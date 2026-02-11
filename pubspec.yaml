@@ -7,6 +7,11 @@ environment:
   sdk: ^3.10.8
 
 dependencies:
+  localpkg:
+    git:
+      url: https://github.com/Calebh101/localpkg-dart.git
+      ref: f14b3c7ef9a3af81f999a1c18bb61fb108ea0dc5
+
   openapi:
     path: ./api_client
 
