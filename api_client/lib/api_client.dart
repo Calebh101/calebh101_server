@@ -182,12 +182,28 @@ class ApiClient {
           return valueString == 'true' || valueString == '1';
         case 'DateTime':
           return value is DateTime ? value : DateTime.tryParse(value);
-        case 'StatusGet200Response':
-          return StatusGet200Response.fromJson(value);
-        case 'StatusGet200ResponseData':
-          return StatusGet200ResponseData.fromJson(value);
-        case 'StatusGet200ResponseErrorsInner':
-          return StatusGet200ResponseErrorsInner.fromJson(value);
+        case 'AuthCreatePost200Response':
+          return AuthCreatePost200Response.fromJson(value);
+        case 'AuthCreatePost200ResponseData':
+          return AuthCreatePost200ResponseData.fromJson(value);
+        case 'AuthCreatePost200ResponseErrorsInner':
+          return AuthCreatePost200ResponseErrorsInner.fromJson(value);
+        case 'AuthCreatePostRequest':
+          return AuthCreatePostRequest.fromJson(value);
+        case 'AuthLoginPost200Response':
+          return AuthLoginPost200Response.fromJson(value);
+        case 'AuthVerifyUserPostRequest':
+          return AuthVerifyUserPostRequest.fromJson(value);
+        case 'GetStatus200Response':
+          return GetStatus200Response.fromJson(value);
+        case 'GetStatus200ResponseData':
+          return GetStatus200ResponseData.fromJson(value);
+        case 'TestPost200Response':
+          return TestPost200Response.fromJson(value);
+        case 'TestPost200ResponseData':
+          return TestPost200ResponseData.fromJson(value);
+        case 'TestPostRequest':
+          return TestPostRequest.fromJson(value);
         default:
           dynamic match;
           if (value is List && (match = _regList.firstMatch(targetType)?.group(1)) != null) {

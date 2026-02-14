@@ -10,4 +10,4 @@ To generate the API client:
 openapi-generator generate -i openapi.json -g dart -o api_client
 ```
 
-`openapi.json` can be retrieved by fetching `https://calebh101.com/openapi/json`.
+`openapi.json` can be retrieved by fetching `https://calebh101.com/openapi/json` (or `http://127.0.0.1:9001/openapi/json`).

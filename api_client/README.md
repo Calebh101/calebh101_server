@@ -42,12 +42,13 @@ import 'package:openapi/api.dart';
 
 
 final api_instance = DefaultApi();
+final authCreatePostRequest = AuthCreatePostRequest(); // AuthCreatePostRequest | Request body
 
 try {
-    final result = api_instance.openapiJsonGet();
+    final result = api_instance.authCreatePost(authCreatePostRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->openapiJsonGet: $e\n');
+    print('Exception when calling DefaultApi->authCreatePost: $e\n');
 }
 
 ```
@@ -58,15 +59,27 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DefaultApi* | [**authCreatePost**](doc//DefaultApi.md#authcreatepost) | **POST** /auth/create | 
+*DefaultApi* | [**authLoginPost**](doc//DefaultApi.md#authloginpost) | **POST** /auth/login | 
+*DefaultApi* | [**authVerifyUserPost**](doc//DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
 *DefaultApi* | [**openapiJsonGet**](doc//DefaultApi.md#openapijsonget) | **GET** /openapi/json | 
-*DefaultApi* | [**statusGet**](doc//DefaultApi.md#statusget) | **GET** /status | 
+*DefaultApi* | [**testPost**](doc//DefaultApi.md#testpost) | **POST** /test | 
+*StatusApiApi* | [**getStatus**](doc//StatusApiApi.md#getstatus) | **GET** /status | 
 
 
 ## Documentation For Models
 
- - [StatusGet200Response](doc//StatusGet200Response.md)
- - [StatusGet200ResponseData](doc//StatusGet200ResponseData.md)
- - [StatusGet200ResponseErrorsInner](doc//StatusGet200ResponseErrorsInner.md)
+ - [AuthCreatePost200Response](doc//AuthCreatePost200Response.md)
+ - [AuthCreatePost200ResponseData](doc//AuthCreatePost200ResponseData.md)
+ - [AuthCreatePost200ResponseErrorsInner](doc//AuthCreatePost200ResponseErrorsInner.md)
+ - [AuthCreatePostRequest](doc//AuthCreatePostRequest.md)
+ - [AuthLoginPost200Response](doc//AuthLoginPost200Response.md)
+ - [AuthVerifyUserPostRequest](doc//AuthVerifyUserPostRequest.md)
+ - [GetStatus200Response](doc//GetStatus200Response.md)
+ - [GetStatus200ResponseData](doc//GetStatus200ResponseData.md)
+ - [TestPost200Response](doc//TestPost200Response.md)
+ - [TestPost200ResponseData](doc//TestPost200ResponseData.md)
+ - [TestPostRequest](doc//TestPostRequest.md)
 
 
 ## Documentation For Authorization
