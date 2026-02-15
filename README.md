@@ -2,6 +2,17 @@
 
 This package provides API utilities for my server.
 
+# Installation
+
+Add this to your `pubspec.yaml`:
+```yaml
+dependencies:
+  calebh101_server:
+    git:
+      url: https://github.com/Calebh101/calebh101_server
+      ref: main
+```
+
 # Tools
 
 To generate the API client:
