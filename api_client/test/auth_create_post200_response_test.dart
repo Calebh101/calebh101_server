@@ -31,7 +31,7 @@ void main() {
       // TODO
     });
 
-    // List<AuthCreatePost200ResponseErrorsInner> errors (default value: const [])
+    // List<AuthCreateAgainPost200ResponseErrorsInner> errors (default value: const [])
     test('to test the property `errors`', () async {
       // TODO
     });

@@ -42,13 +42,12 @@ import 'package:openapi/api.dart';
 
 
 final api_instance = DefaultApi();
-final authCreatePostRequest = AuthCreatePostRequest(); // AuthCreatePostRequest | Request body
 
 try {
-    final result = api_instance.authCreatePost(authCreatePostRequest);
+    final result = api_instance.authAllowedRedirectUrlsGet();
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->authCreatePost: $e\n');
+    print('Exception when calling DefaultApi->authAllowedRedirectUrlsGet: $e\n');
 }
 
 ```
@@ -59,27 +58,34 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DefaultApi* | [**authAllowedRedirectUrlsGet**](doc//DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
+*DefaultApi* | [**authCreateAgainPost**](doc//DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 *DefaultApi* | [**authCreatePost**](doc//DefaultApi.md#authcreatepost) | **POST** /auth/create | 
 *DefaultApi* | [**authLoginPost**](doc//DefaultApi.md#authloginpost) | **POST** /auth/login | 
 *DefaultApi* | [**authVerifyUserPost**](doc//DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
-*DefaultApi* | [**openapiJsonGet**](doc//DefaultApi.md#openapijsonget) | **GET** /openapi/json | 
-*DefaultApi* | [**testPost**](doc//DefaultApi.md#testpost) | **POST** /test | 
-*StatusApiApi* | [**getStatus**](doc//StatusApiApi.md#getstatus) | **GET** /status | 
+*DefaultApi* | [**getOpenAPI**](doc//DefaultApi.md#getopenapi) | **GET** /openapi/json | 
+*DefaultApi* | [**getStatus**](doc//DefaultApi.md#getstatus) | **GET** /status | 
+*DefaultApi* | [**postTest**](doc//DefaultApi.md#posttest) | **POST** /test | 
 
 
 ## Documentation For Models
 
+ - [AuthAllowedRedirectUrlsGet200Response](doc//AuthAllowedRedirectUrlsGet200Response.md)
+ - [AuthAllowedRedirectUrlsGet200ResponseDataInner](doc//AuthAllowedRedirectUrlsGet200ResponseDataInner.md)
+ - [AuthCreateAgainPost200Response](doc//AuthCreateAgainPost200Response.md)
+ - [AuthCreateAgainPost200ResponseData](doc//AuthCreateAgainPost200ResponseData.md)
+ - [AuthCreateAgainPost200ResponseErrorsInner](doc//AuthCreateAgainPost200ResponseErrorsInner.md)
+ - [AuthCreateAgainPostRequest](doc//AuthCreateAgainPostRequest.md)
  - [AuthCreatePost200Response](doc//AuthCreatePost200Response.md)
  - [AuthCreatePost200ResponseData](doc//AuthCreatePost200ResponseData.md)
- - [AuthCreatePost200ResponseErrorsInner](doc//AuthCreatePost200ResponseErrorsInner.md)
  - [AuthCreatePostRequest](doc//AuthCreatePostRequest.md)
  - [AuthLoginPost200Response](doc//AuthLoginPost200Response.md)
  - [AuthVerifyUserPostRequest](doc//AuthVerifyUserPostRequest.md)
  - [GetStatus200Response](doc//GetStatus200Response.md)
  - [GetStatus200ResponseData](doc//GetStatus200ResponseData.md)
- - [TestPost200Response](doc//TestPost200Response.md)
- - [TestPost200ResponseData](doc//TestPost200ResponseData.md)
- - [TestPostRequest](doc//TestPostRequest.md)
+ - [PostTest200Response](doc//PostTest200Response.md)
+ - [PostTest200ResponseData](doc//PostTest200ResponseData.md)
+ - [PostTestRequest](doc//PostTestRequest.md)
 
 
 ## Documentation For Authorization

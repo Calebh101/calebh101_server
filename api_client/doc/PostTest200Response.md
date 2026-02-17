@@ -1,4 +1,4 @@
-# openapi.model.AuthLoginPost200Response
+# openapi.model.PostTest200Response
 
 ## Load the model package
 ```dart
@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **bool** |  | 
 **code** | **int** |  | 
-**data** | [**Object**](.md) |  | 
+**data** | [**PostTest200ResponseData**](PostTest200ResponseData.md) |  | 
 **errors** | [**List<AuthCreateAgainPost200ResponseErrorsInner>**](AuthCreateAgainPost200ResponseErrorsInner.md) |  | [default to const []]
 **message** | **String** |  | 
 

@@ -15,10 +15,11 @@ dependencies:
 
 # Tools
 
-To generate the API client:
-
 ```
+CSERVER=http://127.0.0.1:9001
+curl -o openapi.json $CSERVER/openapi/json
+rm -rf api_client
 openapi-generator generate -i openapi.json -g dart -o api_client
 ```
 
-`openapi.json` can be retrieved by fetching `https://calebh101.com/openapi/json` (or `http://127.0.0.1:9001/openapi/json`).
+`openapi.json` can be retrieved by fetching `https://calebh101.com/openapi/json` (or `http://127.0.0.1:9001/openapi/json` for local development).

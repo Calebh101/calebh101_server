@@ -28,7 +28,7 @@ class GetStatus200Response {
 
   GetStatus200ResponseData data;
 
-  List<AuthCreatePost200ResponseErrorsInner> errors;
+  List<AuthCreateAgainPost200ResponseErrorsInner> errors;
 
   String? message;
 
@@ -88,7 +88,7 @@ class GetStatus200Response {
         success: mapValueOfType<bool>(json, r'success')!,
         code: mapValueOfType<int>(json, r'code')!,
         data: GetStatus200ResponseData.fromJson(json[r'data'])!,
-        errors: AuthCreatePost200ResponseErrorsInner.listFromJson(json[r'errors']),
+        errors: AuthCreateAgainPost200ResponseErrorsInner.listFromJson(json[r'errors']),
         message: mapValueOfType<String>(json, r'message'),
       );
     }

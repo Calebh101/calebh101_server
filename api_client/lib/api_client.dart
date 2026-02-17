@@ -182,12 +182,22 @@ class ApiClient {
           return valueString == 'true' || valueString == '1';
         case 'DateTime':
           return value is DateTime ? value : DateTime.tryParse(value);
+        case 'AuthAllowedRedirectUrlsGet200Response':
+          return AuthAllowedRedirectUrlsGet200Response.fromJson(value);
+        case 'AuthAllowedRedirectUrlsGet200ResponseDataInner':
+          return AuthAllowedRedirectUrlsGet200ResponseDataInner.fromJson(value);
+        case 'AuthCreateAgainPost200Response':
+          return AuthCreateAgainPost200Response.fromJson(value);
+        case 'AuthCreateAgainPost200ResponseData':
+          return AuthCreateAgainPost200ResponseData.fromJson(value);
+        case 'AuthCreateAgainPost200ResponseErrorsInner':
+          return AuthCreateAgainPost200ResponseErrorsInner.fromJson(value);
+        case 'AuthCreateAgainPostRequest':
+          return AuthCreateAgainPostRequest.fromJson(value);
         case 'AuthCreatePost200Response':
           return AuthCreatePost200Response.fromJson(value);
         case 'AuthCreatePost200ResponseData':
           return AuthCreatePost200ResponseData.fromJson(value);
-        case 'AuthCreatePost200ResponseErrorsInner':
-          return AuthCreatePost200ResponseErrorsInner.fromJson(value);
         case 'AuthCreatePostRequest':
           return AuthCreatePostRequest.fromJson(value);
         case 'AuthLoginPost200Response':
@@ -198,12 +208,12 @@ class ApiClient {
           return GetStatus200Response.fromJson(value);
         case 'GetStatus200ResponseData':
           return GetStatus200ResponseData.fromJson(value);
-        case 'TestPost200Response':
-          return TestPost200Response.fromJson(value);
-        case 'TestPost200ResponseData':
-          return TestPost200ResponseData.fromJson(value);
-        case 'TestPostRequest':
-          return TestPostRequest.fromJson(value);
+        case 'PostTest200Response':
+          return PostTest200Response.fromJson(value);
+        case 'PostTest200ResponseData':
+          return PostTest200ResponseData.fromJson(value);
+        case 'PostTestRequest':
+          return PostTestRequest.fromJson(value);
         default:
           dynamic match;
           if (value is List && (match = _regList.firstMatch(targetType)?.group(1)) != null) {

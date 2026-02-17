@@ -11,23 +11,13 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for AuthVerifyUserPostRequest
+// tests for AuthCreateAgainPostRequest
 void main() {
-  // final instance = AuthVerifyUserPostRequest();
+  // final instance = AuthCreateAgainPostRequest();
 
-  group('test AuthVerifyUserPostRequest', () {
+  group('test AuthCreateAgainPostRequest', () {
     // String email
     test('to test the property `email`', () async {
-      // TODO
-    });
-
-    // String password
-    test('to test the property `password`', () async {
-      // TODO
-    });
-
-    // String code
-    test('to test the property `code`', () async {
       // TODO
     });
 

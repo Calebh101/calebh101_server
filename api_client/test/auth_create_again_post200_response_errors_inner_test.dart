@@ -11,28 +11,18 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for AuthVerifyUserPostRequest
+// tests for AuthCreateAgainPost200ResponseErrorsInner
 void main() {
-  // final instance = AuthVerifyUserPostRequest();
+  // final instance = AuthCreateAgainPost200ResponseErrorsInner();
 
-  group('test AuthVerifyUserPostRequest', () {
-    // String email
-    test('to test the property `email`', () async {
-      // TODO
-    });
-
-    // String password
-    test('to test the property `password`', () async {
-      // TODO
-    });
-
+  group('test AuthCreateAgainPost200ResponseErrorsInner', () {
     // String code
     test('to test the property `code`', () async {
       // TODO
     });
 
-    // String sessionId
-    test('to test the property `sessionId`', () async {
+    // Map<String, Object> data (default value: const {})
+    test('to test the property `data`', () async {
       // TODO
     });
 

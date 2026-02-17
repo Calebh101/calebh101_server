@@ -9,12 +9,93 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**authAllowedRedirectUrlsGet**](DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
+[**authCreateAgainPost**](DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 [**authCreatePost**](DefaultApi.md#authcreatepost) | **POST** /auth/create | 
 [**authLoginPost**](DefaultApi.md#authloginpost) | **POST** /auth/login | 
 [**authVerifyUserPost**](DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
-[**openapiJsonGet**](DefaultApi.md#openapijsonget) | **GET** /openapi/json | 
-[**testPost**](DefaultApi.md#testpost) | **POST** /test | 
+[**getOpenAPI**](DefaultApi.md#getopenapi) | **GET** /openapi/json | 
+[**getStatus**](DefaultApi.md#getstatus) | **GET** /status | 
+[**postTest**](DefaultApi.md#posttest) | **POST** /test | 
 
+
+# **authAllowedRedirectUrlsGet**
+> AuthAllowedRedirectUrlsGet200Response authAllowedRedirectUrlsGet()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+try {
+    final result = api_instance.authAllowedRedirectUrlsGet();
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->authAllowedRedirectUrlsGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**AuthAllowedRedirectUrlsGet200Response**](AuthAllowedRedirectUrlsGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **authCreateAgainPost**
+> AuthCreateAgainPost200Response authCreateAgainPost(authCreateAgainPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final authCreateAgainPostRequest = AuthCreateAgainPostRequest(); // AuthCreateAgainPostRequest | Request body
+
+try {
+    final result = api_instance.authCreateAgainPost(authCreateAgainPostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->authCreateAgainPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authCreateAgainPostRequest** | [**AuthCreateAgainPostRequest**](AuthCreateAgainPostRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **authCreatePost**
 > AuthCreatePost200Response authCreatePost(authCreatePostRequest)
@@ -139,8 +220,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **openapiJsonGet**
-> Object openapiJsonGet()
+# **getOpenAPI**
+> Object getOpenAPI()
 
 
 
@@ -151,10 +232,10 @@ import 'package:openapi/api.dart';
 final api_instance = DefaultApi();
 
 try {
-    final result = api_instance.openapiJsonGet();
+    final result = api_instance.getOpenAPI();
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->openapiJsonGet: $e\n');
+    print('Exception when calling DefaultApi->getOpenAPI: $e\n');
 }
 ```
 
@@ -176,8 +257,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **testPost**
-> TestPost200Response testPost(testPostRequest)
+# **getStatus**
+> GetStatus200Response getStatus()
 
 
 
@@ -186,13 +267,50 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final testPostRequest = TestPostRequest(); // TestPostRequest | Request body
 
 try {
-    final result = api_instance.testPost(testPostRequest);
+    final result = api_instance.getStatus();
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->testPost: $e\n');
+    print('Exception when calling DefaultApi->getStatus: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetStatus200Response**](GetStatus200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **postTest**
+> PostTest200Response postTest(postTestRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final postTestRequest = PostTestRequest(); // PostTestRequest | Request body
+
+try {
+    final result = api_instance.postTest(postTestRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->postTest: $e\n');
 }
 ```
 
@@ -200,11 +318,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **testPostRequest** | [**TestPostRequest**](TestPostRequest.md)| Request body | [optional] 
+ **postTestRequest** | [**PostTestRequest**](PostTestRequest.md)| Request body | [optional] 
 
 ### Return type
 
-[**TestPost200Response**](TestPost200Response.md)
+[**PostTest200Response**](PostTest200Response.md)
 
 ### Authorization
 

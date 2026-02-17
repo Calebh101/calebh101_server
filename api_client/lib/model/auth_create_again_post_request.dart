@@ -10,54 +10,42 @@
 
 part of openapi.api;
 
-class AuthVerifyUserPostRequest {
-  /// Returns a new [AuthVerifyUserPostRequest] instance.
-  AuthVerifyUserPostRequest({
+class AuthCreateAgainPostRequest {
+  /// Returns a new [AuthCreateAgainPostRequest] instance.
+  AuthCreateAgainPostRequest({
     required this.email,
-    required this.password,
-    required this.code,
     required this.sessionId,
   });
 
   String email;
 
-  String password;
-
-  String code;
-
   String sessionId;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is AuthVerifyUserPostRequest &&
+  bool operator ==(Object other) => identical(this, other) || other is AuthCreateAgainPostRequest &&
     other.email == email &&
-    other.password == password &&
-    other.code == code &&
     other.sessionId == sessionId;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (email.hashCode) +
-    (password.hashCode) +
-    (code.hashCode) +
     (sessionId.hashCode);
 
   @override
-  String toString() => 'AuthVerifyUserPostRequest[email=$email, password=$password, code=$code, sessionId=$sessionId]';
+  String toString() => 'AuthCreateAgainPostRequest[email=$email, sessionId=$sessionId]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'email'] = this.email;
-      json[r'password'] = this.password;
-      json[r'code'] = this.code;
       json[r'sessionId'] = this.sessionId;
     return json;
   }
 
-  /// Returns a new [AuthVerifyUserPostRequest] instance and imports its values from
+  /// Returns a new [AuthCreateAgainPostRequest] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static AuthVerifyUserPostRequest? fromJson(dynamic value) {
+  static AuthCreateAgainPostRequest? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -66,27 +54,25 @@ class AuthVerifyUserPostRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AuthVerifyUserPostRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AuthVerifyUserPostRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "AuthCreateAgainPostRequest[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "AuthCreateAgainPostRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return AuthVerifyUserPostRequest(
+      return AuthCreateAgainPostRequest(
         email: mapValueOfType<String>(json, r'email')!,
-        password: mapValueOfType<String>(json, r'password')!,
-        code: mapValueOfType<String>(json, r'code')!,
         sessionId: mapValueOfType<String>(json, r'sessionId')!,
       );
     }
     return null;
   }
 
-  static List<AuthVerifyUserPostRequest> listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <AuthVerifyUserPostRequest>[];
+  static List<AuthCreateAgainPostRequest> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <AuthCreateAgainPostRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = AuthVerifyUserPostRequest.fromJson(row);
+        final value = AuthCreateAgainPostRequest.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -95,12 +81,12 @@ class AuthVerifyUserPostRequest {
     return result.toList(growable: growable);
   }
 
-  static Map<String, AuthVerifyUserPostRequest> mapFromJson(dynamic json) {
-    final map = <String, AuthVerifyUserPostRequest>{};
+  static Map<String, AuthCreateAgainPostRequest> mapFromJson(dynamic json) {
+    final map = <String, AuthCreateAgainPostRequest>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = AuthVerifyUserPostRequest.fromJson(entry.value);
+        final value = AuthCreateAgainPostRequest.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -109,14 +95,14 @@ class AuthVerifyUserPostRequest {
     return map;
   }
 
-  // maps a json object with a list of AuthVerifyUserPostRequest-objects as value to a dart map
-  static Map<String, List<AuthVerifyUserPostRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<AuthVerifyUserPostRequest>>{};
+  // maps a json object with a list of AuthCreateAgainPostRequest-objects as value to a dart map
+  static Map<String, List<AuthCreateAgainPostRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<AuthCreateAgainPostRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = AuthVerifyUserPostRequest.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = AuthCreateAgainPostRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -125,8 +111,6 @@ class AuthVerifyUserPostRequest {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'email',
-    'password',
-    'code',
     'sessionId',
   };
 }

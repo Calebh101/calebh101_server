@@ -29,19 +29,23 @@ part 'auth/http_basic_auth.dart';
 part 'auth/http_bearer_auth.dart';
 
 part 'api/default_api.dart';
-part 'api/status_api_api.dart';
 
+part 'model/auth_allowed_redirect_urls_get200_response.dart';
+part 'model/auth_allowed_redirect_urls_get200_response_data_inner.dart';
+part 'model/auth_create_again_post200_response.dart';
+part 'model/auth_create_again_post200_response_data.dart';
+part 'model/auth_create_again_post200_response_errors_inner.dart';
+part 'model/auth_create_again_post_request.dart';
 part 'model/auth_create_post200_response.dart';
 part 'model/auth_create_post200_response_data.dart';
-part 'model/auth_create_post200_response_errors_inner.dart';
 part 'model/auth_create_post_request.dart';
 part 'model/auth_login_post200_response.dart';
 part 'model/auth_verify_user_post_request.dart';
 part 'model/get_status200_response.dart';
 part 'model/get_status200_response_data.dart';
-part 'model/test_post200_response.dart';
-part 'model/test_post200_response_data.dart';
-part 'model/test_post_request.dart';
+part 'model/post_test200_response.dart';
+part 'model/post_test200_response_data.dart';
+part 'model/post_test_request.dart';
 
 
 /// An [ApiClient] instance that uses the default values obtained from

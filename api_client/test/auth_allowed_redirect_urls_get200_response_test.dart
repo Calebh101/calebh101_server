@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for GetStatus200Response
+// tests for AuthAllowedRedirectUrlsGet200Response
 void main() {
-  // final instance = GetStatus200Response();
+  // final instance = AuthAllowedRedirectUrlsGet200Response();
 
-  group('test GetStatus200Response', () {
+  group('test AuthAllowedRedirectUrlsGet200Response', () {
     // bool success
     test('to test the property `success`', () async {
       // TODO
@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // GetStatus200ResponseData data
+    // List<AuthAllowedRedirectUrlsGet200ResponseDataInner> data (default value: const [])
     test('to test the property `data`', () async {
       // TODO
     });
