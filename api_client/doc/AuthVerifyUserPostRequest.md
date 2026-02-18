@@ -9,7 +9,6 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **String** |  | 
-**password** | **String** |  | 
 **code** | **String** |  | 
 **sessionId** | **String** |  | 
 

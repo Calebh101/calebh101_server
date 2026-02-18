@@ -14,14 +14,11 @@ class AuthVerifyUserPostRequest {
   /// Returns a new [AuthVerifyUserPostRequest] instance.
   AuthVerifyUserPostRequest({
     required this.email,
-    required this.password,
     required this.code,
     required this.sessionId,
   });
 
   String email;
-
-  String password;
 
   String code;
 
@@ -30,7 +27,6 @@ class AuthVerifyUserPostRequest {
   @override
   bool operator ==(Object other) => identical(this, other) || other is AuthVerifyUserPostRequest &&
     other.email == email &&
-    other.password == password &&
     other.code == code &&
     other.sessionId == sessionId;
 
@@ -38,17 +34,15 @@ class AuthVerifyUserPostRequest {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (email.hashCode) +
-    (password.hashCode) +
     (code.hashCode) +
     (sessionId.hashCode);
 
   @override
-  String toString() => 'AuthVerifyUserPostRequest[email=$email, password=$password, code=$code, sessionId=$sessionId]';
+  String toString() => 'AuthVerifyUserPostRequest[email=$email, code=$code, sessionId=$sessionId]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'email'] = this.email;
-      json[r'password'] = this.password;
       json[r'code'] = this.code;
       json[r'sessionId'] = this.sessionId;
     return json;
@@ -74,7 +68,6 @@ class AuthVerifyUserPostRequest {
 
       return AuthVerifyUserPostRequest(
         email: mapValueOfType<String>(json, r'email')!,
-        password: mapValueOfType<String>(json, r'password')!,
         code: mapValueOfType<String>(json, r'code')!,
         sessionId: mapValueOfType<String>(json, r'sessionId')!,
       );
@@ -125,7 +118,6 @@ class AuthVerifyUserPostRequest {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'email',
-    'password',
     'code',
     'sessionId',
   };

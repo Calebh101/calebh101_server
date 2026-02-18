@@ -21,11 +21,6 @@ void main() {
       // TODO
     });
 
-    // String password
-    test('to test the property `password`', () async {
-      // TODO
-    });
-
     // String code
     test('to test the property `code`', () async {
       // TODO

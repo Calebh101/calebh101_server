@@ -6,7 +6,7 @@ void Function(ApiException e)? onNeedsLogin;
 
 class Calebh101Client {
   static const String publicBasePath = "https://api.calebh101.com";
-  static String localBasePath({int port = 80, String protocol = "http", String basePath = ""}) => "$protocol://localhost:$port$basePath";
+  static String localBasePath({int port = 9001, String protocol = "http", String basePath = ""}) => "$protocol://localhost:$port$basePath";
 
   /// Set up a new [ApiClient].
   ///
