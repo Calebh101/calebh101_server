@@ -37,7 +37,7 @@ class ApiFailureDetails<T> {
 
   String? get message {
     try {
-      return body["message"];
+      return body["message"] ?? (body["errors"] as List?)?.map((x) => x["code"]).join(", ");
     } catch (_) {
       return null;
     }
