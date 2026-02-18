@@ -26,15 +26,36 @@ class Calebh101Client {
 class ApiFailureDetails<T> {
   final Object e;
   final int? code;
-  final String? message;
-  final Map? data;
-  final String? raw;
 
-  const ApiFailureDetails({required this.e, required this.code, required this.message, required this.data, required this.raw});
+  dynamic get body {
+    try {
+      return jsonDecode((e as ApiException).message!);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  String? get message {
+    try {
+      return body["message"];
+    } catch (_) {
+      return null;
+    }
+  }
+
+  dynamic get data {
+    try {
+      return body["data"];
+    } catch (_) {
+      return null;
+    }
+  }
+
+  const ApiFailureDetails({required this.e, required this.code});
 
   @override
   String toString() {
-    return "ApiFailureDetails<$T>(code: $code, message: $message, e: $e)";
+    return "ApiFailureDetails<$T>(code: $code, message: $message, e: $e, data: $data)";
   }
 }
 
@@ -56,17 +77,9 @@ Future<Result<T?, ApiFailureDetails<T>?>?> request<T>(Future<T?> Function() call
       onNeedsLogin?.call(e);
       return null;
     } else {
-      final body = () {
-        try {
-          return jsonDecode(e.message!) as Map;
-        } catch (_) {
-          return null;
-        }
-      }();
-
-      return Result(null, ApiFailureDetails(e: e, code: e.code, message: body?["message"], data: body?["data"], raw: e.message));
+      return Result(null, ApiFailureDetails(e: e, code: e.code));
     }
   } catch (e) {
-    return Result(null, ApiFailureDetails(e: e, code: null, message: null, data: null, raw: null));
+    return Result(null, ApiFailureDetails(e: e, code: null));
   }
 }
