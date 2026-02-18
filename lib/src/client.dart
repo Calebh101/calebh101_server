@@ -4,7 +4,7 @@ import 'package:calebh101_server/calebh101_server.dart';
 
 void Function(ApiException e)? onNeedsLogin;
 
-extension CustomApiClient on ApiClient {
+class Calebh101Client {
   static const String publicBasePath = "https://api.calebh101.com";
   static String localBasePath({int port = 80, String protocol = "http", String basePath = ""}) => "$protocol://localhost:$port$basePath";
 
