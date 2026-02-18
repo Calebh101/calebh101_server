@@ -17,7 +17,7 @@ class AuthAllowedRedirectUrlsGet200Response {
     required this.code,
     this.data = const [],
     this.errors = const [],
-    required this.message,
+    this.message,
   });
 
   bool success;
@@ -26,10 +26,16 @@ class AuthAllowedRedirectUrlsGet200Response {
   /// Maximum value: 999
   int code;
 
-  List<AuthAllowedRedirectUrlsGet200ResponseDataInner>? data;
+  List<AuthAllowedRedirectUrlsGet200ResponseDataInner> data;
 
   List<AuthCreateAgainPost200ResponseErrorsInner> errors;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   String? message;
 
   @override
@@ -45,7 +51,7 @@ class AuthAllowedRedirectUrlsGet200Response {
     // ignore: unnecessary_parenthesis
     (success.hashCode) +
     (code.hashCode) +
-    (data == null ? 0 : data!.hashCode) +
+    (data.hashCode) +
     (errors.hashCode) +
     (message == null ? 0 : message!.hashCode);
 
@@ -56,11 +62,7 @@ class AuthAllowedRedirectUrlsGet200Response {
     final json = <String, dynamic>{};
       json[r'success'] = this.success;
       json[r'code'] = this.code;
-    if (this.data != null) {
       json[r'data'] = this.data;
-    } else {
-      json[r'data'] = null;
-    }
       json[r'errors'] = this.errors;
     if (this.message != null) {
       json[r'message'] = this.message;
@@ -143,9 +145,7 @@ class AuthAllowedRedirectUrlsGet200Response {
   static const requiredKeys = <String>{
     'success',
     'code',
-    'data',
     'errors',
-    'message',
   };
 }
 

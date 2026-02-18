@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **bool** |  | 
 **code** | **int** |  | 
-**data** | [**List<AuthAllowedRedirectUrlsGet200ResponseDataInner>**](AuthAllowedRedirectUrlsGet200ResponseDataInner.md) |  | [default to const []]
+**data** | [**List<AuthAllowedRedirectUrlsGet200ResponseDataInner>**](AuthAllowedRedirectUrlsGet200ResponseDataInner.md) |  | [optional] [default to const []]
 **errors** | [**List<AuthCreateAgainPost200ResponseErrorsInner>**](AuthCreateAgainPost200ResponseErrorsInner.md) |  | [default to const []]
-**message** | **String** |  | 
+**message** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

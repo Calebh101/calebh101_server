@@ -15,9 +15,9 @@ class AuthLoginPost200Response {
   AuthLoginPost200Response({
     required this.success,
     required this.code,
-    required this.data,
+    this.data,
     this.errors = const [],
-    required this.message,
+    this.message,
   });
 
   bool success;
@@ -26,10 +26,22 @@ class AuthLoginPost200Response {
   /// Maximum value: 999
   int code;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   Object? data;
 
   List<AuthCreateAgainPost200ResponseErrorsInner> errors;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   String? message;
 
   @override
@@ -143,9 +155,7 @@ class AuthLoginPost200Response {
   static const requiredKeys = <String>{
     'success',
     'code',
-    'data',
     'errors',
-    'message',
   };
 }
 
