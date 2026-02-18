@@ -26,7 +26,7 @@ class AuthCreatePost200Response {
   /// Maximum value: 999
   int code;
 
-  AuthCreatePost200ResponseData data;
+  AuthCreatePost200ResponseData? data;
 
   List<AuthCreateAgainPost200ResponseErrorsInner> errors;
 
@@ -45,7 +45,7 @@ class AuthCreatePost200Response {
     // ignore: unnecessary_parenthesis
     (success.hashCode) +
     (code.hashCode) +
-    (data.hashCode) +
+    (data == null ? 0 : data!.hashCode) +
     (errors.hashCode) +
     (message == null ? 0 : message!.hashCode);
 
@@ -56,7 +56,11 @@ class AuthCreatePost200Response {
     final json = <String, dynamic>{};
       json[r'success'] = this.success;
       json[r'code'] = this.code;
+    if (this.data != null) {
       json[r'data'] = this.data;
+    } else {
+      json[r'data'] = null;
+    }
       json[r'errors'] = this.errors;
     if (this.message != null) {
       json[r'message'] = this.message;
@@ -87,7 +91,7 @@ class AuthCreatePost200Response {
       return AuthCreatePost200Response(
         success: mapValueOfType<bool>(json, r'success')!,
         code: mapValueOfType<int>(json, r'code')!,
-        data: AuthCreatePost200ResponseData.fromJson(json[r'data'])!,
+        data: AuthCreatePost200ResponseData.fromJson(json[r'data']),
         errors: AuthCreateAgainPost200ResponseErrorsInner.listFromJson(json[r'errors']),
         message: mapValueOfType<String>(json, r'message'),
       );
