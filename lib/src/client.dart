@@ -24,13 +24,18 @@ class Calebh101Client {
 }
 
 class ApiFailureDetails<T> {
-  final ApiException e;
-  final int code;
+  final Object e;
+  final int? code;
   final String? message;
   final Map? data;
   final String? raw;
 
   const ApiFailureDetails({required this.e, required this.code, required this.message, required this.data, required this.raw});
+
+  @override
+  String toString() {
+    return "ApiFailureDetails<$T>(code: $code, message: $message, e: $e)";
+  }
 }
 
 class Result<T, F> {
@@ -40,12 +45,14 @@ class Result<T, F> {
   const Result(this.t, this.f);
 }
 
-Future<Result<T?, ApiFailureDetails?>?> request<T>(Future<T?> Function() callback) async {
+/// Reasons for returning null:
+///
+/// - Needs logged in (`onNeedsLogin` will be called)
+Future<Result<T?, ApiFailureDetails<T>?>?> request<T>(Future<T?> Function() callback) async {
   try {
     return Result(await callback(), null);
   } on ApiException catch (e) {
     if (e.code == 401) {
-      print("[calebh101_server] Needs login for type $T: $e (${onNeedsLogin != null ? "calling" : "not calling"})");
       onNeedsLogin?.call(e);
       return null;
     } else {
@@ -57,11 +64,9 @@ Future<Result<T?, ApiFailureDetails?>?> request<T>(Future<T?> Function() callbac
         }
       }();
 
-      print("[calebh101_server] Request failed for type $T: $e");
       return Result(null, ApiFailureDetails(e: e, code: e.code, message: body?["message"], data: body?["data"], raw: e.message));
     }
   } catch (e) {
-    print("[calebh101_server] Unable to request type $T: $e");
-    return null;
+    return Result(null, ApiFailureDetails(e: e, code: null, message: null, data: null, raw: null));
   }
 }
