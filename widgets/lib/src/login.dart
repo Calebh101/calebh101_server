@@ -1,11 +1,13 @@
 import 'package:calebh101_server/calebh101_server.dart';
 import 'package:calebh101_server_widgets/src/main.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:validators/validators.dart';
 
 class LoginPage extends StatefulWidget {
   final ApiClient client;
-  const LoginPage({super.key, required this.client});
+  final void Function(BuildContext context, String sessionId)? onLoggedIn;
+  const LoginPage({super.key, required this.client, this.onLoggedIn});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -23,7 +25,18 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController password = TextEditingController();
   final TextEditingController password2 = TextEditingController();
 
-  void onLoggedIn(String id) async {}
+  void onLoggedIn(String id) async {
+    widget.client.addDefaultHeader("Authentication", id);
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString("authentication", id);
+    if (!context.mounted) return;
+
+    if (widget.onLoggedIn != null) {
+      widget.onLoggedIn!(context, id);
+    } else {
+      Navigator.of(context).pop(id);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -99,29 +112,35 @@ class _LoginPageState extends State<LoginPage> {
                       setState(() => isCreateAccountMode = false);
                       setState(() => isLoading = true);
 
-                      if (!state.validate()) return;
-                      snackbar(context, "Loading...");
-
-                      final api = DefaultApi(widget.client);
-                      final result = await request(() => api.authLoginPost(authCreatePostRequest: AuthCreatePostRequest(email: email.text, password: password.text)));
-                      if (!context.mounted) return;
-
-                      if (result?.t != null && result?.t?.data != null) {
-                        final t = result!.t!;
-                        snackbar(context, "Verification code sent.");
-                        final r = await Navigator.push(context, MaterialPageRoute(builder: (context) => VerifySessionPage(id: t.data!.session, client: widget.client)));
-
-                        if (r == true) {
-                          onLoggedIn(t.data!.session);
-                        }
-                      } else if (result?.f != null) {
-                        final f = result!.f!;
-                        snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
-                      } else {
-                        snackbar(context, "An unknown error occurred.");
+                      void end() {
+                        setState(() => isLoading = false);
                       }
 
-                      setState(() => isLoading = false);
+                      WidgetsBinding.instance.addPostFrameCallback((_) async {
+                        if (!state.validate()) return end();
+                        snackbar(context, "Loading...");
+
+                        final api = DefaultApi(widget.client);
+                        final result = await request(() => api.authLoginPost(authCreatePostRequest: AuthCreatePostRequest(email: email.text, password: password.text)));
+                        if (!context.mounted) return end();
+
+                        if (result?.t != null && result?.t?.data != null) {
+                          final t = result!.t!;
+                          snackbar(context, "Verification code sent.");
+                          final r = await Navigator.push(context, MaterialPageRoute(builder: (context) => VerifySessionPage(id: t.data!.session, client: widget.client)));
+
+                          if (r == true) {
+                            onLoggedIn(t.data!.session);
+                          }
+                        } else if (result?.f != null) {
+                          final f = result!.f!;
+                          snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
+                        } else {
+                          snackbar(context, "An unknown error occurred.");
+                        }
+
+                        end();
+                      });
                     },
                     style: ElevatedButton.styleFrom(
                       fixedSize: Size(200, 70),
@@ -140,25 +159,31 @@ class _LoginPageState extends State<LoginPage> {
                       setState(() => isCreateAccountMode = true);
                       setState(() => isLoading = true);
 
-                      if (!state.validate()) return;
-                      snackbar(context, "Loading...");
-
-                      final api = DefaultApi(widget.client);
-                      final result = await request(() => api.authCreatePost(authCreatePostRequest: AuthCreatePostRequest(email: email.text, password: password.text)));
-                      if (!context.mounted) return;
-
-                      if (result?.t != null && result?.t?.data != null) {
-                        final t = result!.t!;
-                        setState(() => sessionId = t.data!.sessionId);
-                        snackbar(context, "Account created. Please check your email for a verification link.");
-                      } else if (result?.f != null) {
-                        final f = result!.f!;
-                        snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
-                      } else {
-                        snackbar(context, "An unknown error occurred.");
+                      void end() {
+                        setState(() => isLoading = false);
                       }
 
-                      setState(() => isLoading = false);
+                      WidgetsBinding.instance.addPostFrameCallback((_) async {
+                        if (!state.validate()) return end();
+                        snackbar(context, "Loading...");
+
+                        final api = DefaultApi(widget.client);
+                        final result = await request(() => api.authCreatePost(authCreatePostRequest: AuthCreatePostRequest(email: email.text, password: password.text)));
+                        if (!context.mounted) return end();
+
+                        if (result?.t != null && result?.t?.data != null) {
+                          final t = result!.t!;
+                          setState(() => sessionId = t.data!.sessionId);
+                          snackbar(context, "Account created. Please check your email for a verification link.");
+                        } else if (result?.f != null) {
+                          final f = result!.f!;
+                          snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
+                        } else {
+                          snackbar(context, "An unknown error occurred.");
+                        }
+
+                        end();
+                      });
                     },
                     style: ElevatedButton.styleFrom(
                       fixedSize: Size(200, 70),
@@ -181,24 +206,30 @@ class _LoginPageState extends State<LoginPage> {
                   setState(() => isCreateAccountMode = true);
                   setState(() => isLoading = true);
 
-                  if (!state.validate()) return;
-                  snackbar(context, "Loading...");
-
-                  final api = DefaultApi(widget.client);
-                  final result = await request(() => api.authCreateAgainPost(authCreateAgainPostRequest: AuthCreateAgainPostRequest(email: email.text, sessionId: sessionId!)));
-                  if (!context.mounted) return;
-
-                  if (result?.t != null && result?.t?.data != null) {
-                    final t = result!.t!;
-                    snackbar(context, "Please check your email for a verification link.");
-                  } else if (result?.f != null) {
-                    final f = result!.f!;
-                    snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
-                  } else {
-                    snackbar(context, "An unknown error occurred.");
+                  void end() {
+                    setState(() => isLoading = false);
                   }
 
-                  setState(() => isLoading = false);
+                  WidgetsBinding.instance.addPostFrameCallback((_) async {
+                    if (!state.validate()) return end();
+                    snackbar(context, "Loading...");
+
+                    final api = DefaultApi(widget.client);
+                    final result = await request(() => api.authCreateAgainPost(authCreateAgainPostRequest: AuthCreateAgainPostRequest(email: email.text, sessionId: sessionId!)));
+                    if (!context.mounted) return end();
+
+                    if (result?.t != null && result?.t?.data != null) {
+                      final t = result!.t!;
+                      snackbar(context, "Please check your email for a verification link.");
+                    } else if (result?.f != null) {
+                      final f = result!.f!;
+                      snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
+                    } else {
+                      snackbar(context, "An unknown error occurred.");
+                    }
+
+                    end();
+                  });
                 }, child: Text("Resend Email")),
               ],
               Spacer(),
@@ -257,12 +288,16 @@ class _VerifySessionPageState extends State<VerifySessionPage> {
                   if (isLoading) return;
                   setState(() => isLoading = true);
 
-                  if (!state.validate()) return;
+                  void end() {
+                    setState(() => isLoading = false);
+                  }
+
+                  if (!state.validate()) return end();
                   snackbar(context, "Loading...");
 
                   final api = DefaultApi(widget.client);
                   final result = await request(() => api.authVerifySessionPost(authVerifySessionPostRequest: AuthVerifySessionPostRequest(session: widget.id, code: code)));
-                  if (!context.mounted) return;
+                  if (!context.mounted) return end();
 
                   if (result?.t != null) {
                     final t = result!.t!;
@@ -275,7 +310,7 @@ class _VerifySessionPageState extends State<VerifySessionPage> {
                     snackbar(context, "An unknown error occurred.");
                   }
 
-                  setState(() => isLoading = false);
+                  end();
                 },
                 style: ElevatedButton.styleFrom(
                   fixedSize: Size(200, 70),
