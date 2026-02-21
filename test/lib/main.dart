@@ -6,7 +6,10 @@ import 'package:flutter/material.dart';
 late ApiClient client;
 
 final List<(String name, Widget Function(ApiClient client) widget)> pages = [
-  ("Login Page", (client) => LoginPage(client: client)),
+  ("Login Page", (client) => LoginPage(client: client, onLoggedIn: (context, id) {
+    print("New session ID: $id");
+    Navigator.of(context).pop();
+  })),
 ];
 
 void main() {

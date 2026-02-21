@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:calebh101_server/calebh101_server.dart';
 import 'package:styled_logger/styled_logger.dart';
 
+const bool explicitRatelimitHandling = false;
+
 void Function(ApiException e)? onNeedsLogin;
 
 class Calebh101Client {
@@ -27,6 +29,7 @@ class Calebh101Client {
 class ApiFailureDetails<T> {
   final Object e;
   final int? code;
+  final String? _message;
 
   dynamic get body {
     try {
@@ -38,6 +41,7 @@ class ApiFailureDetails<T> {
 
   String? get message {
     try {
+      if (_message != null) return _message;
       return body["message"] ?? (body["errors"] as List?)?.map((x) => x["code"]).join(", ");
     } catch (_) {
       return null;
@@ -52,7 +56,7 @@ class ApiFailureDetails<T> {
     }
   }
 
-  const ApiFailureDetails({required this.e, required this.code});
+  const ApiFailureDetails({required this.e, required this.code, String? message}) : _message = message;
 
   @override
   String toString() {
@@ -78,6 +82,9 @@ Future<Result<T?, ApiFailureDetails<T>?>?> request<T>(Future<T?> Function() call
       Logger.print("[calebh101_server] Needs login");
       onNeedsLogin?.call(e);
       return null;
+    } else if (e.code == 429 && explicitRatelimitHandling) {
+      Logger.print("[calebh101_server] Too many requests (${e.code}): $e");
+      return Result(null, ApiFailureDetails(e: e, code: e.code, message: "Too many requests. Please try again later."));
     } else {
       Logger.print("[calebh101_server] [code ${e.code}] $e");
       return Result(null, ApiFailureDetails(e: e, code: e.code));
