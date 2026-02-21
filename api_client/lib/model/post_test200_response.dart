@@ -17,7 +17,7 @@ class PostTest200Response {
     required this.code,
     this.data,
     this.errors = const [],
-    this.message,
+    required this.message,
   });
 
   bool success;
@@ -36,13 +36,7 @@ class PostTest200Response {
 
   List<AuthCreateAgainPost200ResponseErrorsInner> errors;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? message;
+  String message;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PostTest200Response &&
@@ -59,7 +53,7 @@ class PostTest200Response {
     (code.hashCode) +
     (data == null ? 0 : data!.hashCode) +
     (errors.hashCode) +
-    (message == null ? 0 : message!.hashCode);
+    (message.hashCode);
 
   @override
   String toString() => 'PostTest200Response[success=$success, code=$code, data=$data, errors=$errors, message=$message]';
@@ -74,11 +68,7 @@ class PostTest200Response {
       json[r'data'] = null;
     }
       json[r'errors'] = this.errors;
-    if (this.message != null) {
       json[r'message'] = this.message;
-    } else {
-      json[r'message'] = null;
-    }
     return json;
   }
 
@@ -105,7 +95,7 @@ class PostTest200Response {
         code: mapValueOfType<int>(json, r'code')!,
         data: PostTest200ResponseData.fromJson(json[r'data']),
         errors: AuthCreateAgainPost200ResponseErrorsInner.listFromJson(json[r'errors']),
-        message: mapValueOfType<String>(json, r'message'),
+        message: mapValueOfType<String>(json, r'message')!,
       );
     }
     return null;
@@ -156,6 +146,7 @@ class PostTest200Response {
     'success',
     'code',
     'errors',
+    'message',
   };
 }
 

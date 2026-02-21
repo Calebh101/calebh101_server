@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**authCreateAgainPost**](DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 [**authCreatePost**](DefaultApi.md#authcreatepost) | **POST** /auth/create | 
 [**authLoginPost**](DefaultApi.md#authloginpost) | **POST** /auth/login | 
+[**authVerifySessionPost**](DefaultApi.md#authverifysessionpost) | **POST** /auth/verify/session | 
 [**authVerifyUserPost**](DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
 [**getOpenAPI**](DefaultApi.md#getopenapi) | **GET** /openapi/json | 
 [**getStatus**](DefaultApi.md#getstatus) | **GET** /status | 
@@ -179,8 +180,49 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **authVerifySessionPost**
+> AuthVerifySessionPost200Response authVerifySessionPost(authVerifySessionPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final authVerifySessionPostRequest = AuthVerifySessionPostRequest(); // AuthVerifySessionPostRequest | Request body
+
+try {
+    final result = api_instance.authVerifySessionPost(authVerifySessionPostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->authVerifySessionPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authVerifySessionPostRequest** | [**AuthVerifySessionPostRequest**](AuthVerifySessionPostRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **authVerifyUserPost**
-> AuthLoginPost200Response authVerifyUserPost(authVerifyUserPostRequest)
+> AuthVerifySessionPost200Response authVerifyUserPost(authVerifyUserPostRequest)
 
 
 
@@ -207,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthLoginPost200Response**](AuthLoginPost200Response.md)
+[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
 
 ### Authorization
 

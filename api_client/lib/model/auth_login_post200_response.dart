@@ -17,7 +17,7 @@ class AuthLoginPost200Response {
     required this.code,
     this.data,
     this.errors = const [],
-    this.message,
+    required this.message,
   });
 
   bool success;
@@ -32,17 +32,11 @@ class AuthLoginPost200Response {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  Object? data;
+  AuthLoginPost200ResponseData? data;
 
   List<AuthCreateAgainPost200ResponseErrorsInner> errors;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? message;
+  String message;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is AuthLoginPost200Response &&
@@ -59,7 +53,7 @@ class AuthLoginPost200Response {
     (code.hashCode) +
     (data == null ? 0 : data!.hashCode) +
     (errors.hashCode) +
-    (message == null ? 0 : message!.hashCode);
+    (message.hashCode);
 
   @override
   String toString() => 'AuthLoginPost200Response[success=$success, code=$code, data=$data, errors=$errors, message=$message]';
@@ -74,11 +68,7 @@ class AuthLoginPost200Response {
       json[r'data'] = null;
     }
       json[r'errors'] = this.errors;
-    if (this.message != null) {
       json[r'message'] = this.message;
-    } else {
-      json[r'message'] = null;
-    }
     return json;
   }
 
@@ -103,9 +93,9 @@ class AuthLoginPost200Response {
       return AuthLoginPost200Response(
         success: mapValueOfType<bool>(json, r'success')!,
         code: mapValueOfType<int>(json, r'code')!,
-        data: mapValueOfType<Object>(json, r'data'),
+        data: AuthLoginPost200ResponseData.fromJson(json[r'data']),
         errors: AuthCreateAgainPost200ResponseErrorsInner.listFromJson(json[r'errors']),
-        message: mapValueOfType<String>(json, r'message'),
+        message: mapValueOfType<String>(json, r'message')!,
       );
     }
     return null;
@@ -156,6 +146,7 @@ class AuthLoginPost200Response {
     'success',
     'code',
     'errors',
+    'message',
   };
 }
 

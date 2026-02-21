@@ -17,7 +17,7 @@ class AuthAllowedRedirectUrlsGet200Response {
     required this.code,
     this.data = const [],
     this.errors = const [],
-    this.message,
+    required this.message,
   });
 
   bool success;
@@ -30,13 +30,7 @@ class AuthAllowedRedirectUrlsGet200Response {
 
   List<AuthCreateAgainPost200ResponseErrorsInner> errors;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? message;
+  String message;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is AuthAllowedRedirectUrlsGet200Response &&
@@ -53,7 +47,7 @@ class AuthAllowedRedirectUrlsGet200Response {
     (code.hashCode) +
     (data.hashCode) +
     (errors.hashCode) +
-    (message == null ? 0 : message!.hashCode);
+    (message.hashCode);
 
   @override
   String toString() => 'AuthAllowedRedirectUrlsGet200Response[success=$success, code=$code, data=$data, errors=$errors, message=$message]';
@@ -64,11 +58,7 @@ class AuthAllowedRedirectUrlsGet200Response {
       json[r'code'] = this.code;
       json[r'data'] = this.data;
       json[r'errors'] = this.errors;
-    if (this.message != null) {
       json[r'message'] = this.message;
-    } else {
-      json[r'message'] = null;
-    }
     return json;
   }
 
@@ -95,7 +85,7 @@ class AuthAllowedRedirectUrlsGet200Response {
         code: mapValueOfType<int>(json, r'code')!,
         data: AuthAllowedRedirectUrlsGet200ResponseDataInner.listFromJson(json[r'data']),
         errors: AuthCreateAgainPost200ResponseErrorsInner.listFromJson(json[r'errors']),
-        message: mapValueOfType<String>(json, r'message'),
+        message: mapValueOfType<String>(json, r'message')!,
       );
     }
     return null;
@@ -146,6 +136,7 @@ class AuthAllowedRedirectUrlsGet200Response {
     'success',
     'code',
     'errors',
+    'message',
   };
 }
 

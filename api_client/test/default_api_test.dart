@@ -37,7 +37,12 @@ void main() {
       // TODO
     });
 
-    //Future<AuthLoginPost200Response> authVerifyUserPost({ AuthVerifyUserPostRequest authVerifyUserPostRequest }) async
+    //Future<AuthVerifySessionPost200Response> authVerifySessionPost({ AuthVerifySessionPostRequest authVerifySessionPostRequest }) async
+    test('test authVerifySessionPost', () async {
+      // TODO
+    });
+
+    //Future<AuthVerifySessionPost200Response> authVerifyUserPost({ AuthVerifyUserPostRequest authVerifyUserPostRequest }) async
     test('test authVerifyUserPost', () async {
       // TODO
     });

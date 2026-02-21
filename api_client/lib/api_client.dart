@@ -202,6 +202,12 @@ class ApiClient {
           return AuthCreatePostRequest.fromJson(value);
         case 'AuthLoginPost200Response':
           return AuthLoginPost200Response.fromJson(value);
+        case 'AuthLoginPost200ResponseData':
+          return AuthLoginPost200ResponseData.fromJson(value);
+        case 'AuthVerifySessionPost200Response':
+          return AuthVerifySessionPost200Response.fromJson(value);
+        case 'AuthVerifySessionPostRequest':
+          return AuthVerifySessionPostRequest.fromJson(value);
         case 'AuthVerifyUserPostRequest':
           return AuthVerifyUserPostRequest.fromJson(value);
         case 'GetStatus200Response':

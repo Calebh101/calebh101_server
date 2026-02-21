@@ -13,6 +13,9 @@ doc/AuthCreatePost200Response.md
 doc/AuthCreatePost200ResponseData.md
 doc/AuthCreatePostRequest.md
 doc/AuthLoginPost200Response.md
+doc/AuthLoginPost200ResponseData.md
+doc/AuthVerifySessionPost200Response.md
+doc/AuthVerifySessionPostRequest.md
 doc/AuthVerifyUserPostRequest.md
 doc/DefaultApi.md
 doc/GetStatus200Response.md
@@ -41,6 +44,9 @@ lib/model/auth_create_post200_response.dart
 lib/model/auth_create_post200_response_data.dart
 lib/model/auth_create_post_request.dart
 lib/model/auth_login_post200_response.dart
+lib/model/auth_login_post200_response_data.dart
+lib/model/auth_verify_session_post200_response.dart
+lib/model/auth_verify_session_post_request.dart
 lib/model/auth_verify_user_post_request.dart
 lib/model/get_status200_response.dart
 lib/model/get_status200_response_data.dart
@@ -57,7 +63,10 @@ test/auth_create_again_post_request_test.dart
 test/auth_create_post200_response_data_test.dart
 test/auth_create_post200_response_test.dart
 test/auth_create_post_request_test.dart
+test/auth_login_post200_response_data_test.dart
 test/auth_login_post200_response_test.dart
+test/auth_verify_session_post200_response_test.dart
+test/auth_verify_session_post_request_test.dart
 test/auth_verify_user_post_request_test.dart
 test/default_api_test.dart
 test/get_status200_response_data_test.dart

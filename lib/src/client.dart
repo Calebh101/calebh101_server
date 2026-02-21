@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:calebh101_server/calebh101_server.dart';
+import 'package:styled_logger/styled_logger.dart';
 
 void Function(ApiException e)? onNeedsLogin;
 
@@ -74,12 +75,15 @@ Future<Result<T?, ApiFailureDetails<T>?>?> request<T>(Future<T?> Function() call
     return Result(await callback(), null);
   } on ApiException catch (e) {
     if (e.code == 401) {
+      Logger.print("[calebh101_server] Needs login");
       onNeedsLogin?.call(e);
       return null;
     } else {
+      Logger.print("[calebh101_server] [code ${e.code}] $e");
       return Result(null, ApiFailureDetails(e: e, code: e.code));
     }
   } catch (e) {
+    Logger.print("[calebh101_server] $e");
     return Result(null, ApiFailureDetails(e: e, code: null));
   }
 }

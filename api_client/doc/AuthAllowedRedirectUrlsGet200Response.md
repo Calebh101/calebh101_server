@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **code** | **int** |  | 
 **data** | [**List<AuthAllowedRedirectUrlsGet200ResponseDataInner>**](AuthAllowedRedirectUrlsGet200ResponseDataInner.md) |  | [optional] [default to const []]
 **errors** | [**List<AuthCreateAgainPost200ResponseErrorsInner>**](AuthCreateAgainPost200ResponseErrorsInner.md) |  | [default to const []]
-**message** | **String** |  | [optional] 
+**message** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
