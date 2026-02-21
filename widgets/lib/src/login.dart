@@ -126,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
 
                         if (result?.t != null && result?.t?.data != null) {
                           final t = result!.t!;
-                          snackbar(context, "Verification code sent.");
+                          snackbar(context, "Verification code sent. Please check your email.");
                           final r = await Navigator.push(context, MaterialPageRoute(builder: (context) => VerifySessionPage(id: t.data!.session, client: widget.client)));
 
                           if (r == true) {
