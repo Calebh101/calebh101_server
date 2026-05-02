@@ -8,7 +8,7 @@ const bool explicitRatelimitHandling = false;
 void Function(ApiException e)? onNeedsLogin;
 
 class Calebh101Client {
-  static const String publicBasePath = "https://api.calebh101.com";
+  static const String publicBasePath = "https://api.calebh101.net";
   static String localBasePath({int port = 9001, String protocol = "http", String basePath = ""}) => "$protocol://localhost:$port$basePath";
 
   /// Set up a new [ApiClient].
