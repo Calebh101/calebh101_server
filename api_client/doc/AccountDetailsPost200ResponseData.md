@@ -1,4 +1,4 @@
-# openapi.model.ApiAccountDetailsPost200ResponseData
+# openapi.model.AccountDetailsPost200ResponseData
 
 ## Load the model package
 ```dart
@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **created** | [**DateTime**](DateTime.md) |  | 
 **updated** | [**DateTime**](DateTime.md) |  | 
 **email** | **String** |  | 
-**sessions** | [**List<ApiAccountDetailsPost200ResponseDataSessionsInner>**](ApiAccountDetailsPost200ResponseDataSessionsInner.md) |  | [default to const []]
+**sessions** | [**List<AccountDetailsPost200ResponseDataSessionsInner>**](AccountDetailsPost200ResponseDataSessionsInner.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

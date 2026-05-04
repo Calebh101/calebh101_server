@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class ApiAccountDetailsPost200ResponseData {
-  /// Returns a new [ApiAccountDetailsPost200ResponseData] instance.
-  ApiAccountDetailsPost200ResponseData({
+class AccountDetailsPost200ResponseData {
+  /// Returns a new [AccountDetailsPost200ResponseData] instance.
+  AccountDetailsPost200ResponseData({
     required this.created,
     required this.updated,
     required this.email,
@@ -25,10 +25,10 @@ class ApiAccountDetailsPost200ResponseData {
 
   String email;
 
-  List<ApiAccountDetailsPost200ResponseDataSessionsInner> sessions;
+  List<AccountDetailsPost200ResponseDataSessionsInner> sessions;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is ApiAccountDetailsPost200ResponseData &&
+  bool operator ==(Object other) => identical(this, other) || other is AccountDetailsPost200ResponseData &&
     other.created == created &&
     other.updated == updated &&
     other.email == email &&
@@ -43,7 +43,7 @@ class ApiAccountDetailsPost200ResponseData {
     (sessions.hashCode);
 
   @override
-  String toString() => 'ApiAccountDetailsPost200ResponseData[created=$created, updated=$updated, email=$email, sessions=$sessions]';
+  String toString() => 'AccountDetailsPost200ResponseData[created=$created, updated=$updated, email=$email, sessions=$sessions]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -54,10 +54,10 @@ class ApiAccountDetailsPost200ResponseData {
     return json;
   }
 
-  /// Returns a new [ApiAccountDetailsPost200ResponseData] instance and imports its values from
+  /// Returns a new [AccountDetailsPost200ResponseData] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static ApiAccountDetailsPost200ResponseData? fromJson(dynamic value) {
+  static AccountDetailsPost200ResponseData? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -66,27 +66,27 @@ class ApiAccountDetailsPost200ResponseData {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ApiAccountDetailsPost200ResponseData[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ApiAccountDetailsPost200ResponseData[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "AccountDetailsPost200ResponseData[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "AccountDetailsPost200ResponseData[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return ApiAccountDetailsPost200ResponseData(
+      return AccountDetailsPost200ResponseData(
         created: mapDateTime(json, r'created', r'')!,
         updated: mapDateTime(json, r'updated', r'')!,
         email: mapValueOfType<String>(json, r'email')!,
-        sessions: ApiAccountDetailsPost200ResponseDataSessionsInner.listFromJson(json[r'sessions']),
+        sessions: AccountDetailsPost200ResponseDataSessionsInner.listFromJson(json[r'sessions']),
       );
     }
     return null;
   }
 
-  static List<ApiAccountDetailsPost200ResponseData> listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <ApiAccountDetailsPost200ResponseData>[];
+  static List<AccountDetailsPost200ResponseData> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <AccountDetailsPost200ResponseData>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = ApiAccountDetailsPost200ResponseData.fromJson(row);
+        final value = AccountDetailsPost200ResponseData.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -95,12 +95,12 @@ class ApiAccountDetailsPost200ResponseData {
     return result.toList(growable: growable);
   }
 
-  static Map<String, ApiAccountDetailsPost200ResponseData> mapFromJson(dynamic json) {
-    final map = <String, ApiAccountDetailsPost200ResponseData>{};
+  static Map<String, AccountDetailsPost200ResponseData> mapFromJson(dynamic json) {
+    final map = <String, AccountDetailsPost200ResponseData>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = ApiAccountDetailsPost200ResponseData.fromJson(entry.value);
+        final value = AccountDetailsPost200ResponseData.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -109,14 +109,14 @@ class ApiAccountDetailsPost200ResponseData {
     return map;
   }
 
-  // maps a json object with a list of ApiAccountDetailsPost200ResponseData-objects as value to a dart map
-  static Map<String, List<ApiAccountDetailsPost200ResponseData>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<ApiAccountDetailsPost200ResponseData>>{};
+  // maps a json object with a list of AccountDetailsPost200ResponseData-objects as value to a dart map
+  static Map<String, List<AccountDetailsPost200ResponseData>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<AccountDetailsPost200ResponseData>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = ApiAccountDetailsPost200ResponseData.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = AccountDetailsPost200ResponseData.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

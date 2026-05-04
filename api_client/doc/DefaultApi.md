@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiAccountDetailsPost**](DefaultApi.md#apiaccountdetailspost) | **POST** /api/account/details | 
+[**accountDetailsPost**](DefaultApi.md#accountdetailspost) | **POST** /account/details | 
 [**authAllowedRedirectUrlsGet**](DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 [**authCreateAgainPost**](DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 [**authCreatePost**](DefaultApi.md#authcreatepost) | **POST** /auth/create | 
@@ -23,8 +23,8 @@ Method | HTTP request | Description
 [**testPost**](DefaultApi.md#testpost) | **POST** /test | 
 
 
-# **apiAccountDetailsPost**
-> ApiAccountDetailsPost200Response apiAccountDetailsPost(body)
+# **accountDetailsPost**
+> AccountDetailsPost200Response accountDetailsPost(body)
 
 
 
@@ -36,10 +36,10 @@ final api_instance = DefaultApi();
 final body = Object(); // Object | Request body
 
 try {
-    final result = api_instance.apiAccountDetailsPost(body);
+    final result = api_instance.accountDetailsPost(body);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->apiAccountDetailsPost: $e\n');
+    print('Exception when calling DefaultApi->accountDetailsPost: $e\n');
 }
 ```
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiAccountDetailsPost200Response**](ApiAccountDetailsPost200Response.md)
+[**AccountDetailsPost200Response**](AccountDetailsPost200Response.md)
 
 ### Authorization
 

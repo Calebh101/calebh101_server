@@ -16,14 +16,14 @@ class DefaultApi {
 
   final ApiClient apiClient;
 
-  /// Performs an HTTP 'POST /api/account/details' operation and returns the [Response].
+  /// Performs an HTTP 'POST /account/details' operation and returns the [Response].
   /// Parameters:
   ///
   /// * [Object] body:
   ///   Request body
-  Future<Response> apiAccountDetailsPostWithHttpInfo({ Object? body, }) async {
+  Future<Response> accountDetailsPostWithHttpInfo({ Object? body, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/api/account/details';
+    final path = r'/account/details';
 
     // ignore: prefer_final_locals
     Object? postBody = body;
@@ -50,8 +50,8 @@ class DefaultApi {
   ///
   /// * [Object] body:
   ///   Request body
-  Future<ApiAccountDetailsPost200Response?> apiAccountDetailsPost({ Object? body, }) async {
-    final response = await apiAccountDetailsPostWithHttpInfo( body: body, );
+  Future<AccountDetailsPost200Response?> accountDetailsPost({ Object? body, }) async {
+    final response = await accountDetailsPostWithHttpInfo( body: body, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -59,7 +59,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'ApiAccountDetailsPost200Response',) as ApiAccountDetailsPost200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AccountDetailsPost200Response',) as AccountDetailsPost200Response;
     
     }
     return null;

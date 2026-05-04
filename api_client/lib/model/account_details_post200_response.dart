@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class ApiAccountDetailsPost200Response {
-  /// Returns a new [ApiAccountDetailsPost200Response] instance.
-  ApiAccountDetailsPost200Response({
+class AccountDetailsPost200Response {
+  /// Returns a new [AccountDetailsPost200Response] instance.
+  AccountDetailsPost200Response({
     required this.success,
     required this.code,
     this.data,
@@ -32,14 +32,14 @@ class ApiAccountDetailsPost200Response {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  ApiAccountDetailsPost200ResponseData? data;
+  AccountDetailsPost200ResponseData? data;
 
   List<AuthCreateAgainPost200ResponseErrorsInner> errors;
 
   String message;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is ApiAccountDetailsPost200Response &&
+  bool operator ==(Object other) => identical(this, other) || other is AccountDetailsPost200Response &&
     other.success == success &&
     other.code == code &&
     other.data == data &&
@@ -56,7 +56,7 @@ class ApiAccountDetailsPost200Response {
     (message.hashCode);
 
   @override
-  String toString() => 'ApiAccountDetailsPost200Response[success=$success, code=$code, data=$data, errors=$errors, message=$message]';
+  String toString() => 'AccountDetailsPost200Response[success=$success, code=$code, data=$data, errors=$errors, message=$message]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -72,10 +72,10 @@ class ApiAccountDetailsPost200Response {
     return json;
   }
 
-  /// Returns a new [ApiAccountDetailsPost200Response] instance and imports its values from
+  /// Returns a new [AccountDetailsPost200Response] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static ApiAccountDetailsPost200Response? fromJson(dynamic value) {
+  static AccountDetailsPost200Response? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -84,16 +84,16 @@ class ApiAccountDetailsPost200Response {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ApiAccountDetailsPost200Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ApiAccountDetailsPost200Response[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "AccountDetailsPost200Response[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "AccountDetailsPost200Response[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return ApiAccountDetailsPost200Response(
+      return AccountDetailsPost200Response(
         success: mapValueOfType<bool>(json, r'success')!,
         code: mapValueOfType<int>(json, r'code')!,
-        data: ApiAccountDetailsPost200ResponseData.fromJson(json[r'data']),
+        data: AccountDetailsPost200ResponseData.fromJson(json[r'data']),
         errors: AuthCreateAgainPost200ResponseErrorsInner.listFromJson(json[r'errors']),
         message: mapValueOfType<String>(json, r'message')!,
       );
@@ -101,11 +101,11 @@ class ApiAccountDetailsPost200Response {
     return null;
   }
 
-  static List<ApiAccountDetailsPost200Response> listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <ApiAccountDetailsPost200Response>[];
+  static List<AccountDetailsPost200Response> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <AccountDetailsPost200Response>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = ApiAccountDetailsPost200Response.fromJson(row);
+        final value = AccountDetailsPost200Response.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -114,12 +114,12 @@ class ApiAccountDetailsPost200Response {
     return result.toList(growable: growable);
   }
 
-  static Map<String, ApiAccountDetailsPost200Response> mapFromJson(dynamic json) {
-    final map = <String, ApiAccountDetailsPost200Response>{};
+  static Map<String, AccountDetailsPost200Response> mapFromJson(dynamic json) {
+    final map = <String, AccountDetailsPost200Response>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = ApiAccountDetailsPost200Response.fromJson(entry.value);
+        final value = AccountDetailsPost200Response.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -128,14 +128,14 @@ class ApiAccountDetailsPost200Response {
     return map;
   }
 
-  // maps a json object with a list of ApiAccountDetailsPost200Response-objects as value to a dart map
-  static Map<String, List<ApiAccountDetailsPost200Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<ApiAccountDetailsPost200Response>>{};
+  // maps a json object with a list of AccountDetailsPost200Response-objects as value to a dart map
+  static Map<String, List<AccountDetailsPost200Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<AccountDetailsPost200Response>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = ApiAccountDetailsPost200Response.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = AccountDetailsPost200Response.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -17,8 +17,8 @@ void main() {
   // final instance = DefaultApi();
 
   group('tests for DefaultApi', () {
-    //Future<ApiAccountDetailsPost200Response> apiAccountDetailsPost({ Object body }) async
-    test('test apiAccountDetailsPost', () async {
+    //Future<AccountDetailsPost200Response> accountDetailsPost({ Object body }) async
+    test('test accountDetailsPost', () async {
       // TODO
     });
 

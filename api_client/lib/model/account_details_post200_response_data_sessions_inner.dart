@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class ApiAccountDetailsPost200ResponseDataSessionsInner {
-  /// Returns a new [ApiAccountDetailsPost200ResponseDataSessionsInner] instance.
-  ApiAccountDetailsPost200ResponseDataSessionsInner({
+class AccountDetailsPost200ResponseDataSessionsInner {
+  /// Returns a new [AccountDetailsPost200ResponseDataSessionsInner] instance.
+  AccountDetailsPost200ResponseDataSessionsInner({
     required this.id,
     required this.created,
     required this.used,
@@ -34,7 +34,7 @@ class ApiAccountDetailsPost200ResponseDataSessionsInner {
   String? userAgent;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is ApiAccountDetailsPost200ResponseDataSessionsInner &&
+  bool operator ==(Object other) => identical(this, other) || other is AccountDetailsPost200ResponseDataSessionsInner &&
     other.id == id &&
     other.created == created &&
     other.used == used &&
@@ -53,7 +53,7 @@ class ApiAccountDetailsPost200ResponseDataSessionsInner {
     (userAgent == null ? 0 : userAgent!.hashCode);
 
   @override
-  String toString() => 'ApiAccountDetailsPost200ResponseDataSessionsInner[id=$id, created=$created, used=$used, expires=$expires, ip=$ip, userAgent=$userAgent]';
+  String toString() => 'AccountDetailsPost200ResponseDataSessionsInner[id=$id, created=$created, used=$used, expires=$expires, ip=$ip, userAgent=$userAgent]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -74,10 +74,10 @@ class ApiAccountDetailsPost200ResponseDataSessionsInner {
     return json;
   }
 
-  /// Returns a new [ApiAccountDetailsPost200ResponseDataSessionsInner] instance and imports its values from
+  /// Returns a new [AccountDetailsPost200ResponseDataSessionsInner] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static ApiAccountDetailsPost200ResponseDataSessionsInner? fromJson(dynamic value) {
+  static AccountDetailsPost200ResponseDataSessionsInner? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -86,13 +86,13 @@ class ApiAccountDetailsPost200ResponseDataSessionsInner {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ApiAccountDetailsPost200ResponseDataSessionsInner[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ApiAccountDetailsPost200ResponseDataSessionsInner[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "AccountDetailsPost200ResponseDataSessionsInner[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "AccountDetailsPost200ResponseDataSessionsInner[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return ApiAccountDetailsPost200ResponseDataSessionsInner(
+      return AccountDetailsPost200ResponseDataSessionsInner(
         id: mapValueOfType<String>(json, r'id')!,
         created: mapDateTime(json, r'created', r'')!,
         used: mapDateTime(json, r'used', r'')!,
@@ -104,11 +104,11 @@ class ApiAccountDetailsPost200ResponseDataSessionsInner {
     return null;
   }
 
-  static List<ApiAccountDetailsPost200ResponseDataSessionsInner> listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <ApiAccountDetailsPost200ResponseDataSessionsInner>[];
+  static List<AccountDetailsPost200ResponseDataSessionsInner> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <AccountDetailsPost200ResponseDataSessionsInner>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = ApiAccountDetailsPost200ResponseDataSessionsInner.fromJson(row);
+        final value = AccountDetailsPost200ResponseDataSessionsInner.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -117,12 +117,12 @@ class ApiAccountDetailsPost200ResponseDataSessionsInner {
     return result.toList(growable: growable);
   }
 
-  static Map<String, ApiAccountDetailsPost200ResponseDataSessionsInner> mapFromJson(dynamic json) {
-    final map = <String, ApiAccountDetailsPost200ResponseDataSessionsInner>{};
+  static Map<String, AccountDetailsPost200ResponseDataSessionsInner> mapFromJson(dynamic json) {
+    final map = <String, AccountDetailsPost200ResponseDataSessionsInner>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = ApiAccountDetailsPost200ResponseDataSessionsInner.fromJson(entry.value);
+        final value = AccountDetailsPost200ResponseDataSessionsInner.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -131,14 +131,14 @@ class ApiAccountDetailsPost200ResponseDataSessionsInner {
     return map;
   }
 
-  // maps a json object with a list of ApiAccountDetailsPost200ResponseDataSessionsInner-objects as value to a dart map
-  static Map<String, List<ApiAccountDetailsPost200ResponseDataSessionsInner>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<ApiAccountDetailsPost200ResponseDataSessionsInner>>{};
+  // maps a json object with a list of AccountDetailsPost200ResponseDataSessionsInner-objects as value to a dart map
+  static Map<String, List<AccountDetailsPost200ResponseDataSessionsInner>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<AccountDetailsPost200ResponseDataSessionsInner>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = ApiAccountDetailsPost200ResponseDataSessionsInner.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = AccountDetailsPost200ResponseDataSessionsInner.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

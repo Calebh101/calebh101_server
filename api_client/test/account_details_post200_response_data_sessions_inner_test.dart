@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for ApiAccountDetailsPost200ResponseDataSessionsInner
+// tests for AccountDetailsPost200ResponseDataSessionsInner
 void main() {
-  // final instance = ApiAccountDetailsPost200ResponseDataSessionsInner();
+  // final instance = AccountDetailsPost200ResponseDataSessionsInner();
 
-  group('test ApiAccountDetailsPost200ResponseDataSessionsInner', () {
+  group('test AccountDetailsPost200ResponseDataSessionsInner', () {
     // String id
     test('to test the property `id`', () async {
       // TODO

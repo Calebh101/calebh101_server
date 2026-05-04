@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for ApiAccountDetailsPost200ResponseData
+// tests for AccountDetailsPost200ResponseData
 void main() {
-  // final instance = ApiAccountDetailsPost200ResponseData();
+  // final instance = AccountDetailsPost200ResponseData();
 
-  group('test ApiAccountDetailsPost200ResponseData', () {
+  group('test AccountDetailsPost200ResponseData', () {
     // DateTime created
     test('to test the property `created`', () async {
       // TODO
@@ -31,7 +31,7 @@ void main() {
       // TODO
     });
 
-    // List<ApiAccountDetailsPost200ResponseDataSessionsInner> sessions (default value: const [])
+    // List<AccountDetailsPost200ResponseDataSessionsInner> sessions (default value: const [])
     test('to test the property `sessions`', () async {
       // TODO
     });

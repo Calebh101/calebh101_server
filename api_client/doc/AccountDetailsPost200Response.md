@@ -1,4 +1,4 @@
-# openapi.model.ApiAccountDetailsPost200Response
+# openapi.model.AccountDetailsPost200Response
 
 ## Load the model package
 ```dart
@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **bool** |  | 
 **code** | **int** |  | 
-**data** | [**ApiAccountDetailsPost200ResponseData**](ApiAccountDetailsPost200ResponseData.md) |  | [optional] 
+**data** | [**AccountDetailsPost200ResponseData**](AccountDetailsPost200ResponseData.md) |  | [optional] 
 **errors** | [**List<AuthCreateAgainPost200ResponseErrorsInner>**](AuthCreateAgainPost200ResponseErrorsInner.md) |  | [default to const []]
 **message** | **String** |  | 
 

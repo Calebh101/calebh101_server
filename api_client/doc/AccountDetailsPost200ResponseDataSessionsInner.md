@@ -1,4 +1,4 @@
-# openapi.model.ApiAccountDetailsPost200ResponseDataSessionsInner
+# openapi.model.AccountDetailsPost200ResponseDataSessionsInner
 
 ## Load the model package
 ```dart
