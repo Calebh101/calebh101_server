@@ -11,12 +11,15 @@ class LoginPage extends StatefulWidget {
 
   @override
   State<LoginPage> createState() => _LoginPageState();
+
+  static final String version = "1.0.0A";
 }
 
 class _LoginPageState extends State<LoginPage> {
   bool isCreateAccountMode = false;
   bool isLoading = false;
   String? sessionId;
+  bool obscure = false;
 
   final key = GlobalKey<FormState>();
   FormState get state => key.currentState!;
@@ -78,8 +81,19 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   TextFormField(
                     controller: password,
+                    obscureText: obscure,
                     decoration: InputDecoration(
                       labelText: "Password",
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          obscure ? Icons.visibility : Icons.visibility_off,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            obscure = !obscure;
+                          });
+                        },
+                      ),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) return "Must not be empty.";
@@ -90,6 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                   if (isCreateAccountMode)
                   TextFormField(
                     controller: password2,
+                    obscureText: obscure,
                     decoration: InputDecoration(
                       labelText: "Verify Password",
                     ),
@@ -156,7 +171,9 @@ class _LoginPageState extends State<LoginPage> {
                   ElevatedButton(
                     onPressed: () async {
                       if (isLoading) return;
+                      final bool wasCreateAccountMode = isCreateAccountMode;
                       setState(() => isCreateAccountMode = true);
+                      if (wasCreateAccountMode == false) return;
                       setState(() => isLoading = true);
 
                       void end() {
@@ -233,6 +250,7 @@ class _LoginPageState extends State<LoginPage> {
                 }, child: Text("Resend Email")),
               ],
               Spacer(),
+              Text("Login v${LoginPage.version}", style: TextStyle(fontSize: 12, color: Colors.grey)),
             ],
           ),
         ),

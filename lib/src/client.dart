@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:calebh101_server/calebh101_server.dart';
-import 'package:styled_logger/styled_logger.dart';
 
 const bool explicitRatelimitHandling = false;
 
@@ -76,22 +75,22 @@ class Result<T, F> {
 /// - Needs logged in (`onNeedsLogin` will be called)
 Future<Result<T?, ApiFailureDetails<T>?>?> request<T>(Future<T?> Function() callback) async {
   try {
-    Logger.print("[calebh101_server] Requesting $T");
+    Logger.print("request<$T>", "Requesting...");
     return Result(await callback(), null);
   } on ApiException catch (e) {
     if (e.code == 401) {
-      Logger.print("[calebh101_server] Needs login");
+      Logger.print("request<$T>", "Needs login");
       onNeedsLogin?.call(e);
       return null;
     } else if (e.code == 429 && explicitRatelimitHandling) {
-      Logger.print("[calebh101_server] Too many requests (${e.code}): $e");
+      Logger.print("request<$T>", "Too many requests (${e.code}): $e");
       return Result(null, ApiFailureDetails(e: e, code: e.code, message: "Too many requests. Please try again later."));
     } else {
-      Logger.print("[calebh101_server] [code ${e.code}] $e");
+      Logger.print("request<$T>", "code=${e.code}: $e");
       return Result(null, ApiFailureDetails(e: e, code: e.code));
     }
   } catch (e) {
-    Logger.print("[calebh101_server] $e");
+    Logger.warn("request<$T>", "$e");
     return Result(null, ApiFailureDetails(e: e, code: null));
   }
 }

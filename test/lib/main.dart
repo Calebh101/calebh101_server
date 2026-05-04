@@ -13,7 +13,6 @@ final List<(String name, Widget Function(ApiClient client) widget)> pages = [
 ];
 
 void main(List<String> arguments) {
-  calebh101ServerEnableLogging();
   calebh101ServerEnableLoggingWidgets();
 
   final path = kDebugMode && !arguments.contains("--publicpath") ? Calebh101Client.localBasePath() : Calebh101Client.publicBasePath;
