@@ -3,6 +3,9 @@
 .travis.yml
 README.md
 analysis_options.yaml
+doc/ApiAccountDetailsPost200Response.md
+doc/ApiAccountDetailsPost200ResponseData.md
+doc/ApiAccountDetailsPost200ResponseDataSessionsInner.md
 doc/AuthAllowedRedirectUrlsGet200Response.md
 doc/AuthAllowedRedirectUrlsGet200ResponseDataInner.md
 doc/AuthCreateAgainPost200Response.md
@@ -34,6 +37,9 @@ lib/auth/authentication.dart
 lib/auth/http_basic_auth.dart
 lib/auth/http_bearer_auth.dart
 lib/auth/oauth.dart
+lib/model/api_account_details_post200_response.dart
+lib/model/api_account_details_post200_response_data.dart
+lib/model/api_account_details_post200_response_data_sessions_inner.dart
 lib/model/auth_allowed_redirect_urls_get200_response.dart
 lib/model/auth_allowed_redirect_urls_get200_response_data_inner.dart
 lib/model/auth_create_again_post200_response.dart
@@ -54,6 +60,9 @@ lib/model/test_post200_response.dart
 lib/model/test_post200_response_data.dart
 lib/model/test_post_request.dart
 pubspec.yaml
+test/api_account_details_post200_response_data_sessions_inner_test.dart
+test/api_account_details_post200_response_data_test.dart
+test/api_account_details_post200_response_test.dart
 test/auth_allowed_redirect_urls_get200_response_data_inner_test.dart
 test/auth_allowed_redirect_urls_get200_response_test.dart
 test/auth_create_again_post200_response_data_test.dart

@@ -182,6 +182,12 @@ class ApiClient {
           return valueString == 'true' || valueString == '1';
         case 'DateTime':
           return value is DateTime ? value : DateTime.tryParse(value);
+        case 'ApiAccountDetailsPost200Response':
+          return ApiAccountDetailsPost200Response.fromJson(value);
+        case 'ApiAccountDetailsPost200ResponseData':
+          return ApiAccountDetailsPost200ResponseData.fromJson(value);
+        case 'ApiAccountDetailsPost200ResponseDataSessionsInner':
+          return ApiAccountDetailsPost200ResponseDataSessionsInner.fromJson(value);
         case 'AuthAllowedRedirectUrlsGet200Response':
           return AuthAllowedRedirectUrlsGet200Response.fromJson(value);
         case 'AuthAllowedRedirectUrlsGet200ResponseDataInner':

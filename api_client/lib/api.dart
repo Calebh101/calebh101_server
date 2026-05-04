@@ -30,6 +30,9 @@ part 'auth/http_bearer_auth.dart';
 
 part 'api/default_api.dart';
 
+part 'model/api_account_details_post200_response.dart';
+part 'model/api_account_details_post200_response_data.dart';
+part 'model/api_account_details_post200_response_data_sessions_inner.dart';
 part 'model/auth_allowed_redirect_urls_get200_response.dart';
 part 'model/auth_allowed_redirect_urls_get200_response_data_inner.dart';
 part 'model/auth_create_again_post200_response.dart';

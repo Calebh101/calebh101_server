@@ -9,6 +9,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**apiAccountDetailsPost**](DefaultApi.md#apiaccountdetailspost) | **POST** /api/account/details | 
 [**authAllowedRedirectUrlsGet**](DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 [**authCreateAgainPost**](DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 [**authCreatePost**](DefaultApi.md#authcreatepost) | **POST** /auth/create | 
@@ -21,6 +22,47 @@ Method | HTTP request | Description
 [**ghFirstSecondGet**](DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 [**testPost**](DefaultApi.md#testpost) | **POST** /test | 
 
+
+# **apiAccountDetailsPost**
+> ApiAccountDetailsPost200Response apiAccountDetailsPost(body)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final body = Object(); // Object | Request body
+
+try {
+    final result = api_instance.apiAccountDetailsPost(body);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->apiAccountDetailsPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **Object**| Request body | [optional] 
+
+### Return type
+
+[**ApiAccountDetailsPost200Response**](ApiAccountDetailsPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **authAllowedRedirectUrlsGet**
 > AuthAllowedRedirectUrlsGet200Response authAllowedRedirectUrlsGet()

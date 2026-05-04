@@ -17,6 +17,11 @@ void main() {
   // final instance = DefaultApi();
 
   group('tests for DefaultApi', () {
+    //Future<ApiAccountDetailsPost200Response> apiAccountDetailsPost({ Object body }) async
+    test('test apiAccountDetailsPost', () async {
+      // TODO
+    });
+
     //Future<AuthAllowedRedirectUrlsGet200Response> authAllowedRedirectUrlsGet() async
     test('test authAllowedRedirectUrlsGet', () async {
       // TODO

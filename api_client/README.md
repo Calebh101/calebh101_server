@@ -42,12 +42,13 @@ import 'package:openapi/api.dart';
 
 
 final api_instance = DefaultApi();
+final body = Object(); // Object | Request body
 
 try {
-    final result = api_instance.authAllowedRedirectUrlsGet();
+    final result = api_instance.apiAccountDetailsPost(body);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->authAllowedRedirectUrlsGet: $e\n');
+    print('Exception when calling DefaultApi->apiAccountDetailsPost: $e\n');
 }
 
 ```
@@ -58,6 +59,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DefaultApi* | [**apiAccountDetailsPost**](doc//DefaultApi.md#apiaccountdetailspost) | **POST** /api/account/details | 
 *DefaultApi* | [**authAllowedRedirectUrlsGet**](doc//DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 *DefaultApi* | [**authCreateAgainPost**](doc//DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 *DefaultApi* | [**authCreatePost**](doc//DefaultApi.md#authcreatepost) | **POST** /auth/create | 
@@ -73,6 +75,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [ApiAccountDetailsPost200Response](doc//ApiAccountDetailsPost200Response.md)
+ - [ApiAccountDetailsPost200ResponseData](doc//ApiAccountDetailsPost200ResponseData.md)
+ - [ApiAccountDetailsPost200ResponseDataSessionsInner](doc//ApiAccountDetailsPost200ResponseDataSessionsInner.md)
  - [AuthAllowedRedirectUrlsGet200Response](doc//AuthAllowedRedirectUrlsGet200Response.md)
  - [AuthAllowedRedirectUrlsGet200ResponseDataInner](doc//AuthAllowedRedirectUrlsGet200ResponseDataInner.md)
  - [AuthCreateAgainPost200Response](doc//AuthCreateAgainPost200Response.md)
