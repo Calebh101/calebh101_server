@@ -76,6 +76,7 @@ class Result<T, F> {
 /// - Needs logged in (`onNeedsLogin` will be called)
 Future<Result<T?, ApiFailureDetails<T>?>?> request<T>(Future<T?> Function() callback) async {
   try {
+    Logger.print("[calebh101_server] Requesting $T");
     return Result(await callback(), null);
   } on ApiException catch (e) {
     if (e.code == 401) {

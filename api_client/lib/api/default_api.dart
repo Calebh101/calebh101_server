@@ -384,17 +384,99 @@ class DefaultApi {
     return null;
   }
 
+  /// Performs an HTTP 'GET /gh/:first' operation and returns the [Response].
+  Future<Response> ghFirstGetWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/gh/:first';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  Future<String?> ghFirstGet() async {
+    final response = await ghFirstGetWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'String',) as String;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'GET /gh/:first/:second' operation and returns the [Response].
+  Future<Response> ghFirstSecondGetWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/gh/:first/:second';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  Future<String?> ghFirstSecondGet() async {
+    final response = await ghFirstSecondGetWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'String',) as String;
+    
+    }
+    return null;
+  }
+
   /// Performs an HTTP 'POST /test' operation and returns the [Response].
   /// Parameters:
   ///
-  /// * [PostTestRequest] postTestRequest:
+  /// * [TestPostRequest] testPostRequest:
   ///   Request body
-  Future<Response> postTestWithHttpInfo({ PostTestRequest? postTestRequest, }) async {
+  Future<Response> testPostWithHttpInfo({ TestPostRequest? testPostRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/test';
 
     // ignore: prefer_final_locals
-    Object? postBody = postTestRequest;
+    Object? postBody = testPostRequest;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -416,10 +498,10 @@ class DefaultApi {
 
   /// Parameters:
   ///
-  /// * [PostTestRequest] postTestRequest:
+  /// * [TestPostRequest] testPostRequest:
   ///   Request body
-  Future<PostTest200Response?> postTest({ PostTestRequest? postTestRequest, }) async {
-    final response = await postTestWithHttpInfo( postTestRequest: postTestRequest, );
+  Future<TestPost200Response?> testPost({ TestPostRequest? testPostRequest, }) async {
+    final response = await testPostWithHttpInfo( testPostRequest: testPostRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -427,7 +509,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostTest200Response',) as PostTest200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'TestPost200Response',) as TestPost200Response;
     
     }
     return null;

@@ -11,13 +11,13 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for PostTestRequest
+// tests for TestPost200ResponseData
 void main() {
-  // final instance = PostTestRequest();
+  // final instance = TestPost200ResponseData();
 
-  group('test PostTestRequest', () {
-    // bool input
-    test('to test the property `input`', () async {
+  group('test TestPost200ResponseData', () {
+    // bool userInput
+    test('to test the property `userInput`', () async {
       // TODO
     });
 

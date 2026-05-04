@@ -214,12 +214,12 @@ class ApiClient {
           return GetStatus200Response.fromJson(value);
         case 'GetStatus200ResponseData':
           return GetStatus200ResponseData.fromJson(value);
-        case 'PostTest200Response':
-          return PostTest200Response.fromJson(value);
-        case 'PostTest200ResponseData':
-          return PostTest200ResponseData.fromJson(value);
-        case 'PostTestRequest':
-          return PostTestRequest.fromJson(value);
+        case 'TestPost200Response':
+          return TestPost200Response.fromJson(value);
+        case 'TestPost200ResponseData':
+          return TestPost200ResponseData.fromJson(value);
+        case 'TestPostRequest':
+          return TestPostRequest.fromJson(value);
         default:
           dynamic match;
           if (value is List && (match = _regList.firstMatch(targetType)?.group(1)) != null) {

@@ -10,36 +10,36 @@
 
 part of openapi.api;
 
-class PostTestRequest {
-  /// Returns a new [PostTestRequest] instance.
-  PostTestRequest({
-    required this.input,
+class TestPost200ResponseData {
+  /// Returns a new [TestPost200ResponseData] instance.
+  TestPost200ResponseData({
+    required this.userInput,
   });
 
-  bool input;
+  bool userInput;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is PostTestRequest &&
-    other.input == input;
+  bool operator ==(Object other) => identical(this, other) || other is TestPost200ResponseData &&
+    other.userInput == userInput;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (input.hashCode);
+    (userInput.hashCode);
 
   @override
-  String toString() => 'PostTestRequest[input=$input]';
+  String toString() => 'TestPost200ResponseData[userInput=$userInput]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'input'] = this.input;
+      json[r'userInput'] = this.userInput;
     return json;
   }
 
-  /// Returns a new [PostTestRequest] instance and imports its values from
+  /// Returns a new [TestPost200ResponseData] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static PostTestRequest? fromJson(dynamic value) {
+  static TestPost200ResponseData? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -48,24 +48,24 @@ class PostTestRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PostTestRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PostTestRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "TestPost200ResponseData[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "TestPost200ResponseData[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return PostTestRequest(
-        input: mapValueOfType<bool>(json, r'input')!,
+      return TestPost200ResponseData(
+        userInput: mapValueOfType<bool>(json, r'userInput')!,
       );
     }
     return null;
   }
 
-  static List<PostTestRequest> listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <PostTestRequest>[];
+  static List<TestPost200ResponseData> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <TestPost200ResponseData>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = PostTestRequest.fromJson(row);
+        final value = TestPost200ResponseData.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -74,12 +74,12 @@ class PostTestRequest {
     return result.toList(growable: growable);
   }
 
-  static Map<String, PostTestRequest> mapFromJson(dynamic json) {
-    final map = <String, PostTestRequest>{};
+  static Map<String, TestPost200ResponseData> mapFromJson(dynamic json) {
+    final map = <String, TestPost200ResponseData>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = PostTestRequest.fromJson(entry.value);
+        final value = TestPost200ResponseData.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -88,14 +88,14 @@ class PostTestRequest {
     return map;
   }
 
-  // maps a json object with a list of PostTestRequest-objects as value to a dart map
-  static Map<String, List<PostTestRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<PostTestRequest>>{};
+  // maps a json object with a list of TestPost200ResponseData-objects as value to a dart map
+  static Map<String, List<TestPost200ResponseData>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<TestPost200ResponseData>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostTestRequest.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = TestPost200ResponseData.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -103,7 +103,7 @@ class PostTestRequest {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'input',
+    'userInput',
   };
 }
 

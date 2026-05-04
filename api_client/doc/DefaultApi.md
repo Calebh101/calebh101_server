@@ -17,7 +17,9 @@ Method | HTTP request | Description
 [**authVerifyUserPost**](DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
 [**getOpenAPI**](DefaultApi.md#getopenapi) | **GET** /openapi/json | 
 [**getStatus**](DefaultApi.md#getstatus) | **GET** /status | 
-[**postTest**](DefaultApi.md#posttest) | **POST** /test | 
+[**ghFirstGet**](DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
+[**ghFirstSecondGet**](DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
+[**testPost**](DefaultApi.md#testpost) | **POST** /test | 
 
 
 # **authAllowedRedirectUrlsGet**
@@ -336,8 +338,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **postTest**
-> PostTest200Response postTest(postTestRequest)
+# **ghFirstGet**
+> String ghFirstGet()
 
 
 
@@ -346,13 +348,87 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final postTestRequest = PostTestRequest(); // PostTestRequest | Request body
 
 try {
-    final result = api_instance.postTest(postTestRequest);
+    final result = api_instance.ghFirstGet();
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->postTest: $e\n');
+    print('Exception when calling DefaultApi->ghFirstGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ghFirstSecondGet**
+> String ghFirstSecondGet()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+try {
+    final result = api_instance.ghFirstSecondGet();
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->ghFirstSecondGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **testPost**
+> TestPost200Response testPost(testPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final testPostRequest = TestPostRequest(); // TestPostRequest | Request body
+
+try {
+    final result = api_instance.testPost(testPostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->testPost: $e\n');
 }
 ```
 
@@ -360,11 +436,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postTestRequest** | [**PostTestRequest**](PostTestRequest.md)| Request body | [optional] 
+ **testPostRequest** | [**TestPostRequest**](TestPostRequest.md)| Request body | [optional] 
 
 ### Return type
 
-[**PostTest200Response**](PostTest200Response.md)
+[**TestPost200Response**](TestPost200Response.md)
 
 ### Authorization
 

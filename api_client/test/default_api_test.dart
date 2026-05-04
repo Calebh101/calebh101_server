@@ -57,8 +57,18 @@ void main() {
       // TODO
     });
 
-    //Future<PostTest200Response> postTest({ PostTestRequest postTestRequest }) async
-    test('test postTest', () async {
+    //Future<String> ghFirstGet() async
+    test('test ghFirstGet', () async {
+      // TODO
+    });
+
+    //Future<String> ghFirstSecondGet() async
+    test('test ghFirstSecondGet', () async {
+      // TODO
+    });
+
+    //Future<TestPost200Response> testPost({ TestPostRequest testPostRequest }) async
+    test('test testPost', () async {
       // TODO
     });
 

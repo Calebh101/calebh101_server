@@ -15,7 +15,10 @@ final List<(String name, Widget Function(ApiClient client) widget)> pages = [
 void main(List<String> arguments) {
   calebh101ServerEnableLogging();
   calebh101ServerEnableLoggingWidgets();
-  client = Calebh101Client.setup(kDebugMode && !arguments.contains("--publicpath") ? Calebh101Client.localBasePath() : Calebh101Client.publicBasePath);
+
+  final path = kDebugMode && !arguments.contains("--publicpath") ? Calebh101Client.localBasePath() : Calebh101Client.publicBasePath;
+  print("Using path: $path");
+  client = Calebh101Client.setup(path);
   runApp(const MyApp());
 }
 

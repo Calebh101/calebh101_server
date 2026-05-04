@@ -135,6 +135,8 @@ class AuthCreateAgainPost200ResponseErrorsInnerCodeEnum {
   static const userExists = AuthCreateAgainPost200ResponseErrorsInnerCodeEnum._(r'UserExists');
   static const alreadyVerified = AuthCreateAgainPost200ResponseErrorsInnerCodeEnum._(r'AlreadyVerified');
   static const alreadyBlocked = AuthCreateAgainPost200ResponseErrorsInnerCodeEnum._(r'AlreadyBlocked');
+  static const invalidAuthentication = AuthCreateAgainPost200ResponseErrorsInnerCodeEnum._(r'InvalidAuthentication');
+  static const tooManyRequests = AuthCreateAgainPost200ResponseErrorsInnerCodeEnum._(r'TooManyRequests');
 
   /// List of all possible values in this [enum][AuthCreateAgainPost200ResponseErrorsInnerCodeEnum].
   static const values = <AuthCreateAgainPost200ResponseErrorsInnerCodeEnum>[
@@ -145,6 +147,8 @@ class AuthCreateAgainPost200ResponseErrorsInnerCodeEnum {
     userExists,
     alreadyVerified,
     alreadyBlocked,
+    invalidAuthentication,
+    tooManyRequests,
   ];
 
   static AuthCreateAgainPost200ResponseErrorsInnerCodeEnum? fromJson(dynamic value) => AuthCreateAgainPost200ResponseErrorsInnerCodeEnumTypeTransformer().decode(value);
@@ -190,6 +194,8 @@ class AuthCreateAgainPost200ResponseErrorsInnerCodeEnumTypeTransformer {
         case r'UserExists': return AuthCreateAgainPost200ResponseErrorsInnerCodeEnum.userExists;
         case r'AlreadyVerified': return AuthCreateAgainPost200ResponseErrorsInnerCodeEnum.alreadyVerified;
         case r'AlreadyBlocked': return AuthCreateAgainPost200ResponseErrorsInnerCodeEnum.alreadyBlocked;
+        case r'InvalidAuthentication': return AuthCreateAgainPost200ResponseErrorsInnerCodeEnum.invalidAuthentication;
+        case r'TooManyRequests': return AuthCreateAgainPost200ResponseErrorsInnerCodeEnum.tooManyRequests;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

@@ -46,9 +46,9 @@ part 'model/auth_verify_session_post_request.dart';
 part 'model/auth_verify_user_post_request.dart';
 part 'model/get_status200_response.dart';
 part 'model/get_status200_response_data.dart';
-part 'model/post_test200_response.dart';
-part 'model/post_test200_response_data.dart';
-part 'model/post_test_request.dart';
+part 'model/test_post200_response.dart';
+part 'model/test_post200_response_data.dart';
+part 'model/test_post_request.dart';
 
 
 /// An [ApiClient] instance that uses the default values obtained from
