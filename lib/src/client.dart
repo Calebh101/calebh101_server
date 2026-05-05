@@ -8,7 +8,7 @@ void Function(ApiException e)? onNeedsLogin;
 
 class Calebh101Client {
   static String publicBasePath({String? subdomain = "api"}) => "https://${[?subdomain, "calebh101", "net"].join(".")}";
-  static String localBasePath({int port = 9001, String protocol = "http", String basePath = "", String? subdomain = "api"}) => "$protocol://${[?subdomain, "localhost"].join(".")}:$port$basePath";
+  static String localBasePath({int port = 9001, String protocol = "http", String basePath = "/api", String? subdomain}) => "$protocol://${[?subdomain, "localhost"].join(".")}:$port$basePath";
 
   /// Set up a new [ApiClient].
   ///
