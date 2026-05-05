@@ -64,6 +64,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**authCreateAgainPost**](doc//DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 *DefaultApi* | [**authCreatePost**](doc//DefaultApi.md#authcreatepost) | **POST** /auth/create | 
 *DefaultApi* | [**authLoginPost**](doc//DefaultApi.md#authloginpost) | **POST** /auth/login | 
+*DefaultApi* | [**authSessionDelete**](doc//DefaultApi.md#authsessiondelete) | **DELETE** /auth/session | 
 *DefaultApi* | [**authVerifySessionPost**](doc//DefaultApi.md#authverifysessionpost) | **POST** /auth/verify/session | 
 *DefaultApi* | [**authVerifyUserPost**](doc//DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
 *DefaultApi* | [**getOpenAPI**](doc//DefaultApi.md#getopenapi) | **GET** /openapi/json | 
@@ -89,6 +90,7 @@ Class | Method | HTTP request | Description
  - [AuthCreatePostRequest](doc//AuthCreatePostRequest.md)
  - [AuthLoginPost200Response](doc//AuthLoginPost200Response.md)
  - [AuthLoginPost200ResponseData](doc//AuthLoginPost200ResponseData.md)
+ - [AuthSessionDeleteRequest](doc//AuthSessionDeleteRequest.md)
  - [AuthVerifySessionPost200Response](doc//AuthVerifySessionPost200Response.md)
  - [AuthVerifySessionPostRequest](doc//AuthVerifySessionPostRequest.md)
  - [AuthVerifyUserPostRequest](doc//AuthVerifyUserPostRequest.md)

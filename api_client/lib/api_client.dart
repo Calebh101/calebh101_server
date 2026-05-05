@@ -210,6 +210,8 @@ class ApiClient {
           return AuthLoginPost200Response.fromJson(value);
         case 'AuthLoginPost200ResponseData':
           return AuthLoginPost200ResponseData.fromJson(value);
+        case 'AuthSessionDeleteRequest':
+          return AuthSessionDeleteRequest.fromJson(value);
         case 'AuthVerifySessionPost200Response':
           return AuthVerifySessionPost200Response.fromJson(value);
         case 'AuthVerifySessionPostRequest':

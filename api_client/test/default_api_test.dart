@@ -42,6 +42,11 @@ void main() {
       // TODO
     });
 
+    //Future<AuthVerifySessionPost200Response> authSessionDelete({ AuthSessionDeleteRequest authSessionDeleteRequest }) async
+    test('test authSessionDelete', () async {
+      // TODO
+    });
+
     //Future<AuthVerifySessionPost200Response> authVerifySessionPost({ AuthVerifySessionPostRequest authVerifySessionPostRequest }) async
     test('test authVerifySessionPost', () async {
       // TODO

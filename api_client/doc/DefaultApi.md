@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**authCreateAgainPost**](DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 [**authCreatePost**](DefaultApi.md#authcreatepost) | **POST** /auth/create | 
 [**authLoginPost**](DefaultApi.md#authloginpost) | **POST** /auth/login | 
+[**authSessionDelete**](DefaultApi.md#authsessiondelete) | **DELETE** /auth/session | 
 [**authVerifySessionPost**](DefaultApi.md#authverifysessionpost) | **POST** /auth/verify/session | 
 [**authVerifyUserPost**](DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
 [**getOpenAPI**](DefaultApi.md#getopenapi) | **GET** /openapi/json | 
@@ -212,6 +213,47 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AuthLoginPost200Response**](AuthLoginPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **authSessionDelete**
+> AuthVerifySessionPost200Response authSessionDelete(authSessionDeleteRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final authSessionDeleteRequest = AuthSessionDeleteRequest(); // AuthSessionDeleteRequest | Request body
+
+try {
+    final result = api_instance.authSessionDelete(authSessionDeleteRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->authSessionDelete: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authSessionDeleteRequest** | [**AuthSessionDeleteRequest**](AuthSessionDeleteRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
 
 ### Authorization
 

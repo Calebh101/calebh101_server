@@ -44,6 +44,7 @@ part 'model/auth_create_post200_response_data.dart';
 part 'model/auth_create_post_request.dart';
 part 'model/auth_login_post200_response.dart';
 part 'model/auth_login_post200_response_data.dart';
+part 'model/auth_session_delete_request.dart';
 part 'model/auth_verify_session_post200_response.dart';
 part 'model/auth_verify_session_post_request.dart';
 part 'model/auth_verify_user_post_request.dart';
