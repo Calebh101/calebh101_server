@@ -1,5 +1,5 @@
 import 'package:calebh101_server/calebh101_server.dart';
-import 'package:calebh101_server_widgets/calebh101_server_widgets.dart';
+import 'package:calebh101_server_flutter/calebh101_server_flutter.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 

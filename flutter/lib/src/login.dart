@@ -1,5 +1,5 @@
 import 'package:calebh101_server/calebh101_server.dart';
-import 'package:calebh101_server_widgets/src/main.dart';
+import 'package:calebh101_server_flutter/src/main.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:validators/validators.dart';

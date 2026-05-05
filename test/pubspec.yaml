@@ -31,11 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  calebh101_server:
-    path: ..
-
-  calebh101_server_widgets:
-    path: ../widgets
+  calebh101_server_flutter:
+    path: ../flutter
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

@@ -13,6 +13,16 @@ dependencies:
       ref: main
 ```
 
+Or, for Flutter:
+```yaml
+dependencies:
+  calebh101_server_flutter:
+    git:
+      url: https://github.com/Calebh101/calebh101_server
+      ref: main
+      path: flutter
+```
+
 # Tools
 
 ```
