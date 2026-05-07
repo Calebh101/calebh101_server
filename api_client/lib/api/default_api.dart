@@ -65,6 +65,251 @@ class DefaultApi {
     return null;
   }
 
+  /// Performs an HTTP 'POST /account/email/change' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [Object] body:
+  ///   Request body
+  Future<Response> accountEmailChangePostWithHttpInfo({ Object? body, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/account/email/change';
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [Object] body:
+  ///   Request body
+  Future<AuthVerifySessionPost200Response?> accountEmailChangePost({ Object? body, }) async {
+    final response = await accountEmailChangePostWithHttpInfo( body: body, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'POST /account/email/change/verify/new' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AccountEmailChangeVerifyNewPostRequest] accountEmailChangeVerifyNewPostRequest:
+  ///   Request body
+  Future<Response> accountEmailChangeVerifyNewPostWithHttpInfo({ AccountEmailChangeVerifyNewPostRequest? accountEmailChangeVerifyNewPostRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/account/email/change/verify/new';
+
+    // ignore: prefer_final_locals
+    Object? postBody = accountEmailChangeVerifyNewPostRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [AccountEmailChangeVerifyNewPostRequest] accountEmailChangeVerifyNewPostRequest:
+  ///   Request body
+  Future<AuthVerifySessionPost200Response?> accountEmailChangeVerifyNewPost({ AccountEmailChangeVerifyNewPostRequest? accountEmailChangeVerifyNewPostRequest, }) async {
+    final response = await accountEmailChangeVerifyNewPostWithHttpInfo( accountEmailChangeVerifyNewPostRequest: accountEmailChangeVerifyNewPostRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'POST /account/email/change/verify/old' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AccountEmailChangeVerifyOldPostRequest] accountEmailChangeVerifyOldPostRequest:
+  ///   Request body
+  Future<Response> accountEmailChangeVerifyOldPostWithHttpInfo({ AccountEmailChangeVerifyOldPostRequest? accountEmailChangeVerifyOldPostRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/account/email/change/verify/old';
+
+    // ignore: prefer_final_locals
+    Object? postBody = accountEmailChangeVerifyOldPostRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [AccountEmailChangeVerifyOldPostRequest] accountEmailChangeVerifyOldPostRequest:
+  ///   Request body
+  Future<AuthVerifySessionPost200Response?> accountEmailChangeVerifyOldPost({ AccountEmailChangeVerifyOldPostRequest? accountEmailChangeVerifyOldPostRequest, }) async {
+    final response = await accountEmailChangeVerifyOldPostWithHttpInfo( accountEmailChangeVerifyOldPostRequest: accountEmailChangeVerifyOldPostRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'PUT /account/password' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AccountPasswordPutRequest] accountPasswordPutRequest:
+  ///   Request body
+  Future<Response> accountPasswordPutWithHttpInfo({ AccountPasswordPutRequest? accountPasswordPutRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/account/password';
+
+    // ignore: prefer_final_locals
+    Object? postBody = accountPasswordPutRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [AccountPasswordPutRequest] accountPasswordPutRequest:
+  ///   Request body
+  Future<AuthVerifySessionPost200Response?> accountPasswordPut({ AccountPasswordPutRequest? accountPasswordPutRequest, }) async {
+    final response = await accountPasswordPutWithHttpInfo( accountPasswordPutRequest: accountPasswordPutRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'DELETE /account/session' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
+  ///   Request body
+  Future<Response> accountSessionDeleteWithHttpInfo({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/account/session';
+
+    // ignore: prefer_final_locals
+    Object? postBody = accountSessionDeleteRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'DELETE',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
+  ///   Request body
+  Future<AuthVerifySessionPost200Response?> accountSessionDelete({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+    final response = await accountSessionDeleteWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+    
+    }
+    return null;
+  }
+
   /// Performs an HTTP 'GET /auth/allowedRedirectUrls' operation and returns the [Response].
   Future<Response> authAllowedRedirectUrlsGetWithHttpInfo() async {
     // ignore: prefer_const_declarations
@@ -248,55 +493,6 @@ class DefaultApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthLoginPost200Response',) as AuthLoginPost200Response;
-    
-    }
-    return null;
-  }
-
-  /// Performs an HTTP 'DELETE /auth/session' operation and returns the [Response].
-  /// Parameters:
-  ///
-  /// * [AuthSessionDeleteRequest] authSessionDeleteRequest:
-  ///   Request body
-  Future<Response> authSessionDeleteWithHttpInfo({ AuthSessionDeleteRequest? authSessionDeleteRequest, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/auth/session';
-
-    // ignore: prefer_final_locals
-    Object? postBody = authSessionDeleteRequest;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'DELETE',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Parameters:
-  ///
-  /// * [AuthSessionDeleteRequest] authSessionDeleteRequest:
-  ///   Request body
-  Future<AuthVerifySessionPost200Response?> authSessionDelete({ AuthSessionDeleteRequest? authSessionDeleteRequest, }) async {
-    final response = await authSessionDeleteWithHttpInfo( authSessionDeleteRequest: authSessionDeleteRequest, );
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
     
     }
     return null;

@@ -10,16 +10,16 @@
 
 part of openapi.api;
 
-class AuthSessionDeleteRequest {
-  /// Returns a new [AuthSessionDeleteRequest] instance.
-  AuthSessionDeleteRequest({
+class AccountSessionDeleteRequest {
+  /// Returns a new [AccountSessionDeleteRequest] instance.
+  AccountSessionDeleteRequest({
     required this.id,
   });
 
   String id;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is AuthSessionDeleteRequest &&
+  bool operator ==(Object other) => identical(this, other) || other is AccountSessionDeleteRequest &&
     other.id == id;
 
   @override
@@ -28,7 +28,7 @@ class AuthSessionDeleteRequest {
     (id.hashCode);
 
   @override
-  String toString() => 'AuthSessionDeleteRequest[id=$id]';
+  String toString() => 'AccountSessionDeleteRequest[id=$id]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -36,10 +36,10 @@ class AuthSessionDeleteRequest {
     return json;
   }
 
-  /// Returns a new [AuthSessionDeleteRequest] instance and imports its values from
+  /// Returns a new [AccountSessionDeleteRequest] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static AuthSessionDeleteRequest? fromJson(dynamic value) {
+  static AccountSessionDeleteRequest? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -48,24 +48,24 @@ class AuthSessionDeleteRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AuthSessionDeleteRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AuthSessionDeleteRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "AccountSessionDeleteRequest[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "AccountSessionDeleteRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return AuthSessionDeleteRequest(
+      return AccountSessionDeleteRequest(
         id: mapValueOfType<String>(json, r'id')!,
       );
     }
     return null;
   }
 
-  static List<AuthSessionDeleteRequest> listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <AuthSessionDeleteRequest>[];
+  static List<AccountSessionDeleteRequest> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <AccountSessionDeleteRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = AuthSessionDeleteRequest.fromJson(row);
+        final value = AccountSessionDeleteRequest.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -74,12 +74,12 @@ class AuthSessionDeleteRequest {
     return result.toList(growable: growable);
   }
 
-  static Map<String, AuthSessionDeleteRequest> mapFromJson(dynamic json) {
-    final map = <String, AuthSessionDeleteRequest>{};
+  static Map<String, AccountSessionDeleteRequest> mapFromJson(dynamic json) {
+    final map = <String, AccountSessionDeleteRequest>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = AuthSessionDeleteRequest.fromJson(entry.value);
+        final value = AccountSessionDeleteRequest.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -88,14 +88,14 @@ class AuthSessionDeleteRequest {
     return map;
   }
 
-  // maps a json object with a list of AuthSessionDeleteRequest-objects as value to a dart map
-  static Map<String, List<AuthSessionDeleteRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<AuthSessionDeleteRequest>>{};
+  // maps a json object with a list of AccountSessionDeleteRequest-objects as value to a dart map
+  static Map<String, List<AccountSessionDeleteRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<AccountSessionDeleteRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = AuthSessionDeleteRequest.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = AccountSessionDeleteRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

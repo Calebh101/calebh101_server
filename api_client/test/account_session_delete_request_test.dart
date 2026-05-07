@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for AuthSessionDeleteRequest
+// tests for AccountSessionDeleteRequest
 void main() {
-  // final instance = AuthSessionDeleteRequest();
+  // final instance = AccountSessionDeleteRequest();
 
-  group('test AuthSessionDeleteRequest', () {
+  group('test AccountSessionDeleteRequest', () {
     // String id
     test('to test the property `id`', () async {
       // TODO

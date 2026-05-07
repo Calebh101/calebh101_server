@@ -10,11 +10,15 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**accountDetailsPost**](DefaultApi.md#accountdetailspost) | **POST** /account/details | 
+[**accountEmailChangePost**](DefaultApi.md#accountemailchangepost) | **POST** /account/email/change | 
+[**accountEmailChangeVerifyNewPost**](DefaultApi.md#accountemailchangeverifynewpost) | **POST** /account/email/change/verify/new | 
+[**accountEmailChangeVerifyOldPost**](DefaultApi.md#accountemailchangeverifyoldpost) | **POST** /account/email/change/verify/old | 
+[**accountPasswordPut**](DefaultApi.md#accountpasswordput) | **PUT** /account/password | 
+[**accountSessionDelete**](DefaultApi.md#accountsessiondelete) | **DELETE** /account/session | 
 [**authAllowedRedirectUrlsGet**](DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 [**authCreateAgainPost**](DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 [**authCreatePost**](DefaultApi.md#authcreatepost) | **POST** /auth/create | 
 [**authLoginPost**](DefaultApi.md#authloginpost) | **POST** /auth/login | 
-[**authSessionDelete**](DefaultApi.md#authsessiondelete) | **DELETE** /auth/session | 
 [**authVerifySessionPost**](DefaultApi.md#authverifysessionpost) | **POST** /auth/verify/session | 
 [**authVerifyUserPost**](DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
 [**getOpenAPI**](DefaultApi.md#getopenapi) | **GET** /openapi/json | 
@@ -53,6 +57,211 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AccountDetailsPost200Response**](AccountDetailsPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **accountEmailChangePost**
+> AuthVerifySessionPost200Response accountEmailChangePost(body)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final body = Object(); // Object | Request body
+
+try {
+    final result = api_instance.accountEmailChangePost(body);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->accountEmailChangePost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **Object**| Request body | [optional] 
+
+### Return type
+
+[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **accountEmailChangeVerifyNewPost**
+> AuthVerifySessionPost200Response accountEmailChangeVerifyNewPost(accountEmailChangeVerifyNewPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountEmailChangeVerifyNewPostRequest = AccountEmailChangeVerifyNewPostRequest(); // AccountEmailChangeVerifyNewPostRequest | Request body
+
+try {
+    final result = api_instance.accountEmailChangeVerifyNewPost(accountEmailChangeVerifyNewPostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->accountEmailChangeVerifyNewPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountEmailChangeVerifyNewPostRequest** | [**AccountEmailChangeVerifyNewPostRequest**](AccountEmailChangeVerifyNewPostRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **accountEmailChangeVerifyOldPost**
+> AuthVerifySessionPost200Response accountEmailChangeVerifyOldPost(accountEmailChangeVerifyOldPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountEmailChangeVerifyOldPostRequest = AccountEmailChangeVerifyOldPostRequest(); // AccountEmailChangeVerifyOldPostRequest | Request body
+
+try {
+    final result = api_instance.accountEmailChangeVerifyOldPost(accountEmailChangeVerifyOldPostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->accountEmailChangeVerifyOldPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountEmailChangeVerifyOldPostRequest** | [**AccountEmailChangeVerifyOldPostRequest**](AccountEmailChangeVerifyOldPostRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **accountPasswordPut**
+> AuthVerifySessionPost200Response accountPasswordPut(accountPasswordPutRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountPasswordPutRequest = AccountPasswordPutRequest(); // AccountPasswordPutRequest | Request body
+
+try {
+    final result = api_instance.accountPasswordPut(accountPasswordPutRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->accountPasswordPut: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountPasswordPutRequest** | [**AccountPasswordPutRequest**](AccountPasswordPutRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **accountSessionDelete**
+> AuthVerifySessionPost200Response accountSessionDelete(accountSessionDeleteRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountSessionDeleteRequest = AccountSessionDeleteRequest(); // AccountSessionDeleteRequest | Request body
+
+try {
+    final result = api_instance.accountSessionDelete(accountSessionDeleteRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->accountSessionDelete: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountSessionDeleteRequest** | [**AccountSessionDeleteRequest**](AccountSessionDeleteRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
 
 ### Authorization
 
@@ -213,47 +422,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AuthLoginPost200Response**](AuthLoginPost200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **authSessionDelete**
-> AuthVerifySessionPost200Response authSessionDelete(authSessionDeleteRequest)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = DefaultApi();
-final authSessionDeleteRequest = AuthSessionDeleteRequest(); // AuthSessionDeleteRequest | Request body
-
-try {
-    final result = api_instance.authSessionDelete(authSessionDeleteRequest);
-    print(result);
-} catch (e) {
-    print('Exception when calling DefaultApi->authSessionDelete: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authSessionDeleteRequest** | [**AuthSessionDeleteRequest**](AuthSessionDeleteRequest.md)| Request body | [optional] 
-
-### Return type
-
-[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
 
 ### Authorization
 

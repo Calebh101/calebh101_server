@@ -60,11 +60,15 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**accountDetailsPost**](doc//DefaultApi.md#accountdetailspost) | **POST** /account/details | 
+*DefaultApi* | [**accountEmailChangePost**](doc//DefaultApi.md#accountemailchangepost) | **POST** /account/email/change | 
+*DefaultApi* | [**accountEmailChangeVerifyNewPost**](doc//DefaultApi.md#accountemailchangeverifynewpost) | **POST** /account/email/change/verify/new | 
+*DefaultApi* | [**accountEmailChangeVerifyOldPost**](doc//DefaultApi.md#accountemailchangeverifyoldpost) | **POST** /account/email/change/verify/old | 
+*DefaultApi* | [**accountPasswordPut**](doc//DefaultApi.md#accountpasswordput) | **PUT** /account/password | 
+*DefaultApi* | [**accountSessionDelete**](doc//DefaultApi.md#accountsessiondelete) | **DELETE** /account/session | 
 *DefaultApi* | [**authAllowedRedirectUrlsGet**](doc//DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 *DefaultApi* | [**authCreateAgainPost**](doc//DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 *DefaultApi* | [**authCreatePost**](doc//DefaultApi.md#authcreatepost) | **POST** /auth/create | 
 *DefaultApi* | [**authLoginPost**](doc//DefaultApi.md#authloginpost) | **POST** /auth/login | 
-*DefaultApi* | [**authSessionDelete**](doc//DefaultApi.md#authsessiondelete) | **DELETE** /auth/session | 
 *DefaultApi* | [**authVerifySessionPost**](doc//DefaultApi.md#authverifysessionpost) | **POST** /auth/verify/session | 
 *DefaultApi* | [**authVerifyUserPost**](doc//DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
 *DefaultApi* | [**getOpenAPI**](doc//DefaultApi.md#getopenapi) | **GET** /openapi/json | 
@@ -79,6 +83,10 @@ Class | Method | HTTP request | Description
  - [AccountDetailsPost200Response](doc//AccountDetailsPost200Response.md)
  - [AccountDetailsPost200ResponseData](doc//AccountDetailsPost200ResponseData.md)
  - [AccountDetailsPost200ResponseDataSessionsInner](doc//AccountDetailsPost200ResponseDataSessionsInner.md)
+ - [AccountEmailChangeVerifyNewPostRequest](doc//AccountEmailChangeVerifyNewPostRequest.md)
+ - [AccountEmailChangeVerifyOldPostRequest](doc//AccountEmailChangeVerifyOldPostRequest.md)
+ - [AccountPasswordPutRequest](doc//AccountPasswordPutRequest.md)
+ - [AccountSessionDeleteRequest](doc//AccountSessionDeleteRequest.md)
  - [AuthAllowedRedirectUrlsGet200Response](doc//AuthAllowedRedirectUrlsGet200Response.md)
  - [AuthAllowedRedirectUrlsGet200ResponseDataInner](doc//AuthAllowedRedirectUrlsGet200ResponseDataInner.md)
  - [AuthCreateAgainPost200Response](doc//AuthCreateAgainPost200Response.md)
@@ -90,7 +98,6 @@ Class | Method | HTTP request | Description
  - [AuthCreatePostRequest](doc//AuthCreatePostRequest.md)
  - [AuthLoginPost200Response](doc//AuthLoginPost200Response.md)
  - [AuthLoginPost200ResponseData](doc//AuthLoginPost200ResponseData.md)
- - [AuthSessionDeleteRequest](doc//AuthSessionDeleteRequest.md)
  - [AuthVerifySessionPost200Response](doc//AuthVerifySessionPost200Response.md)
  - [AuthVerifySessionPostRequest](doc//AuthVerifySessionPostRequest.md)
  - [AuthVerifyUserPostRequest](doc//AuthVerifyUserPostRequest.md)

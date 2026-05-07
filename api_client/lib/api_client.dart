@@ -188,6 +188,14 @@ class ApiClient {
           return AccountDetailsPost200ResponseData.fromJson(value);
         case 'AccountDetailsPost200ResponseDataSessionsInner':
           return AccountDetailsPost200ResponseDataSessionsInner.fromJson(value);
+        case 'AccountEmailChangeVerifyNewPostRequest':
+          return AccountEmailChangeVerifyNewPostRequest.fromJson(value);
+        case 'AccountEmailChangeVerifyOldPostRequest':
+          return AccountEmailChangeVerifyOldPostRequest.fromJson(value);
+        case 'AccountPasswordPutRequest':
+          return AccountPasswordPutRequest.fromJson(value);
+        case 'AccountSessionDeleteRequest':
+          return AccountSessionDeleteRequest.fromJson(value);
         case 'AuthAllowedRedirectUrlsGet200Response':
           return AuthAllowedRedirectUrlsGet200Response.fromJson(value);
         case 'AuthAllowedRedirectUrlsGet200ResponseDataInner':
@@ -210,8 +218,6 @@ class ApiClient {
           return AuthLoginPost200Response.fromJson(value);
         case 'AuthLoginPost200ResponseData':
           return AuthLoginPost200ResponseData.fromJson(value);
-        case 'AuthSessionDeleteRequest':
-          return AuthSessionDeleteRequest.fromJson(value);
         case 'AuthVerifySessionPost200Response':
           return AuthVerifySessionPost200Response.fromJson(value);
         case 'AuthVerifySessionPostRequest':

@@ -22,6 +22,31 @@ void main() {
       // TODO
     });
 
+    //Future<AuthVerifySessionPost200Response> accountEmailChangePost({ Object body }) async
+    test('test accountEmailChangePost', () async {
+      // TODO
+    });
+
+    //Future<AuthVerifySessionPost200Response> accountEmailChangeVerifyNewPost({ AccountEmailChangeVerifyNewPostRequest accountEmailChangeVerifyNewPostRequest }) async
+    test('test accountEmailChangeVerifyNewPost', () async {
+      // TODO
+    });
+
+    //Future<AuthVerifySessionPost200Response> accountEmailChangeVerifyOldPost({ AccountEmailChangeVerifyOldPostRequest accountEmailChangeVerifyOldPostRequest }) async
+    test('test accountEmailChangeVerifyOldPost', () async {
+      // TODO
+    });
+
+    //Future<AuthVerifySessionPost200Response> accountPasswordPut({ AccountPasswordPutRequest accountPasswordPutRequest }) async
+    test('test accountPasswordPut', () async {
+      // TODO
+    });
+
+    //Future<AuthVerifySessionPost200Response> accountSessionDelete({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
+    test('test accountSessionDelete', () async {
+      // TODO
+    });
+
     //Future<AuthAllowedRedirectUrlsGet200Response> authAllowedRedirectUrlsGet() async
     test('test authAllowedRedirectUrlsGet', () async {
       // TODO
@@ -39,11 +64,6 @@ void main() {
 
     //Future<AuthLoginPost200Response> authLoginPost({ AuthCreatePostRequest authCreatePostRequest }) async
     test('test authLoginPost', () async {
-      // TODO
-    });
-
-    //Future<AuthVerifySessionPost200Response> authSessionDelete({ AuthSessionDeleteRequest authSessionDeleteRequest }) async
-    test('test authSessionDelete', () async {
       // TODO
     });
 
