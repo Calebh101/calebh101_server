@@ -33,7 +33,7 @@ part 'api/default_api.dart';
 part 'model/account_details_post200_response.dart';
 part 'model/account_details_post200_response_data.dart';
 part 'model/account_details_post200_response_data_sessions_inner.dart';
-part 'model/account_email_change_verify_new_post_request.dart';
+part 'model/account_email_change_post_request.dart';
 part 'model/account_email_change_verify_old_post_request.dart';
 part 'model/account_password_put_request.dart';
 part 'model/account_session_delete_request.dart';

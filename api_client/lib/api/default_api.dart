@@ -68,14 +68,14 @@ class DefaultApi {
   /// Performs an HTTP 'POST /account/email/change' operation and returns the [Response].
   /// Parameters:
   ///
-  /// * [Object] body:
+  /// * [AccountEmailChangePostRequest] accountEmailChangePostRequest:
   ///   Request body
-  Future<Response> accountEmailChangePostWithHttpInfo({ Object? body, }) async {
+  Future<Response> accountEmailChangePostWithHttpInfo({ AccountEmailChangePostRequest? accountEmailChangePostRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/account/email/change';
 
     // ignore: prefer_final_locals
-    Object? postBody = body;
+    Object? postBody = accountEmailChangePostRequest;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -97,10 +97,10 @@ class DefaultApi {
 
   /// Parameters:
   ///
-  /// * [Object] body:
+  /// * [AccountEmailChangePostRequest] accountEmailChangePostRequest:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> accountEmailChangePost({ Object? body, }) async {
-    final response = await accountEmailChangePostWithHttpInfo( body: body, );
+  Future<AuthVerifySessionPost200Response?> accountEmailChangePost({ AccountEmailChangePostRequest? accountEmailChangePostRequest, }) async {
+    final response = await accountEmailChangePostWithHttpInfo( accountEmailChangePostRequest: accountEmailChangePostRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -117,14 +117,14 @@ class DefaultApi {
   /// Performs an HTTP 'POST /account/email/change/verify/new' operation and returns the [Response].
   /// Parameters:
   ///
-  /// * [AccountEmailChangeVerifyNewPostRequest] accountEmailChangeVerifyNewPostRequest:
+  /// * [AccountEmailChangeVerifyOldPostRequest] accountEmailChangeVerifyOldPostRequest:
   ///   Request body
-  Future<Response> accountEmailChangeVerifyNewPostWithHttpInfo({ AccountEmailChangeVerifyNewPostRequest? accountEmailChangeVerifyNewPostRequest, }) async {
+  Future<Response> accountEmailChangeVerifyNewPostWithHttpInfo({ AccountEmailChangeVerifyOldPostRequest? accountEmailChangeVerifyOldPostRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/account/email/change/verify/new';
 
     // ignore: prefer_final_locals
-    Object? postBody = accountEmailChangeVerifyNewPostRequest;
+    Object? postBody = accountEmailChangeVerifyOldPostRequest;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -146,10 +146,10 @@ class DefaultApi {
 
   /// Parameters:
   ///
-  /// * [AccountEmailChangeVerifyNewPostRequest] accountEmailChangeVerifyNewPostRequest:
+  /// * [AccountEmailChangeVerifyOldPostRequest] accountEmailChangeVerifyOldPostRequest:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> accountEmailChangeVerifyNewPost({ AccountEmailChangeVerifyNewPostRequest? accountEmailChangeVerifyNewPostRequest, }) async {
-    final response = await accountEmailChangeVerifyNewPostWithHttpInfo( accountEmailChangeVerifyNewPostRequest: accountEmailChangeVerifyNewPostRequest, );
+  Future<AuthVerifySessionPost200Response?> accountEmailChangeVerifyNewPost({ AccountEmailChangeVerifyOldPostRequest? accountEmailChangeVerifyOldPostRequest, }) async {
+    final response = await accountEmailChangeVerifyNewPostWithHttpInfo( accountEmailChangeVerifyOldPostRequest: accountEmailChangeVerifyOldPostRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

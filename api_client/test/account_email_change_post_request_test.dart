@@ -11,18 +11,13 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for AccountEmailChangeVerifyNewPostRequest
+// tests for AccountEmailChangePostRequest
 void main() {
-  // final instance = AccountEmailChangeVerifyNewPostRequest();
+  // final instance = AccountEmailChangePostRequest();
 
-  group('test AccountEmailChangeVerifyNewPostRequest', () {
-    // String code
-    test('to test the property `code`', () async {
-      // TODO
-    });
-
-    // String session
-    test('to test the property `session`', () async {
+  group('test AccountEmailChangePostRequest', () {
+    // String email
+    test('to test the property `email`', () async {
       // TODO
     });
 

@@ -15,36 +15,30 @@ class AccountEmailChangeVerifyOldPostRequest {
   AccountEmailChangeVerifyOldPostRequest({
     required this.code,
     required this.session,
-    required this.email,
   });
 
   String code;
 
   String session;
 
-  String email;
-
   @override
   bool operator ==(Object other) => identical(this, other) || other is AccountEmailChangeVerifyOldPostRequest &&
     other.code == code &&
-    other.session == session &&
-    other.email == email;
+    other.session == session;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (code.hashCode) +
-    (session.hashCode) +
-    (email.hashCode);
+    (session.hashCode);
 
   @override
-  String toString() => 'AccountEmailChangeVerifyOldPostRequest[code=$code, session=$session, email=$email]';
+  String toString() => 'AccountEmailChangeVerifyOldPostRequest[code=$code, session=$session]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'code'] = this.code;
       json[r'session'] = this.session;
-      json[r'email'] = this.email;
     return json;
   }
 
@@ -69,7 +63,6 @@ class AccountEmailChangeVerifyOldPostRequest {
       return AccountEmailChangeVerifyOldPostRequest(
         code: mapValueOfType<String>(json, r'code')!,
         session: mapValueOfType<String>(json, r'session')!,
-        email: mapValueOfType<String>(json, r'email')!,
       );
     }
     return null;
@@ -119,7 +112,6 @@ class AccountEmailChangeVerifyOldPostRequest {
   static const requiredKeys = <String>{
     'code',
     'session',
-    'email',
   };
 }
 

@@ -83,7 +83,7 @@ Class | Method | HTTP request | Description
  - [AccountDetailsPost200Response](doc//AccountDetailsPost200Response.md)
  - [AccountDetailsPost200ResponseData](doc//AccountDetailsPost200ResponseData.md)
  - [AccountDetailsPost200ResponseDataSessionsInner](doc//AccountDetailsPost200ResponseDataSessionsInner.md)
- - [AccountEmailChangeVerifyNewPostRequest](doc//AccountEmailChangeVerifyNewPostRequest.md)
+ - [AccountEmailChangePostRequest](doc//AccountEmailChangePostRequest.md)
  - [AccountEmailChangeVerifyOldPostRequest](doc//AccountEmailChangeVerifyOldPostRequest.md)
  - [AccountPasswordPutRequest](doc//AccountPasswordPutRequest.md)
  - [AccountSessionDeleteRequest](doc//AccountSessionDeleteRequest.md)

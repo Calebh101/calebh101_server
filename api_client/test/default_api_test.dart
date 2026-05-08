@@ -22,12 +22,12 @@ void main() {
       // TODO
     });
 
-    //Future<AuthVerifySessionPost200Response> accountEmailChangePost({ Object body }) async
+    //Future<AuthVerifySessionPost200Response> accountEmailChangePost({ AccountEmailChangePostRequest accountEmailChangePostRequest }) async
     test('test accountEmailChangePost', () async {
       // TODO
     });
 
-    //Future<AuthVerifySessionPost200Response> accountEmailChangeVerifyNewPost({ AccountEmailChangeVerifyNewPostRequest accountEmailChangeVerifyNewPostRequest }) async
+    //Future<AuthVerifySessionPost200Response> accountEmailChangeVerifyNewPost({ AccountEmailChangeVerifyOldPostRequest accountEmailChangeVerifyOldPostRequest }) async
     test('test accountEmailChangeVerifyNewPost', () async {
       // TODO
     });

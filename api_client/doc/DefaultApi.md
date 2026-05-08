@@ -70,7 +70,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **accountEmailChangePost**
-> AuthVerifySessionPost200Response accountEmailChangePost(body)
+> AuthVerifySessionPost200Response accountEmailChangePost(accountEmailChangePostRequest)
 
 
 
@@ -79,10 +79,10 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final body = Object(); // Object | Request body
+final accountEmailChangePostRequest = AccountEmailChangePostRequest(); // AccountEmailChangePostRequest | Request body
 
 try {
-    final result = api_instance.accountEmailChangePost(body);
+    final result = api_instance.accountEmailChangePost(accountEmailChangePostRequest);
     print(result);
 } catch (e) {
     print('Exception when calling DefaultApi->accountEmailChangePost: $e\n');
@@ -93,7 +93,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **Object**| Request body | [optional] 
+ **accountEmailChangePostRequest** | [**AccountEmailChangePostRequest**](AccountEmailChangePostRequest.md)| Request body | [optional] 
 
 ### Return type
 
@@ -111,7 +111,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **accountEmailChangeVerifyNewPost**
-> AuthVerifySessionPost200Response accountEmailChangeVerifyNewPost(accountEmailChangeVerifyNewPostRequest)
+> AuthVerifySessionPost200Response accountEmailChangeVerifyNewPost(accountEmailChangeVerifyOldPostRequest)
 
 
 
@@ -120,10 +120,10 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final accountEmailChangeVerifyNewPostRequest = AccountEmailChangeVerifyNewPostRequest(); // AccountEmailChangeVerifyNewPostRequest | Request body
+final accountEmailChangeVerifyOldPostRequest = AccountEmailChangeVerifyOldPostRequest(); // AccountEmailChangeVerifyOldPostRequest | Request body
 
 try {
-    final result = api_instance.accountEmailChangeVerifyNewPost(accountEmailChangeVerifyNewPostRequest);
+    final result = api_instance.accountEmailChangeVerifyNewPost(accountEmailChangeVerifyOldPostRequest);
     print(result);
 } catch (e) {
     print('Exception when calling DefaultApi->accountEmailChangeVerifyNewPost: $e\n');
@@ -134,7 +134,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountEmailChangeVerifyNewPostRequest** | [**AccountEmailChangeVerifyNewPostRequest**](AccountEmailChangeVerifyNewPostRequest.md)| Request body | [optional] 
+ **accountEmailChangeVerifyOldPostRequest** | [**AccountEmailChangeVerifyOldPostRequest**](AccountEmailChangeVerifyOldPostRequest.md)| Request body | [optional] 
 
 ### Return type
 
