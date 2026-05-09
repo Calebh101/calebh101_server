@@ -11,3 +11,9 @@ Future<void> setAuth(ApiClient client) async {
   final id = prefs.getString("authentication");
   if (id != null) client.addDefaultHeader("Authentication", id);
 }
+
+Future<void> signOut(ApiClient client) async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final prefs = await SharedPreferences.getInstance();
+  prefs.remove("authentication");
+}

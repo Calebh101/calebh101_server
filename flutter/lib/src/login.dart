@@ -6,8 +6,10 @@ import 'package:validators/validators.dart';
 
 class LoginPage extends StatefulWidget {
   final ApiClient client;
+  final List<Widget>? actions;
+
   final void Function(BuildContext context, String sessionId)? onLoggedIn;
-  const LoginPage({super.key, required this.client, this.onLoggedIn});
+  const LoginPage({super.key, required this.client, this.onLoggedIn, this.actions});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -53,6 +55,7 @@ class _LoginPageState extends State<LoginPage> {
             height: 24,
             child: isLoading ? CircularProgressIndicator() : SizedBox.shrink(),
           ),
+          ...?widget.actions,
         ],
       ),
       body: Padding(
