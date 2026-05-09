@@ -13,6 +13,7 @@ Future<void> setAuth(ApiClient client) async {
 }
 
 Future<void> signOut(ApiClient client) async {
+  client.defaultHeaderMap.remove("Authentication");
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
   prefs.remove("authentication");
