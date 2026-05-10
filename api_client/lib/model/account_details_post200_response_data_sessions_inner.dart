@@ -13,15 +13,12 @@ part of openapi.api;
 class AccountDetailsPost200ResponseDataSessionsInner {
   /// Returns a new [AccountDetailsPost200ResponseDataSessionsInner] instance.
   AccountDetailsPost200ResponseDataSessionsInner({
-    required this.id,
     required this.created,
     required this.used,
     required this.expires,
     required this.ip,
     required this.userAgent,
   });
-
-  String id;
 
   DateTime created;
 
@@ -35,7 +32,6 @@ class AccountDetailsPost200ResponseDataSessionsInner {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is AccountDetailsPost200ResponseDataSessionsInner &&
-    other.id == id &&
     other.created == created &&
     other.used == used &&
     other.expires == expires &&
@@ -45,7 +41,6 @@ class AccountDetailsPost200ResponseDataSessionsInner {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (id.hashCode) +
     (created.hashCode) +
     (used.hashCode) +
     (expires.hashCode) +
@@ -53,11 +48,10 @@ class AccountDetailsPost200ResponseDataSessionsInner {
     (userAgent == null ? 0 : userAgent!.hashCode);
 
   @override
-  String toString() => 'AccountDetailsPost200ResponseDataSessionsInner[id=$id, created=$created, used=$used, expires=$expires, ip=$ip, userAgent=$userAgent]';
+  String toString() => 'AccountDetailsPost200ResponseDataSessionsInner[created=$created, used=$used, expires=$expires, ip=$ip, userAgent=$userAgent]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'id'] = this.id;
       json[r'created'] = this.created.toUtc().toIso8601String();
       json[r'used'] = this.used.toUtc().toIso8601String();
       json[r'expires'] = this.expires.toUtc().toIso8601String();
@@ -93,7 +87,6 @@ class AccountDetailsPost200ResponseDataSessionsInner {
       }());
 
       return AccountDetailsPost200ResponseDataSessionsInner(
-        id: mapValueOfType<String>(json, r'id')!,
         created: mapDateTime(json, r'created', r'')!,
         used: mapDateTime(json, r'used', r'')!,
         expires: mapDateTime(json, r'expires', r'')!,
@@ -146,7 +139,6 @@ class AccountDetailsPost200ResponseDataSessionsInner {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'id',
     'created',
     'used',
     'expires',

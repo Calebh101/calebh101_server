@@ -16,11 +16,6 @@ void main() {
   // final instance = AccountDetailsPost200ResponseDataSessionsInner();
 
   group('test AccountDetailsPost200ResponseDataSessionsInner', () {
-    // String id
-    test('to test the property `id`', () async {
-      // TODO
-    });
-
     // DateTime created
     test('to test the property `created`', () async {
       // TODO
