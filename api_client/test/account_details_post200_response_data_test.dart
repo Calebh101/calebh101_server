@@ -31,6 +31,11 @@ void main() {
       // TODO
     });
 
+    // String currentSafeId
+    test('to test the property `currentSafeId`', () async {
+      // TODO
+    });
+
     // List<AccountDetailsPost200ResponseDataSessionsInner> sessions (default value: const [])
     test('to test the property `sessions`', () async {
       // TODO

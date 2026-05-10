@@ -16,6 +16,7 @@ class AccountDetailsPost200ResponseData {
     required this.created,
     required this.updated,
     required this.email,
+    required this.currentSafeId,
     this.sessions = const [],
   });
 
@@ -25,6 +26,8 @@ class AccountDetailsPost200ResponseData {
 
   String email;
 
+  String currentSafeId;
+
   List<AccountDetailsPost200ResponseDataSessionsInner> sessions;
 
   @override
@@ -32,6 +35,7 @@ class AccountDetailsPost200ResponseData {
     other.created == created &&
     other.updated == updated &&
     other.email == email &&
+    other.currentSafeId == currentSafeId &&
     _deepEquality.equals(other.sessions, sessions);
 
   @override
@@ -40,16 +44,18 @@ class AccountDetailsPost200ResponseData {
     (created.hashCode) +
     (updated.hashCode) +
     (email.hashCode) +
+    (currentSafeId.hashCode) +
     (sessions.hashCode);
 
   @override
-  String toString() => 'AccountDetailsPost200ResponseData[created=$created, updated=$updated, email=$email, sessions=$sessions]';
+  String toString() => 'AccountDetailsPost200ResponseData[created=$created, updated=$updated, email=$email, currentSafeId=$currentSafeId, sessions=$sessions]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'created'] = this.created.toUtc().toIso8601String();
       json[r'updated'] = this.updated.toUtc().toIso8601String();
       json[r'email'] = this.email;
+      json[r'currentSafeId'] = this.currentSafeId;
       json[r'sessions'] = this.sessions;
     return json;
   }
@@ -76,6 +82,7 @@ class AccountDetailsPost200ResponseData {
         created: mapDateTime(json, r'created', r'')!,
         updated: mapDateTime(json, r'updated', r'')!,
         email: mapValueOfType<String>(json, r'email')!,
+        currentSafeId: mapValueOfType<String>(json, r'currentSafeId')!,
         sessions: AccountDetailsPost200ResponseDataSessionsInner.listFromJson(json[r'sessions']),
       );
     }
@@ -127,6 +134,7 @@ class AccountDetailsPost200ResponseData {
     'created',
     'updated',
     'email',
+    'currentSafeId',
     'sessions',
   };
 }
