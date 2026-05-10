@@ -21,6 +21,11 @@ void main() {
       // TODO
     });
 
+    // String session
+    test('to test the property `session`', () async {
+      // TODO
+    });
+
     // String password
     test('to test the property `password`', () async {
       // TODO

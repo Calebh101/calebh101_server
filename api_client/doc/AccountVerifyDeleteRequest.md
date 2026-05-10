@@ -9,6 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **String** |  | 
+**session** | **String** |  | 
 **password** | **String** |  | 
 **iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis** | **bool** |  | 
 

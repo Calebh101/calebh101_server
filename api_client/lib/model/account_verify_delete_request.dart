@@ -14,11 +14,14 @@ class AccountVerifyDeleteRequest {
   /// Returns a new [AccountVerifyDeleteRequest] instance.
   AccountVerifyDeleteRequest({
     required this.code,
+    required this.session,
     required this.password,
     required this.iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis,
   });
 
   String code;
+
+  String session;
 
   String password;
 
@@ -27,6 +30,7 @@ class AccountVerifyDeleteRequest {
   @override
   bool operator ==(Object other) => identical(this, other) || other is AccountVerifyDeleteRequest &&
     other.code == code &&
+    other.session == session &&
     other.password == password &&
     other.iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis == iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis;
 
@@ -34,15 +38,17 @@ class AccountVerifyDeleteRequest {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (code.hashCode) +
+    (session.hashCode) +
     (password.hashCode) +
     (iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis.hashCode);
 
   @override
-  String toString() => 'AccountVerifyDeleteRequest[code=$code, password=$password, iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis=$iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis]';
+  String toString() => 'AccountVerifyDeleteRequest[code=$code, session=$session, password=$password, iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis=$iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'code'] = this.code;
+      json[r'session'] = this.session;
       json[r'password'] = this.password;
       json[r'iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis'] = this.iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis;
     return json;
@@ -68,6 +74,7 @@ class AccountVerifyDeleteRequest {
 
       return AccountVerifyDeleteRequest(
         code: mapValueOfType<String>(json, r'code')!,
+        session: mapValueOfType<String>(json, r'session')!,
         password: mapValueOfType<String>(json, r'password')!,
         iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis: mapValueOfType<bool>(json, r'iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis')!,
       );
@@ -118,6 +125,7 @@ class AccountVerifyDeleteRequest {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'code',
+    'session',
     'password',
     'iAmCompletelySureThatIWantToDoThisAndIKnowIWillHaveNoRegretsWhatsoeverAndIfIDoIKnowIAmCompletelyLiableForThisAndIAcknowledgeThatAllMyDataAndEverythingWillAlsoBeDeletedAndIWillDefinitelyNotRegretThisAndIfIDoIKnowIAmCompletelyLiableForThis',
   };
