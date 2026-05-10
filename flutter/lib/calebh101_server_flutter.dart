@@ -12,9 +12,11 @@ Future<void> setAuth(ApiClient client) async {
   if (id != null) client.addDefaultHeader("Authentication", id);
 }
 
-Future<void> signOut(ApiClient client) async {
+Future<Result<AuthVerifySessionPost200Response?, ApiFailureDetails<AuthVerifySessionPost200Response>?>?> signOut(ApiClient client) async {
   client.defaultHeaderMap.remove("Authentication");
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
   prefs.remove("authentication");
+  final result = await request(() => DefaultApi(client).accountSignoutPost());
+  return result;
 }

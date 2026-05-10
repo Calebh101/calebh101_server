@@ -293,15 +293,20 @@ class _VerifySessionPageState extends State<VerifySessionPage> {
           child: Column(
             children: [
               Spacer(),
-              TextFormField(
-                onChanged: (value) {
-                  setState(() => code = value);
-                },
-                validator: (value) {
-                  if (value == null || value.isEmpty) return "Enter a code we sent to your email.";
-                  if (value.length != 6) return "Code must be 6 digits.";
-                  return null;
-                },
+              ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxWidth: 300,
+                ),
+                child: TextFormField(
+                  onChanged: (value) {
+                    setState(() => code = value);
+                  },
+                  validator: (value) {
+                    if (value == null || value.isEmpty) return "Enter a code we sent to your email.";
+                    if (value.length != 6) return "Code must be 6 digits.";
+                    return null;
+                  },
+                ),
               ),
               Spacer(),
               ElevatedButton(
