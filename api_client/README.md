@@ -42,13 +42,13 @@ import 'package:openapi/api.dart';
 
 
 final api_instance = DefaultApi();
-final body = Object(); // Object | Request body
+final accountDeleteRequest = AccountDeleteRequest(); // AccountDeleteRequest | Request body
 
 try {
-    final result = api_instance.accountDetailsPost(body);
+    final result = api_instance.accountDelete(accountDeleteRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->accountDetailsPost: $e\n');
+    print('Exception when calling DefaultApi->accountDelete: $e\n');
 }
 
 ```
@@ -59,12 +59,14 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DefaultApi* | [**accountDelete**](doc//DefaultApi.md#accountdelete) | **DELETE** /account | 
 *DefaultApi* | [**accountDetailsPost**](doc//DefaultApi.md#accountdetailspost) | **POST** /account/details | 
 *DefaultApi* | [**accountEmailChangePost**](doc//DefaultApi.md#accountemailchangepost) | **POST** /account/email/change | 
 *DefaultApi* | [**accountEmailChangeVerifyNewPost**](doc//DefaultApi.md#accountemailchangeverifynewpost) | **POST** /account/email/change/verify/new | 
 *DefaultApi* | [**accountEmailChangeVerifyOldPost**](doc//DefaultApi.md#accountemailchangeverifyoldpost) | **POST** /account/email/change/verify/old | 
 *DefaultApi* | [**accountPasswordPut**](doc//DefaultApi.md#accountpasswordput) | **PUT** /account/password | 
 *DefaultApi* | [**accountSessionDelete**](doc//DefaultApi.md#accountsessiondelete) | **DELETE** /account/session | 
+*DefaultApi* | [**accountVerifyDelete**](doc//DefaultApi.md#accountverifydelete) | **DELETE** /account/verify | 
 *DefaultApi* | [**authAllowedRedirectUrlsGet**](doc//DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 *DefaultApi* | [**authCreateAgainPost**](doc//DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 *DefaultApi* | [**authCreatePost**](doc//DefaultApi.md#authcreatepost) | **POST** /auth/create | 
@@ -80,6 +82,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AccountDeleteRequest](doc//AccountDeleteRequest.md)
  - [AccountDetailsPost200Response](doc//AccountDetailsPost200Response.md)
  - [AccountDetailsPost200ResponseData](doc//AccountDetailsPost200ResponseData.md)
  - [AccountDetailsPost200ResponseDataSessionsInner](doc//AccountDetailsPost200ResponseDataSessionsInner.md)
@@ -87,6 +90,7 @@ Class | Method | HTTP request | Description
  - [AccountEmailChangeVerifyOldPostRequest](doc//AccountEmailChangeVerifyOldPostRequest.md)
  - [AccountPasswordPutRequest](doc//AccountPasswordPutRequest.md)
  - [AccountSessionDeleteRequest](doc//AccountSessionDeleteRequest.md)
+ - [AccountVerifyDeleteRequest](doc//AccountVerifyDeleteRequest.md)
  - [AuthAllowedRedirectUrlsGet200Response](doc//AuthAllowedRedirectUrlsGet200Response.md)
  - [AuthAllowedRedirectUrlsGet200ResponseDataInner](doc//AuthAllowedRedirectUrlsGet200ResponseDataInner.md)
  - [AuthCreateAgainPost200Response](doc//AuthCreateAgainPost200Response.md)

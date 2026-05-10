@@ -70,9 +70,12 @@ class Result<T, F> {
   const Result(this.t, this.f);
 }
 
-/// Reasons for returning null:
+/// Returns:
 ///
-/// - Needs logged in (`onNeedsLogin` will be called)
+/// - `Result<T, null>`: Success
+/// - `Result<null, ApiFailureDetails<T>>`: Server-side fail
+/// - `Result<null, ApiFailureDetails<T>>` (without code/message): Client-side fail
+/// - `null`: Needs logged in (`onNeedsLogin` will be called)
 Future<Result<T?, ApiFailureDetails<T>?>?> request<T>(Future<T?> Function() callback) async {
   try {
     Logger.print("request<$T>", "Requesting...");

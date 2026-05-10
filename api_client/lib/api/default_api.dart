@@ -16,6 +16,55 @@ class DefaultApi {
 
   final ApiClient apiClient;
 
+  /// Performs an HTTP 'DELETE /account' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AccountDeleteRequest] accountDeleteRequest:
+  ///   Request body
+  Future<Response> accountDeleteWithHttpInfo({ AccountDeleteRequest? accountDeleteRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/account';
+
+    // ignore: prefer_final_locals
+    Object? postBody = accountDeleteRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'DELETE',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [AccountDeleteRequest] accountDeleteRequest:
+  ///   Request body
+  Future<AuthVerifySessionPost200Response?> accountDelete({ AccountDeleteRequest? accountDeleteRequest, }) async {
+    final response = await accountDeleteWithHttpInfo( accountDeleteRequest: accountDeleteRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+    
+    }
+    return null;
+  }
+
   /// Performs an HTTP 'POST /account/details' operation and returns the [Response].
   /// Parameters:
   ///
@@ -297,6 +346,55 @@ class DefaultApi {
   ///   Request body
   Future<AuthVerifySessionPost200Response?> accountSessionDelete({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
     final response = await accountSessionDeleteWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'DELETE /account/verify' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AccountVerifyDeleteRequest] accountVerifyDeleteRequest:
+  ///   Request body
+  Future<Response> accountVerifyDeleteWithHttpInfo({ AccountVerifyDeleteRequest? accountVerifyDeleteRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/account/verify';
+
+    // ignore: prefer_final_locals
+    Object? postBody = accountVerifyDeleteRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'DELETE',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [AccountVerifyDeleteRequest] accountVerifyDeleteRequest:
+  ///   Request body
+  Future<AuthVerifySessionPost200Response?> accountVerifyDelete({ AccountVerifyDeleteRequest? accountVerifyDeleteRequest, }) async {
+    final response = await accountVerifyDeleteWithHttpInfo( accountVerifyDeleteRequest: accountVerifyDeleteRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

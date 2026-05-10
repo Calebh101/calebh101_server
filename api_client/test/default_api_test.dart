@@ -17,6 +17,11 @@ void main() {
   // final instance = DefaultApi();
 
   group('tests for DefaultApi', () {
+    //Future<AuthVerifySessionPost200Response> accountDelete({ AccountDeleteRequest accountDeleteRequest }) async
+    test('test accountDelete', () async {
+      // TODO
+    });
+
     //Future<AccountDetailsPost200Response> accountDetailsPost({ Object body }) async
     test('test accountDetailsPost', () async {
       // TODO
@@ -44,6 +49,11 @@ void main() {
 
     //Future<AuthVerifySessionPost200Response> accountSessionDelete({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
     test('test accountSessionDelete', () async {
+      // TODO
+    });
+
+    //Future<AuthVerifySessionPost200Response> accountVerifyDelete({ AccountVerifyDeleteRequest accountVerifyDeleteRequest }) async
+    test('test accountVerifyDelete', () async {
       // TODO
     });
 

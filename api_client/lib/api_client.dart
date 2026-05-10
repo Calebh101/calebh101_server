@@ -182,6 +182,8 @@ class ApiClient {
           return valueString == 'true' || valueString == '1';
         case 'DateTime':
           return value is DateTime ? value : DateTime.tryParse(value);
+        case 'AccountDeleteRequest':
+          return AccountDeleteRequest.fromJson(value);
         case 'AccountDetailsPost200Response':
           return AccountDetailsPost200Response.fromJson(value);
         case 'AccountDetailsPost200ResponseData':
@@ -196,6 +198,8 @@ class ApiClient {
           return AccountPasswordPutRequest.fromJson(value);
         case 'AccountSessionDeleteRequest':
           return AccountSessionDeleteRequest.fromJson(value);
+        case 'AccountVerifyDeleteRequest':
+          return AccountVerifyDeleteRequest.fromJson(value);
         case 'AuthAllowedRedirectUrlsGet200Response':
           return AuthAllowedRedirectUrlsGet200Response.fromJson(value);
         case 'AuthAllowedRedirectUrlsGet200ResponseDataInner':

@@ -9,12 +9,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**accountDelete**](DefaultApi.md#accountdelete) | **DELETE** /account | 
 [**accountDetailsPost**](DefaultApi.md#accountdetailspost) | **POST** /account/details | 
 [**accountEmailChangePost**](DefaultApi.md#accountemailchangepost) | **POST** /account/email/change | 
 [**accountEmailChangeVerifyNewPost**](DefaultApi.md#accountemailchangeverifynewpost) | **POST** /account/email/change/verify/new | 
 [**accountEmailChangeVerifyOldPost**](DefaultApi.md#accountemailchangeverifyoldpost) | **POST** /account/email/change/verify/old | 
 [**accountPasswordPut**](DefaultApi.md#accountpasswordput) | **PUT** /account/password | 
 [**accountSessionDelete**](DefaultApi.md#accountsessiondelete) | **DELETE** /account/session | 
+[**accountVerifyDelete**](DefaultApi.md#accountverifydelete) | **DELETE** /account/verify | 
 [**authAllowedRedirectUrlsGet**](DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 [**authCreateAgainPost**](DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 [**authCreatePost**](DefaultApi.md#authcreatepost) | **POST** /auth/create | 
@@ -27,6 +29,47 @@ Method | HTTP request | Description
 [**ghFirstSecondGet**](DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 [**testPost**](DefaultApi.md#testpost) | **POST** /test | 
 
+
+# **accountDelete**
+> AuthVerifySessionPost200Response accountDelete(accountDeleteRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountDeleteRequest = AccountDeleteRequest(); // AccountDeleteRequest | Request body
+
+try {
+    final result = api_instance.accountDelete(accountDeleteRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->accountDelete: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountDeleteRequest** | [**AccountDeleteRequest**](AccountDeleteRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **accountDetailsPost**
 > AccountDetailsPost200Response accountDetailsPost(body)
@@ -258,6 +301,47 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountSessionDeleteRequest** | [**AccountSessionDeleteRequest**](AccountSessionDeleteRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **accountVerifyDelete**
+> AuthVerifySessionPost200Response accountVerifyDelete(accountVerifyDeleteRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountVerifyDeleteRequest = AccountVerifyDeleteRequest(); // AccountVerifyDeleteRequest | Request body
+
+try {
+    final result = api_instance.accountVerifyDelete(accountVerifyDeleteRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->accountVerifyDelete: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountVerifyDeleteRequest** | [**AccountVerifyDeleteRequest**](AccountVerifyDeleteRequest.md)| Request body | [optional] 
 
 ### Return type
 
