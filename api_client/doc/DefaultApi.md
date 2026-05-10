@@ -319,7 +319,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **accountSignoutPost**
-> AuthVerifySessionPost200Response accountSignoutPost(accountSessionDeleteRequest)
+> AuthVerifySessionPost200Response accountSignoutPost(body)
 
 
 
@@ -328,10 +328,10 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final accountSessionDeleteRequest = AccountSessionDeleteRequest(); // AccountSessionDeleteRequest | Request body
+final body = Object(); // Object | Request body
 
 try {
-    final result = api_instance.accountSignoutPost(accountSessionDeleteRequest);
+    final result = api_instance.accountSignoutPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling DefaultApi->accountSignoutPost: $e\n');
@@ -342,7 +342,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountSessionDeleteRequest** | [**AccountSessionDeleteRequest**](AccountSessionDeleteRequest.md)| Request body | [optional] 
+ **body** | **Object**| Request body | [optional] 
 
 ### Return type
 

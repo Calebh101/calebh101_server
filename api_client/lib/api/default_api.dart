@@ -362,14 +362,14 @@ class DefaultApi {
   /// Performs an HTTP 'POST /account/signout' operation and returns the [Response].
   /// Parameters:
   ///
-  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
+  /// * [Object] body:
   ///   Request body
-  Future<Response> accountSignoutPostWithHttpInfo({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+  Future<Response> accountSignoutPostWithHttpInfo({ Object? body, }) async {
     // ignore: prefer_const_declarations
     final path = r'/account/signout';
 
     // ignore: prefer_final_locals
-    Object? postBody = accountSessionDeleteRequest;
+    Object? postBody = body;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -391,10 +391,10 @@ class DefaultApi {
 
   /// Parameters:
   ///
-  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
+  /// * [Object] body:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> accountSignoutPost({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
-    final response = await accountSignoutPostWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
+  Future<AuthVerifySessionPost200Response?> accountSignoutPost({ Object? body, }) async {
+    final response = await accountSignoutPostWithHttpInfo( body: body, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

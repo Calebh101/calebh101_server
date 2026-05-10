@@ -16,6 +16,11 @@ void main() {
   // final instance = AccountDetailsPost200ResponseDataSessionsInner();
 
   group('test AccountDetailsPost200ResponseDataSessionsInner', () {
+    // String safeId
+    test('to test the property `safeId`', () async {
+      // TODO
+    });
+
     // DateTime created
     test('to test the property `created`', () async {
       // TODO

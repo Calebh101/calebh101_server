@@ -52,7 +52,7 @@ void main() {
       // TODO
     });
 
-    //Future<AuthVerifySessionPost200Response> accountSignoutPost({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
+    //Future<AuthVerifySessionPost200Response> accountSignoutPost({ Object body }) async
     test('test accountSignoutPost', () async {
       // TODO
     });
