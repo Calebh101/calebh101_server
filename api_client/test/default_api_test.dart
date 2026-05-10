@@ -52,6 +52,11 @@ void main() {
       // TODO
     });
 
+    //Future<AuthVerifySessionPost200Response> accountSignoutPost({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
+    test('test accountSignoutPost', () async {
+      // TODO
+    });
+
     //Future<AuthVerifySessionPost200Response> accountVerifyDelete({ AccountVerifyDeleteRequest accountVerifyDeleteRequest }) async
     test('test accountVerifyDelete', () async {
       // TODO

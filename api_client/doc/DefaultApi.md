@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**accountEmailChangeVerifyOldPost**](DefaultApi.md#accountemailchangeverifyoldpost) | **POST** /account/email/change/verify/old | 
 [**accountPasswordPut**](DefaultApi.md#accountpasswordput) | **PUT** /account/password | 
 [**accountSessionDelete**](DefaultApi.md#accountsessiondelete) | **DELETE** /account/session | 
+[**accountSignoutPost**](DefaultApi.md#accountsignoutpost) | **POST** /account/signout | 
 [**accountVerifyDelete**](DefaultApi.md#accountverifydelete) | **DELETE** /account/verify | 
 [**authAllowedRedirectUrlsGet**](DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 [**authCreateAgainPost**](DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
@@ -293,6 +294,47 @@ try {
     print(result);
 } catch (e) {
     print('Exception when calling DefaultApi->accountSessionDelete: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountSessionDeleteRequest** | [**AccountSessionDeleteRequest**](AccountSessionDeleteRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **accountSignoutPost**
+> AuthVerifySessionPost200Response accountSignoutPost(accountSessionDeleteRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountSessionDeleteRequest = AccountSessionDeleteRequest(); // AccountSessionDeleteRequest | Request body
+
+try {
+    final result = api_instance.accountSignoutPost(accountSessionDeleteRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->accountSignoutPost: $e\n');
 }
 ```
 

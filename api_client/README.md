@@ -66,6 +66,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**accountEmailChangeVerifyOldPost**](doc//DefaultApi.md#accountemailchangeverifyoldpost) | **POST** /account/email/change/verify/old | 
 *DefaultApi* | [**accountPasswordPut**](doc//DefaultApi.md#accountpasswordput) | **PUT** /account/password | 
 *DefaultApi* | [**accountSessionDelete**](doc//DefaultApi.md#accountsessiondelete) | **DELETE** /account/session | 
+*DefaultApi* | [**accountSignoutPost**](doc//DefaultApi.md#accountsignoutpost) | **POST** /account/signout | 
 *DefaultApi* | [**accountVerifyDelete**](doc//DefaultApi.md#accountverifydelete) | **DELETE** /account/verify | 
 *DefaultApi* | [**authAllowedRedirectUrlsGet**](doc//DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 *DefaultApi* | [**authCreateAgainPost**](doc//DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
