@@ -14,17 +14,22 @@ class LoginPage extends StatefulWidget {
   @override
   State<LoginPage> createState() => _LoginPageState();
 
-  static final String version = "1.0.0B";
+  static final String version = "1.0.0C";
+}
+
+extension on GlobalKey<FormState> {
+  FormState get state => currentState!;
 }
 
 class _LoginPageState extends State<LoginPage> {
-  bool isCreateAccountMode = false;
   bool isLoading = false;
   String? sessionId;
-  bool obscure = false;
+  bool obscure = true;
 
-  final key = GlobalKey<FormState>();
-  FormState get state => key.currentState!;
+  final keys = {
+    false: GlobalKey<FormState>(),
+    true: GlobalKey<FormState>(),
+  };
 
   final TextEditingController email = TextEditingController();
   final TextEditingController password = TextEditingController();
@@ -34,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
     widget.client.addDefaultHeader("Authentication", id);
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString("authentication", id);
-    if (!context.mounted) return;
+    if (!mounted) return;
 
     if (widget.onLoggedIn != null) {
       widget.onLoggedIn!(context, id);
@@ -45,219 +50,233 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Sign In"),
-        centerTitle: true,
-        actions: [
-          SizedBox(
-            width: 24,
-            height: 24,
-            child: isLoading ? CircularProgressIndicator() : SizedBox.shrink(),
-          ),
-          ...?widget.actions,
-        ],
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Form(
-          key: key,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Spacer(),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  TextFormField(
-                    controller: email,
-                    decoration: InputDecoration(
-                      labelText: "Email",
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) return "Must not be empty.";
-                      if (!isEmail(value)) return "Must be a valid email.";
-                      return null;
-                    },
-                  ),
-                  TextFormField(
-                    controller: password,
-                    obscureText: obscure,
-                    decoration: InputDecoration(
-                      labelText: "Password",
-                      suffixIcon: IconButton(
-                        icon: Icon(
-                          obscure ? Icons.visibility : Icons.visibility_off,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            obscure = !obscure;
-                          });
-                        },
-                      ),
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) return "Must not be empty.";
-                      if (isCreateAccountMode && value.length < 8) return "Must be at least 8 characters.";
-                      return null;
-                    },
-                  ),
-                  if (isCreateAccountMode)
-                  TextFormField(
-                    controller: password2,
-                    obscureText: obscure,
-                    decoration: InputDecoration(
-                      labelText: "Verify Password",
-                    ),
-                    validator: (value) {
-                      if (!isCreateAccountMode) return null;
-                      if (value != password.text) return "Passwords do not match.";
-                      return null;
-                    },
-                  ),
-                ],
-              ),
-              Spacer(),
-              Row(
-                spacing: 8,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    onPressed: () async {
-                      if (isLoading) return;
-                      setState(() => isCreateAccountMode = false);
-                      setState(() => isLoading = true);
-
-                      void end() {
-                        setState(() => isLoading = false);
-                      }
-
-                      WidgetsBinding.instance.addPostFrameCallback((_) async {
-                        if (!state.validate()) return end();
-                        snackbar(context, "Loading...");
-
-                        final api = DefaultApi(widget.client);
-                        final result = await request(() => api.authLoginPost(authCreatePostRequest: AuthCreatePostRequest(email: email.text, password: password.text)));
-                        if (!context.mounted) return end();
-
-                        if (result?.t != null && result?.t?.data != null) {
-                          final t = result!.t!;
-                          snackbar(context, "Verification code sent. Please check your email.");
-                          final r = await Navigator.push(context, MaterialPageRoute(builder: (context) => VerifySessionPage(id: t.data!.session, client: widget.client)));
-
-                          if (r == true) {
-                            onLoggedIn(t.data!.session);
-                          }
-                        } else if (result?.f != null) {
-                          final f = result!.f!;
-                          snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
-                        } else {
-                          snackbar(context, "An unknown error occurred.");
-                        }
-
-                        end();
-                      });
-                    },
-                    style: ElevatedButton.styleFrom(
-                      fixedSize: Size(200, 70),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      textStyle: TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
-                    child: Text("Sign In"),
-                  ),
-                  ElevatedButton(
-                    onPressed: () async {
-                      if (isLoading) return;
-                      final bool wasCreateAccountMode = isCreateAccountMode;
-                      setState(() => isCreateAccountMode = true);
-                      if (wasCreateAccountMode == false) return;
-                      setState(() => isLoading = true);
-
-                      void end() {
-                        setState(() => isLoading = false);
-                      }
-
-                      WidgetsBinding.instance.addPostFrameCallback((_) async {
-                        if (!state.validate()) return end();
-                        snackbar(context, "Loading...");
-
-                        final api = DefaultApi(widget.client);
-                        final result = await request(() => api.authCreatePost(authCreatePostRequest: AuthCreatePostRequest(email: email.text, password: password.text)));
-                        if (!context.mounted) return end();
-
-                        if (result?.t != null && result?.t?.data != null) {
-                          final t = result!.t!;
-                          setState(() => sessionId = t.data!.sessionId);
-                          snackbar(context, "Account created. Please check your email for a verification link.");
-                        } else if (result?.f != null) {
-                          final f = result!.f!;
-                          snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
-                        } else {
-                          snackbar(context, "An unknown error occurred.");
-                        }
-
-                        end();
-                      });
-                    },
-                    style: ElevatedButton.styleFrom(
-                      fixedSize: Size(200, 70),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      textStyle: TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
-                    child: Text("Create Account"),
-                  ),
-                ],
-              ),
-              if (sessionId != null) ...[
-                Spacer(),
-                Text("Session ID: $sessionId"),
-                TextButton(onPressed: () async {
-                  if (isLoading) return;
-                  setState(() => isCreateAccountMode = true);
-                  setState(() => isLoading = true);
-
-                  void end() {
-                    setState(() => isLoading = false);
-                  }
-
-                  WidgetsBinding.instance.addPostFrameCallback((_) async {
-                    if (!state.validate()) return end();
-                    snackbar(context, "Loading...");
-
-                    final api = DefaultApi(widget.client);
-                    final result = await request(() => api.authCreateAgainPost(authCreateAgainPostRequest: AuthCreateAgainPostRequest(email: email.text, sessionId: sessionId!)));
-                    if (!context.mounted) return end();
-
-                    if (result?.t != null && result?.t?.data != null) {
-                      final t = result!.t!;
-                      snackbar(context, "Please check your email for a verification link.");
-                    } else if (result?.f != null) {
-                      final f = result!.f!;
-                      snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
-                    } else {
-                      snackbar(context, "An unknown error occurred.");
-                    }
-
-                    end();
-                  });
-                }, child: Text("Resend Email")),
-              ],
-              Spacer(),
-              Text("Login v${LoginPage.version}", style: TextStyle(fontSize: 12, color: Colors.grey)),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Sign In"),
+          centerTitle: true,
+          actions: [
+            SizedBox(
+              width: 24,
+              height: 24,
+              child: isLoading ? CircularProgressIndicator() : SizedBox.shrink(),
+            ),
+            ...?widget.actions,
+          ],
+          bottom: const TabBar(
+            tabs: [
+              Tab(icon: Icon(Icons.door_front_door), text: 'Log In'),
+              Tab(icon: Icon(Icons.add_box), text: 'Create Account'),
             ],
-          ),
+          )
         ),
-      ),
+        body: TabBarView(
+          children: [false, true].map((createAccount) {
+            final key = keys[createAccount]!;
+
+            return Padding(
+              key: Key("login=$createAccount"),
+              padding: const EdgeInsets.all(16),
+              child: Form(
+                key: key,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Spacer(),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        TextFormField(
+                          controller: email,
+                          decoration: InputDecoration(
+                            labelText: "Email",
+                          ),
+                          validator: (value) {
+                            if (value == null || value.isEmpty) return "Must not be empty.";
+                            if (!isEmail(value)) return "Must be a valid email.";
+                            return null;
+                          },
+                        ),
+                        TextFormField(
+                          controller: password,
+                          obscureText: obscure,
+                          decoration: InputDecoration(
+                            labelText: "Password",
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                obscure ? Icons.visibility : Icons.visibility_off,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  obscure = !obscure;
+                                });
+                              },
+                            ),
+                          ),
+                          validator: (value) {
+                            if (value == null || value.isEmpty) return "Must not be empty.";
+                            if (createAccount && value.length < 8) return "Must be at least 8 characters.";
+                            return null;
+                          },
+                        ),
+                        if (createAccount)
+                        TextFormField(
+                          controller: password2,
+                          obscureText: obscure,
+                          decoration: InputDecoration(
+                            labelText: "Verify Password",
+                          ),
+                          validator: (value) {
+                            if (!createAccount) return null;
+                            if (value != password.text) return "Passwords do not match.";
+                            return null;
+                          },
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+                    Row(
+                      spacing: 8,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        if (!createAccount)
+                        ElevatedButton(
+                          onPressed: () async {
+                            if (isLoading) return;
+                            setState(() => isLoading = true);
+
+                            void end() {
+                              setState(() => isLoading = false);
+                            }
+
+                            WidgetsBinding.instance.addPostFrameCallback((_) async {
+                              if (!key.state.validate()) return end();
+                              snackbar(context, "Loading...");
+
+                              final api = DefaultApi(widget.client);
+                              final result = await request(() => api.authLoginPost(authCreatePostRequest: AuthCreatePostRequest(email: email.text, password: password.text)));
+                              if (!context.mounted) return end();
+
+                              if (result?.t != null && result?.t?.data != null) {
+                                final t = result!.t!;
+                                snackbar(context, "Verification code sent. Please check your email.");
+                                final r = await Navigator.push(context, MaterialPageRoute(builder: (context) => VerifySessionPage(id: t.data!.session, client: widget.client)));
+
+                                if (r == true) {
+                                  onLoggedIn(t.data!.session);
+                                }
+                              } else if (result?.f != null) {
+                                final f = result!.f!;
+                                snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
+                              } else {
+                                snackbar(context, "An unknown error occurred.");
+                              }
+
+                              end();
+                            });
+                          },
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: Size(200, 70),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            textStyle: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                          child: Text("Sign In"),
+                        ),
+                        if (createAccount)
+                        ElevatedButton(
+                          onPressed: () async {
+                            if (isLoading) return;
+                            if (createAccount == false) return;
+                            setState(() => isLoading = true);
+
+                            void end() {
+                              setState(() => isLoading = false);
+                            }
+
+                            WidgetsBinding.instance.addPostFrameCallback((_) async {
+                              if (!key.state.validate()) return end();
+                              snackbar(context, "Loading...");
+
+                              final api = DefaultApi(widget.client);
+                              final result = await request(() => api.authCreatePost(authCreatePostRequest: AuthCreatePostRequest(email: email.text, password: password.text)));
+                              if (!context.mounted) return end();
+
+                              if (result?.t != null && result?.t?.data != null) {
+                                final t = result!.t!;
+                                setState(() => sessionId = t.data!.sessionId);
+                                snackbar(context, "Account created. Please check your email for a verification link.");
+                              } else if (result?.f != null) {
+                                final f = result!.f!;
+                                snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
+                              } else {
+                                snackbar(context, "An unknown error occurred.");
+                              }
+
+                              end();
+                            });
+                          },
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: Size(200, 70),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            textStyle: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                          child: Text("Create Account"),
+                        ),
+                      ],
+                    ),
+                    if (sessionId != null) ...[
+                      Spacer(),
+                      Text("Session ID: $sessionId"),
+                      TextButton(onPressed: () async {
+                        if (isLoading) return;
+                        setState(() => isLoading = true);
+
+                        void end() {
+                          setState(() => isLoading = false);
+                        }
+
+                        WidgetsBinding.instance.addPostFrameCallback((_) async {
+                          if (!key.state.validate()) return end();
+                          snackbar(context, "Loading...");
+
+                          final api = DefaultApi(widget.client);
+                          final result = await request(() => api.authCreateAgainPost(authCreateAgainPostRequest: AuthCreateAgainPostRequest(email: email.text, sessionId: sessionId!)));
+                          if (!context.mounted) return end();
+
+                          if (result?.t != null && result?.t?.data != null) {
+                            final t = result!.t!;
+                            snackbar(context, "Please check your email for a verification link.");
+                          } else if (result?.f != null) {
+                            final f = result!.f!;
+                            snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
+                          } else {
+                            snackbar(context, "An unknown error occurred.");
+                          }
+
+                          end();
+                        });
+                      }, child: Text("Resend Email")),
+                    ],
+                    Spacer(),
+                    Text("Login v${LoginPage.version}", style: TextStyle(fontSize: 12, color: Colors.grey)),
+                  ],
+                ),
+              ),
+            );
+          },
+        ).toList(),
+      )),
     );
   }
 }
