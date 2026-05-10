@@ -14,7 +14,7 @@ class LoginPage extends StatefulWidget {
   @override
   State<LoginPage> createState() => _LoginPageState();
 
-  static final String version = "1.0.0A";
+  static final String version = "1.0.0B";
 }
 
 class _LoginPageState extends State<LoginPage> {
@@ -286,73 +286,76 @@ class _VerifySessionPageState extends State<VerifySessionPage> {
         centerTitle: true,
         leading: IconButton(onPressed: () => Navigator.of(context).pop(), icon: Icon(Icons.arrow_back)),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Form(
-          key: key,
-          child: Column(
-            children: [
-              Spacer(),
-              ConstrainedBox(
-                constraints: BoxConstraints(
-                  maxWidth: 300,
-                ),
-                child: TextFormField(
-                  onChanged: (value) {
-                    setState(() => code = value);
-                  },
-                  validator: (value) {
-                    if (value == null || value.isEmpty) return "Enter a code we sent to your email.";
-                    if (value.length != 6) return "Code must be 6 digits.";
-                    return null;
-                  },
-                ),
-              ),
-              Spacer(),
-              ElevatedButton(
-                onPressed: () async {
-                  if (isLoading) return;
-                  setState(() => isLoading = true);
-
-                  void end() {
-                    setState(() => isLoading = false);
-                  }
-
-                  if (!state.validate()) return end();
-                  snackbar(context, "Loading...");
-
-                  final api = DefaultApi(widget.client);
-                  final result = await request(() => api.authVerifySessionPost(authVerifySessionPostRequest: AuthVerifySessionPostRequest(session: widget.id, code: code)));
-                  if (!context.mounted) return end();
-
-                  if (result?.t != null) {
-                    final t = result!.t!;
-                    snackbar(context, "Session verified.");
-                    Navigator.of(context).pop(true);
-                  } else if (result?.f != null) {
-                    final f = result!.f!;
-                    snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
-                  } else {
-                    snackbar(context, "An unknown error occurred.");
-                  }
-
-                  end();
-                },
-                style: ElevatedButton.styleFrom(
-                  fixedSize: Size(200, 70),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Form(
+            key: key,
+            child: Column(
+              children: [
+                Spacer(),
+                ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: 300,
                   ),
-                  textStyle: TextStyle(
-                    fontSize: 20,
+                  child: TextFormField(
+                    onChanged: (value) {
+                      setState(() => code = value);
+                    },
+                    validator: (value) {
+                      if (value == null || value.isEmpty) return "Enter a code we sent to your email.";
+                      if (value.length != 6) return "Code must be 6 digits.";
+                      return null;
+                    },
                   ),
                 ),
-                child: isLoading ? CircularProgressIndicator() : Text("Verify"),
-              ),
-              SizedBox(height: 8),
-              Text("Session ID: ${widget.id}"),
-              Spacer(),
-            ],
+                Spacer(),
+                ElevatedButton(
+                  onPressed: () async {
+                    if (isLoading) return;
+                    setState(() => isLoading = true);
+
+                    void end() {
+                      setState(() => isLoading = false);
+                    }
+
+                    if (!state.validate()) return end();
+                    snackbar(context, "Loading...");
+
+                    final api = DefaultApi(widget.client);
+                    final result = await request(() => api.authVerifySessionPost(authVerifySessionPostRequest: AuthVerifySessionPostRequest(session: widget.id, code: code)));
+                    if (!context.mounted) return end();
+
+                    if (result?.t != null) {
+                      final t = result!.t!;
+                      snackbar(context, "Session verified.");
+                      Navigator.of(context).pop(true);
+                    } else if (result?.f != null) {
+                      final f = result!.f!;
+                      snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
+                    } else {
+                      snackbar(context, "An unknown error occurred.");
+                    }
+
+                    end();
+                  },
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(200, 70),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    textStyle: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  child: isLoading ? CircularProgressIndicator() : Text("Verify"),
+                ),
+                SizedBox(height: 8),
+                Spacer(),
+                Text("Session ID: ${widget.id}"),
+                Text("Login v${LoginPage.version}"),
+              ],
+            ),
           ),
         ),
       ),
