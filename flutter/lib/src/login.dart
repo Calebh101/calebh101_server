@@ -470,8 +470,9 @@ class _ForgotPasswordDialogueState extends State<ForgotPasswordDialogue> {
                     final result = await request(() => api.accountPasswordForgotPost(accountEmailChangePostRequest: AccountEmailChangePostRequest(email: email.text)));
                     if (!context.mounted) return end();
 
-                    if (result?.t != null && result?.t?.data != null) {
+                    if (result?.t != null) {
                       final t = result!.t!;
+                      Navigator.of(context).pop();
                       snackbar(context, t.message);
                     } else if (result?.f != null) {
                       final f = result!.f!;
