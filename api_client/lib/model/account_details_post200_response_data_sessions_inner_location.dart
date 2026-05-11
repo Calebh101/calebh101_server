@@ -13,15 +13,33 @@ part of openapi.api;
 class AccountDetailsPost200ResponseDataSessionsInnerLocation {
   /// Returns a new [AccountDetailsPost200ResponseDataSessionsInnerLocation] instance.
   AccountDetailsPost200ResponseDataSessionsInnerLocation({
-    required this.city,
-    required this.region,
-    required this.country,
+    this.city,
+    this.region,
+    this.country,
   });
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   String? city;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   String? region;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   String? country;
 
   @override
@@ -129,9 +147,6 @@ class AccountDetailsPost200ResponseDataSessionsInnerLocation {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'city',
-    'region',
-    'country',
   };
 }
 

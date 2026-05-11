@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **created** | [**DateTime**](DateTime.md) |  | 
 **used** | [**DateTime**](DateTime.md) |  | 
 **expires** | [**DateTime**](DateTime.md) |  | 
-**ip** | **String** |  | 
-**userAgent** | **String** |  | 
+**ip** | **String** |  | [optional] 
+**userAgent** | **String** |  | [optional] 
 **location** | [**AccountDetailsPost200ResponseDataSessionsInnerLocation**](AccountDetailsPost200ResponseDataSessionsInnerLocation.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -17,8 +17,8 @@ class AccountDetailsPost200ResponseDataSessionsInner {
     required this.created,
     required this.used,
     required this.expires,
-    required this.ip,
-    required this.userAgent,
+    this.ip,
+    this.userAgent,
     required this.location,
   });
 
@@ -30,8 +30,20 @@ class AccountDetailsPost200ResponseDataSessionsInner {
 
   DateTime expires;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   String? ip;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   String? userAgent;
 
   AccountDetailsPost200ResponseDataSessionsInnerLocation location;
@@ -157,8 +169,6 @@ class AccountDetailsPost200ResponseDataSessionsInner {
     'created',
     'used',
     'expires',
-    'ip',
-    'user_agent',
     'location',
   };
 }
