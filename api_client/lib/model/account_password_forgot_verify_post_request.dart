@@ -15,30 +15,36 @@ class AccountPasswordForgotVerifyPostRequest {
   AccountPasswordForgotVerifyPostRequest({
     required this.email,
     required this.code,
+    required this.password,
   });
 
   String email;
 
   String code;
 
+  String password;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is AccountPasswordForgotVerifyPostRequest &&
     other.email == email &&
-    other.code == code;
+    other.code == code &&
+    other.password == password;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (email.hashCode) +
-    (code.hashCode);
+    (code.hashCode) +
+    (password.hashCode);
 
   @override
-  String toString() => 'AccountPasswordForgotVerifyPostRequest[email=$email, code=$code]';
+  String toString() => 'AccountPasswordForgotVerifyPostRequest[email=$email, code=$code, password=$password]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'email'] = this.email;
       json[r'code'] = this.code;
+      json[r'password'] = this.password;
     return json;
   }
 
@@ -63,6 +69,7 @@ class AccountPasswordForgotVerifyPostRequest {
       return AccountPasswordForgotVerifyPostRequest(
         email: mapValueOfType<String>(json, r'email')!,
         code: mapValueOfType<String>(json, r'code')!,
+        password: mapValueOfType<String>(json, r'password')!,
       );
     }
     return null;
@@ -112,6 +119,7 @@ class AccountPasswordForgotVerifyPostRequest {
   static const requiredKeys = <String>{
     'email',
     'code',
+    'password',
   };
 }
 
