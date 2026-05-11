@@ -192,10 +192,10 @@ class ApiClient {
           return AccountDetailsPost200ResponseDataSessionsInner.fromJson(value);
         case 'AccountDetailsPost200ResponseDataSessionsInnerLocation':
           return AccountDetailsPost200ResponseDataSessionsInnerLocation.fromJson(value);
-        case 'AccountEmailEmailPostRequest':
-          return AccountEmailEmailPostRequest.fromJson(value);
-        case 'AccountEmailEmailVerifyOldPostRequest':
-          return AccountEmailEmailVerifyOldPostRequest.fromJson(value);
+        case 'AccountEmailChangePostRequest':
+          return AccountEmailChangePostRequest.fromJson(value);
+        case 'AccountEmailChangeVerifyOldPostRequest':
+          return AccountEmailChangeVerifyOldPostRequest.fromJson(value);
         case 'AccountPasswordForgotVerifyPostRequest':
           return AccountPasswordForgotVerifyPostRequest.fromJson(value);
         case 'AccountPasswordPutRequest':

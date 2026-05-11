@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for AccountEmailEmailVerifyOldPostRequest
+// tests for AccountEmailChangeVerifyOldPostRequest
 void main() {
-  // final instance = AccountEmailEmailVerifyOldPostRequest();
+  // final instance = AccountEmailChangeVerifyOldPostRequest();
 
-  group('test AccountEmailEmailVerifyOldPostRequest', () {
+  group('test AccountEmailChangeVerifyOldPostRequest', () {
     // String code
     test('to test the property `code`', () async {
       // TODO

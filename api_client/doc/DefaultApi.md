@@ -11,9 +11,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**accountDelete**](DefaultApi.md#accountdelete) | **DELETE** /account | 
 [**accountDetailsPost**](DefaultApi.md#accountdetailspost) | **POST** /account/details | 
-[**accountEmailEmailPost**](DefaultApi.md#accountemailemailpost) | **POST** /account/email/email | 
-[**accountEmailEmailVerifyNewPost**](DefaultApi.md#accountemailemailverifynewpost) | **POST** /account/email/email/verify/new | 
-[**accountEmailEmailVerifyOldPost**](DefaultApi.md#accountemailemailverifyoldpost) | **POST** /account/email/email/verify/old | 
+[**accountEmailChangePost**](DefaultApi.md#accountemailchangepost) | **POST** /account/email/change | 
+[**accountEmailChangeVerifyNewPost**](DefaultApi.md#accountemailchangeverifynewpost) | **POST** /account/email/change/verify/new | 
+[**accountEmailChangeVerifyOldPost**](DefaultApi.md#accountemailchangeverifyoldpost) | **POST** /account/email/change/verify/old | 
 [**accountPasswordForgotPost**](DefaultApi.md#accountpasswordforgotpost) | **POST** /account/password/forgot | 
 [**accountPasswordForgotVerifyPost**](DefaultApi.md#accountpasswordforgotverifypost) | **POST** /account/password/forgot/verify | 
 [**accountPasswordPut**](DefaultApi.md#accountpasswordput) | **PUT** /account/password | 
@@ -115,8 +115,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **accountEmailEmailPost**
-> AuthCreateAgainPost200Response accountEmailEmailPost(accountEmailEmailPostRequest)
+# **accountEmailChangePost**
+> AuthCreateAgainPost200Response accountEmailChangePost(accountEmailChangePostRequest)
 
 
 
@@ -125,13 +125,13 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final accountEmailEmailPostRequest = AccountEmailEmailPostRequest(); // AccountEmailEmailPostRequest | Request body
+final accountEmailChangePostRequest = AccountEmailChangePostRequest(); // AccountEmailChangePostRequest | Request body
 
 try {
-    final result = api_instance.accountEmailEmailPost(accountEmailEmailPostRequest);
+    final result = api_instance.accountEmailChangePost(accountEmailChangePostRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->accountEmailEmailPost: $e\n');
+    print('Exception when calling DefaultApi->accountEmailChangePost: $e\n');
 }
 ```
 
@@ -139,7 +139,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountEmailEmailPostRequest** | [**AccountEmailEmailPostRequest**](AccountEmailEmailPostRequest.md)| Request body | [optional] 
+ **accountEmailChangePostRequest** | [**AccountEmailChangePostRequest**](AccountEmailChangePostRequest.md)| Request body | [optional] 
 
 ### Return type
 
@@ -156,8 +156,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **accountEmailEmailVerifyNewPost**
-> AuthCreateAgainPost200Response accountEmailEmailVerifyNewPost(accountEmailEmailVerifyOldPostRequest)
+# **accountEmailChangeVerifyNewPost**
+> AuthCreateAgainPost200Response accountEmailChangeVerifyNewPost(accountEmailChangeVerifyOldPostRequest)
 
 
 
@@ -166,13 +166,13 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final accountEmailEmailVerifyOldPostRequest = AccountEmailEmailVerifyOldPostRequest(); // AccountEmailEmailVerifyOldPostRequest | Request body
+final accountEmailChangeVerifyOldPostRequest = AccountEmailChangeVerifyOldPostRequest(); // AccountEmailChangeVerifyOldPostRequest | Request body
 
 try {
-    final result = api_instance.accountEmailEmailVerifyNewPost(accountEmailEmailVerifyOldPostRequest);
+    final result = api_instance.accountEmailChangeVerifyNewPost(accountEmailChangeVerifyOldPostRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->accountEmailEmailVerifyNewPost: $e\n');
+    print('Exception when calling DefaultApi->accountEmailChangeVerifyNewPost: $e\n');
 }
 ```
 
@@ -180,7 +180,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountEmailEmailVerifyOldPostRequest** | [**AccountEmailEmailVerifyOldPostRequest**](AccountEmailEmailVerifyOldPostRequest.md)| Request body | [optional] 
+ **accountEmailChangeVerifyOldPostRequest** | [**AccountEmailChangeVerifyOldPostRequest**](AccountEmailChangeVerifyOldPostRequest.md)| Request body | [optional] 
 
 ### Return type
 
@@ -197,8 +197,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **accountEmailEmailVerifyOldPost**
-> AuthCreateAgainPost200Response accountEmailEmailVerifyOldPost(accountEmailEmailVerifyOldPostRequest)
+# **accountEmailChangeVerifyOldPost**
+> AuthCreateAgainPost200Response accountEmailChangeVerifyOldPost(accountEmailChangeVerifyOldPostRequest)
 
 
 
@@ -207,13 +207,13 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final accountEmailEmailVerifyOldPostRequest = AccountEmailEmailVerifyOldPostRequest(); // AccountEmailEmailVerifyOldPostRequest | Request body
+final accountEmailChangeVerifyOldPostRequest = AccountEmailChangeVerifyOldPostRequest(); // AccountEmailChangeVerifyOldPostRequest | Request body
 
 try {
-    final result = api_instance.accountEmailEmailVerifyOldPost(accountEmailEmailVerifyOldPostRequest);
+    final result = api_instance.accountEmailChangeVerifyOldPost(accountEmailChangeVerifyOldPostRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->accountEmailEmailVerifyOldPost: $e\n');
+    print('Exception when calling DefaultApi->accountEmailChangeVerifyOldPost: $e\n');
 }
 ```
 
@@ -221,7 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountEmailEmailVerifyOldPostRequest** | [**AccountEmailEmailVerifyOldPostRequest**](AccountEmailEmailVerifyOldPostRequest.md)| Request body | [optional] 
+ **accountEmailChangeVerifyOldPostRequest** | [**AccountEmailChangeVerifyOldPostRequest**](AccountEmailChangeVerifyOldPostRequest.md)| Request body | [optional] 
 
 ### Return type
 
@@ -239,7 +239,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **accountPasswordForgotPost**
-> AuthCreateAgainPost200Response accountPasswordForgotPost(accountEmailEmailPostRequest)
+> AuthCreateAgainPost200Response accountPasswordForgotPost(accountEmailChangePostRequest)
 
 
 
@@ -248,10 +248,10 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final accountEmailEmailPostRequest = AccountEmailEmailPostRequest(); // AccountEmailEmailPostRequest | Request body
+final accountEmailChangePostRequest = AccountEmailChangePostRequest(); // AccountEmailChangePostRequest | Request body
 
 try {
-    final result = api_instance.accountPasswordForgotPost(accountEmailEmailPostRequest);
+    final result = api_instance.accountPasswordForgotPost(accountEmailChangePostRequest);
     print(result);
 } catch (e) {
     print('Exception when calling DefaultApi->accountPasswordForgotPost: $e\n');
@@ -262,7 +262,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountEmailEmailPostRequest** | [**AccountEmailEmailPostRequest**](AccountEmailEmailPostRequest.md)| Request body | [optional] 
+ **accountEmailChangePostRequest** | [**AccountEmailChangePostRequest**](AccountEmailChangePostRequest.md)| Request body | [optional] 
 
 ### Return type
 

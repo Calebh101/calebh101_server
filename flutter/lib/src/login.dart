@@ -467,7 +467,7 @@ class _ForgotPasswordDialogueState extends State<ForgotPasswordDialogue> {
                     snackbar(context, "Loading...");
 
                     final api = DefaultApi(widget.client);
-                    final result = await request(() => api.accountPasswordForgotPost(accountEmailEmailPostRequest: AccountEmailEmailPostRequest(email: email.text)));
+                    final result = await request(() => api.accountPasswordForgotPost(accountEmailChangePostRequest: AccountEmailChangePostRequest(email: email.text)));
                     if (!context.mounted) return end();
 
                     if (result?.t != null && result?.t?.data != null) {

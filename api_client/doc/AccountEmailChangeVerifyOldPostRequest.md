@@ -1,4 +1,4 @@
-# openapi.model.AccountEmailEmailVerifyOldPostRequest
+# openapi.model.AccountEmailChangeVerifyOldPostRequest
 
 ## Load the model package
 ```dart

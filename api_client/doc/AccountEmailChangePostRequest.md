@@ -1,4 +1,4 @@
-# openapi.model.AccountEmailEmailPostRequest
+# openapi.model.AccountEmailChangePostRequest
 
 ## Load the model package
 ```dart

@@ -10,16 +10,16 @@
 
 part of openapi.api;
 
-class AccountEmailEmailPostRequest {
-  /// Returns a new [AccountEmailEmailPostRequest] instance.
-  AccountEmailEmailPostRequest({
+class AccountEmailChangePostRequest {
+  /// Returns a new [AccountEmailChangePostRequest] instance.
+  AccountEmailChangePostRequest({
     required this.email,
   });
 
   String email;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is AccountEmailEmailPostRequest &&
+  bool operator ==(Object other) => identical(this, other) || other is AccountEmailChangePostRequest &&
     other.email == email;
 
   @override
@@ -28,7 +28,7 @@ class AccountEmailEmailPostRequest {
     (email.hashCode);
 
   @override
-  String toString() => 'AccountEmailEmailPostRequest[email=$email]';
+  String toString() => 'AccountEmailChangePostRequest[email=$email]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -36,10 +36,10 @@ class AccountEmailEmailPostRequest {
     return json;
   }
 
-  /// Returns a new [AccountEmailEmailPostRequest] instance and imports its values from
+  /// Returns a new [AccountEmailChangePostRequest] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static AccountEmailEmailPostRequest? fromJson(dynamic value) {
+  static AccountEmailChangePostRequest? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -48,24 +48,24 @@ class AccountEmailEmailPostRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AccountEmailEmailPostRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AccountEmailEmailPostRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "AccountEmailChangePostRequest[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "AccountEmailChangePostRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return AccountEmailEmailPostRequest(
+      return AccountEmailChangePostRequest(
         email: mapValueOfType<String>(json, r'email')!,
       );
     }
     return null;
   }
 
-  static List<AccountEmailEmailPostRequest> listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <AccountEmailEmailPostRequest>[];
+  static List<AccountEmailChangePostRequest> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <AccountEmailChangePostRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = AccountEmailEmailPostRequest.fromJson(row);
+        final value = AccountEmailChangePostRequest.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -74,12 +74,12 @@ class AccountEmailEmailPostRequest {
     return result.toList(growable: growable);
   }
 
-  static Map<String, AccountEmailEmailPostRequest> mapFromJson(dynamic json) {
-    final map = <String, AccountEmailEmailPostRequest>{};
+  static Map<String, AccountEmailChangePostRequest> mapFromJson(dynamic json) {
+    final map = <String, AccountEmailChangePostRequest>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = AccountEmailEmailPostRequest.fromJson(entry.value);
+        final value = AccountEmailChangePostRequest.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -88,14 +88,14 @@ class AccountEmailEmailPostRequest {
     return map;
   }
 
-  // maps a json object with a list of AccountEmailEmailPostRequest-objects as value to a dart map
-  static Map<String, List<AccountEmailEmailPostRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<AccountEmailEmailPostRequest>>{};
+  // maps a json object with a list of AccountEmailChangePostRequest-objects as value to a dart map
+  static Map<String, List<AccountEmailChangePostRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<AccountEmailChangePostRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = AccountEmailEmailPostRequest.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = AccountEmailChangePostRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

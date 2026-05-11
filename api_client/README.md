@@ -61,9 +61,9 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**accountDelete**](doc//DefaultApi.md#accountdelete) | **DELETE** /account | 
 *DefaultApi* | [**accountDetailsPost**](doc//DefaultApi.md#accountdetailspost) | **POST** /account/details | 
-*DefaultApi* | [**accountEmailEmailPost**](doc//DefaultApi.md#accountemailemailpost) | **POST** /account/email/email | 
-*DefaultApi* | [**accountEmailEmailVerifyNewPost**](doc//DefaultApi.md#accountemailemailverifynewpost) | **POST** /account/email/email/verify/new | 
-*DefaultApi* | [**accountEmailEmailVerifyOldPost**](doc//DefaultApi.md#accountemailemailverifyoldpost) | **POST** /account/email/email/verify/old | 
+*DefaultApi* | [**accountEmailChangePost**](doc//DefaultApi.md#accountemailchangepost) | **POST** /account/email/change | 
+*DefaultApi* | [**accountEmailChangeVerifyNewPost**](doc//DefaultApi.md#accountemailchangeverifynewpost) | **POST** /account/email/change/verify/new | 
+*DefaultApi* | [**accountEmailChangeVerifyOldPost**](doc//DefaultApi.md#accountemailchangeverifyoldpost) | **POST** /account/email/change/verify/old | 
 *DefaultApi* | [**accountPasswordForgotPost**](doc//DefaultApi.md#accountpasswordforgotpost) | **POST** /account/password/forgot | 
 *DefaultApi* | [**accountPasswordForgotVerifyPost**](doc//DefaultApi.md#accountpasswordforgotverifypost) | **POST** /account/password/forgot/verify | 
 *DefaultApi* | [**accountPasswordPut**](doc//DefaultApi.md#accountpasswordput) | **PUT** /account/password | 
@@ -90,8 +90,8 @@ Class | Method | HTTP request | Description
  - [AccountDetailsPost200ResponseData](doc//AccountDetailsPost200ResponseData.md)
  - [AccountDetailsPost200ResponseDataSessionsInner](doc//AccountDetailsPost200ResponseDataSessionsInner.md)
  - [AccountDetailsPost200ResponseDataSessionsInnerLocation](doc//AccountDetailsPost200ResponseDataSessionsInnerLocation.md)
- - [AccountEmailEmailPostRequest](doc//AccountEmailEmailPostRequest.md)
- - [AccountEmailEmailVerifyOldPostRequest](doc//AccountEmailEmailVerifyOldPostRequest.md)
+ - [AccountEmailChangePostRequest](doc//AccountEmailChangePostRequest.md)
+ - [AccountEmailChangeVerifyOldPostRequest](doc//AccountEmailChangeVerifyOldPostRequest.md)
  - [AccountPasswordForgotVerifyPostRequest](doc//AccountPasswordForgotVerifyPostRequest.md)
  - [AccountPasswordPutRequest](doc//AccountPasswordPutRequest.md)
  - [AccountSessionDeleteRequest](doc//AccountSessionDeleteRequest.md)

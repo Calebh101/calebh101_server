@@ -27,22 +27,22 @@ void main() {
       // TODO
     });
 
-    //Future<AuthCreateAgainPost200Response> accountEmailEmailPost({ AccountEmailEmailPostRequest accountEmailEmailPostRequest }) async
-    test('test accountEmailEmailPost', () async {
+    //Future<AuthCreateAgainPost200Response> accountEmailChangePost({ AccountEmailChangePostRequest accountEmailChangePostRequest }) async
+    test('test accountEmailChangePost', () async {
       // TODO
     });
 
-    //Future<AuthCreateAgainPost200Response> accountEmailEmailVerifyNewPost({ AccountEmailEmailVerifyOldPostRequest accountEmailEmailVerifyOldPostRequest }) async
-    test('test accountEmailEmailVerifyNewPost', () async {
+    //Future<AuthCreateAgainPost200Response> accountEmailChangeVerifyNewPost({ AccountEmailChangeVerifyOldPostRequest accountEmailChangeVerifyOldPostRequest }) async
+    test('test accountEmailChangeVerifyNewPost', () async {
       // TODO
     });
 
-    //Future<AuthCreateAgainPost200Response> accountEmailEmailVerifyOldPost({ AccountEmailEmailVerifyOldPostRequest accountEmailEmailVerifyOldPostRequest }) async
-    test('test accountEmailEmailVerifyOldPost', () async {
+    //Future<AuthCreateAgainPost200Response> accountEmailChangeVerifyOldPost({ AccountEmailChangeVerifyOldPostRequest accountEmailChangeVerifyOldPostRequest }) async
+    test('test accountEmailChangeVerifyOldPost', () async {
       // TODO
     });
 
-    //Future<AuthCreateAgainPost200Response> accountPasswordForgotPost({ AccountEmailEmailPostRequest accountEmailEmailPostRequest }) async
+    //Future<AuthCreateAgainPost200Response> accountPasswordForgotPost({ AccountEmailChangePostRequest accountEmailChangePostRequest }) async
     test('test accountPasswordForgotPost', () async {
       // TODO
     });

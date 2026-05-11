@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for AccountEmailEmailPostRequest
+// tests for AccountEmailChangePostRequest
 void main() {
-  // final instance = AccountEmailEmailPostRequest();
+  // final instance = AccountEmailChangePostRequest();
 
-  group('test AccountEmailEmailPostRequest', () {
+  group('test AccountEmailChangePostRequest', () {
     // String email
     test('to test the property `email`', () async {
       // TODO
