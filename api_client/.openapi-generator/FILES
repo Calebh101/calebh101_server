@@ -7,6 +7,7 @@ doc/AccountDeleteRequest.md
 doc/AccountDetailsPost200Response.md
 doc/AccountDetailsPost200ResponseData.md
 doc/AccountDetailsPost200ResponseDataSessionsInner.md
+doc/AccountDetailsPost200ResponseDataSessionsInnerLocation.md
 doc/AccountEmailChangePostRequest.md
 doc/AccountEmailChangeVerifyOldPostRequest.md
 doc/AccountPasswordPutRequest.md
@@ -47,6 +48,7 @@ lib/model/account_delete_request.dart
 lib/model/account_details_post200_response.dart
 lib/model/account_details_post200_response_data.dart
 lib/model/account_details_post200_response_data_sessions_inner.dart
+lib/model/account_details_post200_response_data_sessions_inner_location.dart
 lib/model/account_email_change_post_request.dart
 lib/model/account_email_change_verify_old_post_request.dart
 lib/model/account_password_put_request.dart
@@ -73,6 +75,7 @@ lib/model/test_post200_response_data.dart
 lib/model/test_post_request.dart
 pubspec.yaml
 test/account_delete_request_test.dart
+test/account_details_post200_response_data_sessions_inner_location_test.dart
 test/account_details_post200_response_data_sessions_inner_test.dart
 test/account_details_post200_response_data_test.dart
 test/account_details_post200_response_test.dart

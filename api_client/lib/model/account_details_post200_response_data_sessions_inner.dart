@@ -19,6 +19,7 @@ class AccountDetailsPost200ResponseDataSessionsInner {
     required this.expires,
     required this.ip,
     required this.userAgent,
+    required this.location,
   });
 
   String safeId;
@@ -33,6 +34,8 @@ class AccountDetailsPost200ResponseDataSessionsInner {
 
   String? userAgent;
 
+  AccountDetailsPost200ResponseDataSessionsInnerLocation location;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is AccountDetailsPost200ResponseDataSessionsInner &&
     other.safeId == safeId &&
@@ -40,7 +43,8 @@ class AccountDetailsPost200ResponseDataSessionsInner {
     other.used == used &&
     other.expires == expires &&
     other.ip == ip &&
-    other.userAgent == userAgent;
+    other.userAgent == userAgent &&
+    other.location == location;
 
   @override
   int get hashCode =>
@@ -50,10 +54,11 @@ class AccountDetailsPost200ResponseDataSessionsInner {
     (used.hashCode) +
     (expires.hashCode) +
     (ip == null ? 0 : ip!.hashCode) +
-    (userAgent == null ? 0 : userAgent!.hashCode);
+    (userAgent == null ? 0 : userAgent!.hashCode) +
+    (location.hashCode);
 
   @override
-  String toString() => 'AccountDetailsPost200ResponseDataSessionsInner[safeId=$safeId, created=$created, used=$used, expires=$expires, ip=$ip, userAgent=$userAgent]';
+  String toString() => 'AccountDetailsPost200ResponseDataSessionsInner[safeId=$safeId, created=$created, used=$used, expires=$expires, ip=$ip, userAgent=$userAgent, location=$location]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -71,6 +76,7 @@ class AccountDetailsPost200ResponseDataSessionsInner {
     } else {
       json[r'user_agent'] = null;
     }
+      json[r'location'] = this.location;
     return json;
   }
 
@@ -99,6 +105,7 @@ class AccountDetailsPost200ResponseDataSessionsInner {
         expires: mapDateTime(json, r'expires', r'')!,
         ip: mapValueOfType<String>(json, r'ip'),
         userAgent: mapValueOfType<String>(json, r'user_agent'),
+        location: AccountDetailsPost200ResponseDataSessionsInnerLocation.fromJson(json[r'location'])!,
       );
     }
     return null;
@@ -152,6 +159,7 @@ class AccountDetailsPost200ResponseDataSessionsInner {
     'expires',
     'ip',
     'user_agent',
+    'location',
   };
 }
 

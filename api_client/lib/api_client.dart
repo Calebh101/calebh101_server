@@ -190,6 +190,8 @@ class ApiClient {
           return AccountDetailsPost200ResponseData.fromJson(value);
         case 'AccountDetailsPost200ResponseDataSessionsInner':
           return AccountDetailsPost200ResponseDataSessionsInner.fromJson(value);
+        case 'AccountDetailsPost200ResponseDataSessionsInnerLocation':
+          return AccountDetailsPost200ResponseDataSessionsInnerLocation.fromJson(value);
         case 'AccountEmailChangePostRequest':
           return AccountEmailChangePostRequest.fromJson(value);
         case 'AccountEmailChangeVerifyOldPostRequest':

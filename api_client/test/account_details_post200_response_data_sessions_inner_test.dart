@@ -46,6 +46,11 @@ void main() {
       // TODO
     });
 
+    // AccountDetailsPost200ResponseDataSessionsInnerLocation location
+    test('to test the property `location`', () async {
+      // TODO
+    });
+
 
   });
 
