@@ -11,13 +11,18 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for AuthCreateAgainPost200ResponseData
+// tests for AccountEmailEmailVerifyOldPostRequest
 void main() {
-  // final instance = AuthCreateAgainPost200ResponseData();
+  // final instance = AccountEmailEmailVerifyOldPostRequest();
 
-  group('test AuthCreateAgainPost200ResponseData', () {
-    // DateTime lastVerificationSent
-    test('to test the property `lastVerificationSent`', () async {
+  group('test AccountEmailEmailVerifyOldPostRequest', () {
+    // String code
+    test('to test the property `code`', () async {
+      // TODO
+    });
+
+    // String session
+    test('to test the property `session`', () async {
       // TODO
     });
 

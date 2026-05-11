@@ -61,9 +61,11 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**accountDelete**](doc//DefaultApi.md#accountdelete) | **DELETE** /account | 
 *DefaultApi* | [**accountDetailsPost**](doc//DefaultApi.md#accountdetailspost) | **POST** /account/details | 
-*DefaultApi* | [**accountEmailChangePost**](doc//DefaultApi.md#accountemailchangepost) | **POST** /account/email/change | 
-*DefaultApi* | [**accountEmailChangeVerifyNewPost**](doc//DefaultApi.md#accountemailchangeverifynewpost) | **POST** /account/email/change/verify/new | 
-*DefaultApi* | [**accountEmailChangeVerifyOldPost**](doc//DefaultApi.md#accountemailchangeverifyoldpost) | **POST** /account/email/change/verify/old | 
+*DefaultApi* | [**accountEmailEmailPost**](doc//DefaultApi.md#accountemailemailpost) | **POST** /account/email/email | 
+*DefaultApi* | [**accountEmailEmailVerifyNewPost**](doc//DefaultApi.md#accountemailemailverifynewpost) | **POST** /account/email/email/verify/new | 
+*DefaultApi* | [**accountEmailEmailVerifyOldPost**](doc//DefaultApi.md#accountemailemailverifyoldpost) | **POST** /account/email/email/verify/old | 
+*DefaultApi* | [**accountPasswordForgotPost**](doc//DefaultApi.md#accountpasswordforgotpost) | **POST** /account/password/forgot | 
+*DefaultApi* | [**accountPasswordForgotVerifyPost**](doc//DefaultApi.md#accountpasswordforgotverifypost) | **POST** /account/password/forgot/verify | 
 *DefaultApi* | [**accountPasswordPut**](doc//DefaultApi.md#accountpasswordput) | **PUT** /account/password | 
 *DefaultApi* | [**accountSessionDelete**](doc//DefaultApi.md#accountsessiondelete) | **DELETE** /account/session | 
 *DefaultApi* | [**accountSignoutPost**](doc//DefaultApi.md#accountsignoutpost) | **POST** /account/signout | 
@@ -88,15 +90,15 @@ Class | Method | HTTP request | Description
  - [AccountDetailsPost200ResponseData](doc//AccountDetailsPost200ResponseData.md)
  - [AccountDetailsPost200ResponseDataSessionsInner](doc//AccountDetailsPost200ResponseDataSessionsInner.md)
  - [AccountDetailsPost200ResponseDataSessionsInnerLocation](doc//AccountDetailsPost200ResponseDataSessionsInnerLocation.md)
- - [AccountEmailChangePostRequest](doc//AccountEmailChangePostRequest.md)
- - [AccountEmailChangeVerifyOldPostRequest](doc//AccountEmailChangeVerifyOldPostRequest.md)
+ - [AccountEmailEmailPostRequest](doc//AccountEmailEmailPostRequest.md)
+ - [AccountEmailEmailVerifyOldPostRequest](doc//AccountEmailEmailVerifyOldPostRequest.md)
+ - [AccountPasswordForgotVerifyPostRequest](doc//AccountPasswordForgotVerifyPostRequest.md)
  - [AccountPasswordPutRequest](doc//AccountPasswordPutRequest.md)
  - [AccountSessionDeleteRequest](doc//AccountSessionDeleteRequest.md)
  - [AccountVerifyDeleteRequest](doc//AccountVerifyDeleteRequest.md)
  - [AuthAllowedRedirectUrlsGet200Response](doc//AuthAllowedRedirectUrlsGet200Response.md)
  - [AuthAllowedRedirectUrlsGet200ResponseDataInner](doc//AuthAllowedRedirectUrlsGet200ResponseDataInner.md)
  - [AuthCreateAgainPost200Response](doc//AuthCreateAgainPost200Response.md)
- - [AuthCreateAgainPost200ResponseData](doc//AuthCreateAgainPost200ResponseData.md)
  - [AuthCreateAgainPost200ResponseErrorsInner](doc//AuthCreateAgainPost200ResponseErrorsInner.md)
  - [AuthCreateAgainPostRequest](doc//AuthCreateAgainPostRequest.md)
  - [AuthCreatePost200Response](doc//AuthCreatePost200Response.md)
@@ -104,7 +106,6 @@ Class | Method | HTTP request | Description
  - [AuthCreatePostRequest](doc//AuthCreatePostRequest.md)
  - [AuthLoginPost200Response](doc//AuthLoginPost200Response.md)
  - [AuthLoginPost200ResponseData](doc//AuthLoginPost200ResponseData.md)
- - [AuthVerifySessionPost200Response](doc//AuthVerifySessionPost200Response.md)
  - [AuthVerifySessionPostRequest](doc//AuthVerifySessionPostRequest.md)
  - [AuthVerifyUserPostRequest](doc//AuthVerifyUserPostRequest.md)
  - [GetStatus200Response](doc//GetStatus200Response.md)

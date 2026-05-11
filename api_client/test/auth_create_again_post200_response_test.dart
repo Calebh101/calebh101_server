@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // AuthCreateAgainPost200ResponseData data
+    // Object data
     test('to test the property `data`', () async {
       // TODO
     });

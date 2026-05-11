@@ -11,9 +11,11 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**accountDelete**](DefaultApi.md#accountdelete) | **DELETE** /account | 
 [**accountDetailsPost**](DefaultApi.md#accountdetailspost) | **POST** /account/details | 
-[**accountEmailChangePost**](DefaultApi.md#accountemailchangepost) | **POST** /account/email/change | 
-[**accountEmailChangeVerifyNewPost**](DefaultApi.md#accountemailchangeverifynewpost) | **POST** /account/email/change/verify/new | 
-[**accountEmailChangeVerifyOldPost**](DefaultApi.md#accountemailchangeverifyoldpost) | **POST** /account/email/change/verify/old | 
+[**accountEmailEmailPost**](DefaultApi.md#accountemailemailpost) | **POST** /account/email/email | 
+[**accountEmailEmailVerifyNewPost**](DefaultApi.md#accountemailemailverifynewpost) | **POST** /account/email/email/verify/new | 
+[**accountEmailEmailVerifyOldPost**](DefaultApi.md#accountemailemailverifyoldpost) | **POST** /account/email/email/verify/old | 
+[**accountPasswordForgotPost**](DefaultApi.md#accountpasswordforgotpost) | **POST** /account/password/forgot | 
+[**accountPasswordForgotVerifyPost**](DefaultApi.md#accountpasswordforgotverifypost) | **POST** /account/password/forgot/verify | 
 [**accountPasswordPut**](DefaultApi.md#accountpasswordput) | **PUT** /account/password | 
 [**accountSessionDelete**](DefaultApi.md#accountsessiondelete) | **DELETE** /account/session | 
 [**accountSignoutPost**](DefaultApi.md#accountsignoutpost) | **POST** /account/signout | 
@@ -32,7 +34,7 @@ Method | HTTP request | Description
 
 
 # **accountDelete**
-> AuthVerifySessionPost200Response accountDelete(accountDeleteRequest)
+> AuthCreateAgainPost200Response accountDelete(accountDeleteRequest)
 
 
 
@@ -59,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
 
 ### Authorization
 
@@ -113,8 +115,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **accountEmailChangePost**
-> AuthVerifySessionPost200Response accountEmailChangePost(accountEmailChangePostRequest)
+# **accountEmailEmailPost**
+> AuthCreateAgainPost200Response accountEmailEmailPost(accountEmailEmailPostRequest)
 
 
 
@@ -123,13 +125,13 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final accountEmailChangePostRequest = AccountEmailChangePostRequest(); // AccountEmailChangePostRequest | Request body
+final accountEmailEmailPostRequest = AccountEmailEmailPostRequest(); // AccountEmailEmailPostRequest | Request body
 
 try {
-    final result = api_instance.accountEmailChangePost(accountEmailChangePostRequest);
+    final result = api_instance.accountEmailEmailPost(accountEmailEmailPostRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->accountEmailChangePost: $e\n');
+    print('Exception when calling DefaultApi->accountEmailEmailPost: $e\n');
 }
 ```
 
@@ -137,11 +139,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountEmailChangePostRequest** | [**AccountEmailChangePostRequest**](AccountEmailChangePostRequest.md)| Request body | [optional] 
+ **accountEmailEmailPostRequest** | [**AccountEmailEmailPostRequest**](AccountEmailEmailPostRequest.md)| Request body | [optional] 
 
 ### Return type
 
-[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
 
 ### Authorization
 
@@ -154,8 +156,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **accountEmailChangeVerifyNewPost**
-> AuthVerifySessionPost200Response accountEmailChangeVerifyNewPost(accountEmailChangeVerifyOldPostRequest)
+# **accountEmailEmailVerifyNewPost**
+> AuthCreateAgainPost200Response accountEmailEmailVerifyNewPost(accountEmailEmailVerifyOldPostRequest)
 
 
 
@@ -164,13 +166,13 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final accountEmailChangeVerifyOldPostRequest = AccountEmailChangeVerifyOldPostRequest(); // AccountEmailChangeVerifyOldPostRequest | Request body
+final accountEmailEmailVerifyOldPostRequest = AccountEmailEmailVerifyOldPostRequest(); // AccountEmailEmailVerifyOldPostRequest | Request body
 
 try {
-    final result = api_instance.accountEmailChangeVerifyNewPost(accountEmailChangeVerifyOldPostRequest);
+    final result = api_instance.accountEmailEmailVerifyNewPost(accountEmailEmailVerifyOldPostRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->accountEmailChangeVerifyNewPost: $e\n');
+    print('Exception when calling DefaultApi->accountEmailEmailVerifyNewPost: $e\n');
 }
 ```
 
@@ -178,11 +180,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountEmailChangeVerifyOldPostRequest** | [**AccountEmailChangeVerifyOldPostRequest**](AccountEmailChangeVerifyOldPostRequest.md)| Request body | [optional] 
+ **accountEmailEmailVerifyOldPostRequest** | [**AccountEmailEmailVerifyOldPostRequest**](AccountEmailEmailVerifyOldPostRequest.md)| Request body | [optional] 
 
 ### Return type
 
-[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
 
 ### Authorization
 
@@ -195,8 +197,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **accountEmailChangeVerifyOldPost**
-> AuthVerifySessionPost200Response accountEmailChangeVerifyOldPost(accountEmailChangeVerifyOldPostRequest)
+# **accountEmailEmailVerifyOldPost**
+> AuthCreateAgainPost200Response accountEmailEmailVerifyOldPost(accountEmailEmailVerifyOldPostRequest)
 
 
 
@@ -205,13 +207,13 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final accountEmailChangeVerifyOldPostRequest = AccountEmailChangeVerifyOldPostRequest(); // AccountEmailChangeVerifyOldPostRequest | Request body
+final accountEmailEmailVerifyOldPostRequest = AccountEmailEmailVerifyOldPostRequest(); // AccountEmailEmailVerifyOldPostRequest | Request body
 
 try {
-    final result = api_instance.accountEmailChangeVerifyOldPost(accountEmailChangeVerifyOldPostRequest);
+    final result = api_instance.accountEmailEmailVerifyOldPost(accountEmailEmailVerifyOldPostRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->accountEmailChangeVerifyOldPost: $e\n');
+    print('Exception when calling DefaultApi->accountEmailEmailVerifyOldPost: $e\n');
 }
 ```
 
@@ -219,11 +221,93 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountEmailChangeVerifyOldPostRequest** | [**AccountEmailChangeVerifyOldPostRequest**](AccountEmailChangeVerifyOldPostRequest.md)| Request body | [optional] 
+ **accountEmailEmailVerifyOldPostRequest** | [**AccountEmailEmailVerifyOldPostRequest**](AccountEmailEmailVerifyOldPostRequest.md)| Request body | [optional] 
 
 ### Return type
 
-[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **accountPasswordForgotPost**
+> AuthCreateAgainPost200Response accountPasswordForgotPost(accountEmailEmailPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountEmailEmailPostRequest = AccountEmailEmailPostRequest(); // AccountEmailEmailPostRequest | Request body
+
+try {
+    final result = api_instance.accountPasswordForgotPost(accountEmailEmailPostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->accountPasswordForgotPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountEmailEmailPostRequest** | [**AccountEmailEmailPostRequest**](AccountEmailEmailPostRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **accountPasswordForgotVerifyPost**
+> AuthCreateAgainPost200Response accountPasswordForgotVerifyPost(accountPasswordForgotVerifyPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountPasswordForgotVerifyPostRequest = AccountPasswordForgotVerifyPostRequest(); // AccountPasswordForgotVerifyPostRequest | Request body
+
+try {
+    final result = api_instance.accountPasswordForgotVerifyPost(accountPasswordForgotVerifyPostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->accountPasswordForgotVerifyPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountPasswordForgotVerifyPostRequest** | [**AccountPasswordForgotVerifyPostRequest**](AccountPasswordForgotVerifyPostRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
 
 ### Authorization
 
@@ -237,7 +321,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **accountPasswordPut**
-> AuthVerifySessionPost200Response accountPasswordPut(accountPasswordPutRequest)
+> AuthCreateAgainPost200Response accountPasswordPut(accountPasswordPutRequest)
 
 
 
@@ -264,7 +348,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
 
 ### Authorization
 
@@ -278,7 +362,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **accountSessionDelete**
-> AuthVerifySessionPost200Response accountSessionDelete(accountSessionDeleteRequest)
+> AuthCreateAgainPost200Response accountSessionDelete(accountSessionDeleteRequest)
 
 
 
@@ -305,7 +389,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
 
 ### Authorization
 
@@ -319,7 +403,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **accountSignoutPost**
-> AuthVerifySessionPost200Response accountSignoutPost(body)
+> AuthCreateAgainPost200Response accountSignoutPost(body)
 
 
 
@@ -346,7 +430,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
 
 ### Authorization
 
@@ -360,7 +444,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **accountVerifyDelete**
-> AuthVerifySessionPost200Response accountVerifyDelete(accountVerifyDeleteRequest)
+> AuthCreateAgainPost200Response accountVerifyDelete(accountVerifyDeleteRequest)
 
 
 
@@ -387,7 +471,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
 
 ### Authorization
 
@@ -561,7 +645,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **authVerifySessionPost**
-> AuthVerifySessionPost200Response authVerifySessionPost(authVerifySessionPostRequest)
+> AuthCreateAgainPost200Response authVerifySessionPost(authVerifySessionPostRequest)
 
 
 
@@ -588,7 +672,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
 
 ### Authorization
 
@@ -602,7 +686,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **authVerifyUserPost**
-> AuthVerifySessionPost200Response authVerifyUserPost(authVerifyUserPostRequest)
+> AuthCreateAgainPost200Response authVerifyUserPost(authVerifyUserPostRequest)
 
 
 
@@ -629,7 +713,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthVerifySessionPost200Response**](AuthVerifySessionPost200Response.md)
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
 
 ### Authorization
 

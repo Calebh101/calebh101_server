@@ -14,31 +14,25 @@ class AuthCreatePost200ResponseData {
   /// Returns a new [AuthCreatePost200ResponseData] instance.
   AuthCreatePost200ResponseData({
     required this.sessionId,
-    required this.lastVerificationSent,
   });
 
   String sessionId;
 
-  DateTime lastVerificationSent;
-
   @override
   bool operator ==(Object other) => identical(this, other) || other is AuthCreatePost200ResponseData &&
-    other.sessionId == sessionId &&
-    other.lastVerificationSent == lastVerificationSent;
+    other.sessionId == sessionId;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (sessionId.hashCode) +
-    (lastVerificationSent.hashCode);
+    (sessionId.hashCode);
 
   @override
-  String toString() => 'AuthCreatePost200ResponseData[sessionId=$sessionId, lastVerificationSent=$lastVerificationSent]';
+  String toString() => 'AuthCreatePost200ResponseData[sessionId=$sessionId]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'sessionId'] = this.sessionId;
-      json[r'lastVerificationSent'] = this.lastVerificationSent.toUtc().toIso8601String();
     return json;
   }
 
@@ -62,7 +56,6 @@ class AuthCreatePost200ResponseData {
 
       return AuthCreatePost200ResponseData(
         sessionId: mapValueOfType<String>(json, r'sessionId')!,
-        lastVerificationSent: mapDateTime(json, r'lastVerificationSent', r'')!,
       );
     }
     return null;
@@ -111,7 +104,6 @@ class AuthCreatePost200ResponseData {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'sessionId',
-    'lastVerificationSent',
   };
 }
 

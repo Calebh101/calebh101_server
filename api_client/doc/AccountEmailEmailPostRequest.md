@@ -1,4 +1,4 @@
-# openapi.model.AuthCreateAgainPost200ResponseData
+# openapi.model.AccountEmailEmailPostRequest
 
 ## Load the model package
 ```dart
@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**lastVerificationSent** | [**DateTime**](DateTime.md) |  | 
+**email** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

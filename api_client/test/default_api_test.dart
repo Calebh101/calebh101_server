@@ -17,7 +17,7 @@ void main() {
   // final instance = DefaultApi();
 
   group('tests for DefaultApi', () {
-    //Future<AuthVerifySessionPost200Response> accountDelete({ AccountDeleteRequest accountDeleteRequest }) async
+    //Future<AuthCreateAgainPost200Response> accountDelete({ AccountDeleteRequest accountDeleteRequest }) async
     test('test accountDelete', () async {
       // TODO
     });
@@ -27,37 +27,47 @@ void main() {
       // TODO
     });
 
-    //Future<AuthVerifySessionPost200Response> accountEmailChangePost({ AccountEmailChangePostRequest accountEmailChangePostRequest }) async
-    test('test accountEmailChangePost', () async {
+    //Future<AuthCreateAgainPost200Response> accountEmailEmailPost({ AccountEmailEmailPostRequest accountEmailEmailPostRequest }) async
+    test('test accountEmailEmailPost', () async {
       // TODO
     });
 
-    //Future<AuthVerifySessionPost200Response> accountEmailChangeVerifyNewPost({ AccountEmailChangeVerifyOldPostRequest accountEmailChangeVerifyOldPostRequest }) async
-    test('test accountEmailChangeVerifyNewPost', () async {
+    //Future<AuthCreateAgainPost200Response> accountEmailEmailVerifyNewPost({ AccountEmailEmailVerifyOldPostRequest accountEmailEmailVerifyOldPostRequest }) async
+    test('test accountEmailEmailVerifyNewPost', () async {
       // TODO
     });
 
-    //Future<AuthVerifySessionPost200Response> accountEmailChangeVerifyOldPost({ AccountEmailChangeVerifyOldPostRequest accountEmailChangeVerifyOldPostRequest }) async
-    test('test accountEmailChangeVerifyOldPost', () async {
+    //Future<AuthCreateAgainPost200Response> accountEmailEmailVerifyOldPost({ AccountEmailEmailVerifyOldPostRequest accountEmailEmailVerifyOldPostRequest }) async
+    test('test accountEmailEmailVerifyOldPost', () async {
       // TODO
     });
 
-    //Future<AuthVerifySessionPost200Response> accountPasswordPut({ AccountPasswordPutRequest accountPasswordPutRequest }) async
+    //Future<AuthCreateAgainPost200Response> accountPasswordForgotPost({ AccountEmailEmailPostRequest accountEmailEmailPostRequest }) async
+    test('test accountPasswordForgotPost', () async {
+      // TODO
+    });
+
+    //Future<AuthCreateAgainPost200Response> accountPasswordForgotVerifyPost({ AccountPasswordForgotVerifyPostRequest accountPasswordForgotVerifyPostRequest }) async
+    test('test accountPasswordForgotVerifyPost', () async {
+      // TODO
+    });
+
+    //Future<AuthCreateAgainPost200Response> accountPasswordPut({ AccountPasswordPutRequest accountPasswordPutRequest }) async
     test('test accountPasswordPut', () async {
       // TODO
     });
 
-    //Future<AuthVerifySessionPost200Response> accountSessionDelete({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
+    //Future<AuthCreateAgainPost200Response> accountSessionDelete({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
     test('test accountSessionDelete', () async {
       // TODO
     });
 
-    //Future<AuthVerifySessionPost200Response> accountSignoutPost({ Object body }) async
+    //Future<AuthCreateAgainPost200Response> accountSignoutPost({ Object body }) async
     test('test accountSignoutPost', () async {
       // TODO
     });
 
-    //Future<AuthVerifySessionPost200Response> accountVerifyDelete({ AccountVerifyDeleteRequest accountVerifyDeleteRequest }) async
+    //Future<AuthCreateAgainPost200Response> accountVerifyDelete({ AccountVerifyDeleteRequest accountVerifyDeleteRequest }) async
     test('test accountVerifyDelete', () async {
       // TODO
     });
@@ -82,12 +92,12 @@ void main() {
       // TODO
     });
 
-    //Future<AuthVerifySessionPost200Response> authVerifySessionPost({ AuthVerifySessionPostRequest authVerifySessionPostRequest }) async
+    //Future<AuthCreateAgainPost200Response> authVerifySessionPost({ AuthVerifySessionPostRequest authVerifySessionPostRequest }) async
     test('test authVerifySessionPost', () async {
       // TODO
     });
 
-    //Future<AuthVerifySessionPost200Response> authVerifyUserPost({ AuthVerifyUserPostRequest authVerifyUserPostRequest }) async
+    //Future<AuthCreateAgainPost200Response> authVerifyUserPost({ AuthVerifyUserPostRequest authVerifyUserPostRequest }) async
     test('test authVerifyUserPost', () async {
       // TODO
     });

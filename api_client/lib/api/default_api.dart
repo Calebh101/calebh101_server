@@ -50,7 +50,7 @@ class DefaultApi {
   ///
   /// * [AccountDeleteRequest] accountDeleteRequest:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> accountDelete({ AccountDeleteRequest? accountDeleteRequest, }) async {
+  Future<AuthCreateAgainPost200Response?> accountDelete({ AccountDeleteRequest? accountDeleteRequest, }) async {
     final response = await accountDeleteWithHttpInfo( accountDeleteRequest: accountDeleteRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -59,7 +59,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
     
     }
     return null;
@@ -114,17 +114,17 @@ class DefaultApi {
     return null;
   }
 
-  /// Performs an HTTP 'POST /account/email/change' operation and returns the [Response].
+  /// Performs an HTTP 'POST /account/email/email' operation and returns the [Response].
   /// Parameters:
   ///
-  /// * [AccountEmailChangePostRequest] accountEmailChangePostRequest:
+  /// * [AccountEmailEmailPostRequest] accountEmailEmailPostRequest:
   ///   Request body
-  Future<Response> accountEmailChangePostWithHttpInfo({ AccountEmailChangePostRequest? accountEmailChangePostRequest, }) async {
+  Future<Response> accountEmailEmailPostWithHttpInfo({ AccountEmailEmailPostRequest? accountEmailEmailPostRequest, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/account/email/change';
+    final path = r'/account/email/email';
 
     // ignore: prefer_final_locals
-    Object? postBody = accountEmailChangePostRequest;
+    Object? postBody = accountEmailEmailPostRequest;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -146,10 +146,10 @@ class DefaultApi {
 
   /// Parameters:
   ///
-  /// * [AccountEmailChangePostRequest] accountEmailChangePostRequest:
+  /// * [AccountEmailEmailPostRequest] accountEmailEmailPostRequest:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> accountEmailChangePost({ AccountEmailChangePostRequest? accountEmailChangePostRequest, }) async {
-    final response = await accountEmailChangePostWithHttpInfo( accountEmailChangePostRequest: accountEmailChangePostRequest, );
+  Future<AuthCreateAgainPost200Response?> accountEmailEmailPost({ AccountEmailEmailPostRequest? accountEmailEmailPostRequest, }) async {
+    final response = await accountEmailEmailPostWithHttpInfo( accountEmailEmailPostRequest: accountEmailEmailPostRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -157,23 +157,23 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
     
     }
     return null;
   }
 
-  /// Performs an HTTP 'POST /account/email/change/verify/new' operation and returns the [Response].
+  /// Performs an HTTP 'POST /account/email/email/verify/new' operation and returns the [Response].
   /// Parameters:
   ///
-  /// * [AccountEmailChangeVerifyOldPostRequest] accountEmailChangeVerifyOldPostRequest:
+  /// * [AccountEmailEmailVerifyOldPostRequest] accountEmailEmailVerifyOldPostRequest:
   ///   Request body
-  Future<Response> accountEmailChangeVerifyNewPostWithHttpInfo({ AccountEmailChangeVerifyOldPostRequest? accountEmailChangeVerifyOldPostRequest, }) async {
+  Future<Response> accountEmailEmailVerifyNewPostWithHttpInfo({ AccountEmailEmailVerifyOldPostRequest? accountEmailEmailVerifyOldPostRequest, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/account/email/change/verify/new';
+    final path = r'/account/email/email/verify/new';
 
     // ignore: prefer_final_locals
-    Object? postBody = accountEmailChangeVerifyOldPostRequest;
+    Object? postBody = accountEmailEmailVerifyOldPostRequest;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -195,10 +195,10 @@ class DefaultApi {
 
   /// Parameters:
   ///
-  /// * [AccountEmailChangeVerifyOldPostRequest] accountEmailChangeVerifyOldPostRequest:
+  /// * [AccountEmailEmailVerifyOldPostRequest] accountEmailEmailVerifyOldPostRequest:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> accountEmailChangeVerifyNewPost({ AccountEmailChangeVerifyOldPostRequest? accountEmailChangeVerifyOldPostRequest, }) async {
-    final response = await accountEmailChangeVerifyNewPostWithHttpInfo( accountEmailChangeVerifyOldPostRequest: accountEmailChangeVerifyOldPostRequest, );
+  Future<AuthCreateAgainPost200Response?> accountEmailEmailVerifyNewPost({ AccountEmailEmailVerifyOldPostRequest? accountEmailEmailVerifyOldPostRequest, }) async {
+    final response = await accountEmailEmailVerifyNewPostWithHttpInfo( accountEmailEmailVerifyOldPostRequest: accountEmailEmailVerifyOldPostRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -206,23 +206,23 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
     
     }
     return null;
   }
 
-  /// Performs an HTTP 'POST /account/email/change/verify/old' operation and returns the [Response].
+  /// Performs an HTTP 'POST /account/email/email/verify/old' operation and returns the [Response].
   /// Parameters:
   ///
-  /// * [AccountEmailChangeVerifyOldPostRequest] accountEmailChangeVerifyOldPostRequest:
+  /// * [AccountEmailEmailVerifyOldPostRequest] accountEmailEmailVerifyOldPostRequest:
   ///   Request body
-  Future<Response> accountEmailChangeVerifyOldPostWithHttpInfo({ AccountEmailChangeVerifyOldPostRequest? accountEmailChangeVerifyOldPostRequest, }) async {
+  Future<Response> accountEmailEmailVerifyOldPostWithHttpInfo({ AccountEmailEmailVerifyOldPostRequest? accountEmailEmailVerifyOldPostRequest, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/account/email/change/verify/old';
+    final path = r'/account/email/email/verify/old';
 
     // ignore: prefer_final_locals
-    Object? postBody = accountEmailChangeVerifyOldPostRequest;
+    Object? postBody = accountEmailEmailVerifyOldPostRequest;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -244,10 +244,10 @@ class DefaultApi {
 
   /// Parameters:
   ///
-  /// * [AccountEmailChangeVerifyOldPostRequest] accountEmailChangeVerifyOldPostRequest:
+  /// * [AccountEmailEmailVerifyOldPostRequest] accountEmailEmailVerifyOldPostRequest:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> accountEmailChangeVerifyOldPost({ AccountEmailChangeVerifyOldPostRequest? accountEmailChangeVerifyOldPostRequest, }) async {
-    final response = await accountEmailChangeVerifyOldPostWithHttpInfo( accountEmailChangeVerifyOldPostRequest: accountEmailChangeVerifyOldPostRequest, );
+  Future<AuthCreateAgainPost200Response?> accountEmailEmailVerifyOldPost({ AccountEmailEmailVerifyOldPostRequest? accountEmailEmailVerifyOldPostRequest, }) async {
+    final response = await accountEmailEmailVerifyOldPostWithHttpInfo( accountEmailEmailVerifyOldPostRequest: accountEmailEmailVerifyOldPostRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -255,7 +255,105 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'POST /account/password/forgot' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AccountEmailEmailPostRequest] accountEmailEmailPostRequest:
+  ///   Request body
+  Future<Response> accountPasswordForgotPostWithHttpInfo({ AccountEmailEmailPostRequest? accountEmailEmailPostRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/account/password/forgot';
+
+    // ignore: prefer_final_locals
+    Object? postBody = accountEmailEmailPostRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [AccountEmailEmailPostRequest] accountEmailEmailPostRequest:
+  ///   Request body
+  Future<AuthCreateAgainPost200Response?> accountPasswordForgotPost({ AccountEmailEmailPostRequest? accountEmailEmailPostRequest, }) async {
+    final response = await accountPasswordForgotPostWithHttpInfo( accountEmailEmailPostRequest: accountEmailEmailPostRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'POST /account/password/forgot/verify' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AccountPasswordForgotVerifyPostRequest] accountPasswordForgotVerifyPostRequest:
+  ///   Request body
+  Future<Response> accountPasswordForgotVerifyPostWithHttpInfo({ AccountPasswordForgotVerifyPostRequest? accountPasswordForgotVerifyPostRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/account/password/forgot/verify';
+
+    // ignore: prefer_final_locals
+    Object? postBody = accountPasswordForgotVerifyPostRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [AccountPasswordForgotVerifyPostRequest] accountPasswordForgotVerifyPostRequest:
+  ///   Request body
+  Future<AuthCreateAgainPost200Response?> accountPasswordForgotVerifyPost({ AccountPasswordForgotVerifyPostRequest? accountPasswordForgotVerifyPostRequest, }) async {
+    final response = await accountPasswordForgotVerifyPostWithHttpInfo( accountPasswordForgotVerifyPostRequest: accountPasswordForgotVerifyPostRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
     
     }
     return null;
@@ -295,7 +393,7 @@ class DefaultApi {
   ///
   /// * [AccountPasswordPutRequest] accountPasswordPutRequest:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> accountPasswordPut({ AccountPasswordPutRequest? accountPasswordPutRequest, }) async {
+  Future<AuthCreateAgainPost200Response?> accountPasswordPut({ AccountPasswordPutRequest? accountPasswordPutRequest, }) async {
     final response = await accountPasswordPutWithHttpInfo( accountPasswordPutRequest: accountPasswordPutRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -304,7 +402,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
     
     }
     return null;
@@ -344,7 +442,7 @@ class DefaultApi {
   ///
   /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> accountSessionDelete({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+  Future<AuthCreateAgainPost200Response?> accountSessionDelete({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
     final response = await accountSessionDeleteWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -353,7 +451,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
     
     }
     return null;
@@ -393,7 +491,7 @@ class DefaultApi {
   ///
   /// * [Object] body:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> accountSignoutPost({ Object? body, }) async {
+  Future<AuthCreateAgainPost200Response?> accountSignoutPost({ Object? body, }) async {
     final response = await accountSignoutPostWithHttpInfo( body: body, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -402,7 +500,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
     
     }
     return null;
@@ -442,7 +540,7 @@ class DefaultApi {
   ///
   /// * [AccountVerifyDeleteRequest] accountVerifyDeleteRequest:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> accountVerifyDelete({ AccountVerifyDeleteRequest? accountVerifyDeleteRequest, }) async {
+  Future<AuthCreateAgainPost200Response?> accountVerifyDelete({ AccountVerifyDeleteRequest? accountVerifyDeleteRequest, }) async {
     final response = await accountVerifyDeleteWithHttpInfo( accountVerifyDeleteRequest: accountVerifyDeleteRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -451,7 +549,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
     
     }
     return null;
@@ -679,7 +777,7 @@ class DefaultApi {
   ///
   /// * [AuthVerifySessionPostRequest] authVerifySessionPostRequest:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> authVerifySessionPost({ AuthVerifySessionPostRequest? authVerifySessionPostRequest, }) async {
+  Future<AuthCreateAgainPost200Response?> authVerifySessionPost({ AuthVerifySessionPostRequest? authVerifySessionPostRequest, }) async {
     final response = await authVerifySessionPostWithHttpInfo( authVerifySessionPostRequest: authVerifySessionPostRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -688,7 +786,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
     
     }
     return null;
@@ -728,7 +826,7 @@ class DefaultApi {
   ///
   /// * [AuthVerifyUserPostRequest] authVerifyUserPostRequest:
   ///   Request body
-  Future<AuthVerifySessionPost200Response?> authVerifyUserPost({ AuthVerifyUserPostRequest? authVerifyUserPostRequest, }) async {
+  Future<AuthCreateAgainPost200Response?> authVerifyUserPost({ AuthVerifyUserPostRequest? authVerifyUserPostRequest, }) async {
     final response = await authVerifyUserPostWithHttpInfo( authVerifyUserPostRequest: authVerifyUserPostRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -737,7 +835,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthVerifySessionPost200Response',) as AuthVerifySessionPost200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
     
     }
     return null;

@@ -32,7 +32,7 @@ class AuthCreateAgainPost200Response {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  AuthCreateAgainPost200ResponseData? data;
+  Object? data;
 
   List<AuthCreateAgainPost200ResponseErrorsInner> errors;
 
@@ -93,7 +93,7 @@ class AuthCreateAgainPost200Response {
       return AuthCreateAgainPost200Response(
         success: mapValueOfType<bool>(json, r'success')!,
         code: mapValueOfType<int>(json, r'code')!,
-        data: AuthCreateAgainPost200ResponseData.fromJson(json[r'data']),
+        data: mapValueOfType<Object>(json, r'data'),
         errors: AuthCreateAgainPost200ResponseErrorsInner.listFromJson(json[r'errors']),
         message: mapValueOfType<String>(json, r'message')!,
       );

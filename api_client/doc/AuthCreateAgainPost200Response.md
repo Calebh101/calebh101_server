@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **bool** |  | 
 **code** | **int** |  | 
-**data** | [**AuthCreateAgainPost200ResponseData**](AuthCreateAgainPost200ResponseData.md) |  | [optional] 
+**data** | [**Object**](.md) |  | [optional] 
 **errors** | [**List<AuthCreateAgainPost200ResponseErrorsInner>**](AuthCreateAgainPost200ResponseErrorsInner.md) |  | [default to const []]
 **message** | **String** |  | 
 

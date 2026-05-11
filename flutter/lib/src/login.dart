@@ -138,7 +138,7 @@ class _LoginPageState extends State<LoginPage> {
                       ],
                     ),
                     Spacer(),
-                    Row(
+                    Column(
                       spacing: 8,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -188,6 +188,23 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                           child: Text("Sign In"),
+                        ),
+                        if (!createAccount)
+                        ElevatedButton(
+                          onPressed: () async {
+                            if (isLoading) return;
+                            await showDialog(context: context, builder: (context) => ForgotPasswordDialogue(defaultEmail: email.text, client: widget.client));
+                          },
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: Size(200, 70),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            textStyle: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                          child: Text("Forgot Password", style: TextStyle(fontSize: 16)),
                         ),
                         if (createAccount)
                         ElevatedButton(
@@ -375,6 +392,109 @@ class _VerifySessionPageState extends State<VerifySessionPage> {
                 Text("Login v${LoginPage.version}"),
               ],
             ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ForgotPasswordDialogue extends StatefulWidget {
+  final ApiClient client;
+  final String defaultEmail;
+
+  const ForgotPasswordDialogue({super.key, required this.defaultEmail, required this.client});
+
+  @override
+  State<ForgotPasswordDialogue> createState() => _ForgotPasswordDialogueState();
+}
+
+class _ForgotPasswordDialogueState extends State<ForgotPasswordDialogue> {
+  final key = GlobalKey<FormState>();
+  TextEditingController email = TextEditingController();
+  bool isLoading = false;
+  FormState get state => key.currentState!;
+
+  @override
+  void initState() {
+    email.text = widget.defaultEmail;
+    super.initState();
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: Text("Forgot Password"),
+      actions: [
+        if (isLoading) CircularProgressIndicator(),
+        TextButton(onPressed: () {
+          Navigator.of(context).pop();
+        }, child: Text("Cancel")),
+      ],
+      content: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Form(
+                key: key,
+                child: TextFormField(
+                  controller: email,
+                  decoration: InputDecoration(
+                    labelText: "Email",
+                  ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) return "Must not be empty.";
+                    if (!isEmail(value)) return "Must be a valid email.";
+                    return null;
+                  },
+                ),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () async {
+                  if (isLoading) return;
+                  setState(() => isLoading = true);
+
+                  void end() {
+                    setState(() => isLoading = false);
+                  }
+
+                  WidgetsBinding.instance.addPostFrameCallback((_) async {
+                    if (!key.state.validate()) return end();
+                    snackbar(context, "Loading...");
+
+                    final api = DefaultApi(widget.client);
+                    final result = await request(() => api.accountPasswordForgotPost(accountEmailEmailPostRequest: AccountEmailEmailPostRequest(email: email.text)));
+                    if (!context.mounted) return end();
+
+                    if (result?.t != null && result?.t?.data != null) {
+                      final t = result!.t!;
+                      snackbar(context, t.message);
+                    } else if (result?.f != null) {
+                      final f = result!.f!;
+                      snackbar(context, f.message ?? "An unknown error occurred: ${f.e}");
+                    } else {
+                      snackbar(context, "An unknown error occurred.");
+                    }
+
+                    end();
+                  });
+                },
+                style: ElevatedButton.styleFrom(
+                  fixedSize: Size(200, 70),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  textStyle: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                child: Text("Send Email"),
+              ),
+            ],
           ),
         ),
       ),

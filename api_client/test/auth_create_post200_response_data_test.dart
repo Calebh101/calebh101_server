@@ -21,11 +21,6 @@ void main() {
       // TODO
     });
 
-    // DateTime lastVerificationSent
-    test('to test the property `lastVerificationSent`', () async {
-      // TODO
-    });
-
 
   });
 

@@ -192,10 +192,12 @@ class ApiClient {
           return AccountDetailsPost200ResponseDataSessionsInner.fromJson(value);
         case 'AccountDetailsPost200ResponseDataSessionsInnerLocation':
           return AccountDetailsPost200ResponseDataSessionsInnerLocation.fromJson(value);
-        case 'AccountEmailChangePostRequest':
-          return AccountEmailChangePostRequest.fromJson(value);
-        case 'AccountEmailChangeVerifyOldPostRequest':
-          return AccountEmailChangeVerifyOldPostRequest.fromJson(value);
+        case 'AccountEmailEmailPostRequest':
+          return AccountEmailEmailPostRequest.fromJson(value);
+        case 'AccountEmailEmailVerifyOldPostRequest':
+          return AccountEmailEmailVerifyOldPostRequest.fromJson(value);
+        case 'AccountPasswordForgotVerifyPostRequest':
+          return AccountPasswordForgotVerifyPostRequest.fromJson(value);
         case 'AccountPasswordPutRequest':
           return AccountPasswordPutRequest.fromJson(value);
         case 'AccountSessionDeleteRequest':
@@ -208,8 +210,6 @@ class ApiClient {
           return AuthAllowedRedirectUrlsGet200ResponseDataInner.fromJson(value);
         case 'AuthCreateAgainPost200Response':
           return AuthCreateAgainPost200Response.fromJson(value);
-        case 'AuthCreateAgainPost200ResponseData':
-          return AuthCreateAgainPost200ResponseData.fromJson(value);
         case 'AuthCreateAgainPost200ResponseErrorsInner':
           return AuthCreateAgainPost200ResponseErrorsInner.fromJson(value);
         case 'AuthCreateAgainPostRequest':
@@ -224,8 +224,6 @@ class ApiClient {
           return AuthLoginPost200Response.fromJson(value);
         case 'AuthLoginPost200ResponseData':
           return AuthLoginPost200ResponseData.fromJson(value);
-        case 'AuthVerifySessionPost200Response':
-          return AuthVerifySessionPost200Response.fromJson(value);
         case 'AuthVerifySessionPostRequest':
           return AuthVerifySessionPostRequest.fromJson(value);
         case 'AuthVerifyUserPostRequest':
