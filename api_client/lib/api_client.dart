@@ -228,10 +228,32 @@ class ApiClient {
           return AuthVerifySessionPostRequest.fromJson(value);
         case 'AuthVerifyUserPostRequest':
           return AuthVerifyUserPostRequest.fromJson(value);
+        case 'DebugNewlinkPostRequest':
+          return DebugNewlinkPostRequest.fromJson(value);
         case 'GetStatus200Response':
           return GetStatus200Response.fromJson(value);
         case 'GetStatus200ResponseData':
           return GetStatus200ResponseData.fromJson(value);
+        case 'IdPost307Response':
+          return IdPost307Response.fromJson(value);
+        case 'LinkGet200Response':
+          return LinkGet200Response.fromJson(value);
+        case 'LinkGet200ResponseData':
+          return LinkGet200ResponseData.fromJson(value);
+        case 'LinkGet200ResponseDataLogic':
+          return LinkGet200ResponseDataLogic.fromJson(value);
+        case 'LinkPut200Response':
+          return LinkPut200Response.fromJson(value);
+        case 'LinkPutRequest':
+          return LinkPutRequest.fromJson(value);
+        case 'LinkPutRequestData':
+          return LinkPutRequestData.fromJson(value);
+        case 'LinksGet200Response':
+          return LinksGet200Response.fromJson(value);
+        case 'LinksGet200ResponseData':
+          return LinksGet200ResponseData.fromJson(value);
+        case 'LinksGet200ResponseDataLinksInner':
+          return LinksGet200ResponseDataLinksInner.fromJson(value);
         case 'TestPost200Response':
           return TestPost200Response.fromJson(value);
         case 'TestPost200ResponseData':

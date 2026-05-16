@@ -26,10 +26,15 @@ Method | HTTP request | Description
 [**authLoginPost**](DefaultApi.md#authloginpost) | **POST** /auth/login | 
 [**authVerifySessionPost**](DefaultApi.md#authverifysessionpost) | **POST** /auth/verify/session | 
 [**authVerifyUserPost**](DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
+[**debugNewlinkPost**](DefaultApi.md#debugnewlinkpost) | **POST** /debug-newlink | 
 [**getOpenAPI**](DefaultApi.md#getopenapi) | **GET** /openapi/json | 
 [**getStatus**](DefaultApi.md#getstatus) | **GET** /status | 
 [**ghFirstGet**](DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
 [**ghFirstSecondGet**](DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
+[**idPost**](DefaultApi.md#idpost) | **POST** /:id | 
+[**linkGet**](DefaultApi.md#linkget) | **GET** /link | 
+[**linkPut**](DefaultApi.md#linkput) | **PUT** /link | 
+[**linksGet**](DefaultApi.md#linksget) | **GET** /links | 
 [**testPost**](DefaultApi.md#testpost) | **POST** /test | 
 
 
@@ -726,6 +731,46 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **debugNewlinkPost**
+> debugNewlinkPost(debugNewlinkPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final debugNewlinkPostRequest = DebugNewlinkPostRequest(); // DebugNewlinkPostRequest | Request body
+
+try {
+    api_instance.debugNewlinkPost(debugNewlinkPostRequest);
+} catch (e) {
+    print('Exception when calling DefaultApi->debugNewlinkPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **debugNewlinkPostRequest** | [**DebugNewlinkPostRequest**](DebugNewlinkPostRequest.md)| Request body | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **getOpenAPI**
 > Object getOpenAPI()
 
@@ -871,6 +916,161 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **idPost**
+> idPost()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+try {
+    api_instance.idPost();
+} catch (e) {
+    print('Exception when calling DefaultApi->idPost: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **linkGet**
+> LinkGet200Response linkGet(accountSessionDeleteRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountSessionDeleteRequest = AccountSessionDeleteRequest(); // AccountSessionDeleteRequest | Request body
+
+try {
+    final result = api_instance.linkGet(accountSessionDeleteRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->linkGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountSessionDeleteRequest** | [**AccountSessionDeleteRequest**](AccountSessionDeleteRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**LinkGet200Response**](LinkGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **linkPut**
+> LinkPut200Response linkPut(linkPutRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final linkPutRequest = LinkPutRequest(); // LinkPutRequest | Request body
+
+try {
+    final result = api_instance.linkPut(linkPutRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->linkPut: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **linkPutRequest** | [**LinkPutRequest**](LinkPutRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**LinkPut200Response**](LinkPut200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **linksGet**
+> LinksGet200Response linksGet()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+try {
+    final result = api_instance.linksGet();
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->linksGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**LinksGet200Response**](LinksGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

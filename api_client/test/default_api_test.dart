@@ -102,6 +102,11 @@ void main() {
       // TODO
     });
 
+    //Future debugNewlinkPost({ DebugNewlinkPostRequest debugNewlinkPostRequest }) async
+    test('test debugNewlinkPost', () async {
+      // TODO
+    });
+
     //Future<Object> getOpenAPI() async
     test('test getOpenAPI', () async {
       // TODO
@@ -119,6 +124,26 @@ void main() {
 
     //Future<String> ghFirstSecondGet() async
     test('test ghFirstSecondGet', () async {
+      // TODO
+    });
+
+    //Future idPost() async
+    test('test idPost', () async {
+      // TODO
+    });
+
+    //Future<LinkGet200Response> linkGet({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
+    test('test linkGet', () async {
+      // TODO
+    });
+
+    //Future<LinkPut200Response> linkPut({ LinkPutRequest linkPutRequest }) async
+    test('test linkPut', () async {
+      // TODO
+    });
+
+    //Future<LinksGet200Response> linksGet() async
+    test('test linksGet', () async {
       // TODO
     });
 

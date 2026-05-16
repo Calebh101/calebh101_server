@@ -841,6 +841,47 @@ class DefaultApi {
     return null;
   }
 
+  /// Performs an HTTP 'POST /debug-newlink' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [DebugNewlinkPostRequest] debugNewlinkPostRequest:
+  ///   Request body
+  Future<Response> debugNewlinkPostWithHttpInfo({ DebugNewlinkPostRequest? debugNewlinkPostRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/debug-newlink';
+
+    // ignore: prefer_final_locals
+    Object? postBody = debugNewlinkPostRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [DebugNewlinkPostRequest] debugNewlinkPostRequest:
+  ///   Request body
+  Future<void> debugNewlinkPost({ DebugNewlinkPostRequest? debugNewlinkPostRequest, }) async {
+    final response = await debugNewlinkPostWithHttpInfo( debugNewlinkPostRequest: debugNewlinkPostRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// Performs an HTTP 'GET /openapi/json' operation and returns the [Response].
   Future<Response> getOpenAPIWithHttpInfo() async {
     // ignore: prefer_const_declarations
@@ -1000,6 +1041,178 @@ class DefaultApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'String',) as String;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'POST /:id' operation and returns the [Response].
+  Future<Response> idPostWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/:id';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  Future<void> idPost() async {
+    final response = await idPostWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
+  /// Performs an HTTP 'GET /link' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
+  ///   Request body
+  Future<Response> linkGetWithHttpInfo({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/link';
+
+    // ignore: prefer_final_locals
+    Object? postBody = accountSessionDeleteRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
+  ///   Request body
+  Future<LinkGet200Response?> linkGet({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+    final response = await linkGetWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'LinkGet200Response',) as LinkGet200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'PUT /link' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [LinkPutRequest] linkPutRequest:
+  ///   Request body
+  Future<Response> linkPutWithHttpInfo({ LinkPutRequest? linkPutRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/link';
+
+    // ignore: prefer_final_locals
+    Object? postBody = linkPutRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [LinkPutRequest] linkPutRequest:
+  ///   Request body
+  Future<LinkPut200Response?> linkPut({ LinkPutRequest? linkPutRequest, }) async {
+    final response = await linkPutWithHttpInfo( linkPutRequest: linkPutRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'LinkPut200Response',) as LinkPut200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'GET /links' operation and returns the [Response].
+  Future<Response> linksGetWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/links';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  Future<LinksGet200Response?> linksGet() async {
+    final response = await linksGetWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'LinksGet200Response',) as LinksGet200Response;
     
     }
     return null;
