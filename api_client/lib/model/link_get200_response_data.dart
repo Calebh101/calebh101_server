@@ -15,6 +15,7 @@ class LinkGet200ResponseData {
   LinkGet200ResponseData({
     this.url,
     this.logic,
+    required this.created,
     required this.id,
     required this.isOwnedByMe,
   });
@@ -35,6 +36,8 @@ class LinkGet200ResponseData {
   ///
   LinkGet200ResponseDataLogic? logic;
 
+  DateTime created;
+
   String id;
 
   bool isOwnedByMe;
@@ -43,6 +46,7 @@ class LinkGet200ResponseData {
   bool operator ==(Object other) => identical(this, other) || other is LinkGet200ResponseData &&
     other.url == url &&
     other.logic == logic &&
+    other.created == created &&
     other.id == id &&
     other.isOwnedByMe == isOwnedByMe;
 
@@ -51,11 +55,12 @@ class LinkGet200ResponseData {
     // ignore: unnecessary_parenthesis
     (url == null ? 0 : url!.hashCode) +
     (logic == null ? 0 : logic!.hashCode) +
+    (created.hashCode) +
     (id.hashCode) +
     (isOwnedByMe.hashCode);
 
   @override
-  String toString() => 'LinkGet200ResponseData[url=$url, logic=$logic, id=$id, isOwnedByMe=$isOwnedByMe]';
+  String toString() => 'LinkGet200ResponseData[url=$url, logic=$logic, created=$created, id=$id, isOwnedByMe=$isOwnedByMe]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -69,6 +74,7 @@ class LinkGet200ResponseData {
     } else {
       json[r'logic'] = null;
     }
+      json[r'created'] = this.created.toUtc().toIso8601String();
       json[r'id'] = this.id;
       json[r'isOwnedByMe'] = this.isOwnedByMe;
     return json;
@@ -95,6 +101,7 @@ class LinkGet200ResponseData {
       return LinkGet200ResponseData(
         url: mapValueOfType<String>(json, r'url'),
         logic: LinkGet200ResponseDataLogic.fromJson(json[r'logic']),
+        created: mapDateTime(json, r'created', r'')!,
         id: mapValueOfType<String>(json, r'id')!,
         isOwnedByMe: mapValueOfType<bool>(json, r'isOwnedByMe')!,
       );
@@ -144,6 +151,7 @@ class LinkGet200ResponseData {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'created',
     'id',
     'isOwnedByMe',
   };

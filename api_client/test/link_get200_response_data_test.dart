@@ -26,6 +26,11 @@ void main() {
       // TODO
     });
 
+    // DateTime created
+    test('to test the property `created`', () async {
+      // TODO
+    });
+
     // String id
     test('to test the property `id`', () async {
       // TODO

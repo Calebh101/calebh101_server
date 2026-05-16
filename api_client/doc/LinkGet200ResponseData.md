@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **String** |  | [optional] 
 **logic** | [**LinkGet200ResponseDataLogic**](LinkGet200ResponseDataLogic.md) |  | [optional] 
+**created** | [**DateTime**](DateTime.md) |  | 
 **id** | **String** |  | 
 **isOwnedByMe** | **bool** |  | 
 
