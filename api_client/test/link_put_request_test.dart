@@ -21,7 +21,7 @@ void main() {
       // TODO
     });
 
-    // LinkPutRequestData data
+    // LinkGet200ResponseDataLogic data
     test('to test the property `data`', () async {
       // TODO
     });

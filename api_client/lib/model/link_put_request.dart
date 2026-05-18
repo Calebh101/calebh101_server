@@ -25,7 +25,7 @@ class LinkPutRequest {
   ///
   String? id;
 
-  LinkPutRequestData data;
+  LinkGet200ResponseDataLogic data;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is LinkPutRequest &&
@@ -72,7 +72,7 @@ class LinkPutRequest {
 
       return LinkPutRequest(
         id: mapValueOfType<String>(json, r'id'),
-        data: LinkPutRequestData.fromJson(json[r'data'])!,
+        data: LinkGet200ResponseDataLogic.fromJson(json[r'data'])!,
       );
     }
     return null;

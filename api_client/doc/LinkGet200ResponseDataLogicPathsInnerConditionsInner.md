@@ -1,4 +1,4 @@
-# openapi.model.LinkGet200ResponseDataLogic
+# openapi.model.LinkGet200ResponseDataLogicPathsInnerConditionsInner
 
 ## Load the model package
 ```dart
@@ -8,8 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**defaultUrl** | **String** |  | 
-**paths** | [**List<LinkGet200ResponseDataLogicPathsInner>**](LinkGet200ResponseDataLogicPathsInner.md) |  | [optional] [default to const []]
+**type** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

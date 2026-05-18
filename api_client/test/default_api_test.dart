@@ -102,11 +102,6 @@ void main() {
       // TODO
     });
 
-    //Future debugNewlinkPost({ DebugNewlinkPostRequest debugNewlinkPostRequest }) async
-    test('test debugNewlinkPost', () async {
-      // TODO
-    });
-
     //Future<Object> getOpenAPI() async
     test('test getOpenAPI', () async {
       // TODO
@@ -134,6 +129,11 @@ void main() {
 
     //Future<LinkGet200Response> linkGet({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
     test('test linkGet', () async {
+      // TODO
+    });
+
+    //Future<LinkOptionsGet200Response> linkOptionsGet() async
+    test('test linkOptionsGet', () async {
       // TODO
     });
 

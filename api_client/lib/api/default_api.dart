@@ -841,47 +841,6 @@ class DefaultApi {
     return null;
   }
 
-  /// Performs an HTTP 'POST /debug-newlink' operation and returns the [Response].
-  /// Parameters:
-  ///
-  /// * [DebugNewlinkPostRequest] debugNewlinkPostRequest:
-  ///   Request body
-  Future<Response> debugNewlinkPostWithHttpInfo({ DebugNewlinkPostRequest? debugNewlinkPostRequest, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/debug-newlink';
-
-    // ignore: prefer_final_locals
-    Object? postBody = debugNewlinkPostRequest;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Parameters:
-  ///
-  /// * [DebugNewlinkPostRequest] debugNewlinkPostRequest:
-  ///   Request body
-  Future<void> debugNewlinkPost({ DebugNewlinkPostRequest? debugNewlinkPostRequest, }) async {
-    final response = await debugNewlinkPostWithHttpInfo( debugNewlinkPostRequest: debugNewlinkPostRequest, );
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-  }
-
   /// Performs an HTTP 'GET /openapi/json' operation and returns the [Response].
   Future<Response> getOpenAPIWithHttpInfo() async {
     // ignore: prefer_const_declarations
@@ -1123,6 +1082,47 @@ class DefaultApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'LinkGet200Response',) as LinkGet200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'GET /link/options' operation and returns the [Response].
+  Future<Response> linkOptionsGetWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/link/options';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  Future<LinkOptionsGet200Response?> linkOptionsGet() async {
+    final response = await linkOptionsGetWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'LinkOptionsGet200Response',) as LinkOptionsGet200Response;
     
     }
     return null;

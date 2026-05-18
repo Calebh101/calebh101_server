@@ -16,11 +16,6 @@ void main() {
   // final instance = LinkGet200ResponseData();
 
   group('test LinkGet200ResponseData', () {
-    // String url
-    test('to test the property `url`', () async {
-      // TODO
-    });
-
     // LinkGet200ResponseDataLogic logic
     test('to test the property `logic`', () async {
       // TODO

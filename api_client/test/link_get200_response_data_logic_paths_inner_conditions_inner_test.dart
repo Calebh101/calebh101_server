@@ -11,18 +11,13 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for DebugNewlinkPostRequest
+// tests for LinkGet200ResponseDataLogicPathsInnerConditionsInner
 void main() {
-  // final instance = DebugNewlinkPostRequest();
+  // final instance = LinkGet200ResponseDataLogicPathsInnerConditionsInner();
 
-  group('test DebugNewlinkPostRequest', () {
-    // int user
-    test('to test the property `user`', () async {
-      // TODO
-    });
-
-    // String url
-    test('to test the property `url`', () async {
+  group('test LinkGet200ResponseDataLogicPathsInnerConditionsInner', () {
+    // String type
+    test('to test the property `type`', () async {
       // TODO
     });
 

@@ -13,27 +13,12 @@ part of openapi.api;
 class LinksGet200ResponseDataLinksInner {
   /// Returns a new [LinksGet200ResponseDataLinksInner] instance.
   LinksGet200ResponseDataLinksInner({
-    this.url,
-    this.logic,
+    required this.logic,
     required this.created,
     required this.id,
   });
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? url;
-
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  LinkGet200ResponseDataLogic? logic;
+  LinkGet200ResponseDataLogic logic;
 
   DateTime created;
 
@@ -41,7 +26,6 @@ class LinksGet200ResponseDataLinksInner {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is LinksGet200ResponseDataLinksInner &&
-    other.url == url &&
     other.logic == logic &&
     other.created == created &&
     other.id == id;
@@ -49,26 +33,16 @@ class LinksGet200ResponseDataLinksInner {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (url == null ? 0 : url!.hashCode) +
-    (logic == null ? 0 : logic!.hashCode) +
+    (logic.hashCode) +
     (created.hashCode) +
     (id.hashCode);
 
   @override
-  String toString() => 'LinksGet200ResponseDataLinksInner[url=$url, logic=$logic, created=$created, id=$id]';
+  String toString() => 'LinksGet200ResponseDataLinksInner[logic=$logic, created=$created, id=$id]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (this.url != null) {
-      json[r'url'] = this.url;
-    } else {
-      json[r'url'] = null;
-    }
-    if (this.logic != null) {
       json[r'logic'] = this.logic;
-    } else {
-      json[r'logic'] = null;
-    }
       json[r'created'] = this.created.toUtc().toIso8601String();
       json[r'id'] = this.id;
     return json;
@@ -93,8 +67,7 @@ class LinksGet200ResponseDataLinksInner {
       }());
 
       return LinksGet200ResponseDataLinksInner(
-        url: mapValueOfType<String>(json, r'url'),
-        logic: LinkGet200ResponseDataLogic.fromJson(json[r'logic']),
+        logic: LinkGet200ResponseDataLogic.fromJson(json[r'logic'])!,
         created: mapDateTime(json, r'created', r'')!,
         id: mapValueOfType<String>(json, r'id')!,
       );
@@ -144,6 +117,7 @@ class LinksGet200ResponseDataLinksInner {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'logic',
     'created',
     'id',
   };

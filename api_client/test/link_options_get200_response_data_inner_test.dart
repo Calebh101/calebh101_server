@@ -11,23 +11,23 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for LinksGet200ResponseDataLinksInner
+// tests for LinkOptionsGet200ResponseDataInner
 void main() {
-  // final instance = LinksGet200ResponseDataLinksInner();
+  // final instance = LinkOptionsGet200ResponseDataInner();
 
-  group('test LinksGet200ResponseDataLinksInner', () {
-    // LinkGet200ResponseDataLogic logic
-    test('to test the property `logic`', () async {
-      // TODO
-    });
-
-    // DateTime created
-    test('to test the property `created`', () async {
-      // TODO
-    });
-
+  group('test LinkOptionsGet200ResponseDataInner', () {
     // String id
     test('to test the property `id`', () async {
+      // TODO
+    });
+
+    // String pretty
+    test('to test the property `pretty`', () async {
+      // TODO
+    });
+
+    // Map<String, String> options (default value: const {})
+    test('to test the property `options`', () async {
       // TODO
     });
 

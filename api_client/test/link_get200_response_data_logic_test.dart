@@ -16,33 +16,13 @@ void main() {
   // final instance = LinkGet200ResponseDataLogic();
 
   group('test LinkGet200ResponseDataLogic', () {
-    // String default_
-    test('to test the property `default_`', () async {
+    // String defaultUrl
+    test('to test the property `defaultUrl`', () async {
       // TODO
     });
 
-    // String windows
-    test('to test the property `windows`', () async {
-      // TODO
-    });
-
-    // String macos
-    test('to test the property `macos`', () async {
-      // TODO
-    });
-
-    // String linux
-    test('to test the property `linux`', () async {
-      // TODO
-    });
-
-    // String ios
-    test('to test the property `ios`', () async {
-      // TODO
-    });
-
-    // String android
-    test('to test the property `android`', () async {
+    // List<LinkGet200ResponseDataLogicPathsInner> paths (default value: const [])
+    test('to test the property `paths`', () async {
       // TODO
     });
 

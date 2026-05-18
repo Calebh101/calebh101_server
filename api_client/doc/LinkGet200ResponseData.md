@@ -8,8 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**url** | **String** |  | [optional] 
-**logic** | [**LinkGet200ResponseDataLogic**](LinkGet200ResponseDataLogic.md) |  | [optional] 
+**logic** | [**LinkGet200ResponseDataLogic**](LinkGet200ResponseDataLogic.md) |  | 
 **created** | [**DateTime**](DateTime.md) |  | 
 **id** | **String** |  | 
 **isOwnedByMe** | **bool** |  | 

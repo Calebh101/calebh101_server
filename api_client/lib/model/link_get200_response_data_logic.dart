@@ -13,106 +13,32 @@ part of openapi.api;
 class LinkGet200ResponseDataLogic {
   /// Returns a new [LinkGet200ResponseDataLogic] instance.
   LinkGet200ResponseDataLogic({
-    required this.default_,
-    this.windows,
-    this.macos,
-    this.linux,
-    this.ios,
-    this.android,
+    required this.defaultUrl,
+    this.paths = const [],
   });
 
-  String default_;
+  String defaultUrl;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? windows;
-
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? macos;
-
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? linux;
-
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? ios;
-
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? android;
+  List<LinkGet200ResponseDataLogicPathsInner> paths;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is LinkGet200ResponseDataLogic &&
-    other.default_ == default_ &&
-    other.windows == windows &&
-    other.macos == macos &&
-    other.linux == linux &&
-    other.ios == ios &&
-    other.android == android;
+    other.defaultUrl == defaultUrl &&
+    _deepEquality.equals(other.paths, paths);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (default_.hashCode) +
-    (windows == null ? 0 : windows!.hashCode) +
-    (macos == null ? 0 : macos!.hashCode) +
-    (linux == null ? 0 : linux!.hashCode) +
-    (ios == null ? 0 : ios!.hashCode) +
-    (android == null ? 0 : android!.hashCode);
+    (defaultUrl.hashCode) +
+    (paths.hashCode);
 
   @override
-  String toString() => 'LinkGet200ResponseDataLogic[default_=$default_, windows=$windows, macos=$macos, linux=$linux, ios=$ios, android=$android]';
+  String toString() => 'LinkGet200ResponseDataLogic[defaultUrl=$defaultUrl, paths=$paths]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'default'] = this.default_;
-    if (this.windows != null) {
-      json[r'windows'] = this.windows;
-    } else {
-      json[r'windows'] = null;
-    }
-    if (this.macos != null) {
-      json[r'macos'] = this.macos;
-    } else {
-      json[r'macos'] = null;
-    }
-    if (this.linux != null) {
-      json[r'linux'] = this.linux;
-    } else {
-      json[r'linux'] = null;
-    }
-    if (this.ios != null) {
-      json[r'ios'] = this.ios;
-    } else {
-      json[r'ios'] = null;
-    }
-    if (this.android != null) {
-      json[r'android'] = this.android;
-    } else {
-      json[r'android'] = null;
-    }
+      json[r'defaultUrl'] = this.defaultUrl;
+      json[r'paths'] = this.paths;
     return json;
   }
 
@@ -135,12 +61,8 @@ class LinkGet200ResponseDataLogic {
       }());
 
       return LinkGet200ResponseDataLogic(
-        default_: mapValueOfType<String>(json, r'default')!,
-        windows: mapValueOfType<String>(json, r'windows'),
-        macos: mapValueOfType<String>(json, r'macos'),
-        linux: mapValueOfType<String>(json, r'linux'),
-        ios: mapValueOfType<String>(json, r'ios'),
-        android: mapValueOfType<String>(json, r'android'),
+        defaultUrl: mapValueOfType<String>(json, r'defaultUrl')!,
+        paths: LinkGet200ResponseDataLogicPathsInner.listFromJson(json[r'paths']),
       );
     }
     return null;
@@ -188,7 +110,7 @@ class LinkGet200ResponseDataLogic {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'default',
+    'defaultUrl',
   };
 }
 

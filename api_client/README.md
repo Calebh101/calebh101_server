@@ -76,13 +76,13 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**authLoginPost**](doc//DefaultApi.md#authloginpost) | **POST** /auth/login | 
 *DefaultApi* | [**authVerifySessionPost**](doc//DefaultApi.md#authverifysessionpost) | **POST** /auth/verify/session | 
 *DefaultApi* | [**authVerifyUserPost**](doc//DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
-*DefaultApi* | [**debugNewlinkPost**](doc//DefaultApi.md#debugnewlinkpost) | **POST** /debug-newlink | 
 *DefaultApi* | [**getOpenAPI**](doc//DefaultApi.md#getopenapi) | **GET** /openapi/json | 
 *DefaultApi* | [**getStatus**](doc//DefaultApi.md#getstatus) | **GET** /status | 
 *DefaultApi* | [**ghFirstGet**](doc//DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
 *DefaultApi* | [**ghFirstSecondGet**](doc//DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 *DefaultApi* | [**idPost**](doc//DefaultApi.md#idpost) | **POST** /:id | 
 *DefaultApi* | [**linkGet**](doc//DefaultApi.md#linkget) | **GET** /link | 
+*DefaultApi* | [**linkOptionsGet**](doc//DefaultApi.md#linkoptionsget) | **GET** /link/options | 
 *DefaultApi* | [**linkPut**](doc//DefaultApi.md#linkput) | **PUT** /link | 
 *DefaultApi* | [**linksGet**](doc//DefaultApi.md#linksget) | **GET** /links | 
 *DefaultApi* | [**testPost**](doc//DefaultApi.md#testpost) | **POST** /test | 
@@ -113,16 +113,18 @@ Class | Method | HTTP request | Description
  - [AuthLoginPost200ResponseData](doc//AuthLoginPost200ResponseData.md)
  - [AuthVerifySessionPostRequest](doc//AuthVerifySessionPostRequest.md)
  - [AuthVerifyUserPostRequest](doc//AuthVerifyUserPostRequest.md)
- - [DebugNewlinkPostRequest](doc//DebugNewlinkPostRequest.md)
  - [GetStatus200Response](doc//GetStatus200Response.md)
  - [GetStatus200ResponseData](doc//GetStatus200ResponseData.md)
  - [IdPost307Response](doc//IdPost307Response.md)
  - [LinkGet200Response](doc//LinkGet200Response.md)
  - [LinkGet200ResponseData](doc//LinkGet200ResponseData.md)
  - [LinkGet200ResponseDataLogic](doc//LinkGet200ResponseDataLogic.md)
+ - [LinkGet200ResponseDataLogicPathsInner](doc//LinkGet200ResponseDataLogicPathsInner.md)
+ - [LinkGet200ResponseDataLogicPathsInnerConditionsInner](doc//LinkGet200ResponseDataLogicPathsInnerConditionsInner.md)
+ - [LinkOptionsGet200Response](doc//LinkOptionsGet200Response.md)
+ - [LinkOptionsGet200ResponseDataInner](doc//LinkOptionsGet200ResponseDataInner.md)
  - [LinkPut200Response](doc//LinkPut200Response.md)
  - [LinkPutRequest](doc//LinkPutRequest.md)
- - [LinkPutRequestData](doc//LinkPutRequestData.md)
  - [LinksGet200Response](doc//LinksGet200Response.md)
  - [LinksGet200ResponseData](doc//LinksGet200ResponseData.md)
  - [LinksGet200ResponseDataLinksInner](doc//LinksGet200ResponseDataLinksInner.md)

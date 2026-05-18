@@ -9,7 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
-**data** | [**LinkPutRequestData**](LinkPutRequestData.md) |  | 
+**data** | [**LinkGet200ResponseDataLogic**](LinkGet200ResponseDataLogic.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
