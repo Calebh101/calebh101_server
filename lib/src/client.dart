@@ -70,6 +70,30 @@ class Result<T, F> {
   const Result(this.t, this.f);
 }
 
+extension Calebh101ClientExtensions on ApiClient {
+  Future<void> request<T>(Future<T> Function() callback, {required void Function(T data) onData, required void Function(ApiFailureDetails<T> e) onError, void Function(ApiException e)? onNeedsLogin_}) async {
+    try {
+      Logger.print("request<$T>", "Requesting...");
+      return onData.call((await callback()));
+    } on ApiException catch (e) {
+      if (e.code == 401) {
+        Logger.print("request<$T>", "Needs login");
+        return (onNeedsLogin_ ?? onNeedsLogin)?.call(e);
+      } else if (e.code == 429 && explicitRatelimitHandling) {
+        Logger.print("request<$T>", "Too many requests (${e.code}): $e");
+        return onError.call(ApiFailureDetails(e: e, code: e.code, message: "Too many requests. Please try again later."));
+      } else {
+        Logger.print("request<$T>", "code=${e.code}: $e");
+        return onError.call(ApiFailureDetails(e: e, code: e.code));
+      }
+    } catch (e) {
+      Logger.warn("request<$T>", "$e");
+      return onError.call(ApiFailureDetails(e: e, code: null));
+    }
+  }
+}
+
+@Deprecated("Use ApiClient.request instead.")
 /// Returns:
 ///
 /// - `Result<T, null>`: Success
