@@ -19,7 +19,7 @@ class LinkGet200ResponseDataLogicPathsInnerConditionsInner {
 
   LinkGet200ResponseDataLogicPathsInnerConditionsInnerTypeEnum type;
 
-  ValueEnum value;
+  LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum value;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is LinkGet200ResponseDataLogicPathsInnerConditionsInner &&
@@ -62,7 +62,7 @@ class LinkGet200ResponseDataLogicPathsInnerConditionsInner {
 
       return LinkGet200ResponseDataLogicPathsInnerConditionsInner(
         type: LinkGet200ResponseDataLogicPathsInnerConditionsInnerTypeEnum.fromJson(json[r'type'])!,
-        value: ValueEnum.fromJson(json[r'value'])!,
+        value: LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.fromJson(json[r'value'])!,
       );
     }
     return null;
@@ -189,6 +189,110 @@ class LinkGet200ResponseDataLogicPathsInnerConditionsInnerTypeEnumTypeTransforme
 
   /// Singleton [LinkGet200ResponseDataLogicPathsInnerConditionsInnerTypeEnumTypeTransformer] instance.
   static LinkGet200ResponseDataLogicPathsInnerConditionsInnerTypeEnumTypeTransformer? _instance;
+}
+
+
+
+class LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum {
+  /// Instantiate a new enum with the provided [value].
+  const LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const chrome = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'chrome');
+  static const safari = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'safari');
+  static const firefox = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'firefox');
+  static const curl = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'curl');
+  static const dart = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'dart');
+  static const android = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'android');
+  static const ios = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'ios');
+  static const macos = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'macos');
+  static const linux = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'linux');
+  static const windows = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'windows');
+  static const mobile = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'mobile');
+  static const desktop = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'desktop');
+
+  /// List of all possible values in this [enum][LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum].
+  static const values = <LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum>[
+    chrome,
+    safari,
+    firefox,
+    curl,
+    dart,
+    android,
+    ios,
+    macos,
+    linux,
+    windows,
+    mobile,
+    desktop,
+  ];
+
+  static LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum? fromJson(dynamic value) => LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnumTypeTransformer().decode(value);
+
+  static List<LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum] to String,
+/// and [decode] dynamic data back to [LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum].
+class LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnumTypeTransformer {
+  factory LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnumTypeTransformer() => _instance ??= const LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnumTypeTransformer._();
+
+  const LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnumTypeTransformer._();
+
+  String encode(LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'chrome': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.chrome;
+        case r'safari': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.safari;
+        case r'firefox': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.firefox;
+        case r'curl': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.curl;
+        case r'dart': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.dart;
+        case r'android': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.android;
+        case r'ios': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.ios;
+        case r'macos': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.macos;
+        case r'linux': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.linux;
+        case r'windows': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.windows;
+        case r'mobile': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.mobile;
+        case r'desktop': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.desktop;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnumTypeTransformer] instance.
+  static LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnumTypeTransformer? _instance;
 }
 
 
