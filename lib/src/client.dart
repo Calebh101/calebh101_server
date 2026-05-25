@@ -71,10 +71,10 @@ class Result<T, F> {
 }
 
 extension Calebh101ClientExtensions on ApiClient {
-  Future<void> request<T, A extends DefaultApi>(Future<T> Function(A api) callback, {required void Function(T data) onData, required void Function(ApiFailureDetails<T> e) onError, void Function(ApiException e)? onNeedsLogin_, A Function(ApiClient client)? getApi}) async {
+  Future<void> request<T, A extends DefaultApi>(Future<T?> Function(A api) callback, {required void Function(T data) onData, required void Function(ApiFailureDetails<T> e) onError, void Function(ApiException e)? onNeedsLogin_, A Function(ApiClient client)? getApi}) async {
     try {
       Logger.print("request<$T>", "Requesting...");
-      return onData.call((await callback(getApi?.call(this) ?? DefaultApi(this) as A)));
+      return onData.call((await callback(getApi?.call(this) ?? DefaultApi(this) as A))!);
     } on ApiException catch (e) {
       if (e.code == 401) {
         Logger.print("request<$T>", "Needs login");
