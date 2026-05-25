@@ -122,6 +122,11 @@ void main() {
       // TODO
     });
 
+    //Future<String> ghFirstSecondRestGet() async
+    test('test ghFirstSecondRestGet', () async {
+      // TODO
+    });
+
     //Future idPost() async
     test('test idPost', () async {
       // TODO

@@ -30,6 +30,7 @@ Method | HTTP request | Description
 [**getStatus**](DefaultApi.md#getstatus) | **GET** /status | 
 [**ghFirstGet**](DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
 [**ghFirstSecondGet**](DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
+[**ghFirstSecondRestGet**](DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
 [**idPost**](DefaultApi.md#idpost) | **POST** /:id | 
 [**linkGet**](DefaultApi.md#linkget) | **GET** /link | 
 [**linkOptionsGet**](DefaultApi.md#linkoptionsget) | **GET** /link/options | 
@@ -858,6 +859,43 @@ try {
     print(result);
 } catch (e) {
     print('Exception when calling DefaultApi->ghFirstSecondGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ghFirstSecondRestGet**
+> String ghFirstSecondRestGet()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+try {
+    final result = api_instance.ghFirstSecondRestGet();
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->ghFirstSecondRestGet: $e\n');
 }
 ```
 

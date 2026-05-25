@@ -80,6 +80,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**getStatus**](doc//DefaultApi.md#getstatus) | **GET** /status | 
 *DefaultApi* | [**ghFirstGet**](doc//DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
 *DefaultApi* | [**ghFirstSecondGet**](doc//DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
+*DefaultApi* | [**ghFirstSecondRestGet**](doc//DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
 *DefaultApi* | [**idPost**](doc//DefaultApi.md#idpost) | **POST** /:id | 
 *DefaultApi* | [**linkGet**](doc//DefaultApi.md#linkget) | **GET** /link | 
 *DefaultApi* | [**linkOptionsGet**](doc//DefaultApi.md#linkoptionsget) | **GET** /link/options | 

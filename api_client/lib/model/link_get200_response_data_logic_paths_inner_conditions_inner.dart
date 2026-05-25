@@ -14,25 +14,31 @@ class LinkGet200ResponseDataLogicPathsInnerConditionsInner {
   /// Returns a new [LinkGet200ResponseDataLogicPathsInnerConditionsInner] instance.
   LinkGet200ResponseDataLogicPathsInnerConditionsInner({
     required this.type,
+    required this.value,
   });
 
   LinkGet200ResponseDataLogicPathsInnerConditionsInnerTypeEnum type;
 
+  String value;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is LinkGet200ResponseDataLogicPathsInnerConditionsInner &&
-    other.type == type;
+    other.type == type &&
+    other.value == value;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (type.hashCode);
+    (type.hashCode) +
+    (value.hashCode);
 
   @override
-  String toString() => 'LinkGet200ResponseDataLogicPathsInnerConditionsInner[type=$type]';
+  String toString() => 'LinkGet200ResponseDataLogicPathsInnerConditionsInner[type=$type, value=$value]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'type'] = this.type;
+      json[r'value'] = this.value;
     return json;
   }
 
@@ -56,6 +62,7 @@ class LinkGet200ResponseDataLogicPathsInnerConditionsInner {
 
       return LinkGet200ResponseDataLogicPathsInnerConditionsInner(
         type: LinkGet200ResponseDataLogicPathsInnerConditionsInnerTypeEnum.fromJson(json[r'type'])!,
+        value: mapValueOfType<String>(json, r'value')!,
       );
     }
     return null;
@@ -104,6 +111,7 @@ class LinkGet200ResponseDataLogicPathsInnerConditionsInner {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'type',
+    'value',
   };
 }
 
