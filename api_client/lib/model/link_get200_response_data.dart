@@ -15,7 +15,7 @@ class LinkGet200ResponseData {
   LinkGet200ResponseData({
     required this.logic,
     required this.created,
-    required this.used,
+    this.used,
     required this.id,
     required this.isOwnedByMe,
   });
@@ -24,6 +24,12 @@ class LinkGet200ResponseData {
 
   DateTime created;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   DateTime? used;
 
   String id;
@@ -137,7 +143,6 @@ class LinkGet200ResponseData {
   static const requiredKeys = <String>{
     'logic',
     'created',
-    'used',
     'id',
     'isOwnedByMe',
   };

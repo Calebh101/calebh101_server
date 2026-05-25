@@ -15,7 +15,7 @@ class LinksGet200ResponseDataLinksInner {
   LinksGet200ResponseDataLinksInner({
     required this.logic,
     required this.created,
-    required this.used,
+    this.used,
     required this.id,
   });
 
@@ -23,6 +23,12 @@ class LinksGet200ResponseDataLinksInner {
 
   DateTime created;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   DateTime? used;
 
   String id;
@@ -130,7 +136,6 @@ class LinksGet200ResponseDataLinksInner {
   static const requiredKeys = <String>{
     'logic',
     'created',
-    'used',
     'id',
   };
 }
