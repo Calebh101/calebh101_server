@@ -71,14 +71,17 @@ class Result<T, F> {
 }
 
 extension Calebh101ClientExtensions on ApiClient {
-  Future<void> request<T, A extends DefaultApi>(Future<T?> Function(A api) callback, {required void Function(T data) onData, required void Function(ApiFailureDetails<T> e) onError, void Function(ApiException e)? onNeedsLogin_, A Function(ApiClient client)? getApi}) async {
+  Future<R?> request<T, A extends DefaultApi, R>(Future<T?> Function(A api) callback, {required R Function(T data) onData, required R Function(ApiFailureDetails<T> e) onError, R Function(ApiException e)? onNeedsLogin_, A Function(ApiClient client)? getApi}) async {
     try {
       Logger.print("request<$T>", "Requesting...");
       return onData.call((await callback(getApi?.call(this) ?? DefaultApi(this) as A))!);
     } on ApiException catch (e) {
       if (e.code == 401) {
         Logger.print("request<$T>", "Needs login");
-        return (onNeedsLogin_ ?? onNeedsLogin)?.call(e);
+        if (onNeedsLogin_ != null) return onNeedsLogin_.call(e);
+
+        onNeedsLogin?.call(e);
+        return null;
       } else if (e.code == 429 && explicitRatelimitHandling) {
         Logger.print("request<$T>", "Too many requests (${e.code}): $e");
         return onError.call(ApiFailureDetails(e: e, code: e.code, message: "Too many requests. Please try again later."));

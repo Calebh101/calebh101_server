@@ -15,6 +15,7 @@ class LinksGet200ResponseDataLinksInner {
   LinksGet200ResponseDataLinksInner({
     required this.logic,
     required this.created,
+    required this.used,
     required this.id,
   });
 
@@ -22,12 +23,15 @@ class LinksGet200ResponseDataLinksInner {
 
   DateTime created;
 
+  DateTime used;
+
   String id;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is LinksGet200ResponseDataLinksInner &&
     other.logic == logic &&
     other.created == created &&
+    other.used == used &&
     other.id == id;
 
   @override
@@ -35,15 +39,17 @@ class LinksGet200ResponseDataLinksInner {
     // ignore: unnecessary_parenthesis
     (logic.hashCode) +
     (created.hashCode) +
+    (used.hashCode) +
     (id.hashCode);
 
   @override
-  String toString() => 'LinksGet200ResponseDataLinksInner[logic=$logic, created=$created, id=$id]';
+  String toString() => 'LinksGet200ResponseDataLinksInner[logic=$logic, created=$created, used=$used, id=$id]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'logic'] = this.logic;
       json[r'created'] = this.created.toUtc().toIso8601String();
+      json[r'used'] = this.used.toUtc().toIso8601String();
       json[r'id'] = this.id;
     return json;
   }
@@ -69,6 +75,7 @@ class LinksGet200ResponseDataLinksInner {
       return LinksGet200ResponseDataLinksInner(
         logic: LinkGet200ResponseDataLogic.fromJson(json[r'logic'])!,
         created: mapDateTime(json, r'created', r'')!,
+        used: mapDateTime(json, r'used', r'')!,
         id: mapValueOfType<String>(json, r'id')!,
       );
     }
@@ -119,6 +126,7 @@ class LinksGet200ResponseDataLinksInner {
   static const requiredKeys = <String>{
     'logic',
     'created',
+    'used',
     'id',
   };
 }

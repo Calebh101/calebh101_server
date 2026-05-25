@@ -15,6 +15,7 @@ class LinkGet200ResponseData {
   LinkGet200ResponseData({
     required this.logic,
     required this.created,
+    required this.used,
     required this.id,
     required this.isOwnedByMe,
   });
@@ -22,6 +23,8 @@ class LinkGet200ResponseData {
   LinkGet200ResponseDataLogic logic;
 
   DateTime created;
+
+  DateTime used;
 
   String id;
 
@@ -31,6 +34,7 @@ class LinkGet200ResponseData {
   bool operator ==(Object other) => identical(this, other) || other is LinkGet200ResponseData &&
     other.logic == logic &&
     other.created == created &&
+    other.used == used &&
     other.id == id &&
     other.isOwnedByMe == isOwnedByMe;
 
@@ -39,16 +43,18 @@ class LinkGet200ResponseData {
     // ignore: unnecessary_parenthesis
     (logic.hashCode) +
     (created.hashCode) +
+    (used.hashCode) +
     (id.hashCode) +
     (isOwnedByMe.hashCode);
 
   @override
-  String toString() => 'LinkGet200ResponseData[logic=$logic, created=$created, id=$id, isOwnedByMe=$isOwnedByMe]';
+  String toString() => 'LinkGet200ResponseData[logic=$logic, created=$created, used=$used, id=$id, isOwnedByMe=$isOwnedByMe]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'logic'] = this.logic;
       json[r'created'] = this.created.toUtc().toIso8601String();
+      json[r'used'] = this.used.toUtc().toIso8601String();
       json[r'id'] = this.id;
       json[r'isOwnedByMe'] = this.isOwnedByMe;
     return json;
@@ -75,6 +81,7 @@ class LinkGet200ResponseData {
       return LinkGet200ResponseData(
         logic: LinkGet200ResponseDataLogic.fromJson(json[r'logic'])!,
         created: mapDateTime(json, r'created', r'')!,
+        used: mapDateTime(json, r'used', r'')!,
         id: mapValueOfType<String>(json, r'id')!,
         isOwnedByMe: mapValueOfType<bool>(json, r'isOwnedByMe')!,
       );
@@ -126,6 +133,7 @@ class LinkGet200ResponseData {
   static const requiredKeys = <String>{
     'logic',
     'created',
+    'used',
     'id',
     'isOwnedByMe',
   };
