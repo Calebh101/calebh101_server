@@ -16,6 +16,7 @@ class LinksGet200ResponseDataLinksInner {
     required this.logic,
     required this.created,
     this.used,
+    required this.uses,
     required this.id,
   });
 
@@ -23,13 +24,9 @@ class LinksGet200ResponseDataLinksInner {
 
   DateTime created;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
   DateTime? used;
+
+  int uses;
 
   String id;
 
@@ -38,6 +35,7 @@ class LinksGet200ResponseDataLinksInner {
     other.logic == logic &&
     other.created == created &&
     other.used == used &&
+    other.uses == uses &&
     other.id == id;
 
   @override
@@ -46,10 +44,11 @@ class LinksGet200ResponseDataLinksInner {
     (logic.hashCode) +
     (created.hashCode) +
     (used == null ? 0 : used!.hashCode) +
+    (uses.hashCode) +
     (id.hashCode);
 
   @override
-  String toString() => 'LinksGet200ResponseDataLinksInner[logic=$logic, created=$created, used=$used, id=$id]';
+  String toString() => 'LinksGet200ResponseDataLinksInner[logic=$logic, created=$created, used=$used, uses=$uses, id=$id]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -60,6 +59,7 @@ class LinksGet200ResponseDataLinksInner {
     } else {
       json[r'used'] = null;
     }
+      json[r'uses'] = this.uses;
       json[r'id'] = this.id;
     return json;
   }
@@ -86,6 +86,7 @@ class LinksGet200ResponseDataLinksInner {
         logic: LinkGet200ResponseDataLogic.fromJson(json[r'logic'])!,
         created: mapDateTime(json, r'created', r'')!,
         used: mapDateTime(json, r'used', r''),
+        uses: mapValueOfType<int>(json, r'uses')!,
         id: mapValueOfType<String>(json, r'id')!,
       );
     }
@@ -136,6 +137,7 @@ class LinksGet200ResponseDataLinksInner {
   static const requiredKeys = <String>{
     'logic',
     'created',
+    'uses',
     'id',
   };
 }

@@ -16,6 +16,7 @@ class LinkGet200ResponseData {
     required this.logic,
     required this.created,
     this.used,
+    required this.uses,
     required this.id,
     required this.isOwnedByMe,
   });
@@ -24,13 +25,9 @@ class LinkGet200ResponseData {
 
   DateTime created;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
   DateTime? used;
+
+  int uses;
 
   String id;
 
@@ -41,6 +38,7 @@ class LinkGet200ResponseData {
     other.logic == logic &&
     other.created == created &&
     other.used == used &&
+    other.uses == uses &&
     other.id == id &&
     other.isOwnedByMe == isOwnedByMe;
 
@@ -50,11 +48,12 @@ class LinkGet200ResponseData {
     (logic.hashCode) +
     (created.hashCode) +
     (used == null ? 0 : used!.hashCode) +
+    (uses.hashCode) +
     (id.hashCode) +
     (isOwnedByMe.hashCode);
 
   @override
-  String toString() => 'LinkGet200ResponseData[logic=$logic, created=$created, used=$used, id=$id, isOwnedByMe=$isOwnedByMe]';
+  String toString() => 'LinkGet200ResponseData[logic=$logic, created=$created, used=$used, uses=$uses, id=$id, isOwnedByMe=$isOwnedByMe]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -65,6 +64,7 @@ class LinkGet200ResponseData {
     } else {
       json[r'used'] = null;
     }
+      json[r'uses'] = this.uses;
       json[r'id'] = this.id;
       json[r'isOwnedByMe'] = this.isOwnedByMe;
     return json;
@@ -92,6 +92,7 @@ class LinkGet200ResponseData {
         logic: LinkGet200ResponseDataLogic.fromJson(json[r'logic'])!,
         created: mapDateTime(json, r'created', r'')!,
         used: mapDateTime(json, r'used', r''),
+        uses: mapValueOfType<int>(json, r'uses')!,
         id: mapValueOfType<String>(json, r'id')!,
         isOwnedByMe: mapValueOfType<bool>(json, r'isOwnedByMe')!,
       );
@@ -143,6 +144,7 @@ class LinkGet200ResponseData {
   static const requiredKeys = <String>{
     'logic',
     'created',
+    'uses',
     'id',
     'isOwnedByMe',
   };
