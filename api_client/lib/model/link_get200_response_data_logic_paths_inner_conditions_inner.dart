@@ -19,7 +19,7 @@ class LinkGet200ResponseDataLogicPathsInnerConditionsInner {
 
   LinkGet200ResponseDataLogicPathsInnerConditionsInnerTypeEnum type;
 
-  String value;
+  ValueEnum value;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is LinkGet200ResponseDataLogicPathsInnerConditionsInner &&
@@ -62,7 +62,7 @@ class LinkGet200ResponseDataLogicPathsInnerConditionsInner {
 
       return LinkGet200ResponseDataLogicPathsInnerConditionsInner(
         type: LinkGet200ResponseDataLogicPathsInnerConditionsInnerTypeEnum.fromJson(json[r'type'])!,
-        value: mapValueOfType<String>(json, r'value')!,
+        value: ValueEnum.fromJson(json[r'value'])!,
       );
     }
     return null;

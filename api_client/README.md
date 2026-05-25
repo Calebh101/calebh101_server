@@ -82,6 +82,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ghFirstSecondGet**](doc//DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 *DefaultApi* | [**ghFirstSecondRestGet**](doc//DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
 *DefaultApi* | [**idPost**](doc//DefaultApi.md#idpost) | **POST** /:id | 
+*DefaultApi* | [**linkDelete**](doc//DefaultApi.md#linkdelete) | **DELETE** /link | 
 *DefaultApi* | [**linkGet**](doc//DefaultApi.md#linkget) | **GET** /link | 
 *DefaultApi* | [**linkOptionsGet**](doc//DefaultApi.md#linkoptionsget) | **GET** /link/options | 
 *DefaultApi* | [**linkPut**](doc//DefaultApi.md#linkput) | **PUT** /link | 

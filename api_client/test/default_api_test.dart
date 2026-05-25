@@ -132,6 +132,11 @@ void main() {
       // TODO
     });
 
+    //Future<AuthCreateAgainPost200Response> linkDelete({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
+    test('test linkDelete', () async {
+      // TODO
+    });
+
     //Future<LinkGet200Response> linkGet({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
     test('test linkGet', () async {
       // TODO
