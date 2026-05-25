@@ -23,7 +23,7 @@ class LinksGet200ResponseDataLinksInner {
 
   DateTime created;
 
-  DateTime used;
+  DateTime? used;
 
   String id;
 
@@ -39,7 +39,7 @@ class LinksGet200ResponseDataLinksInner {
     // ignore: unnecessary_parenthesis
     (logic.hashCode) +
     (created.hashCode) +
-    (used.hashCode) +
+    (used == null ? 0 : used!.hashCode) +
     (id.hashCode);
 
   @override
@@ -49,7 +49,11 @@ class LinksGet200ResponseDataLinksInner {
     final json = <String, dynamic>{};
       json[r'logic'] = this.logic;
       json[r'created'] = this.created.toUtc().toIso8601String();
-      json[r'used'] = this.used.toUtc().toIso8601String();
+    if (this.used != null) {
+      json[r'used'] = this.used!.toUtc().toIso8601String();
+    } else {
+      json[r'used'] = null;
+    }
       json[r'id'] = this.id;
     return json;
   }
@@ -75,7 +79,7 @@ class LinksGet200ResponseDataLinksInner {
       return LinksGet200ResponseDataLinksInner(
         logic: LinkGet200ResponseDataLogic.fromJson(json[r'logic'])!,
         created: mapDateTime(json, r'created', r'')!,
-        used: mapDateTime(json, r'used', r'')!,
+        used: mapDateTime(json, r'used', r''),
         id: mapValueOfType<String>(json, r'id')!,
       );
     }
