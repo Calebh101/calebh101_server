@@ -13,8 +13,8 @@ part of openapi.api;
 class HomeWeatherGet200ResponseDataCurrent {
   /// Returns a new [HomeWeatherGet200ResponseDataCurrent] instance.
   HomeWeatherGet200ResponseDataCurrent({
-    this.lastUpdatedEpoch,
-    this.lastUpdated,
+    required this.lastUpdatedEpoch,
+    required this.lastUpdated,
     required this.tempC,
     required this.tempF,
     required this.isDay,
@@ -46,25 +46,13 @@ class HomeWeatherGet200ResponseDataCurrent {
     required this.chanceOfRain,
     required this.willItSnow,
     required this.chanceOfSnow,
-    this.timeEpoch,
-    this.time,
-    this.snowCm,
+    required this.timeEpoch,
+    required this.time,
+    required this.snowCm,
   });
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
   num? lastUpdatedEpoch;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
   String? lastUpdated;
 
   num tempC;
@@ -129,28 +117,10 @@ class HomeWeatherGet200ResponseDataCurrent {
 
   num chanceOfSnow;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
   num? timeEpoch;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
   String? time;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
   num? snowCm;
 
   @override
@@ -315,7 +285,9 @@ class HomeWeatherGet200ResponseDataCurrent {
       }());
 
       return HomeWeatherGet200ResponseDataCurrent(
-        lastUpdatedEpoch: num.parse('${json[r'last_updated_epoch']}'),
+        lastUpdatedEpoch: json[r'last_updated_epoch'] == null
+            ? null
+            : num.parse('${json[r'last_updated_epoch']}'),
         lastUpdated: mapValueOfType<String>(json, r'last_updated'),
         tempC: num.parse('${json[r'temp_c']}'),
         tempF: num.parse('${json[r'temp_f']}'),
@@ -348,9 +320,13 @@ class HomeWeatherGet200ResponseDataCurrent {
         chanceOfRain: num.parse('${json[r'chance_of_rain']}'),
         willItSnow: num.parse('${json[r'will_it_snow']}'),
         chanceOfSnow: num.parse('${json[r'chance_of_snow']}'),
-        timeEpoch: num.parse('${json[r'time_epoch']}'),
+        timeEpoch: json[r'time_epoch'] == null
+            ? null
+            : num.parse('${json[r'time_epoch']}'),
         time: mapValueOfType<String>(json, r'time'),
-        snowCm: num.parse('${json[r'snow_cm']}'),
+        snowCm: json[r'snow_cm'] == null
+            ? null
+            : num.parse('${json[r'snow_cm']}'),
       );
     }
     return null;
@@ -398,6 +374,8 @@ class HomeWeatherGet200ResponseDataCurrent {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'last_updated_epoch',
+    'last_updated',
     'temp_c',
     'temp_f',
     'is_day',
@@ -429,6 +407,9 @@ class HomeWeatherGet200ResponseDataCurrent {
     'chance_of_rain',
     'will_it_snow',
     'chance_of_snow',
+    'time_epoch',
+    'time',
+    'snow_cm',
   };
 }
 
