@@ -8,8 +8,6 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**lastUpdatedEpoch** | **num** |  | [optional] 
-**lastUpdated** | **String** |  | [optional] 
 **tempC** | **num** |  | 
 **tempF** | **num** |  | 
 **isDay** | **num** |  | 
@@ -41,7 +39,6 @@ Name | Type | Description | Notes
 **chanceOfRain** | **num** |  | 
 **willItSnow** | **num** |  | 
 **chanceOfSnow** | **num** |  | 
-**time** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

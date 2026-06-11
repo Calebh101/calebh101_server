@@ -16,16 +16,6 @@ void main() {
   // final instance = HomeWeatherGet200ResponseDataCurrent();
 
   group('test HomeWeatherGet200ResponseDataCurrent', () {
-    // num lastUpdatedEpoch
-    test('to test the property `lastUpdatedEpoch`', () async {
-      // TODO
-    });
-
-    // String lastUpdated
-    test('to test the property `lastUpdated`', () async {
-      // TODO
-    });
-
     // num tempC
     test('to test the property `tempC`', () async {
       // TODO
@@ -178,11 +168,6 @@ void main() {
 
     // num chanceOfSnow
     test('to test the property `chanceOfSnow`', () async {
-      // TODO
-    });
-
-    // String time
-    test('to test the property `time`', () async {
       // TODO
     });
 
