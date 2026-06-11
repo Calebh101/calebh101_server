@@ -76,18 +76,20 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**authLoginPost**](doc//DefaultApi.md#authloginpost) | **POST** /auth/login | 
 *DefaultApi* | [**authVerifySessionPost**](doc//DefaultApi.md#authverifysessionpost) | **POST** /auth/verify/session | 
 *DefaultApi* | [**authVerifyUserPost**](doc//DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
+*DefaultApi* | [**debugEchoTextPost**](doc//DefaultApi.md#debugechotextpost) | **POST** /debug/echo/:text | 
+*DefaultApi* | [**debugTestPost**](doc//DefaultApi.md#debugtestpost) | **POST** /debug/test | 
 *DefaultApi* | [**getOpenAPI**](doc//DefaultApi.md#getopenapi) | **GET** /openapi/json | 
 *DefaultApi* | [**getStatus**](doc//DefaultApi.md#getstatus) | **GET** /status | 
 *DefaultApi* | [**ghFirstGet**](doc//DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
 *DefaultApi* | [**ghFirstSecondGet**](doc//DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 *DefaultApi* | [**ghFirstSecondRestGet**](doc//DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
+*DefaultApi* | [**homeWeatherGet**](doc//DefaultApi.md#homeweatherget) | **GET** /home/weather | 
 *DefaultApi* | [**idPost**](doc//DefaultApi.md#idpost) | **POST** /:id | 
 *DefaultApi* | [**linkDelete**](doc//DefaultApi.md#linkdelete) | **DELETE** /link | 
 *DefaultApi* | [**linkGet**](doc//DefaultApi.md#linkget) | **GET** /link | 
 *DefaultApi* | [**linkOptionsGet**](doc//DefaultApi.md#linkoptionsget) | **GET** /link/options | 
 *DefaultApi* | [**linkPut**](doc//DefaultApi.md#linkput) | **PUT** /link | 
 *DefaultApi* | [**linksGet**](doc//DefaultApi.md#linksget) | **GET** /links | 
-*DefaultApi* | [**testPost**](doc//DefaultApi.md#testpost) | **POST** /test | 
 
 
 ## Documentation For Models
@@ -115,8 +117,21 @@ Class | Method | HTTP request | Description
  - [AuthLoginPost200ResponseData](doc//AuthLoginPost200ResponseData.md)
  - [AuthVerifySessionPostRequest](doc//AuthVerifySessionPostRequest.md)
  - [AuthVerifyUserPostRequest](doc//AuthVerifyUserPostRequest.md)
+ - [DebugTestPost200Response](doc//DebugTestPost200Response.md)
+ - [DebugTestPost200ResponseData](doc//DebugTestPost200ResponseData.md)
+ - [DebugTestPostRequest](doc//DebugTestPostRequest.md)
  - [GetStatus200Response](doc//GetStatus200Response.md)
  - [GetStatus200ResponseData](doc//GetStatus200ResponseData.md)
+ - [HomeWeatherGet200Response](doc//HomeWeatherGet200Response.md)
+ - [HomeWeatherGet200ResponseData](doc//HomeWeatherGet200ResponseData.md)
+ - [HomeWeatherGet200ResponseDataCurrent](doc//HomeWeatherGet200ResponseDataCurrent.md)
+ - [HomeWeatherGet200ResponseDataCurrentCondition](doc//HomeWeatherGet200ResponseDataCurrentCondition.md)
+ - [HomeWeatherGet200ResponseDataForecast](doc//HomeWeatherGet200ResponseDataForecast.md)
+ - [HomeWeatherGet200ResponseDataForecastForecastdayInner](doc//HomeWeatherGet200ResponseDataForecastForecastdayInner.md)
+ - [HomeWeatherGet200ResponseDataForecastForecastdayInnerAstro](doc//HomeWeatherGet200ResponseDataForecastForecastdayInnerAstro.md)
+ - [HomeWeatherGet200ResponseDataForecastForecastdayInnerDay](doc//HomeWeatherGet200ResponseDataForecastForecastdayInnerDay.md)
+ - [HomeWeatherGet200ResponseDataLocation](doc//HomeWeatherGet200ResponseDataLocation.md)
+ - [HomeWeatherGetRequest](doc//HomeWeatherGetRequest.md)
  - [IdPost307Response](doc//IdPost307Response.md)
  - [LinkGet200Response](doc//LinkGet200Response.md)
  - [LinkGet200ResponseData](doc//LinkGet200ResponseData.md)
@@ -130,9 +145,6 @@ Class | Method | HTTP request | Description
  - [LinksGet200Response](doc//LinksGet200Response.md)
  - [LinksGet200ResponseData](doc//LinksGet200ResponseData.md)
  - [LinksGet200ResponseDataLinksInner](doc//LinksGet200ResponseDataLinksInner.md)
- - [TestPost200Response](doc//TestPost200Response.md)
- - [TestPost200ResponseData](doc//TestPost200ResponseData.md)
- - [TestPostRequest](doc//TestPostRequest.md)
 
 
 ## Documentation For Authorization

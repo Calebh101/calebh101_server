@@ -1,4 +1,4 @@
-# openapi.model.TestPost200Response
+# openapi.model.HomeWeatherGet200ResponseDataForecastForecastdayInnerAstro
 
 ## Load the model package
 ```dart
@@ -8,11 +8,14 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**success** | **bool** |  | 
-**code** | **int** |  | 
-**data** | [**TestPost200ResponseData**](TestPost200ResponseData.md) |  | [optional] 
-**errors** | [**List<AuthCreateAgainPost200ResponseErrorsInner>**](AuthCreateAgainPost200ResponseErrorsInner.md) |  | [default to const []]
-**message** | **String** |  | 
+**sunrise** | **String** |  | 
+**sunset** | **String** |  | 
+**moonrise** | **String** |  | 
+**moonset** | **String** |  | 
+**moonPhase** | **String** |  | 
+**moonIllumination** | **num** |  | 
+**isMoonUp** | **num** |  | 
+**isSunUp** | **num** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

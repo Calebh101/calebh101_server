@@ -102,6 +102,16 @@ void main() {
       // TODO
     });
 
+    //Future<IdPost307Response> debugEchoTextPost() async
+    test('test debugEchoTextPost', () async {
+      // TODO
+    });
+
+    //Future<DebugTestPost200Response> debugTestPost({ DebugTestPostRequest debugTestPostRequest }) async
+    test('test debugTestPost', () async {
+      // TODO
+    });
+
     //Future<Object> getOpenAPI() async
     test('test getOpenAPI', () async {
       // TODO
@@ -124,6 +134,11 @@ void main() {
 
     //Future<String> ghFirstSecondRestGet() async
     test('test ghFirstSecondRestGet', () async {
+      // TODO
+    });
+
+    //Future<HomeWeatherGet200Response> homeWeatherGet({ HomeWeatherGetRequest homeWeatherGetRequest }) async
+    test('test homeWeatherGet', () async {
       // TODO
     });
 
@@ -154,11 +169,6 @@ void main() {
 
     //Future<LinksGet200Response> linksGet() async
     test('test linksGet', () async {
-      // TODO
-    });
-
-    //Future<TestPost200Response> testPost({ TestPostRequest testPostRequest }) async
-    test('test testPost', () async {
       // TODO
     });
 

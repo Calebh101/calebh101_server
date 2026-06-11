@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class TestPost200Response {
-  /// Returns a new [TestPost200Response] instance.
-  TestPost200Response({
+class DebugTestPost200Response {
+  /// Returns a new [DebugTestPost200Response] instance.
+  DebugTestPost200Response({
     required this.success,
     required this.code,
     this.data,
@@ -32,14 +32,14 @@ class TestPost200Response {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  TestPost200ResponseData? data;
+  DebugTestPost200ResponseData? data;
 
   List<AuthCreateAgainPost200ResponseErrorsInner> errors;
 
   String message;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is TestPost200Response &&
+  bool operator ==(Object other) => identical(this, other) || other is DebugTestPost200Response &&
     other.success == success &&
     other.code == code &&
     other.data == data &&
@@ -56,7 +56,7 @@ class TestPost200Response {
     (message.hashCode);
 
   @override
-  String toString() => 'TestPost200Response[success=$success, code=$code, data=$data, errors=$errors, message=$message]';
+  String toString() => 'DebugTestPost200Response[success=$success, code=$code, data=$data, errors=$errors, message=$message]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -72,10 +72,10 @@ class TestPost200Response {
     return json;
   }
 
-  /// Returns a new [TestPost200Response] instance and imports its values from
+  /// Returns a new [DebugTestPost200Response] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static TestPost200Response? fromJson(dynamic value) {
+  static DebugTestPost200Response? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -84,16 +84,16 @@ class TestPost200Response {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "TestPost200Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "TestPost200Response[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "DebugTestPost200Response[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "DebugTestPost200Response[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return TestPost200Response(
+      return DebugTestPost200Response(
         success: mapValueOfType<bool>(json, r'success')!,
         code: mapValueOfType<int>(json, r'code')!,
-        data: TestPost200ResponseData.fromJson(json[r'data']),
+        data: DebugTestPost200ResponseData.fromJson(json[r'data']),
         errors: AuthCreateAgainPost200ResponseErrorsInner.listFromJson(json[r'errors']),
         message: mapValueOfType<String>(json, r'message')!,
       );
@@ -101,11 +101,11 @@ class TestPost200Response {
     return null;
   }
 
-  static List<TestPost200Response> listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <TestPost200Response>[];
+  static List<DebugTestPost200Response> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <DebugTestPost200Response>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = TestPost200Response.fromJson(row);
+        final value = DebugTestPost200Response.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -114,12 +114,12 @@ class TestPost200Response {
     return result.toList(growable: growable);
   }
 
-  static Map<String, TestPost200Response> mapFromJson(dynamic json) {
-    final map = <String, TestPost200Response>{};
+  static Map<String, DebugTestPost200Response> mapFromJson(dynamic json) {
+    final map = <String, DebugTestPost200Response>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = TestPost200Response.fromJson(entry.value);
+        final value = DebugTestPost200Response.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -128,14 +128,14 @@ class TestPost200Response {
     return map;
   }
 
-  // maps a json object with a list of TestPost200Response-objects as value to a dart map
-  static Map<String, List<TestPost200Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<TestPost200Response>>{};
+  // maps a json object with a list of DebugTestPost200Response-objects as value to a dart map
+  static Map<String, List<DebugTestPost200Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<DebugTestPost200Response>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = TestPost200Response.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = DebugTestPost200Response.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

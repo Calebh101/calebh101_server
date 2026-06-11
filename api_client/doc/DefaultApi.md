@@ -26,18 +26,20 @@ Method | HTTP request | Description
 [**authLoginPost**](DefaultApi.md#authloginpost) | **POST** /auth/login | 
 [**authVerifySessionPost**](DefaultApi.md#authverifysessionpost) | **POST** /auth/verify/session | 
 [**authVerifyUserPost**](DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
+[**debugEchoTextPost**](DefaultApi.md#debugechotextpost) | **POST** /debug/echo/:text | 
+[**debugTestPost**](DefaultApi.md#debugtestpost) | **POST** /debug/test | 
 [**getOpenAPI**](DefaultApi.md#getopenapi) | **GET** /openapi/json | 
 [**getStatus**](DefaultApi.md#getstatus) | **GET** /status | 
 [**ghFirstGet**](DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
 [**ghFirstSecondGet**](DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 [**ghFirstSecondRestGet**](DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
+[**homeWeatherGet**](DefaultApi.md#homeweatherget) | **GET** /home/weather | 
 [**idPost**](DefaultApi.md#idpost) | **POST** /:id | 
 [**linkDelete**](DefaultApi.md#linkdelete) | **DELETE** /link | 
 [**linkGet**](DefaultApi.md#linkget) | **GET** /link | 
 [**linkOptionsGet**](DefaultApi.md#linkoptionsget) | **GET** /link/options | 
 [**linkPut**](DefaultApi.md#linkput) | **PUT** /link | 
 [**linksGet**](DefaultApi.md#linksget) | **GET** /links | 
-[**testPost**](DefaultApi.md#testpost) | **POST** /test | 
 
 
 # **accountDelete**
@@ -733,6 +735,84 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **debugEchoTextPost**
+> IdPost307Response debugEchoTextPost()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+try {
+    final result = api_instance.debugEchoTextPost();
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->debugEchoTextPost: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**IdPost307Response**](IdPost307Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **debugTestPost**
+> DebugTestPost200Response debugTestPost(debugTestPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final debugTestPostRequest = DebugTestPostRequest(); // DebugTestPostRequest | Request body
+
+try {
+    final result = api_instance.debugTestPost(debugTestPostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->debugTestPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **debugTestPostRequest** | [**DebugTestPostRequest**](DebugTestPostRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**DebugTestPost200Response**](DebugTestPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **getOpenAPI**
 > Object getOpenAPI()
 
@@ -915,6 +995,47 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeWeatherGet**
+> HomeWeatherGet200Response homeWeatherGet(homeWeatherGetRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final homeWeatherGetRequest = HomeWeatherGetRequest(); // HomeWeatherGetRequest | Request body
+
+try {
+    final result = api_instance.homeWeatherGet(homeWeatherGetRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->homeWeatherGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **homeWeatherGetRequest** | [**HomeWeatherGetRequest**](HomeWeatherGetRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**HomeWeatherGet200Response**](HomeWeatherGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1147,47 +1268,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **testPost**
-> TestPost200Response testPost(testPostRequest)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = DefaultApi();
-final testPostRequest = TestPostRequest(); // TestPostRequest | Request body
-
-try {
-    final result = api_instance.testPost(testPostRequest);
-    print(result);
-} catch (e) {
-    print('Exception when calling DefaultApi->testPost: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **testPostRequest** | [**TestPostRequest**](TestPostRequest.md)| Request body | [optional] 
-
-### Return type
-
-[**TestPost200Response**](TestPost200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -228,10 +228,36 @@ class ApiClient {
           return AuthVerifySessionPostRequest.fromJson(value);
         case 'AuthVerifyUserPostRequest':
           return AuthVerifyUserPostRequest.fromJson(value);
+        case 'DebugTestPost200Response':
+          return DebugTestPost200Response.fromJson(value);
+        case 'DebugTestPost200ResponseData':
+          return DebugTestPost200ResponseData.fromJson(value);
+        case 'DebugTestPostRequest':
+          return DebugTestPostRequest.fromJson(value);
         case 'GetStatus200Response':
           return GetStatus200Response.fromJson(value);
         case 'GetStatus200ResponseData':
           return GetStatus200ResponseData.fromJson(value);
+        case 'HomeWeatherGet200Response':
+          return HomeWeatherGet200Response.fromJson(value);
+        case 'HomeWeatherGet200ResponseData':
+          return HomeWeatherGet200ResponseData.fromJson(value);
+        case 'HomeWeatherGet200ResponseDataCurrent':
+          return HomeWeatherGet200ResponseDataCurrent.fromJson(value);
+        case 'HomeWeatherGet200ResponseDataCurrentCondition':
+          return HomeWeatherGet200ResponseDataCurrentCondition.fromJson(value);
+        case 'HomeWeatherGet200ResponseDataForecast':
+          return HomeWeatherGet200ResponseDataForecast.fromJson(value);
+        case 'HomeWeatherGet200ResponseDataForecastForecastdayInner':
+          return HomeWeatherGet200ResponseDataForecastForecastdayInner.fromJson(value);
+        case 'HomeWeatherGet200ResponseDataForecastForecastdayInnerAstro':
+          return HomeWeatherGet200ResponseDataForecastForecastdayInnerAstro.fromJson(value);
+        case 'HomeWeatherGet200ResponseDataForecastForecastdayInnerDay':
+          return HomeWeatherGet200ResponseDataForecastForecastdayInnerDay.fromJson(value);
+        case 'HomeWeatherGet200ResponseDataLocation':
+          return HomeWeatherGet200ResponseDataLocation.fromJson(value);
+        case 'HomeWeatherGetRequest':
+          return HomeWeatherGetRequest.fromJson(value);
         case 'IdPost307Response':
           return IdPost307Response.fromJson(value);
         case 'LinkGet200Response':
@@ -258,12 +284,6 @@ class ApiClient {
           return LinksGet200ResponseData.fromJson(value);
         case 'LinksGet200ResponseDataLinksInner':
           return LinksGet200ResponseDataLinksInner.fromJson(value);
-        case 'TestPost200Response':
-          return TestPost200Response.fromJson(value);
-        case 'TestPost200ResponseData':
-          return TestPost200ResponseData.fromJson(value);
-        case 'TestPostRequest':
-          return TestPostRequest.fromJson(value);
         default:
           dynamic match;
           if (value is List && (match = _regList.firstMatch(targetType)?.group(1)) != null) {

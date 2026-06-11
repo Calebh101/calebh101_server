@@ -53,8 +53,21 @@ part 'model/auth_login_post200_response.dart';
 part 'model/auth_login_post200_response_data.dart';
 part 'model/auth_verify_session_post_request.dart';
 part 'model/auth_verify_user_post_request.dart';
+part 'model/debug_test_post200_response.dart';
+part 'model/debug_test_post200_response_data.dart';
+part 'model/debug_test_post_request.dart';
 part 'model/get_status200_response.dart';
 part 'model/get_status200_response_data.dart';
+part 'model/home_weather_get200_response.dart';
+part 'model/home_weather_get200_response_data.dart';
+part 'model/home_weather_get200_response_data_current.dart';
+part 'model/home_weather_get200_response_data_current_condition.dart';
+part 'model/home_weather_get200_response_data_forecast.dart';
+part 'model/home_weather_get200_response_data_forecast_forecastday_inner.dart';
+part 'model/home_weather_get200_response_data_forecast_forecastday_inner_astro.dart';
+part 'model/home_weather_get200_response_data_forecast_forecastday_inner_day.dart';
+part 'model/home_weather_get200_response_data_location.dart';
+part 'model/home_weather_get_request.dart';
 part 'model/id_post307_response.dart';
 part 'model/link_get200_response.dart';
 part 'model/link_get200_response_data.dart';
@@ -68,9 +81,6 @@ part 'model/link_put_request.dart';
 part 'model/links_get200_response.dart';
 part 'model/links_get200_response_data.dart';
 part 'model/links_get200_response_data_links_inner.dart';
-part 'model/test_post200_response.dart';
-part 'model/test_post200_response_data.dart';
-part 'model/test_post_request.dart';
 
 
 /// An [ApiClient] instance that uses the default values obtained from

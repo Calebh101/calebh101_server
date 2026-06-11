@@ -841,6 +841,96 @@ class DefaultApi {
     return null;
   }
 
+  /// Performs an HTTP 'POST /debug/echo/:text' operation and returns the [Response].
+  Future<Response> debugEchoTextPostWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/debug/echo/:text';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  Future<IdPost307Response?> debugEchoTextPost() async {
+    final response = await debugEchoTextPostWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'IdPost307Response',) as IdPost307Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'POST /debug/test' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [DebugTestPostRequest] debugTestPostRequest:
+  ///   Request body
+  Future<Response> debugTestPostWithHttpInfo({ DebugTestPostRequest? debugTestPostRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/debug/test';
+
+    // ignore: prefer_final_locals
+    Object? postBody = debugTestPostRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [DebugTestPostRequest] debugTestPostRequest:
+  ///   Request body
+  Future<DebugTestPost200Response?> debugTestPost({ DebugTestPostRequest? debugTestPostRequest, }) async {
+    final response = await debugTestPostWithHttpInfo( debugTestPostRequest: debugTestPostRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DebugTestPost200Response',) as DebugTestPost200Response;
+    
+    }
+    return null;
+  }
+
   /// Performs an HTTP 'GET /openapi/json' operation and returns the [Response].
   Future<Response> getOpenAPIWithHttpInfo() async {
     // ignore: prefer_const_declarations
@@ -1041,6 +1131,55 @@ class DefaultApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'String',) as String;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'GET /home/weather' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [HomeWeatherGetRequest] homeWeatherGetRequest:
+  ///   Request body
+  Future<Response> homeWeatherGetWithHttpInfo({ HomeWeatherGetRequest? homeWeatherGetRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/home/weather';
+
+    // ignore: prefer_final_locals
+    Object? postBody = homeWeatherGetRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [HomeWeatherGetRequest] homeWeatherGetRequest:
+  ///   Request body
+  Future<HomeWeatherGet200Response?> homeWeatherGet({ HomeWeatherGetRequest? homeWeatherGetRequest, }) async {
+    final response = await homeWeatherGetWithHttpInfo( homeWeatherGetRequest: homeWeatherGetRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'HomeWeatherGet200Response',) as HomeWeatherGet200Response;
     
     }
     return null;
@@ -1303,55 +1442,6 @@ class DefaultApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'LinksGet200Response',) as LinksGet200Response;
-    
-    }
-    return null;
-  }
-
-  /// Performs an HTTP 'POST /test' operation and returns the [Response].
-  /// Parameters:
-  ///
-  /// * [TestPostRequest] testPostRequest:
-  ///   Request body
-  Future<Response> testPostWithHttpInfo({ TestPostRequest? testPostRequest, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/test';
-
-    // ignore: prefer_final_locals
-    Object? postBody = testPostRequest;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Parameters:
-  ///
-  /// * [TestPostRequest] testPostRequest:
-  ///   Request body
-  Future<TestPost200Response?> testPost({ TestPostRequest? testPostRequest, }) async {
-    final response = await testPostWithHttpInfo( testPostRequest: testPostRequest, );
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'TestPost200Response',) as TestPost200Response;
     
     }
     return null;

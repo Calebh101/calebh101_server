@@ -208,8 +208,10 @@ class LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum {
   static const chrome = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'chrome');
   static const safari = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'safari');
   static const firefox = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'firefox');
-  static const curl = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'curl');
-  static const dart = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'dart');
+  static const edge = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'edge');
+  static const opera = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'opera');
+  static const samsung = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'samsung');
+  static const brave = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'brave');
   static const android = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'android');
   static const ios = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'ios');
   static const macos = LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum._(r'macos');
@@ -223,8 +225,10 @@ class LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum {
     chrome,
     safari,
     firefox,
-    curl,
-    dart,
+    edge,
+    opera,
+    samsung,
+    brave,
     android,
     ios,
     macos,
@@ -273,8 +277,10 @@ class LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnumTypeTransform
         case r'chrome': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.chrome;
         case r'safari': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.safari;
         case r'firefox': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.firefox;
-        case r'curl': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.curl;
-        case r'dart': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.dart;
+        case r'edge': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.edge;
+        case r'opera': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.opera;
+        case r'samsung': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.samsung;
+        case r'brave': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.brave;
         case r'android': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.android;
         case r'ios': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.ios;
         case r'macos': return LinkGet200ResponseDataLogicPathsInnerConditionsInnerValueEnum.macos;
