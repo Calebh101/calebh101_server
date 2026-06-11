@@ -186,11 +186,6 @@ void main() {
       // TODO
     });
 
-    // num snowCm
-    test('to test the property `snowCm`', () async {
-      // TODO
-    });
-
 
   });
 

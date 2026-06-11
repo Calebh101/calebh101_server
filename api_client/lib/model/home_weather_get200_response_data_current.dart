@@ -47,7 +47,6 @@ class HomeWeatherGet200ResponseDataCurrent {
     required this.willItSnow,
     required this.chanceOfSnow,
     this.time,
-    this.snowCm,
   });
 
   ///
@@ -136,14 +135,6 @@ class HomeWeatherGet200ResponseDataCurrent {
   ///
   String? time;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  num? snowCm;
-
   @override
   bool operator ==(Object other) => identical(this, other) || other is HomeWeatherGet200ResponseDataCurrent &&
     other.lastUpdatedEpoch == lastUpdatedEpoch &&
@@ -179,8 +170,7 @@ class HomeWeatherGet200ResponseDataCurrent {
     other.chanceOfRain == chanceOfRain &&
     other.willItSnow == willItSnow &&
     other.chanceOfSnow == chanceOfSnow &&
-    other.time == time &&
-    other.snowCm == snowCm;
+    other.time == time;
 
   @override
   int get hashCode =>
@@ -218,11 +208,10 @@ class HomeWeatherGet200ResponseDataCurrent {
     (chanceOfRain.hashCode) +
     (willItSnow.hashCode) +
     (chanceOfSnow.hashCode) +
-    (time == null ? 0 : time!.hashCode) +
-    (snowCm == null ? 0 : snowCm!.hashCode);
+    (time == null ? 0 : time!.hashCode);
 
   @override
-  String toString() => 'HomeWeatherGet200ResponseDataCurrent[lastUpdatedEpoch=$lastUpdatedEpoch, lastUpdated=$lastUpdated, tempC=$tempC, tempF=$tempF, isDay=$isDay, condition=$condition, windMph=$windMph, windKph=$windKph, windDegree=$windDegree, windDir=$windDir, pressureMb=$pressureMb, pressureIn=$pressureIn, precipMm=$precipMm, precipIn=$precipIn, humidity=$humidity, cloud=$cloud, feelslikeC=$feelslikeC, feelslikeF=$feelslikeF, windchillC=$windchillC, windchillF=$windchillF, heatindexC=$heatindexC, heatindexF=$heatindexF, dewpointC=$dewpointC, dewpointF=$dewpointF, visKm=$visKm, visMiles=$visMiles, uv=$uv, gustMph=$gustMph, gustKph=$gustKph, willItRain=$willItRain, chanceOfRain=$chanceOfRain, willItSnow=$willItSnow, chanceOfSnow=$chanceOfSnow, time=$time, snowCm=$snowCm]';
+  String toString() => 'HomeWeatherGet200ResponseDataCurrent[lastUpdatedEpoch=$lastUpdatedEpoch, lastUpdated=$lastUpdated, tempC=$tempC, tempF=$tempF, isDay=$isDay, condition=$condition, windMph=$windMph, windKph=$windKph, windDegree=$windDegree, windDir=$windDir, pressureMb=$pressureMb, pressureIn=$pressureIn, precipMm=$precipMm, precipIn=$precipIn, humidity=$humidity, cloud=$cloud, feelslikeC=$feelslikeC, feelslikeF=$feelslikeF, windchillC=$windchillC, windchillF=$windchillF, heatindexC=$heatindexC, heatindexF=$heatindexF, dewpointC=$dewpointC, dewpointF=$dewpointF, visKm=$visKm, visMiles=$visMiles, uv=$uv, gustMph=$gustMph, gustKph=$gustKph, willItRain=$willItRain, chanceOfRain=$chanceOfRain, willItSnow=$willItSnow, chanceOfSnow=$chanceOfSnow, time=$time]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -271,11 +260,6 @@ class HomeWeatherGet200ResponseDataCurrent {
       json[r'time'] = this.time;
     } else {
       json[r'time'] = null;
-    }
-    if (this.snowCm != null) {
-      json[r'snow_cm'] = this.snowCm;
-    } else {
-      json[r'snow_cm'] = null;
     }
     return json;
   }
@@ -333,7 +317,6 @@ class HomeWeatherGet200ResponseDataCurrent {
         willItSnow: num.parse('${json[r'will_it_snow']}'),
         chanceOfSnow: num.parse('${json[r'chance_of_snow']}'),
         time: mapValueOfType<String>(json, r'time'),
-        snowCm: num.parse('${json[r'snow_cm']}'),
       );
     }
     return null;
