@@ -13,8 +13,8 @@ part of openapi.api;
 class HomeWeatherGet200ResponseDataCurrent {
   /// Returns a new [HomeWeatherGet200ResponseDataCurrent] instance.
   HomeWeatherGet200ResponseDataCurrent({
-    required this.lastUpdatedEpoch,
-    required this.lastUpdated,
+    this.lastUpdatedEpoch,
+    this.lastUpdated,
     required this.tempC,
     required this.tempF,
     required this.isDay,
@@ -46,13 +46,24 @@ class HomeWeatherGet200ResponseDataCurrent {
     required this.chanceOfRain,
     required this.willItSnow,
     required this.chanceOfSnow,
-    required this.timeEpoch,
-    required this.time,
-    required this.snowCm,
+    this.time,
+    this.snowCm,
   });
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   num? lastUpdatedEpoch;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   String? lastUpdated;
 
   num tempC;
@@ -117,10 +128,20 @@ class HomeWeatherGet200ResponseDataCurrent {
 
   num chanceOfSnow;
 
-  num? timeEpoch;
-
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   String? time;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   num? snowCm;
 
   @override
@@ -158,7 +179,6 @@ class HomeWeatherGet200ResponseDataCurrent {
     other.chanceOfRain == chanceOfRain &&
     other.willItSnow == willItSnow &&
     other.chanceOfSnow == chanceOfSnow &&
-    other.timeEpoch == timeEpoch &&
     other.time == time &&
     other.snowCm == snowCm;
 
@@ -198,12 +218,11 @@ class HomeWeatherGet200ResponseDataCurrent {
     (chanceOfRain.hashCode) +
     (willItSnow.hashCode) +
     (chanceOfSnow.hashCode) +
-    (timeEpoch == null ? 0 : timeEpoch!.hashCode) +
     (time == null ? 0 : time!.hashCode) +
     (snowCm == null ? 0 : snowCm!.hashCode);
 
   @override
-  String toString() => 'HomeWeatherGet200ResponseDataCurrent[lastUpdatedEpoch=$lastUpdatedEpoch, lastUpdated=$lastUpdated, tempC=$tempC, tempF=$tempF, isDay=$isDay, condition=$condition, windMph=$windMph, windKph=$windKph, windDegree=$windDegree, windDir=$windDir, pressureMb=$pressureMb, pressureIn=$pressureIn, precipMm=$precipMm, precipIn=$precipIn, humidity=$humidity, cloud=$cloud, feelslikeC=$feelslikeC, feelslikeF=$feelslikeF, windchillC=$windchillC, windchillF=$windchillF, heatindexC=$heatindexC, heatindexF=$heatindexF, dewpointC=$dewpointC, dewpointF=$dewpointF, visKm=$visKm, visMiles=$visMiles, uv=$uv, gustMph=$gustMph, gustKph=$gustKph, willItRain=$willItRain, chanceOfRain=$chanceOfRain, willItSnow=$willItSnow, chanceOfSnow=$chanceOfSnow, timeEpoch=$timeEpoch, time=$time, snowCm=$snowCm]';
+  String toString() => 'HomeWeatherGet200ResponseDataCurrent[lastUpdatedEpoch=$lastUpdatedEpoch, lastUpdated=$lastUpdated, tempC=$tempC, tempF=$tempF, isDay=$isDay, condition=$condition, windMph=$windMph, windKph=$windKph, windDegree=$windDegree, windDir=$windDir, pressureMb=$pressureMb, pressureIn=$pressureIn, precipMm=$precipMm, precipIn=$precipIn, humidity=$humidity, cloud=$cloud, feelslikeC=$feelslikeC, feelslikeF=$feelslikeF, windchillC=$windchillC, windchillF=$windchillF, heatindexC=$heatindexC, heatindexF=$heatindexF, dewpointC=$dewpointC, dewpointF=$dewpointF, visKm=$visKm, visMiles=$visMiles, uv=$uv, gustMph=$gustMph, gustKph=$gustKph, willItRain=$willItRain, chanceOfRain=$chanceOfRain, willItSnow=$willItSnow, chanceOfSnow=$chanceOfSnow, time=$time, snowCm=$snowCm]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -248,11 +267,6 @@ class HomeWeatherGet200ResponseDataCurrent {
       json[r'chance_of_rain'] = this.chanceOfRain;
       json[r'will_it_snow'] = this.willItSnow;
       json[r'chance_of_snow'] = this.chanceOfSnow;
-    if (this.timeEpoch != null) {
-      json[r'time_epoch'] = this.timeEpoch;
-    } else {
-      json[r'time_epoch'] = null;
-    }
     if (this.time != null) {
       json[r'time'] = this.time;
     } else {
@@ -285,9 +299,7 @@ class HomeWeatherGet200ResponseDataCurrent {
       }());
 
       return HomeWeatherGet200ResponseDataCurrent(
-        lastUpdatedEpoch: json[r'last_updated_epoch'] == null
-            ? null
-            : num.parse('${json[r'last_updated_epoch']}'),
+        lastUpdatedEpoch: num.parse('${json[r'last_updated_epoch']}'),
         lastUpdated: mapValueOfType<String>(json, r'last_updated'),
         tempC: num.parse('${json[r'temp_c']}'),
         tempF: num.parse('${json[r'temp_f']}'),
@@ -320,13 +332,8 @@ class HomeWeatherGet200ResponseDataCurrent {
         chanceOfRain: num.parse('${json[r'chance_of_rain']}'),
         willItSnow: num.parse('${json[r'will_it_snow']}'),
         chanceOfSnow: num.parse('${json[r'chance_of_snow']}'),
-        timeEpoch: json[r'time_epoch'] == null
-            ? null
-            : num.parse('${json[r'time_epoch']}'),
         time: mapValueOfType<String>(json, r'time'),
-        snowCm: json[r'snow_cm'] == null
-            ? null
-            : num.parse('${json[r'snow_cm']}'),
+        snowCm: num.parse('${json[r'snow_cm']}'),
       );
     }
     return null;
@@ -374,8 +381,6 @@ class HomeWeatherGet200ResponseDataCurrent {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'last_updated_epoch',
-    'last_updated',
     'temp_c',
     'temp_f',
     'is_day',
@@ -407,9 +412,6 @@ class HomeWeatherGet200ResponseDataCurrent {
     'chance_of_rain',
     'will_it_snow',
     'chance_of_snow',
-    'time_epoch',
-    'time',
-    'snow_cm',
   };
 }
 

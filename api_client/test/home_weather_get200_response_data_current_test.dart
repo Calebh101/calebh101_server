@@ -181,11 +181,6 @@ void main() {
       // TODO
     });
 
-    // num timeEpoch
-    test('to test the property `timeEpoch`', () async {
-      // TODO
-    });
-
     // String time
     test('to test the property `time`', () async {
       // TODO
