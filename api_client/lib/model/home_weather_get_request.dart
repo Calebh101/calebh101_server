@@ -14,6 +14,7 @@ class HomeWeatherGetRequest {
   /// Returns a new [HomeWeatherGetRequest] instance.
   HomeWeatherGetRequest({
     this.zip,
+    required this.sayHi,
   });
 
   ///
@@ -24,17 +25,21 @@ class HomeWeatherGetRequest {
   ///
   int? zip;
 
+  bool sayHi;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is HomeWeatherGetRequest &&
-    other.zip == zip;
+    other.zip == zip &&
+    other.sayHi == sayHi;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (zip == null ? 0 : zip!.hashCode);
+    (zip == null ? 0 : zip!.hashCode) +
+    (sayHi.hashCode);
 
   @override
-  String toString() => 'HomeWeatherGetRequest[zip=$zip]';
+  String toString() => 'HomeWeatherGetRequest[zip=$zip, sayHi=$sayHi]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -43,6 +48,7 @@ class HomeWeatherGetRequest {
     } else {
       json[r'zip'] = null;
     }
+      json[r'sayHi'] = this.sayHi;
     return json;
   }
 
@@ -66,6 +72,7 @@ class HomeWeatherGetRequest {
 
       return HomeWeatherGetRequest(
         zip: mapValueOfType<int>(json, r'zip'),
+        sayHi: mapValueOfType<bool>(json, r'sayHi')!,
       );
     }
     return null;
@@ -113,6 +120,7 @@ class HomeWeatherGetRequest {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'sayHi',
   };
 }
 

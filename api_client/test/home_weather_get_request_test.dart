@@ -21,6 +21,11 @@ void main() {
       // TODO
     });
 
+    // bool sayHi
+    test('to test the property `sayHi`', () async {
+      // TODO
+    });
+
 
   });
 
