@@ -16,48 +16,8 @@ void main() {
   // final instance = HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE();
 
   group('test HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE', () {
-    // String command
-    test('to test the property `command`', () async {
-      // TODO
-    });
-
-    // String channel
-    test('to test the property `channel`', () async {
-      // TODO
-    });
-
-    // String episode
-    test('to test the property `episode`', () async {
-      // TODO
-    });
-
-    // num time
-    test('to test the property `time`', () async {
-      // TODO
-    });
-
-    // String type
-    test('to test the property `type`', () async {
-      // TODO
-    });
-
-    // Object media
-    test('to test the property `media`', () async {
-      // TODO
-    });
-
-    // bool autoplay
-    test('to test the property `autoplay`', () async {
-      // TODO
-    });
-
-    // num currentTime
-    test('to test the property `currentTime`', () async {
-      // TODO
-    });
-
-    // Object customData
-    test('to test the property `customData`', () async {
+    // String kind
+    test('to test the property `kind`', () async {
       // TODO
     });
 

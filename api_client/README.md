@@ -139,8 +139,6 @@ Class | Method | HTTP request | Description
  - [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGE](doc//HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGE.md)
  - [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf](doc//HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf.md)
  - [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE](doc//HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE.md)
- - [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf](doc//HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf.md)
- - [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1](doc//HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1.md)
  - [HomeTvsPost200ResponseDataSettingsInner](doc//HomeTvsPost200ResponseDataSettingsInner.md)
  - [HomeTvsPost200ResponseDataTvsInner](doc//HomeTvsPost200ResponseDataTvsInner.md)
  - [HomeTvsPowerStatePost200Response](doc//HomeTvsPowerStatePost200Response.md)

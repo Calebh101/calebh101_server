@@ -258,10 +258,6 @@ class ApiClient {
           return HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf.fromJson(value);
         case 'HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE':
           return HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE.fromJson(value);
-        case 'HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf':
-          return HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf.fromJson(value);
-        case 'HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1':
-          return HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1.fromJson(value);
         case 'HomeTvsPost200ResponseDataSettingsInner':
           return HomeTvsPost200ResponseDataSettingsInner.fromJson(value);
         case 'HomeTvsPost200ResponseDataTvsInner':

@@ -13,82 +13,26 @@ part of openapi.api;
 class HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE {
   /// Returns a new [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE] instance.
   HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE({
-    required this.command,
-    required this.channel,
-    required this.episode,
-    required this.time,
-    required this.type,
-    this.media,
-    required this.autoplay,
-    required this.currentTime,
-    this.customData,
+    required this.kind,
   });
 
-  String command;
-
-  String channel;
-
-  String episode;
-
-  num time;
-
-  String type;
-
-  Object? media;
-
-  bool autoplay;
-
-  num currentTime;
-
-  Object? customData;
+  HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum kind;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE &&
-    other.command == command &&
-    other.channel == channel &&
-    other.episode == episode &&
-    other.time == time &&
-    other.type == type &&
-    other.media == media &&
-    other.autoplay == autoplay &&
-    other.currentTime == currentTime &&
-    other.customData == customData;
+    other.kind == kind;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (command.hashCode) +
-    (channel.hashCode) +
-    (episode.hashCode) +
-    (time.hashCode) +
-    (type.hashCode) +
-    (media == null ? 0 : media!.hashCode) +
-    (autoplay.hashCode) +
-    (currentTime.hashCode) +
-    (customData == null ? 0 : customData!.hashCode);
+    (kind.hashCode);
 
   @override
-  String toString() => 'HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE[command=$command, channel=$channel, episode=$episode, time=$time, type=$type, media=$media, autoplay=$autoplay, currentTime=$currentTime, customData=$customData]';
+  String toString() => 'HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE[kind=$kind]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'command'] = this.command;
-      json[r'channel'] = this.channel;
-      json[r'episode'] = this.episode;
-      json[r'time'] = this.time;
-      json[r'type'] = this.type;
-    if (this.media != null) {
-      json[r'media'] = this.media;
-    } else {
-      json[r'media'] = null;
-    }
-      json[r'autoplay'] = this.autoplay;
-      json[r'currentTime'] = this.currentTime;
-    if (this.customData != null) {
-      json[r'customData'] = this.customData;
-    } else {
-      json[r'customData'] = null;
-    }
+      json[r'kind'] = this.kind;
     return json;
   }
 
@@ -111,15 +55,7 @@ class HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE {
       }());
 
       return HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE(
-        command: mapValueOfType<String>(json, r'command')!,
-        channel: mapValueOfType<String>(json, r'channel')!,
-        episode: mapValueOfType<String>(json, r'episode')!,
-        time: num.parse('${json[r'time']}'),
-        type: mapValueOfType<String>(json, r'type')!,
-        media: mapValueOfType<Object>(json, r'media'),
-        autoplay: mapValueOfType<bool>(json, r'autoplay')!,
-        currentTime: num.parse('${json[r'currentTime']}'),
-        customData: mapValueOfType<Object>(json, r'customData'),
+        kind: HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum.fromJson(json[r'kind'])!,
       );
     }
     return null;
@@ -167,13 +103,81 @@ class HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'command',
-    'channel',
-    'episode',
-    'time',
-    'type',
-    'autoplay',
-    'currentTime',
+    'kind',
   };
 }
+
+
+class HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum {
+  /// Instantiate a new enum with the provided [value].
+  const HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const command = HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum._(r'command');
+  static const media = HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum._(r'media');
+
+  /// List of all possible values in this [enum][HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum].
+  static const values = <HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum>[
+    command,
+    media,
+  ];
+
+  static HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum? fromJson(dynamic value) => HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnumTypeTransformer().decode(value);
+
+  static List<HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum] to String,
+/// and [decode] dynamic data back to [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum].
+class HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnumTypeTransformer {
+  factory HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnumTypeTransformer() => _instance ??= const HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnumTypeTransformer._();
+
+  const HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnumTypeTransformer._();
+
+  String encode(HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'command': return HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum.command;
+        case r'media': return HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnum.media;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnumTypeTransformer] instance.
+  static HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEKindEnumTypeTransformer? _instance;
+}
+
 

@@ -68,8 +68,6 @@ part 'model/home_tvs_post200_response_data_apps_inner_config_inner.dart';
 part 'model/home_tvs_post200_response_data_apps_inner_config_inner_message.dart';
 part 'model/home_tvs_post200_response_data_apps_inner_config_inner_message_any_of.dart';
 part 'model/home_tvs_post200_response_data_apps_inner_config_inner_message_any_of_castmessage.dart';
-part 'model/home_tvs_post200_response_data_apps_inner_config_inner_message_any_of_castmessage_any_of.dart';
-part 'model/home_tvs_post200_response_data_apps_inner_config_inner_message_any_of_castmessage_any_of1.dart';
 part 'model/home_tvs_post200_response_data_settings_inner.dart';
 part 'model/home_tvs_post200_response_data_tvs_inner.dart';
 part 'model/home_tvs_power_state_post200_response.dart';
