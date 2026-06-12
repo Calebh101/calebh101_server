@@ -46,6 +46,11 @@ void main() {
       // TODO
     });
 
+    // bool state
+    test('to test the property `state`', () async {
+      // TODO
+    });
+
 
   });
 

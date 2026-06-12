@@ -19,6 +19,7 @@ class HomeTvsPost200ResponseDataTvsInner {
     required this.port,
     required this.mac,
     required this.auth,
+    required this.state,
   });
 
   String name;
@@ -33,6 +34,8 @@ class HomeTvsPost200ResponseDataTvsInner {
 
   String auth;
 
+  bool state;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is HomeTvsPost200ResponseDataTvsInner &&
     other.name == name &&
@@ -40,7 +43,8 @@ class HomeTvsPost200ResponseDataTvsInner {
     other.ip == ip &&
     other.port == port &&
     other.mac == mac &&
-    other.auth == auth;
+    other.auth == auth &&
+    other.state == state;
 
   @override
   int get hashCode =>
@@ -50,10 +54,11 @@ class HomeTvsPost200ResponseDataTvsInner {
     (ip.hashCode) +
     (port.hashCode) +
     (mac.hashCode) +
-    (auth.hashCode);
+    (auth.hashCode) +
+    (state.hashCode);
 
   @override
-  String toString() => 'HomeTvsPost200ResponseDataTvsInner[name=$name, id=$id, ip=$ip, port=$port, mac=$mac, auth=$auth]';
+  String toString() => 'HomeTvsPost200ResponseDataTvsInner[name=$name, id=$id, ip=$ip, port=$port, mac=$mac, auth=$auth, state=$state]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -63,6 +68,7 @@ class HomeTvsPost200ResponseDataTvsInner {
       json[r'port'] = this.port;
       json[r'mac'] = this.mac;
       json[r'auth'] = this.auth;
+      json[r'state'] = this.state;
     return json;
   }
 
@@ -91,6 +97,7 @@ class HomeTvsPost200ResponseDataTvsInner {
         port: num.parse('${json[r'port']}'),
         mac: mapValueOfType<String>(json, r'mac')!,
         auth: mapValueOfType<String>(json, r'auth')!,
+        state: mapValueOfType<bool>(json, r'state')!,
       );
     }
     return null;
@@ -144,6 +151,7 @@ class HomeTvsPost200ResponseDataTvsInner {
     'port',
     'mac',
     'auth',
+    'state',
   };
 }
 
