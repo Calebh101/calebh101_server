@@ -15,7 +15,7 @@ class HomeTvsPost200ResponseDataAppsInnerConfigInner {
   HomeTvsPost200ResponseDataAppsInnerConfigInner({
     required this.NAME_SPACE,
     required this.APP_ID,
-    this.MESSAGE,
+    required this.MESSAGE,
   });
 
   num NAME_SPACE;
@@ -123,6 +123,7 @@ class HomeTvsPost200ResponseDataAppsInnerConfigInner {
   static const requiredKeys = <String>{
     'NAME_SPACE',
     'APP_ID',
+    'MESSAGE',
   };
 }
 

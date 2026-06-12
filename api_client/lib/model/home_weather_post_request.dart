@@ -13,7 +13,7 @@ part of openapi.api;
 class HomeWeatherPostRequest {
   /// Returns a new [HomeWeatherPostRequest] instance.
   HomeWeatherPostRequest({
-    required this.zip,
+    this.zip,
   });
 
   int? zip;
@@ -107,7 +107,6 @@ class HomeWeatherPostRequest {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'zip',
   };
 }
 
