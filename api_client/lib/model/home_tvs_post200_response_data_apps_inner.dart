@@ -15,7 +15,7 @@ class HomeTvsPost200ResponseDataAppsInner {
   HomeTvsPost200ResponseDataAppsInner({
     required this.name,
     this.country = const [],
-    required this.id,
+    this.id,
     this.config = const [],
   });
 
@@ -132,7 +132,6 @@ class HomeTvsPost200ResponseDataAppsInner {
   static const requiredKeys = <String>{
     'name',
     'country',
-    'id',
     'config',
   };
 }
