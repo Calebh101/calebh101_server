@@ -89,8 +89,8 @@ extension Calebh101ClientExtensions on ApiClient {
         Logger.print("request<$T>", "code=${e.code}: $e");
         return onError.call(ApiFailureDetails(e: e, code: e.code));
       }
-    } catch (e) {
-      Logger.warn("request<$T>", "$e");
+    } catch (e, t) {
+      Logger.warn("request<$T>", "$e\n$t");
       return onError.call(ApiFailureDetails(e: e, code: null));
     }
   }
