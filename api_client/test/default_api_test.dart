@@ -137,6 +137,46 @@ void main() {
       // TODO
     });
 
+    //Future<AuthCreateAgainPost200Response> homeTvsAppsLaunchPost({ HomeTvsAppsLaunchPostRequest homeTvsAppsLaunchPostRequest }) async
+    test('test homeTvsAppsLaunchPost', () async {
+      // TODO
+    });
+
+    //Future<HomeTvsGet200Response> homeTvsGet({ Object body }) async
+    test('test homeTvsGet', () async {
+      // TODO
+    });
+
+    //Future<AuthCreateAgainPost200Response> homeTvsKeyPost({ HomeTvsKeyPostRequest homeTvsKeyPostRequest }) async
+    test('test homeTvsKeyPost', () async {
+      // TODO
+    });
+
+    //Future<AuthCreateAgainPost200Response> homeTvsPowerOnPost({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
+    test('test homeTvsPowerOnPost', () async {
+      // TODO
+    });
+
+    //Future<HomeTvsPowerStateGet200Response> homeTvsPowerStateGet({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
+    test('test homeTvsPowerStateGet', () async {
+      // TODO
+    });
+
+    //Future<AuthCreateAgainPost200Response> homeTvsSettingsSetPost({ HomeTvsSettingsSetPostRequest homeTvsSettingsSetPostRequest }) async
+    test('test homeTvsSettingsSetPost', () async {
+      // TODO
+    });
+
+    //Future<HomeTvsSourceGet200Response> homeTvsSourceGet({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
+    test('test homeTvsSourceGet', () async {
+      // TODO
+    });
+
+    //Future<AuthCreateAgainPost200Response> homeTvsSourcePost({ HomeTvsSourcePostRequest homeTvsSourcePostRequest }) async
+    test('test homeTvsSourcePost', () async {
+      // TODO
+    });
+
     //Future<HomeWeatherGet200Response> homeWeatherGet({ HomeWeatherGetRequest homeWeatherGetRequest }) async
     test('test homeWeatherGet', () async {
       // TODO

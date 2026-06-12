@@ -1136,6 +1136,398 @@ class DefaultApi {
     return null;
   }
 
+  /// Performs an HTTP 'POST /home/tvs/apps/launch' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [HomeTvsAppsLaunchPostRequest] homeTvsAppsLaunchPostRequest:
+  ///   Request body
+  Future<Response> homeTvsAppsLaunchPostWithHttpInfo({ HomeTvsAppsLaunchPostRequest? homeTvsAppsLaunchPostRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/home/tvs/apps/launch';
+
+    // ignore: prefer_final_locals
+    Object? postBody = homeTvsAppsLaunchPostRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [HomeTvsAppsLaunchPostRequest] homeTvsAppsLaunchPostRequest:
+  ///   Request body
+  Future<AuthCreateAgainPost200Response?> homeTvsAppsLaunchPost({ HomeTvsAppsLaunchPostRequest? homeTvsAppsLaunchPostRequest, }) async {
+    final response = await homeTvsAppsLaunchPostWithHttpInfo( homeTvsAppsLaunchPostRequest: homeTvsAppsLaunchPostRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'GET /home/tvs' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [Object] body:
+  ///   Request body
+  Future<Response> homeTvsGetWithHttpInfo({ Object? body, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/home/tvs';
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [Object] body:
+  ///   Request body
+  Future<HomeTvsGet200Response?> homeTvsGet({ Object? body, }) async {
+    final response = await homeTvsGetWithHttpInfo( body: body, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'HomeTvsGet200Response',) as HomeTvsGet200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'POST /home/tvs/key' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [HomeTvsKeyPostRequest] homeTvsKeyPostRequest:
+  ///   Request body
+  Future<Response> homeTvsKeyPostWithHttpInfo({ HomeTvsKeyPostRequest? homeTvsKeyPostRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/home/tvs/key';
+
+    // ignore: prefer_final_locals
+    Object? postBody = homeTvsKeyPostRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [HomeTvsKeyPostRequest] homeTvsKeyPostRequest:
+  ///   Request body
+  Future<AuthCreateAgainPost200Response?> homeTvsKeyPost({ HomeTvsKeyPostRequest? homeTvsKeyPostRequest, }) async {
+    final response = await homeTvsKeyPostWithHttpInfo( homeTvsKeyPostRequest: homeTvsKeyPostRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'POST /home/tvs/power/on' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
+  ///   Request body
+  Future<Response> homeTvsPowerOnPostWithHttpInfo({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/home/tvs/power/on';
+
+    // ignore: prefer_final_locals
+    Object? postBody = accountSessionDeleteRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
+  ///   Request body
+  Future<AuthCreateAgainPost200Response?> homeTvsPowerOnPost({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+    final response = await homeTvsPowerOnPostWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'GET /home/tvs/power/state' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
+  ///   Request body
+  Future<Response> homeTvsPowerStateGetWithHttpInfo({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/home/tvs/power/state';
+
+    // ignore: prefer_final_locals
+    Object? postBody = accountSessionDeleteRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
+  ///   Request body
+  Future<HomeTvsPowerStateGet200Response?> homeTvsPowerStateGet({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+    final response = await homeTvsPowerStateGetWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'HomeTvsPowerStateGet200Response',) as HomeTvsPowerStateGet200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'POST /home/tvs/settings/set' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [HomeTvsSettingsSetPostRequest] homeTvsSettingsSetPostRequest:
+  ///   Request body
+  Future<Response> homeTvsSettingsSetPostWithHttpInfo({ HomeTvsSettingsSetPostRequest? homeTvsSettingsSetPostRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/home/tvs/settings/set';
+
+    // ignore: prefer_final_locals
+    Object? postBody = homeTvsSettingsSetPostRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [HomeTvsSettingsSetPostRequest] homeTvsSettingsSetPostRequest:
+  ///   Request body
+  Future<AuthCreateAgainPost200Response?> homeTvsSettingsSetPost({ HomeTvsSettingsSetPostRequest? homeTvsSettingsSetPostRequest, }) async {
+    final response = await homeTvsSettingsSetPostWithHttpInfo( homeTvsSettingsSetPostRequest: homeTvsSettingsSetPostRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'GET /home/tvs/source' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
+  ///   Request body
+  Future<Response> homeTvsSourceGetWithHttpInfo({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/home/tvs/source';
+
+    // ignore: prefer_final_locals
+    Object? postBody = accountSessionDeleteRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
+  ///   Request body
+  Future<HomeTvsSourceGet200Response?> homeTvsSourceGet({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+    final response = await homeTvsSourceGetWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'HomeTvsSourceGet200Response',) as HomeTvsSourceGet200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'POST /home/tvs/source' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [HomeTvsSourcePostRequest] homeTvsSourcePostRequest:
+  ///   Request body
+  Future<Response> homeTvsSourcePostWithHttpInfo({ HomeTvsSourcePostRequest? homeTvsSourcePostRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/home/tvs/source';
+
+    // ignore: prefer_final_locals
+    Object? postBody = homeTvsSourcePostRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [HomeTvsSourcePostRequest] homeTvsSourcePostRequest:
+  ///   Request body
+  Future<AuthCreateAgainPost200Response?> homeTvsSourcePost({ HomeTvsSourcePostRequest? homeTvsSourcePostRequest, }) async {
+    final response = await homeTvsSourcePostWithHttpInfo( homeTvsSourcePostRequest: homeTvsSourcePostRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
+    
+    }
+    return null;
+  }
+
   /// Performs an HTTP 'GET /home/weather' operation and returns the [Response].
   /// Parameters:
   ///

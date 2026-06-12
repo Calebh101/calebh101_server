@@ -238,6 +238,44 @@ class ApiClient {
           return GetStatus200Response.fromJson(value);
         case 'GetStatus200ResponseData':
           return GetStatus200ResponseData.fromJson(value);
+        case 'HomeTvsAppsLaunchPostRequest':
+          return HomeTvsAppsLaunchPostRequest.fromJson(value);
+        case 'HomeTvsGet200Response':
+          return HomeTvsGet200Response.fromJson(value);
+        case 'HomeTvsGet200ResponseData':
+          return HomeTvsGet200ResponseData.fromJson(value);
+        case 'HomeTvsGet200ResponseDataAppsInner':
+          return HomeTvsGet200ResponseDataAppsInner.fromJson(value);
+        case 'HomeTvsGet200ResponseDataAppsInnerConfigInner':
+          return HomeTvsGet200ResponseDataAppsInnerConfigInner.fromJson(value);
+        case 'HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGE':
+          return HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGE.fromJson(value);
+        case 'HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf':
+          return HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf.fromJson(value);
+        case 'HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE':
+          return HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE.fromJson(value);
+        case 'HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf':
+          return HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf.fromJson(value);
+        case 'HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1':
+          return HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1.fromJson(value);
+        case 'HomeTvsGet200ResponseDataSettingsInner':
+          return HomeTvsGet200ResponseDataSettingsInner.fromJson(value);
+        case 'HomeTvsGet200ResponseDataTvsInner':
+          return HomeTvsGet200ResponseDataTvsInner.fromJson(value);
+        case 'HomeTvsKeyPostRequest':
+          return HomeTvsKeyPostRequest.fromJson(value);
+        case 'HomeTvsKeyPostRequestKeysInner':
+          return HomeTvsKeyPostRequestKeysInner.fromJson(value);
+        case 'HomeTvsPowerStateGet200Response':
+          return HomeTvsPowerStateGet200Response.fromJson(value);
+        case 'HomeTvsPowerStateGet200ResponseData':
+          return HomeTvsPowerStateGet200ResponseData.fromJson(value);
+        case 'HomeTvsSettingsSetPostRequest':
+          return HomeTvsSettingsSetPostRequest.fromJson(value);
+        case 'HomeTvsSourceGet200Response':
+          return HomeTvsSourceGet200Response.fromJson(value);
+        case 'HomeTvsSourcePostRequest':
+          return HomeTvsSourcePostRequest.fromJson(value);
         case 'HomeWeatherGet200Response':
           return HomeWeatherGet200Response.fromJson(value);
         case 'HomeWeatherGet200ResponseData':

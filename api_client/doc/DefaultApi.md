@@ -33,6 +33,14 @@ Method | HTTP request | Description
 [**ghFirstGet**](DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
 [**ghFirstSecondGet**](DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 [**ghFirstSecondRestGet**](DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
+[**homeTvsAppsLaunchPost**](DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
+[**homeTvsGet**](DefaultApi.md#hometvsget) | **GET** /home/tvs | 
+[**homeTvsKeyPost**](DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
+[**homeTvsPowerOnPost**](DefaultApi.md#hometvspoweronpost) | **POST** /home/tvs/power/on | 
+[**homeTvsPowerStateGet**](DefaultApi.md#hometvspowerstateget) | **GET** /home/tvs/power/state | 
+[**homeTvsSettingsSetPost**](DefaultApi.md#hometvssettingssetpost) | **POST** /home/tvs/settings/set | 
+[**homeTvsSourceGet**](DefaultApi.md#hometvssourceget) | **GET** /home/tvs/source | 
+[**homeTvsSourcePost**](DefaultApi.md#hometvssourcepost) | **POST** /home/tvs/source | 
 [**homeWeatherGet**](DefaultApi.md#homeweatherget) | **GET** /home/weather | 
 [**idPost**](DefaultApi.md#idpost) | **POST** /:id | 
 [**linkDelete**](DefaultApi.md#linkdelete) | **DELETE** /link | 
@@ -995,6 +1003,334 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeTvsAppsLaunchPost**
+> AuthCreateAgainPost200Response homeTvsAppsLaunchPost(homeTvsAppsLaunchPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final homeTvsAppsLaunchPostRequest = HomeTvsAppsLaunchPostRequest(); // HomeTvsAppsLaunchPostRequest | Request body
+
+try {
+    final result = api_instance.homeTvsAppsLaunchPost(homeTvsAppsLaunchPostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->homeTvsAppsLaunchPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **homeTvsAppsLaunchPostRequest** | [**HomeTvsAppsLaunchPostRequest**](HomeTvsAppsLaunchPostRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeTvsGet**
+> HomeTvsGet200Response homeTvsGet(body)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final body = Object(); // Object | Request body
+
+try {
+    final result = api_instance.homeTvsGet(body);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->homeTvsGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **Object**| Request body | [optional] 
+
+### Return type
+
+[**HomeTvsGet200Response**](HomeTvsGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeTvsKeyPost**
+> AuthCreateAgainPost200Response homeTvsKeyPost(homeTvsKeyPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final homeTvsKeyPostRequest = HomeTvsKeyPostRequest(); // HomeTvsKeyPostRequest | Request body
+
+try {
+    final result = api_instance.homeTvsKeyPost(homeTvsKeyPostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->homeTvsKeyPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **homeTvsKeyPostRequest** | [**HomeTvsKeyPostRequest**](HomeTvsKeyPostRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeTvsPowerOnPost**
+> AuthCreateAgainPost200Response homeTvsPowerOnPost(accountSessionDeleteRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountSessionDeleteRequest = AccountSessionDeleteRequest(); // AccountSessionDeleteRequest | Request body
+
+try {
+    final result = api_instance.homeTvsPowerOnPost(accountSessionDeleteRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->homeTvsPowerOnPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountSessionDeleteRequest** | [**AccountSessionDeleteRequest**](AccountSessionDeleteRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeTvsPowerStateGet**
+> HomeTvsPowerStateGet200Response homeTvsPowerStateGet(accountSessionDeleteRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountSessionDeleteRequest = AccountSessionDeleteRequest(); // AccountSessionDeleteRequest | Request body
+
+try {
+    final result = api_instance.homeTvsPowerStateGet(accountSessionDeleteRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->homeTvsPowerStateGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountSessionDeleteRequest** | [**AccountSessionDeleteRequest**](AccountSessionDeleteRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**HomeTvsPowerStateGet200Response**](HomeTvsPowerStateGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeTvsSettingsSetPost**
+> AuthCreateAgainPost200Response homeTvsSettingsSetPost(homeTvsSettingsSetPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final homeTvsSettingsSetPostRequest = HomeTvsSettingsSetPostRequest(); // HomeTvsSettingsSetPostRequest | Request body
+
+try {
+    final result = api_instance.homeTvsSettingsSetPost(homeTvsSettingsSetPostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->homeTvsSettingsSetPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **homeTvsSettingsSetPostRequest** | [**HomeTvsSettingsSetPostRequest**](HomeTvsSettingsSetPostRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeTvsSourceGet**
+> HomeTvsSourceGet200Response homeTvsSourceGet(accountSessionDeleteRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final accountSessionDeleteRequest = AccountSessionDeleteRequest(); // AccountSessionDeleteRequest | Request body
+
+try {
+    final result = api_instance.homeTvsSourceGet(accountSessionDeleteRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->homeTvsSourceGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountSessionDeleteRequest** | [**AccountSessionDeleteRequest**](AccountSessionDeleteRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**HomeTvsSourceGet200Response**](HomeTvsSourceGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeTvsSourcePost**
+> AuthCreateAgainPost200Response homeTvsSourcePost(homeTvsSourcePostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final homeTvsSourcePostRequest = HomeTvsSourcePostRequest(); // HomeTvsSourcePostRequest | Request body
+
+try {
+    final result = api_instance.homeTvsSourcePost(homeTvsSourcePostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->homeTvsSourcePost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **homeTvsSourcePostRequest** | [**HomeTvsSourcePostRequest**](HomeTvsSourcePostRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

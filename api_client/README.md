@@ -83,6 +83,14 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ghFirstGet**](doc//DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
 *DefaultApi* | [**ghFirstSecondGet**](doc//DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 *DefaultApi* | [**ghFirstSecondRestGet**](doc//DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
+*DefaultApi* | [**homeTvsAppsLaunchPost**](doc//DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
+*DefaultApi* | [**homeTvsGet**](doc//DefaultApi.md#hometvsget) | **GET** /home/tvs | 
+*DefaultApi* | [**homeTvsKeyPost**](doc//DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
+*DefaultApi* | [**homeTvsPowerOnPost**](doc//DefaultApi.md#hometvspoweronpost) | **POST** /home/tvs/power/on | 
+*DefaultApi* | [**homeTvsPowerStateGet**](doc//DefaultApi.md#hometvspowerstateget) | **GET** /home/tvs/power/state | 
+*DefaultApi* | [**homeTvsSettingsSetPost**](doc//DefaultApi.md#hometvssettingssetpost) | **POST** /home/tvs/settings/set | 
+*DefaultApi* | [**homeTvsSourceGet**](doc//DefaultApi.md#hometvssourceget) | **GET** /home/tvs/source | 
+*DefaultApi* | [**homeTvsSourcePost**](doc//DefaultApi.md#hometvssourcepost) | **POST** /home/tvs/source | 
 *DefaultApi* | [**homeWeatherGet**](doc//DefaultApi.md#homeweatherget) | **GET** /home/weather | 
 *DefaultApi* | [**idPost**](doc//DefaultApi.md#idpost) | **POST** /:id | 
 *DefaultApi* | [**linkDelete**](doc//DefaultApi.md#linkdelete) | **DELETE** /link | 
@@ -122,6 +130,25 @@ Class | Method | HTTP request | Description
  - [DebugTestPostRequest](doc//DebugTestPostRequest.md)
  - [GetStatus200Response](doc//GetStatus200Response.md)
  - [GetStatus200ResponseData](doc//GetStatus200ResponseData.md)
+ - [HomeTvsAppsLaunchPostRequest](doc//HomeTvsAppsLaunchPostRequest.md)
+ - [HomeTvsGet200Response](doc//HomeTvsGet200Response.md)
+ - [HomeTvsGet200ResponseData](doc//HomeTvsGet200ResponseData.md)
+ - [HomeTvsGet200ResponseDataAppsInner](doc//HomeTvsGet200ResponseDataAppsInner.md)
+ - [HomeTvsGet200ResponseDataAppsInnerConfigInner](doc//HomeTvsGet200ResponseDataAppsInnerConfigInner.md)
+ - [HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGE](doc//HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGE.md)
+ - [HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf](doc//HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf.md)
+ - [HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE](doc//HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE.md)
+ - [HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf](doc//HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf.md)
+ - [HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1](doc//HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1.md)
+ - [HomeTvsGet200ResponseDataSettingsInner](doc//HomeTvsGet200ResponseDataSettingsInner.md)
+ - [HomeTvsGet200ResponseDataTvsInner](doc//HomeTvsGet200ResponseDataTvsInner.md)
+ - [HomeTvsKeyPostRequest](doc//HomeTvsKeyPostRequest.md)
+ - [HomeTvsKeyPostRequestKeysInner](doc//HomeTvsKeyPostRequestKeysInner.md)
+ - [HomeTvsPowerStateGet200Response](doc//HomeTvsPowerStateGet200Response.md)
+ - [HomeTvsPowerStateGet200ResponseData](doc//HomeTvsPowerStateGet200ResponseData.md)
+ - [HomeTvsSettingsSetPostRequest](doc//HomeTvsSettingsSetPostRequest.md)
+ - [HomeTvsSourceGet200Response](doc//HomeTvsSourceGet200Response.md)
+ - [HomeTvsSourcePostRequest](doc//HomeTvsSourcePostRequest.md)
  - [HomeWeatherGet200Response](doc//HomeWeatherGet200Response.md)
  - [HomeWeatherGet200ResponseData](doc//HomeWeatherGet200ResponseData.md)
  - [HomeWeatherGet200ResponseDataCurrent](doc//HomeWeatherGet200ResponseDataCurrent.md)
