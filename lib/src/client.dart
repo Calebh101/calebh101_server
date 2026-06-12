@@ -27,6 +27,7 @@ class Calebh101Client {
 
 class ApiFailureDetails<T> {
   final Object e;
+  final StackTrace? stackTrace;
   final int? code;
   final String? _message;
 
@@ -55,11 +56,11 @@ class ApiFailureDetails<T> {
     }
   }
 
-  const ApiFailureDetails({required this.e, required this.code, String? message}) : _message = message;
+  const ApiFailureDetails({required this.e, required this.code, String? message, this.stackTrace}) : _message = message;
 
   @override
   String toString() {
-    return "ApiFailureDetails<$T>(code: $code, message: $message, e: $e, data: $data)";
+    return "ApiFailureDetails<$T>(code: $code, message: $message, e: $e, data: $data, trace:${stackTrace != null ? "\n${stackTrace.toString().split("\n").map((x) => "  $x").join("\n")}\n" : null})";
   }
 }
 
@@ -91,7 +92,7 @@ extension Calebh101ClientExtensions on ApiClient {
       }
     } catch (e, t) {
       Logger.warn("request<$T>", "$e\n$t");
-      return onError.call(ApiFailureDetails(e: e, code: null));
+      return onError.call(ApiFailureDetails(e: e, stackTrace: t, code: null));
     }
   }
 }
