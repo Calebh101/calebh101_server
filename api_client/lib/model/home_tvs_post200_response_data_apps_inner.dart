@@ -15,7 +15,7 @@ class HomeTvsPost200ResponseDataAppsInner {
   HomeTvsPost200ResponseDataAppsInner({
     required this.name,
     this.country = const [],
-    this.id = const [],
+    required this.id,
     this.config = const [],
   });
 
@@ -23,7 +23,7 @@ class HomeTvsPost200ResponseDataAppsInner {
 
   List<String> country;
 
-  List<String> id;
+  String? id;
 
   List<HomeTvsPost200ResponseDataAppsInnerConfigInner> config;
 
@@ -31,7 +31,7 @@ class HomeTvsPost200ResponseDataAppsInner {
   bool operator ==(Object other) => identical(this, other) || other is HomeTvsPost200ResponseDataAppsInner &&
     other.name == name &&
     _deepEquality.equals(other.country, country) &&
-    _deepEquality.equals(other.id, id) &&
+    other.id == id &&
     _deepEquality.equals(other.config, config);
 
   @override
@@ -39,7 +39,7 @@ class HomeTvsPost200ResponseDataAppsInner {
     // ignore: unnecessary_parenthesis
     (name.hashCode) +
     (country.hashCode) +
-    (id.hashCode) +
+    (id == null ? 0 : id!.hashCode) +
     (config.hashCode);
 
   @override
@@ -49,7 +49,11 @@ class HomeTvsPost200ResponseDataAppsInner {
     final json = <String, dynamic>{};
       json[r'name'] = this.name;
       json[r'country'] = this.country;
+    if (this.id != null) {
       json[r'id'] = this.id;
+    } else {
+      json[r'id'] = null;
+    }
       json[r'config'] = this.config;
     return json;
   }
@@ -77,9 +81,7 @@ class HomeTvsPost200ResponseDataAppsInner {
         country: json[r'country'] is Iterable
             ? (json[r'country'] as Iterable).cast<String>().toList(growable: false)
             : const [],
-        id: json[r'id'] is Iterable
-            ? (json[r'id'] as Iterable).cast<String>().toList(growable: false)
-            : const [],
+        id: mapValueOfType<String>(json, r'id'),
         config: HomeTvsPost200ResponseDataAppsInnerConfigInner.listFromJson(json[r'config']),
       );
     }

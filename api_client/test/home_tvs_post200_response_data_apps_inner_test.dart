@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // List<String> id (default value: const [])
+    // String id
     test('to test the property `id`', () async {
       // TODO
     });
