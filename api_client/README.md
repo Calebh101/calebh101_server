@@ -84,14 +84,13 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ghFirstSecondGet**](doc//DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 *DefaultApi* | [**ghFirstSecondRestGet**](doc//DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
 *DefaultApi* | [**homeTvsAppsLaunchPost**](doc//DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
-*DefaultApi* | [**homeTvsGet**](doc//DefaultApi.md#hometvsget) | **GET** /home/tvs | 
 *DefaultApi* | [**homeTvsKeyPost**](doc//DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
+*DefaultApi* | [**homeTvsPost**](doc//DefaultApi.md#hometvspost) | **POST** /home/tvs | 
 *DefaultApi* | [**homeTvsPowerOnPost**](doc//DefaultApi.md#hometvspoweronpost) | **POST** /home/tvs/power/on | 
-*DefaultApi* | [**homeTvsPowerStateGet**](doc//DefaultApi.md#hometvspowerstateget) | **GET** /home/tvs/power/state | 
+*DefaultApi* | [**homeTvsPowerStatePost**](doc//DefaultApi.md#hometvspowerstatepost) | **POST** /home/tvs/power/state | 
 *DefaultApi* | [**homeTvsSettingsSetPost**](doc//DefaultApi.md#hometvssettingssetpost) | **POST** /home/tvs/settings/set | 
-*DefaultApi* | [**homeTvsSourceGet**](doc//DefaultApi.md#hometvssourceget) | **GET** /home/tvs/source | 
 *DefaultApi* | [**homeTvsSourcePost**](doc//DefaultApi.md#hometvssourcepost) | **POST** /home/tvs/source | 
-*DefaultApi* | [**homeWeatherGet**](doc//DefaultApi.md#homeweatherget) | **GET** /home/weather | 
+*DefaultApi* | [**homeWeatherPost**](doc//DefaultApi.md#homeweatherpost) | **POST** /home/weather | 
 *DefaultApi* | [**idPost**](doc//DefaultApi.md#idpost) | **POST** /:id | 
 *DefaultApi* | [**linkDelete**](doc//DefaultApi.md#linkdelete) | **DELETE** /link | 
 *DefaultApi* | [**linkGet**](doc//DefaultApi.md#linkget) | **GET** /link | 
@@ -131,34 +130,33 @@ Class | Method | HTTP request | Description
  - [GetStatus200Response](doc//GetStatus200Response.md)
  - [GetStatus200ResponseData](doc//GetStatus200ResponseData.md)
  - [HomeTvsAppsLaunchPostRequest](doc//HomeTvsAppsLaunchPostRequest.md)
- - [HomeTvsGet200Response](doc//HomeTvsGet200Response.md)
- - [HomeTvsGet200ResponseData](doc//HomeTvsGet200ResponseData.md)
- - [HomeTvsGet200ResponseDataAppsInner](doc//HomeTvsGet200ResponseDataAppsInner.md)
- - [HomeTvsGet200ResponseDataAppsInnerConfigInner](doc//HomeTvsGet200ResponseDataAppsInnerConfigInner.md)
- - [HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGE](doc//HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGE.md)
- - [HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf](doc//HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf.md)
- - [HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE](doc//HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE.md)
- - [HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf](doc//HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf.md)
- - [HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1](doc//HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1.md)
- - [HomeTvsGet200ResponseDataSettingsInner](doc//HomeTvsGet200ResponseDataSettingsInner.md)
- - [HomeTvsGet200ResponseDataTvsInner](doc//HomeTvsGet200ResponseDataTvsInner.md)
  - [HomeTvsKeyPostRequest](doc//HomeTvsKeyPostRequest.md)
  - [HomeTvsKeyPostRequestKeysInner](doc//HomeTvsKeyPostRequestKeysInner.md)
- - [HomeTvsPowerStateGet200Response](doc//HomeTvsPowerStateGet200Response.md)
- - [HomeTvsPowerStateGet200ResponseData](doc//HomeTvsPowerStateGet200ResponseData.md)
+ - [HomeTvsPost200Response](doc//HomeTvsPost200Response.md)
+ - [HomeTvsPost200ResponseData](doc//HomeTvsPost200ResponseData.md)
+ - [HomeTvsPost200ResponseDataAppsInner](doc//HomeTvsPost200ResponseDataAppsInner.md)
+ - [HomeTvsPost200ResponseDataAppsInnerConfigInner](doc//HomeTvsPost200ResponseDataAppsInnerConfigInner.md)
+ - [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGE](doc//HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGE.md)
+ - [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf](doc//HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf.md)
+ - [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE](doc//HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE.md)
+ - [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf](doc//HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf.md)
+ - [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1](doc//HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1.md)
+ - [HomeTvsPost200ResponseDataSettingsInner](doc//HomeTvsPost200ResponseDataSettingsInner.md)
+ - [HomeTvsPost200ResponseDataTvsInner](doc//HomeTvsPost200ResponseDataTvsInner.md)
+ - [HomeTvsPowerStatePost200Response](doc//HomeTvsPowerStatePost200Response.md)
+ - [HomeTvsPowerStatePost200ResponseData](doc//HomeTvsPowerStatePost200ResponseData.md)
  - [HomeTvsSettingsSetPostRequest](doc//HomeTvsSettingsSetPostRequest.md)
- - [HomeTvsSourceGet200Response](doc//HomeTvsSourceGet200Response.md)
  - [HomeTvsSourcePostRequest](doc//HomeTvsSourcePostRequest.md)
- - [HomeWeatherGet200Response](doc//HomeWeatherGet200Response.md)
- - [HomeWeatherGet200ResponseData](doc//HomeWeatherGet200ResponseData.md)
- - [HomeWeatherGet200ResponseDataCurrent](doc//HomeWeatherGet200ResponseDataCurrent.md)
- - [HomeWeatherGet200ResponseDataCurrentCondition](doc//HomeWeatherGet200ResponseDataCurrentCondition.md)
- - [HomeWeatherGet200ResponseDataForecast](doc//HomeWeatherGet200ResponseDataForecast.md)
- - [HomeWeatherGet200ResponseDataForecastForecastdayInner](doc//HomeWeatherGet200ResponseDataForecastForecastdayInner.md)
- - [HomeWeatherGet200ResponseDataForecastForecastdayInnerAstro](doc//HomeWeatherGet200ResponseDataForecastForecastdayInnerAstro.md)
- - [HomeWeatherGet200ResponseDataForecastForecastdayInnerDay](doc//HomeWeatherGet200ResponseDataForecastForecastdayInnerDay.md)
- - [HomeWeatherGet200ResponseDataLocation](doc//HomeWeatherGet200ResponseDataLocation.md)
- - [HomeWeatherGetRequest](doc//HomeWeatherGetRequest.md)
+ - [HomeWeatherPost200Response](doc//HomeWeatherPost200Response.md)
+ - [HomeWeatherPost200ResponseData](doc//HomeWeatherPost200ResponseData.md)
+ - [HomeWeatherPost200ResponseDataCurrent](doc//HomeWeatherPost200ResponseDataCurrent.md)
+ - [HomeWeatherPost200ResponseDataCurrentCondition](doc//HomeWeatherPost200ResponseDataCurrentCondition.md)
+ - [HomeWeatherPost200ResponseDataForecast](doc//HomeWeatherPost200ResponseDataForecast.md)
+ - [HomeWeatherPost200ResponseDataForecastForecastdayInner](doc//HomeWeatherPost200ResponseDataForecastForecastdayInner.md)
+ - [HomeWeatherPost200ResponseDataForecastForecastdayInnerAstro](doc//HomeWeatherPost200ResponseDataForecastForecastdayInnerAstro.md)
+ - [HomeWeatherPost200ResponseDataForecastForecastdayInnerDay](doc//HomeWeatherPost200ResponseDataForecastForecastdayInnerDay.md)
+ - [HomeWeatherPost200ResponseDataLocation](doc//HomeWeatherPost200ResponseDataLocation.md)
+ - [HomeWeatherPostRequest](doc//HomeWeatherPostRequest.md)
  - [IdPost307Response](doc//IdPost307Response.md)
  - [LinkGet200Response](doc//LinkGet200Response.md)
  - [LinkGet200ResponseData](doc//LinkGet200ResponseData.md)

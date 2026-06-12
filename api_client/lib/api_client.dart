@@ -240,62 +240,60 @@ class ApiClient {
           return GetStatus200ResponseData.fromJson(value);
         case 'HomeTvsAppsLaunchPostRequest':
           return HomeTvsAppsLaunchPostRequest.fromJson(value);
-        case 'HomeTvsGet200Response':
-          return HomeTvsGet200Response.fromJson(value);
-        case 'HomeTvsGet200ResponseData':
-          return HomeTvsGet200ResponseData.fromJson(value);
-        case 'HomeTvsGet200ResponseDataAppsInner':
-          return HomeTvsGet200ResponseDataAppsInner.fromJson(value);
-        case 'HomeTvsGet200ResponseDataAppsInnerConfigInner':
-          return HomeTvsGet200ResponseDataAppsInnerConfigInner.fromJson(value);
-        case 'HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGE':
-          return HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGE.fromJson(value);
-        case 'HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf':
-          return HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf.fromJson(value);
-        case 'HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE':
-          return HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE.fromJson(value);
-        case 'HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf':
-          return HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf.fromJson(value);
-        case 'HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1':
-          return HomeTvsGet200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1.fromJson(value);
-        case 'HomeTvsGet200ResponseDataSettingsInner':
-          return HomeTvsGet200ResponseDataSettingsInner.fromJson(value);
-        case 'HomeTvsGet200ResponseDataTvsInner':
-          return HomeTvsGet200ResponseDataTvsInner.fromJson(value);
         case 'HomeTvsKeyPostRequest':
           return HomeTvsKeyPostRequest.fromJson(value);
         case 'HomeTvsKeyPostRequestKeysInner':
           return HomeTvsKeyPostRequestKeysInner.fromJson(value);
-        case 'HomeTvsPowerStateGet200Response':
-          return HomeTvsPowerStateGet200Response.fromJson(value);
-        case 'HomeTvsPowerStateGet200ResponseData':
-          return HomeTvsPowerStateGet200ResponseData.fromJson(value);
+        case 'HomeTvsPost200Response':
+          return HomeTvsPost200Response.fromJson(value);
+        case 'HomeTvsPost200ResponseData':
+          return HomeTvsPost200ResponseData.fromJson(value);
+        case 'HomeTvsPost200ResponseDataAppsInner':
+          return HomeTvsPost200ResponseDataAppsInner.fromJson(value);
+        case 'HomeTvsPost200ResponseDataAppsInnerConfigInner':
+          return HomeTvsPost200ResponseDataAppsInnerConfigInner.fromJson(value);
+        case 'HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGE':
+          return HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGE.fromJson(value);
+        case 'HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf':
+          return HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOf.fromJson(value);
+        case 'HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE':
+          return HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE.fromJson(value);
+        case 'HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf':
+          return HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf.fromJson(value);
+        case 'HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1':
+          return HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGEAnyOf1.fromJson(value);
+        case 'HomeTvsPost200ResponseDataSettingsInner':
+          return HomeTvsPost200ResponseDataSettingsInner.fromJson(value);
+        case 'HomeTvsPost200ResponseDataTvsInner':
+          return HomeTvsPost200ResponseDataTvsInner.fromJson(value);
+        case 'HomeTvsPowerStatePost200Response':
+          return HomeTvsPowerStatePost200Response.fromJson(value);
+        case 'HomeTvsPowerStatePost200ResponseData':
+          return HomeTvsPowerStatePost200ResponseData.fromJson(value);
         case 'HomeTvsSettingsSetPostRequest':
           return HomeTvsSettingsSetPostRequest.fromJson(value);
-        case 'HomeTvsSourceGet200Response':
-          return HomeTvsSourceGet200Response.fromJson(value);
         case 'HomeTvsSourcePostRequest':
           return HomeTvsSourcePostRequest.fromJson(value);
-        case 'HomeWeatherGet200Response':
-          return HomeWeatherGet200Response.fromJson(value);
-        case 'HomeWeatherGet200ResponseData':
-          return HomeWeatherGet200ResponseData.fromJson(value);
-        case 'HomeWeatherGet200ResponseDataCurrent':
-          return HomeWeatherGet200ResponseDataCurrent.fromJson(value);
-        case 'HomeWeatherGet200ResponseDataCurrentCondition':
-          return HomeWeatherGet200ResponseDataCurrentCondition.fromJson(value);
-        case 'HomeWeatherGet200ResponseDataForecast':
-          return HomeWeatherGet200ResponseDataForecast.fromJson(value);
-        case 'HomeWeatherGet200ResponseDataForecastForecastdayInner':
-          return HomeWeatherGet200ResponseDataForecastForecastdayInner.fromJson(value);
-        case 'HomeWeatherGet200ResponseDataForecastForecastdayInnerAstro':
-          return HomeWeatherGet200ResponseDataForecastForecastdayInnerAstro.fromJson(value);
-        case 'HomeWeatherGet200ResponseDataForecastForecastdayInnerDay':
-          return HomeWeatherGet200ResponseDataForecastForecastdayInnerDay.fromJson(value);
-        case 'HomeWeatherGet200ResponseDataLocation':
-          return HomeWeatherGet200ResponseDataLocation.fromJson(value);
-        case 'HomeWeatherGetRequest':
-          return HomeWeatherGetRequest.fromJson(value);
+        case 'HomeWeatherPost200Response':
+          return HomeWeatherPost200Response.fromJson(value);
+        case 'HomeWeatherPost200ResponseData':
+          return HomeWeatherPost200ResponseData.fromJson(value);
+        case 'HomeWeatherPost200ResponseDataCurrent':
+          return HomeWeatherPost200ResponseDataCurrent.fromJson(value);
+        case 'HomeWeatherPost200ResponseDataCurrentCondition':
+          return HomeWeatherPost200ResponseDataCurrentCondition.fromJson(value);
+        case 'HomeWeatherPost200ResponseDataForecast':
+          return HomeWeatherPost200ResponseDataForecast.fromJson(value);
+        case 'HomeWeatherPost200ResponseDataForecastForecastdayInner':
+          return HomeWeatherPost200ResponseDataForecastForecastdayInner.fromJson(value);
+        case 'HomeWeatherPost200ResponseDataForecastForecastdayInnerAstro':
+          return HomeWeatherPost200ResponseDataForecastForecastdayInnerAstro.fromJson(value);
+        case 'HomeWeatherPost200ResponseDataForecastForecastdayInnerDay':
+          return HomeWeatherPost200ResponseDataForecastForecastdayInnerDay.fromJson(value);
+        case 'HomeWeatherPost200ResponseDataLocation':
+          return HomeWeatherPost200ResponseDataLocation.fromJson(value);
+        case 'HomeWeatherPostRequest':
+          return HomeWeatherPostRequest.fromJson(value);
         case 'IdPost307Response':
           return IdPost307Response.fromJson(value);
         case 'LinkGet200Response':

@@ -142,13 +142,13 @@ void main() {
       // TODO
     });
 
-    //Future<HomeTvsGet200Response> homeTvsGet({ Object body }) async
-    test('test homeTvsGet', () async {
+    //Future<AuthCreateAgainPost200Response> homeTvsKeyPost({ HomeTvsKeyPostRequest homeTvsKeyPostRequest }) async
+    test('test homeTvsKeyPost', () async {
       // TODO
     });
 
-    //Future<AuthCreateAgainPost200Response> homeTvsKeyPost({ HomeTvsKeyPostRequest homeTvsKeyPostRequest }) async
-    test('test homeTvsKeyPost', () async {
+    //Future<HomeTvsPost200Response> homeTvsPost({ Object body }) async
+    test('test homeTvsPost', () async {
       // TODO
     });
 
@@ -157,8 +157,8 @@ void main() {
       // TODO
     });
 
-    //Future<HomeTvsPowerStateGet200Response> homeTvsPowerStateGet({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
-    test('test homeTvsPowerStateGet', () async {
+    //Future<HomeTvsPowerStatePost200Response> homeTvsPowerStatePost({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
+    test('test homeTvsPowerStatePost', () async {
       // TODO
     });
 
@@ -167,18 +167,13 @@ void main() {
       // TODO
     });
 
-    //Future<HomeTvsSourceGet200Response> homeTvsSourceGet({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
-    test('test homeTvsSourceGet', () async {
-      // TODO
-    });
-
     //Future<AuthCreateAgainPost200Response> homeTvsSourcePost({ HomeTvsSourcePostRequest homeTvsSourcePostRequest }) async
     test('test homeTvsSourcePost', () async {
       // TODO
     });
 
-    //Future<HomeWeatherGet200Response> homeWeatherGet({ HomeWeatherGetRequest homeWeatherGetRequest }) async
-    test('test homeWeatherGet', () async {
+    //Future<HomeWeatherPost200Response> homeWeatherPost({ HomeWeatherPostRequest homeWeatherPostRequest }) async
+    test('test homeWeatherPost', () async {
       // TODO
     });
 

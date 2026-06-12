@@ -34,14 +34,13 @@ Method | HTTP request | Description
 [**ghFirstSecondGet**](DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 [**ghFirstSecondRestGet**](DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
 [**homeTvsAppsLaunchPost**](DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
-[**homeTvsGet**](DefaultApi.md#hometvsget) | **GET** /home/tvs | 
 [**homeTvsKeyPost**](DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
+[**homeTvsPost**](DefaultApi.md#hometvspost) | **POST** /home/tvs | 
 [**homeTvsPowerOnPost**](DefaultApi.md#hometvspoweronpost) | **POST** /home/tvs/power/on | 
-[**homeTvsPowerStateGet**](DefaultApi.md#hometvspowerstateget) | **GET** /home/tvs/power/state | 
+[**homeTvsPowerStatePost**](DefaultApi.md#hometvspowerstatepost) | **POST** /home/tvs/power/state | 
 [**homeTvsSettingsSetPost**](DefaultApi.md#hometvssettingssetpost) | **POST** /home/tvs/settings/set | 
-[**homeTvsSourceGet**](DefaultApi.md#hometvssourceget) | **GET** /home/tvs/source | 
 [**homeTvsSourcePost**](DefaultApi.md#hometvssourcepost) | **POST** /home/tvs/source | 
-[**homeWeatherGet**](DefaultApi.md#homeweatherget) | **GET** /home/weather | 
+[**homeWeatherPost**](DefaultApi.md#homeweatherpost) | **POST** /home/weather | 
 [**idPost**](DefaultApi.md#idpost) | **POST** /:id | 
 [**linkDelete**](DefaultApi.md#linkdelete) | **DELETE** /link | 
 [**linkGet**](DefaultApi.md#linkget) | **GET** /link | 
@@ -1047,47 +1046,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **homeTvsGet**
-> HomeTvsGet200Response homeTvsGet(body)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = DefaultApi();
-final body = Object(); // Object | Request body
-
-try {
-    final result = api_instance.homeTvsGet(body);
-    print(result);
-} catch (e) {
-    print('Exception when calling DefaultApi->homeTvsGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | **Object**| Request body | [optional] 
-
-### Return type
-
-[**HomeTvsGet200Response**](HomeTvsGet200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **homeTvsKeyPost**
 > AuthCreateAgainPost200Response homeTvsKeyPost(homeTvsKeyPostRequest)
 
@@ -1117,6 +1075,47 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeTvsPost**
+> HomeTvsPost200Response homeTvsPost(body)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final body = Object(); // Object | Request body
+
+try {
+    final result = api_instance.homeTvsPost(body);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->homeTvsPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **Object**| Request body | [optional] 
+
+### Return type
+
+[**HomeTvsPost200Response**](HomeTvsPost200Response.md)
 
 ### Authorization
 
@@ -1170,8 +1169,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **homeTvsPowerStateGet**
-> HomeTvsPowerStateGet200Response homeTvsPowerStateGet(accountSessionDeleteRequest)
+# **homeTvsPowerStatePost**
+> HomeTvsPowerStatePost200Response homeTvsPowerStatePost(accountSessionDeleteRequest)
 
 
 
@@ -1183,10 +1182,10 @@ final api_instance = DefaultApi();
 final accountSessionDeleteRequest = AccountSessionDeleteRequest(); // AccountSessionDeleteRequest | Request body
 
 try {
-    final result = api_instance.homeTvsPowerStateGet(accountSessionDeleteRequest);
+    final result = api_instance.homeTvsPowerStatePost(accountSessionDeleteRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->homeTvsPowerStateGet: $e\n');
+    print('Exception when calling DefaultApi->homeTvsPowerStatePost: $e\n');
 }
 ```
 
@@ -1198,7 +1197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HomeTvsPowerStateGet200Response**](HomeTvsPowerStateGet200Response.md)
+[**HomeTvsPowerStatePost200Response**](HomeTvsPowerStatePost200Response.md)
 
 ### Authorization
 
@@ -1252,47 +1251,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **homeTvsSourceGet**
-> HomeTvsSourceGet200Response homeTvsSourceGet(accountSessionDeleteRequest)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = DefaultApi();
-final accountSessionDeleteRequest = AccountSessionDeleteRequest(); // AccountSessionDeleteRequest | Request body
-
-try {
-    final result = api_instance.homeTvsSourceGet(accountSessionDeleteRequest);
-    print(result);
-} catch (e) {
-    print('Exception when calling DefaultApi->homeTvsSourceGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountSessionDeleteRequest** | [**AccountSessionDeleteRequest**](AccountSessionDeleteRequest.md)| Request body | [optional] 
-
-### Return type
-
-[**HomeTvsSourceGet200Response**](HomeTvsSourceGet200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **homeTvsSourcePost**
 > AuthCreateAgainPost200Response homeTvsSourcePost(homeTvsSourcePostRequest)
 
@@ -1334,8 +1292,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **homeWeatherGet**
-> HomeWeatherGet200Response homeWeatherGet(homeWeatherGetRequest)
+# **homeWeatherPost**
+> HomeWeatherPost200Response homeWeatherPost(homeWeatherPostRequest)
 
 
 
@@ -1344,13 +1302,13 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
-final homeWeatherGetRequest = HomeWeatherGetRequest(); // HomeWeatherGetRequest | Request body
+final homeWeatherPostRequest = HomeWeatherPostRequest(); // HomeWeatherPostRequest | Request body
 
 try {
-    final result = api_instance.homeWeatherGet(homeWeatherGetRequest);
+    final result = api_instance.homeWeatherPost(homeWeatherPostRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->homeWeatherGet: $e\n');
+    print('Exception when calling DefaultApi->homeWeatherPost: $e\n');
 }
 ```
 
@@ -1358,11 +1316,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **homeWeatherGetRequest** | [**HomeWeatherGetRequest**](HomeWeatherGetRequest.md)| Request body | [optional] 
+ **homeWeatherPostRequest** | [**HomeWeatherPostRequest**](HomeWeatherPostRequest.md)| Request body | [optional] 
 
 ### Return type
 
-[**HomeWeatherGet200Response**](HomeWeatherGet200Response.md)
+[**HomeWeatherPost200Response**](HomeWeatherPost200Response.md)
 
 ### Authorization
 

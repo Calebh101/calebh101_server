@@ -1185,55 +1185,6 @@ class DefaultApi {
     return null;
   }
 
-  /// Performs an HTTP 'GET /home/tvs' operation and returns the [Response].
-  /// Parameters:
-  ///
-  /// * [Object] body:
-  ///   Request body
-  Future<Response> homeTvsGetWithHttpInfo({ Object? body, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/home/tvs';
-
-    // ignore: prefer_final_locals
-    Object? postBody = body;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Parameters:
-  ///
-  /// * [Object] body:
-  ///   Request body
-  Future<HomeTvsGet200Response?> homeTvsGet({ Object? body, }) async {
-    final response = await homeTvsGetWithHttpInfo( body: body, );
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'HomeTvsGet200Response',) as HomeTvsGet200Response;
-    
-    }
-    return null;
-  }
-
   /// Performs an HTTP 'POST /home/tvs/key' operation and returns the [Response].
   /// Parameters:
   ///
@@ -1278,6 +1229,55 @@ class DefaultApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'POST /home/tvs' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [Object] body:
+  ///   Request body
+  Future<Response> homeTvsPostWithHttpInfo({ Object? body, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/home/tvs';
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [Object] body:
+  ///   Request body
+  Future<HomeTvsPost200Response?> homeTvsPost({ Object? body, }) async {
+    final response = await homeTvsPostWithHttpInfo( body: body, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'HomeTvsPost200Response',) as HomeTvsPost200Response;
     
     }
     return null;
@@ -1332,12 +1332,12 @@ class DefaultApi {
     return null;
   }
 
-  /// Performs an HTTP 'GET /home/tvs/power/state' operation and returns the [Response].
+  /// Performs an HTTP 'POST /home/tvs/power/state' operation and returns the [Response].
   /// Parameters:
   ///
   /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
   ///   Request body
-  Future<Response> homeTvsPowerStateGetWithHttpInfo({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+  Future<Response> homeTvsPowerStatePostWithHttpInfo({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/home/tvs/power/state';
 
@@ -1353,7 +1353,7 @@ class DefaultApi {
 
     return apiClient.invokeAPI(
       path,
-      'GET',
+      'POST',
       queryParams,
       postBody,
       headerParams,
@@ -1366,8 +1366,8 @@ class DefaultApi {
   ///
   /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
   ///   Request body
-  Future<HomeTvsPowerStateGet200Response?> homeTvsPowerStateGet({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
-    final response = await homeTvsPowerStateGetWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
+  Future<HomeTvsPowerStatePost200Response?> homeTvsPowerStatePost({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+    final response = await homeTvsPowerStatePostWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1375,7 +1375,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'HomeTvsPowerStateGet200Response',) as HomeTvsPowerStateGet200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'HomeTvsPowerStatePost200Response',) as HomeTvsPowerStatePost200Response;
     
     }
     return null;
@@ -1430,55 +1430,6 @@ class DefaultApi {
     return null;
   }
 
-  /// Performs an HTTP 'GET /home/tvs/source' operation and returns the [Response].
-  /// Parameters:
-  ///
-  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
-  ///   Request body
-  Future<Response> homeTvsSourceGetWithHttpInfo({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/home/tvs/source';
-
-    // ignore: prefer_final_locals
-    Object? postBody = accountSessionDeleteRequest;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Parameters:
-  ///
-  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
-  ///   Request body
-  Future<HomeTvsSourceGet200Response?> homeTvsSourceGet({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
-    final response = await homeTvsSourceGetWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'HomeTvsSourceGet200Response',) as HomeTvsSourceGet200Response;
-    
-    }
-    return null;
-  }
-
   /// Performs an HTTP 'POST /home/tvs/source' operation and returns the [Response].
   /// Parameters:
   ///
@@ -1528,17 +1479,17 @@ class DefaultApi {
     return null;
   }
 
-  /// Performs an HTTP 'GET /home/weather' operation and returns the [Response].
+  /// Performs an HTTP 'POST /home/weather' operation and returns the [Response].
   /// Parameters:
   ///
-  /// * [HomeWeatherGetRequest] homeWeatherGetRequest:
+  /// * [HomeWeatherPostRequest] homeWeatherPostRequest:
   ///   Request body
-  Future<Response> homeWeatherGetWithHttpInfo({ HomeWeatherGetRequest? homeWeatherGetRequest, }) async {
+  Future<Response> homeWeatherPostWithHttpInfo({ HomeWeatherPostRequest? homeWeatherPostRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/home/weather';
 
     // ignore: prefer_final_locals
-    Object? postBody = homeWeatherGetRequest;
+    Object? postBody = homeWeatherPostRequest;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -1549,7 +1500,7 @@ class DefaultApi {
 
     return apiClient.invokeAPI(
       path,
-      'GET',
+      'POST',
       queryParams,
       postBody,
       headerParams,
@@ -1560,10 +1511,10 @@ class DefaultApi {
 
   /// Parameters:
   ///
-  /// * [HomeWeatherGetRequest] homeWeatherGetRequest:
+  /// * [HomeWeatherPostRequest] homeWeatherPostRequest:
   ///   Request body
-  Future<HomeWeatherGet200Response?> homeWeatherGet({ HomeWeatherGetRequest? homeWeatherGetRequest, }) async {
-    final response = await homeWeatherGetWithHttpInfo( homeWeatherGetRequest: homeWeatherGetRequest, );
+  Future<HomeWeatherPost200Response?> homeWeatherPost({ HomeWeatherPostRequest? homeWeatherPostRequest, }) async {
+    final response = await homeWeatherPostWithHttpInfo( homeWeatherPostRequest: homeWeatherPostRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1571,7 +1522,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'HomeWeatherGet200Response',) as HomeWeatherGet200Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'HomeWeatherPost200Response',) as HomeWeatherPost200Response;
     
     }
     return null;
