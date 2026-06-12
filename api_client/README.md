@@ -86,6 +86,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**homeTvsAppsLaunchPost**](doc//DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
 *DefaultApi* | [**homeTvsKeyPost**](doc//DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
 *DefaultApi* | [**homeTvsPost**](doc//DefaultApi.md#hometvspost) | **POST** /home/tvs | 
+*DefaultApi* | [**homeTvsPowerOffPost**](doc//DefaultApi.md#hometvspoweroffpost) | **POST** /home/tvs/power/off | 
 *DefaultApi* | [**homeTvsPowerOnPost**](doc//DefaultApi.md#hometvspoweronpost) | **POST** /home/tvs/power/on | 
 *DefaultApi* | [**homeTvsPowerStatePost**](doc//DefaultApi.md#hometvspowerstatepost) | **POST** /home/tvs/power/state | 
 *DefaultApi* | [**homeTvsSettingsSetPost**](doc//DefaultApi.md#hometvssettingssetpost) | **POST** /home/tvs/settings/set | 
