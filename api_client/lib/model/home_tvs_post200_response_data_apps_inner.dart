@@ -17,6 +17,7 @@ class HomeTvsPost200ResponseDataAppsInner {
     this.country = const [],
     this.id,
     this.config = const [],
+    required this.favorite,
   });
 
   String name;
@@ -27,12 +28,15 @@ class HomeTvsPost200ResponseDataAppsInner {
 
   List<HomeTvsPost200ResponseDataAppsInnerConfigInner> config;
 
+  bool favorite;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is HomeTvsPost200ResponseDataAppsInner &&
     other.name == name &&
     _deepEquality.equals(other.country, country) &&
     other.id == id &&
-    _deepEquality.equals(other.config, config);
+    _deepEquality.equals(other.config, config) &&
+    other.favorite == favorite;
 
   @override
   int get hashCode =>
@@ -40,10 +44,11 @@ class HomeTvsPost200ResponseDataAppsInner {
     (name.hashCode) +
     (country.hashCode) +
     (id == null ? 0 : id!.hashCode) +
-    (config.hashCode);
+    (config.hashCode) +
+    (favorite.hashCode);
 
   @override
-  String toString() => 'HomeTvsPost200ResponseDataAppsInner[name=$name, country=$country, id=$id, config=$config]';
+  String toString() => 'HomeTvsPost200ResponseDataAppsInner[name=$name, country=$country, id=$id, config=$config, favorite=$favorite]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -55,6 +60,7 @@ class HomeTvsPost200ResponseDataAppsInner {
       json[r'id'] = null;
     }
       json[r'config'] = this.config;
+      json[r'favorite'] = this.favorite;
     return json;
   }
 
@@ -83,6 +89,7 @@ class HomeTvsPost200ResponseDataAppsInner {
             : const [],
         id: mapValueOfType<String>(json, r'id'),
         config: HomeTvsPost200ResponseDataAppsInnerConfigInner.listFromJson(json[r'config']),
+        favorite: mapValueOfType<bool>(json, r'favorite')!,
       );
     }
     return null;
@@ -133,6 +140,7 @@ class HomeTvsPost200ResponseDataAppsInner {
     'name',
     'country',
     'config',
+    'favorite',
   };
 }
 

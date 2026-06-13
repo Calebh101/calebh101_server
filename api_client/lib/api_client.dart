@@ -262,10 +262,6 @@ class ApiClient {
           return HomeTvsPost200ResponseDataSettingsInner.fromJson(value);
         case 'HomeTvsPost200ResponseDataTvsInner':
           return HomeTvsPost200ResponseDataTvsInner.fromJson(value);
-        case 'HomeTvsPowerStatePost200Response':
-          return HomeTvsPowerStatePost200Response.fromJson(value);
-        case 'HomeTvsPowerStatePost200ResponseData':
-          return HomeTvsPowerStatePost200ResponseData.fromJson(value);
         case 'HomeTvsSettingsSetPostRequest':
           return HomeTvsSettingsSetPostRequest.fromJson(value);
         case 'HomeTvsSourcePostRequest':

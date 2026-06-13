@@ -88,7 +88,6 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**homeTvsPost**](doc//DefaultApi.md#hometvspost) | **POST** /home/tvs | 
 *DefaultApi* | [**homeTvsPowerOffPost**](doc//DefaultApi.md#hometvspoweroffpost) | **POST** /home/tvs/power/off | 
 *DefaultApi* | [**homeTvsPowerOnPost**](doc//DefaultApi.md#hometvspoweronpost) | **POST** /home/tvs/power/on | 
-*DefaultApi* | [**homeTvsPowerStatePost**](doc//DefaultApi.md#hometvspowerstatepost) | **POST** /home/tvs/power/state | 
 *DefaultApi* | [**homeTvsSettingsSetPost**](doc//DefaultApi.md#hometvssettingssetpost) | **POST** /home/tvs/settings/set | 
 *DefaultApi* | [**homeTvsSourcePost**](doc//DefaultApi.md#hometvssourcepost) | **POST** /home/tvs/source | 
 *DefaultApi* | [**homeWeatherPost**](doc//DefaultApi.md#homeweatherpost) | **POST** /home/weather | 
@@ -142,8 +141,6 @@ Class | Method | HTTP request | Description
  - [HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE](doc//HomeTvsPost200ResponseDataAppsInnerConfigInnerMESSAGEAnyOfCASTMESSAGE.md)
  - [HomeTvsPost200ResponseDataSettingsInner](doc//HomeTvsPost200ResponseDataSettingsInner.md)
  - [HomeTvsPost200ResponseDataTvsInner](doc//HomeTvsPost200ResponseDataTvsInner.md)
- - [HomeTvsPowerStatePost200Response](doc//HomeTvsPowerStatePost200Response.md)
- - [HomeTvsPowerStatePost200ResponseData](doc//HomeTvsPowerStatePost200ResponseData.md)
  - [HomeTvsSettingsSetPostRequest](doc//HomeTvsSettingsSetPostRequest.md)
  - [HomeTvsSourcePostRequest](doc//HomeTvsSourcePostRequest.md)
  - [HomeWeatherPost200Response](doc//HomeWeatherPost200Response.md)

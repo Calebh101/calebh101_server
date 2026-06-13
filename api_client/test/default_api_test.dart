@@ -162,11 +162,6 @@ void main() {
       // TODO
     });
 
-    //Future<HomeTvsPowerStatePost200Response> homeTvsPowerStatePost({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
-    test('test homeTvsPowerStatePost', () async {
-      // TODO
-    });
-
     //Future<AuthCreateAgainPost200Response> homeTvsSettingsSetPost({ HomeTvsSettingsSetPostRequest homeTvsSettingsSetPostRequest }) async
     test('test homeTvsSettingsSetPost', () async {
       // TODO

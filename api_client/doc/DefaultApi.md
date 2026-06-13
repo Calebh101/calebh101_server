@@ -38,7 +38,6 @@ Method | HTTP request | Description
 [**homeTvsPost**](DefaultApi.md#hometvspost) | **POST** /home/tvs | 
 [**homeTvsPowerOffPost**](DefaultApi.md#hometvspoweroffpost) | **POST** /home/tvs/power/off | 
 [**homeTvsPowerOnPost**](DefaultApi.md#hometvspoweronpost) | **POST** /home/tvs/power/on | 
-[**homeTvsPowerStatePost**](DefaultApi.md#hometvspowerstatepost) | **POST** /home/tvs/power/state | 
 [**homeTvsSettingsSetPost**](DefaultApi.md#hometvssettingssetpost) | **POST** /home/tvs/settings/set | 
 [**homeTvsSourcePost**](DefaultApi.md#hometvssourcepost) | **POST** /home/tvs/source | 
 [**homeWeatherPost**](DefaultApi.md#homeweatherpost) | **POST** /home/weather | 
@@ -1199,47 +1198,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **homeTvsPowerStatePost**
-> HomeTvsPowerStatePost200Response homeTvsPowerStatePost(accountSessionDeleteRequest)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = DefaultApi();
-final accountSessionDeleteRequest = AccountSessionDeleteRequest(); // AccountSessionDeleteRequest | Request body
-
-try {
-    final result = api_instance.homeTvsPowerStatePost(accountSessionDeleteRequest);
-    print(result);
-} catch (e) {
-    print('Exception when calling DefaultApi->homeTvsPowerStatePost: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountSessionDeleteRequest** | [**AccountSessionDeleteRequest**](AccountSessionDeleteRequest.md)| Request body | [optional] 
-
-### Return type
-
-[**HomeTvsPowerStatePost200Response**](HomeTvsPowerStatePost200Response.md)
 
 ### Authorization
 

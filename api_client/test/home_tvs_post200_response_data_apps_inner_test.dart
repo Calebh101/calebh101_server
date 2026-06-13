@@ -36,6 +36,11 @@ void main() {
       // TODO
     });
 
+    // bool favorite
+    test('to test the property `favorite`', () async {
+      // TODO
+    });
+
 
   });
 

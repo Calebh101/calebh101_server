@@ -70,8 +70,6 @@ part 'model/home_tvs_post200_response_data_apps_inner_config_inner_message_any_o
 part 'model/home_tvs_post200_response_data_apps_inner_config_inner_message_any_of_castmessage.dart';
 part 'model/home_tvs_post200_response_data_settings_inner.dart';
 part 'model/home_tvs_post200_response_data_tvs_inner.dart';
-part 'model/home_tvs_power_state_post200_response.dart';
-part 'model/home_tvs_power_state_post200_response_data.dart';
 part 'model/home_tvs_settings_set_post_request.dart';
 part 'model/home_tvs_source_post_request.dart';
 part 'model/home_weather_post200_response.dart';
