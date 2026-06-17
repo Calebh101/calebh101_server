@@ -139,6 +139,7 @@ Class | Method | HTTP request | Description
  - [GetStatus200ResponseData](doc//GetStatus200ResponseData.md)
  - [HomeInfoPost200Response](doc//HomeInfoPost200Response.md)
  - [HomeInfoPost200ResponseData](doc//HomeInfoPost200ResponseData.md)
+ - [HomeInfoPost200ResponseDataHouseDiagramDimensions](doc//HomeInfoPost200ResponseDataHouseDiagramDimensions.md)
  - [HomeInfoPost200ResponseDataRoomsInner](doc//HomeInfoPost200ResponseDataRoomsInner.md)
  - [HomeInfoPost200ResponseDataTempSensorsInner](doc//HomeInfoPost200ResponseDataTempSensorsInner.md)
  - [HomeTvsAppsLaunchPostRequest](doc//HomeTvsAppsLaunchPostRequest.md)

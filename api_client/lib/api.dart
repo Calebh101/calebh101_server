@@ -64,6 +64,7 @@ part 'model/get_status200_response.dart';
 part 'model/get_status200_response_data.dart';
 part 'model/home_info_post200_response.dart';
 part 'model/home_info_post200_response_data.dart';
+part 'model/home_info_post200_response_data_house_diagram_dimensions.dart';
 part 'model/home_info_post200_response_data_rooms_inner.dart';
 part 'model/home_info_post200_response_data_temp_sensors_inner.dart';
 part 'model/home_tvs_apps_launch_post_request.dart';

@@ -16,6 +16,7 @@ class HomeInfoPost200ResponseData {
     this.frontDoorCam,
     this.rooms = const [],
     this.tempSensors = const [],
+    required this.houseDiagramDimensions,
   });
 
   ///
@@ -30,21 +31,25 @@ class HomeInfoPost200ResponseData {
 
   List<HomeInfoPost200ResponseDataTempSensorsInner> tempSensors;
 
+  HomeInfoPost200ResponseDataHouseDiagramDimensions houseDiagramDimensions;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is HomeInfoPost200ResponseData &&
     other.frontDoorCam == frontDoorCam &&
     _deepEquality.equals(other.rooms, rooms) &&
-    _deepEquality.equals(other.tempSensors, tempSensors);
+    _deepEquality.equals(other.tempSensors, tempSensors) &&
+    other.houseDiagramDimensions == houseDiagramDimensions;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (frontDoorCam == null ? 0 : frontDoorCam!.hashCode) +
     (rooms.hashCode) +
-    (tempSensors.hashCode);
+    (tempSensors.hashCode) +
+    (houseDiagramDimensions.hashCode);
 
   @override
-  String toString() => 'HomeInfoPost200ResponseData[frontDoorCam=$frontDoorCam, rooms=$rooms, tempSensors=$tempSensors]';
+  String toString() => 'HomeInfoPost200ResponseData[frontDoorCam=$frontDoorCam, rooms=$rooms, tempSensors=$tempSensors, houseDiagramDimensions=$houseDiagramDimensions]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -55,6 +60,7 @@ class HomeInfoPost200ResponseData {
     }
       json[r'rooms'] = this.rooms;
       json[r'tempSensors'] = this.tempSensors;
+      json[r'houseDiagramDimensions'] = this.houseDiagramDimensions;
     return json;
   }
 
@@ -80,6 +86,7 @@ class HomeInfoPost200ResponseData {
         frontDoorCam: mapValueOfType<String>(json, r'frontDoorCam'),
         rooms: HomeInfoPost200ResponseDataRoomsInner.listFromJson(json[r'rooms']),
         tempSensors: HomeInfoPost200ResponseDataTempSensorsInner.listFromJson(json[r'tempSensors']),
+        houseDiagramDimensions: HomeInfoPost200ResponseDataHouseDiagramDimensions.fromJson(json[r'houseDiagramDimensions'])!,
       );
     }
     return null;
@@ -129,6 +136,7 @@ class HomeInfoPost200ResponseData {
   static const requiredKeys = <String>{
     'rooms',
     'tempSensors',
+    'houseDiagramDimensions',
   };
 }
 

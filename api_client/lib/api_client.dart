@@ -250,6 +250,8 @@ class ApiClient {
           return HomeInfoPost200Response.fromJson(value);
         case 'HomeInfoPost200ResponseData':
           return HomeInfoPost200ResponseData.fromJson(value);
+        case 'HomeInfoPost200ResponseDataHouseDiagramDimensions':
+          return HomeInfoPost200ResponseDataHouseDiagramDimensions.fromJson(value);
         case 'HomeInfoPost200ResponseDataRoomsInner':
           return HomeInfoPost200ResponseDataRoomsInner.fromJson(value);
         case 'HomeInfoPost200ResponseDataTempSensorsInner':

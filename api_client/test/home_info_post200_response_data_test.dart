@@ -31,6 +31,11 @@ void main() {
       // TODO
     });
 
+    // HomeInfoPost200ResponseDataHouseDiagramDimensions houseDiagramDimensions
+    test('to test the property `houseDiagramDimensions`', () async {
+      // TODO
+    });
+
 
   });
 
