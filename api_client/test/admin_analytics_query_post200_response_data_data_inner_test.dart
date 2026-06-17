@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType sourceType
+    // String sourceType
     test('to test the property `sourceType`', () async {
       // TODO
     });

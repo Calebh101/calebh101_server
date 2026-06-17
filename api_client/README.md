@@ -118,7 +118,6 @@ Class | Method | HTTP request | Description
  - [AdminAnalyticsQueryPost200Response](doc//AdminAnalyticsQueryPost200Response.md)
  - [AdminAnalyticsQueryPost200ResponseData](doc//AdminAnalyticsQueryPost200ResponseData.md)
  - [AdminAnalyticsQueryPost200ResponseDataDataInner](doc//AdminAnalyticsQueryPost200ResponseDataDataInner.md)
- - [AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType](doc//AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType.md)
  - [AdminAnalyticsQueryPostRequest](doc//AdminAnalyticsQueryPostRequest.md)
  - [AuthAllowedRedirectUrlsGet200Response](doc//AuthAllowedRedirectUrlsGet200Response.md)
  - [AuthAllowedRedirectUrlsGet200ResponseDataInner](doc//AuthAllowedRedirectUrlsGet200ResponseDataInner.md)

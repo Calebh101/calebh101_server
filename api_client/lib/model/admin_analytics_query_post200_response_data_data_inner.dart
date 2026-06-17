@@ -29,7 +29,7 @@ class AdminAnalyticsQueryPost200ResponseDataDataInner {
 
   AdminAnalyticsQueryPost200ResponseDataDataInnerSeverityEnum severity;
 
-  AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType sourceType;
+  AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum sourceType;
 
   String? sourceId;
 
@@ -123,7 +123,7 @@ class AdminAnalyticsQueryPost200ResponseDataDataInner {
       return AdminAnalyticsQueryPost200ResponseDataDataInner(
         timestamp: mapDateTime(json, r'timestamp', r''),
         severity: AdminAnalyticsQueryPost200ResponseDataDataInnerSeverityEnum.fromJson(json[r'severity'])!,
-        sourceType: AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType.fromJson(json[r'source_type'])!,
+        sourceType: AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum.fromJson(json[r'source_type'])!,
         sourceId: mapValueOfType<String>(json, r'source_id'),
         module: mapValueOfType<String>(json, r'module')!,
         eventType: mapValueOfType<String>(json, r'event_type')!,
@@ -274,6 +274,77 @@ class AdminAnalyticsQueryPost200ResponseDataDataInnerSeverityEnumTypeTransformer
 
   /// Singleton [AdminAnalyticsQueryPost200ResponseDataDataInnerSeverityEnumTypeTransformer] instance.
   static AdminAnalyticsQueryPost200ResponseDataDataInnerSeverityEnumTypeTransformer? _instance;
+}
+
+
+
+class AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum {
+  /// Instantiate a new enum with the provided [value].
+  const AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const server = AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum._(r'Server');
+
+  /// List of all possible values in this [enum][AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum].
+  static const values = <AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum>[
+    server,
+  ];
+
+  static AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum? fromJson(dynamic value) => AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnumTypeTransformer().decode(value);
+
+  static List<AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum] to String,
+/// and [decode] dynamic data back to [AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum].
+class AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnumTypeTransformer {
+  factory AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnumTypeTransformer() => _instance ??= const AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnumTypeTransformer._();
+
+  const AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnumTypeTransformer._();
+
+  String encode(AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'Server': return AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnum.server;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnumTypeTransformer] instance.
+  static AdminAnalyticsQueryPost200ResponseDataDataInnerSourceTypeEnumTypeTransformer? _instance;
 }
 
 

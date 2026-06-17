@@ -210,8 +210,6 @@ class ApiClient {
           return AdminAnalyticsQueryPost200ResponseData.fromJson(value);
         case 'AdminAnalyticsQueryPost200ResponseDataDataInner':
           return AdminAnalyticsQueryPost200ResponseDataDataInner.fromJson(value);
-        case 'AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType':
-          return AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType.fromJson(value);
         case 'AdminAnalyticsQueryPostRequest':
           return AdminAnalyticsQueryPostRequest.fromJson(value);
         case 'AuthAllowedRedirectUrlsGet200Response':

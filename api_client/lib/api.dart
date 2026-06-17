@@ -44,7 +44,6 @@ part 'model/account_verify_delete_request.dart';
 part 'model/admin_analytics_query_post200_response.dart';
 part 'model/admin_analytics_query_post200_response_data.dart';
 part 'model/admin_analytics_query_post200_response_data_data_inner.dart';
-part 'model/admin_analytics_query_post200_response_data_data_inner_source_type.dart';
 part 'model/admin_analytics_query_post_request.dart';
 part 'model/auth_allowed_redirect_urls_get200_response.dart';
 part 'model/auth_allowed_redirect_urls_get200_response_data_inner.dart';

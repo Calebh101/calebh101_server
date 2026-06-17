@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **timestamp** | [**DateTime**](DateTime.md) |  | 
 **severity** | **String** |  | 
-**sourceType** | [**AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType**](AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType.md) |  | 
+**sourceType** | **String** |  | 
 **sourceId** | **String** |  | 
 **module** | **String** |  | 
 **eventType** | **String** |  | 
