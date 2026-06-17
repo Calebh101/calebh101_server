@@ -14,6 +14,8 @@ class HomeInfoPost200ResponseData {
   /// Returns a new [HomeInfoPost200ResponseData] instance.
   HomeInfoPost200ResponseData({
     this.frontDoorCam,
+    this.rooms = const [],
+    this.tempSensors = const [],
   });
 
   ///
@@ -24,17 +26,25 @@ class HomeInfoPost200ResponseData {
   ///
   String? frontDoorCam;
 
+  List<HomeInfoPost200ResponseDataRoomsInner> rooms;
+
+  List<HomeInfoPost200ResponseDataTempSensorsInner> tempSensors;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is HomeInfoPost200ResponseData &&
-    other.frontDoorCam == frontDoorCam;
+    other.frontDoorCam == frontDoorCam &&
+    _deepEquality.equals(other.rooms, rooms) &&
+    _deepEquality.equals(other.tempSensors, tempSensors);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (frontDoorCam == null ? 0 : frontDoorCam!.hashCode);
+    (frontDoorCam == null ? 0 : frontDoorCam!.hashCode) +
+    (rooms.hashCode) +
+    (tempSensors.hashCode);
 
   @override
-  String toString() => 'HomeInfoPost200ResponseData[frontDoorCam=$frontDoorCam]';
+  String toString() => 'HomeInfoPost200ResponseData[frontDoorCam=$frontDoorCam, rooms=$rooms, tempSensors=$tempSensors]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -43,6 +53,8 @@ class HomeInfoPost200ResponseData {
     } else {
       json[r'frontDoorCam'] = null;
     }
+      json[r'rooms'] = this.rooms;
+      json[r'tempSensors'] = this.tempSensors;
     return json;
   }
 
@@ -66,6 +78,8 @@ class HomeInfoPost200ResponseData {
 
       return HomeInfoPost200ResponseData(
         frontDoorCam: mapValueOfType<String>(json, r'frontDoorCam'),
+        rooms: HomeInfoPost200ResponseDataRoomsInner.listFromJson(json[r'rooms']),
+        tempSensors: HomeInfoPost200ResponseDataTempSensorsInner.listFromJson(json[r'tempSensors']),
       );
     }
     return null;
@@ -113,6 +127,8 @@ class HomeInfoPost200ResponseData {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'rooms',
+    'tempSensors',
   };
 }
 

@@ -86,6 +86,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ghFirstSecondGet**](doc//DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 *DefaultApi* | [**ghFirstSecondRestGet**](doc//DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
 *DefaultApi* | [**homeInfoPost**](doc//DefaultApi.md#homeinfopost) | **POST** /home/info | 
+*DefaultApi* | [**homeMapPngGet**](doc//DefaultApi.md#homemappngget) | **GET** /home/map.png | 
 *DefaultApi* | [**homeTvsAppsLaunchPost**](doc//DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
 *DefaultApi* | [**homeTvsKeyPost**](doc//DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
 *DefaultApi* | [**homeTvsPost**](doc//DefaultApi.md#hometvspost) | **POST** /home/tvs | 
@@ -138,6 +139,8 @@ Class | Method | HTTP request | Description
  - [GetStatus200ResponseData](doc//GetStatus200ResponseData.md)
  - [HomeInfoPost200Response](doc//HomeInfoPost200Response.md)
  - [HomeInfoPost200ResponseData](doc//HomeInfoPost200ResponseData.md)
+ - [HomeInfoPost200ResponseDataRoomsInner](doc//HomeInfoPost200ResponseDataRoomsInner.md)
+ - [HomeInfoPost200ResponseDataTempSensorsInner](doc//HomeInfoPost200ResponseDataTempSensorsInner.md)
  - [HomeTvsAppsLaunchPostRequest](doc//HomeTvsAppsLaunchPostRequest.md)
  - [HomeTvsKeyPostRequest](doc//HomeTvsKeyPostRequest.md)
  - [HomeTvsKeyPostRequestKeysInner](doc//HomeTvsKeyPostRequestKeysInner.md)

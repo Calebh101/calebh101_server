@@ -36,6 +36,7 @@ Method | HTTP request | Description
 [**ghFirstSecondGet**](DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 [**ghFirstSecondRestGet**](DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
 [**homeInfoPost**](DefaultApi.md#homeinfopost) | **POST** /home/info | 
+[**homeMapPngGet**](DefaultApi.md#homemappngget) | **GET** /home/map.png | 
 [**homeTvsAppsLaunchPost**](DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
 [**homeTvsKeyPost**](DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
 [**homeTvsPost**](DefaultApi.md#hometvspost) | **POST** /home/tvs | 
@@ -1120,6 +1121,42 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeMapPngGet**
+> homeMapPngGet()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+try {
+    api_instance.homeMapPngGet();
+} catch (e) {
+    print('Exception when calling DefaultApi->homeMapPngGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

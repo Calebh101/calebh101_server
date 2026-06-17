@@ -152,6 +152,11 @@ void main() {
       // TODO
     });
 
+    //Future homeMapPngGet() async
+    test('test homeMapPngGet', () async {
+      // TODO
+    });
+
     //Future<AuthCreateAgainPost200Response> homeTvsAppsLaunchPost({ HomeTvsAppsLaunchPostRequest homeTvsAppsLaunchPostRequest }) async
     test('test homeTvsAppsLaunchPost', () async {
       // TODO
