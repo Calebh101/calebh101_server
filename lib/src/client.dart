@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:calebh101_server/calebh101_server.dart';
@@ -69,29 +70,37 @@ class Result<T, F> {
   final F? f;
 
   const Result(this.t, this.f);
+
+  @override
+  String toString() {
+    return "Result<$T, $F>(t: $t, f: $f)";
+  }
 }
 
 extension Calebh101ClientExtensions on ApiClient {
-  Future<R?> request<T, A extends DefaultApi, R>(Future<T?> Function(A api) callback, {required R Function(T data) onData, required R Function(ApiFailureDetails<T> e) onError, R Function(ApiException e)? onNeedsLogin_, A Function(ApiClient client)? getApi}) async {
+  Future<R?> request<T, R>(FutureOr<T?> Function(DefaultApi api) callback, {required R Function(T data) onData, required R Function(ApiFailureDetails<T> e) onError, R Function(ApiException e)? onNeedsLogin_}) async {
     try {
-      Logger.print("request<$T>", "Requesting...");
-      return onData.call((await callback(getApi?.call(this) ?? DefaultApi(this) as A))!);
+      Logger.print("request", "$T: Requesting...");
+      final x = await callback(DefaultApi(this));
+
+      if (x == null) throw Exception("Request result was null, expected $T");
+      return onData.call(x);
     } on ApiException catch (e) {
       if (e.code == 401) {
-        Logger.print("request<$T>", "Needs login");
+        Logger.print("request", "$T: Needs login");
         if (onNeedsLogin_ != null) return onNeedsLogin_.call(e);
 
         onNeedsLogin?.call(e);
         return null;
       } else if (e.code == 429 && explicitRatelimitHandling) {
-        Logger.print("request<$T>", "Too many requests (${e.code}): $e");
-        return onError.call(ApiFailureDetails(e: e, code: e.code, message: "Too many requests. Please try again later."));
+        Logger.print("request", "$T: Too many requests (${e.code}): $e");
+        return onError.call(ApiFailureDetails(e: e, code: e.code, message: e.message ?? "Too many requests. Please try again later."));
       } else {
-        Logger.print("request<$T>", "code=${e.code}: $e");
+        Logger.print("request", "T=$T, code=${e.code}: $e");
         return onError.call(ApiFailureDetails(e: e, code: e.code));
       }
     } catch (e, t) {
-      Logger.warn("request<$T>", "$e\n$t");
+      Logger.warn("request", "$T, ${e.runtimeType}: $e\n$t");
       return onError.call(ApiFailureDetails(e: e, stackTrace: t, code: null));
     }
   }

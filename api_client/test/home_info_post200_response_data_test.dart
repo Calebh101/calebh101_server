@@ -26,6 +26,11 @@ void main() {
       // TODO
     });
 
+    // bool tempSensorDummyValues
+    test('to test the property `tempSensorDummyValues`', () async {
+      // TODO
+    });
+
     // HomeInfoPost200ResponseDataHouseDiagramDimensions houseDiagramDimensions
     test('to test the property `houseDiagramDimensions`', () async {
       // TODO

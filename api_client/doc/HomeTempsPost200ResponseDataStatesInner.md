@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
 **name** | **String** |  | 
-**ip** | **String** |  | 
+**ip** | **String** |  | [optional] 
 **room** | **String** |  | 
 **state** | [**HomeTempsPost200ResponseDataStatesInnerState**](HomeTempsPost200ResponseDataStatesInnerState.md) |  | [optional] 
 

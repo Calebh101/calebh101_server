@@ -15,7 +15,7 @@ class HomeTempsPost200ResponseDataStatesInner {
   HomeTempsPost200ResponseDataStatesInner({
     required this.id,
     required this.name,
-    required this.ip,
+    this.ip,
     required this.room,
     this.state,
   });
@@ -24,7 +24,13 @@ class HomeTempsPost200ResponseDataStatesInner {
 
   String name;
 
-  String ip;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? ip;
 
   String room;
 
@@ -49,7 +55,7 @@ class HomeTempsPost200ResponseDataStatesInner {
     // ignore: unnecessary_parenthesis
     (id.hashCode) +
     (name.hashCode) +
-    (ip.hashCode) +
+    (ip == null ? 0 : ip!.hashCode) +
     (room.hashCode) +
     (state == null ? 0 : state!.hashCode);
 
@@ -60,7 +66,11 @@ class HomeTempsPost200ResponseDataStatesInner {
     final json = <String, dynamic>{};
       json[r'id'] = this.id;
       json[r'name'] = this.name;
+    if (this.ip != null) {
       json[r'ip'] = this.ip;
+    } else {
+      json[r'ip'] = null;
+    }
       json[r'room'] = this.room;
     if (this.state != null) {
       json[r'state'] = this.state;
@@ -91,7 +101,7 @@ class HomeTempsPost200ResponseDataStatesInner {
       return HomeTempsPost200ResponseDataStatesInner(
         id: mapValueOfType<String>(json, r'id')!,
         name: mapValueOfType<String>(json, r'name')!,
-        ip: mapValueOfType<String>(json, r'ip')!,
+        ip: mapValueOfType<String>(json, r'ip'),
         room: mapValueOfType<String>(json, r'room')!,
         state: HomeTempsPost200ResponseDataStatesInnerState.fromJson(json[r'state']),
       );
@@ -143,7 +153,6 @@ class HomeTempsPost200ResponseDataStatesInner {
   static const requiredKeys = <String>{
     'id',
     'name',
-    'ip',
     'room',
   };
 }
