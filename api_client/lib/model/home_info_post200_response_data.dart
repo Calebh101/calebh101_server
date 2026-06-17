@@ -13,10 +13,16 @@ part of openapi.api;
 class HomeInfoPost200ResponseData {
   /// Returns a new [HomeInfoPost200ResponseData] instance.
   HomeInfoPost200ResponseData({
-    required this.frontDoorCam,
+    this.frontDoorCam,
   });
 
-  String frontDoorCam;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? frontDoorCam;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is HomeInfoPost200ResponseData &&
@@ -25,14 +31,18 @@ class HomeInfoPost200ResponseData {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (frontDoorCam.hashCode);
+    (frontDoorCam == null ? 0 : frontDoorCam!.hashCode);
 
   @override
   String toString() => 'HomeInfoPost200ResponseData[frontDoorCam=$frontDoorCam]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.frontDoorCam != null) {
       json[r'frontDoorCam'] = this.frontDoorCam;
+    } else {
+      json[r'frontDoorCam'] = null;
+    }
     return json;
   }
 
@@ -55,7 +65,7 @@ class HomeInfoPost200ResponseData {
       }());
 
       return HomeInfoPost200ResponseData(
-        frontDoorCam: mapValueOfType<String>(json, r'frontDoorCam')!,
+        frontDoorCam: mapValueOfType<String>(json, r'frontDoorCam'),
       );
     }
     return null;
@@ -103,7 +113,6 @@ class HomeInfoPost200ResponseData {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'frontDoorCam',
   };
 }
 
