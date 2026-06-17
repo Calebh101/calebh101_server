@@ -1,4 +1,4 @@
-# openapi.model.HomeInfoPost200ResponseDataTempSensorsInner
+# openapi.model.HomeTempsPost200ResponseDataStatesInner
 
 ## Load the model package
 ```dart
@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **ip** | **String** |  | 
 **room** | **String** |  | 
+**state** | [**HomeTempsPost200ResponseDataStatesInnerState**](HomeTempsPost200ResponseDataStatesInnerState.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -157,6 +157,11 @@ void main() {
       // TODO
     });
 
+    //Future<HomeTempsPost200Response> homeTempsPost() async
+    test('test homeTempsPost', () async {
+      // TODO
+    });
+
     //Future<AuthCreateAgainPost200Response> homeTvsAppsLaunchPost({ HomeTvsAppsLaunchPostRequest homeTvsAppsLaunchPostRequest }) async
     test('test homeTvsAppsLaunchPost', () async {
       // TODO

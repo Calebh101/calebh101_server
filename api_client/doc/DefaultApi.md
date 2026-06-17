@@ -37,6 +37,7 @@ Method | HTTP request | Description
 [**ghFirstSecondRestGet**](DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
 [**homeInfoPost**](DefaultApi.md#homeinfopost) | **POST** /home/info | 
 [**homeMapPngGet**](DefaultApi.md#homemappngget) | **GET** /home/map.png | 
+[**homeTempsPost**](DefaultApi.md#hometempspost) | **POST** /home/temps | 
 [**homeTvsAppsLaunchPost**](DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
 [**homeTvsKeyPost**](DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
 [**homeTvsPost**](DefaultApi.md#hometvspost) | **POST** /home/tvs | 
@@ -1157,6 +1158,43 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeTempsPost**
+> HomeTempsPost200Response homeTempsPost()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+try {
+    final result = api_instance.homeTempsPost();
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->homeTempsPost: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**HomeTempsPost200Response**](HomeTempsPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

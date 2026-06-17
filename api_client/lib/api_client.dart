@@ -254,8 +254,14 @@ class ApiClient {
           return HomeInfoPost200ResponseDataHouseDiagramDimensions.fromJson(value);
         case 'HomeInfoPost200ResponseDataRoomsInner':
           return HomeInfoPost200ResponseDataRoomsInner.fromJson(value);
-        case 'HomeInfoPost200ResponseDataTempSensorsInner':
-          return HomeInfoPost200ResponseDataTempSensorsInner.fromJson(value);
+        case 'HomeTempsPost200Response':
+          return HomeTempsPost200Response.fromJson(value);
+        case 'HomeTempsPost200ResponseData':
+          return HomeTempsPost200ResponseData.fromJson(value);
+        case 'HomeTempsPost200ResponseDataStatesInner':
+          return HomeTempsPost200ResponseDataStatesInner.fromJson(value);
+        case 'HomeTempsPost200ResponseDataStatesInnerState':
+          return HomeTempsPost200ResponseDataStatesInnerState.fromJson(value);
         case 'HomeTvsAppsLaunchPostRequest':
           return HomeTvsAppsLaunchPostRequest.fromJson(value);
         case 'HomeTvsKeyPostRequest':

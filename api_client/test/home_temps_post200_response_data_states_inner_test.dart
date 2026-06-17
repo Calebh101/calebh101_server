@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for HomeInfoPost200ResponseDataTempSensorsInner
+// tests for HomeTempsPost200ResponseDataStatesInner
 void main() {
-  // final instance = HomeInfoPost200ResponseDataTempSensorsInner();
+  // final instance = HomeTempsPost200ResponseDataStatesInner();
 
-  group('test HomeInfoPost200ResponseDataTempSensorsInner', () {
+  group('test HomeTempsPost200ResponseDataStatesInner', () {
     // String id
     test('to test the property `id`', () async {
       // TODO
@@ -33,6 +33,11 @@ void main() {
 
     // String room
     test('to test the property `room`', () async {
+      // TODO
+    });
+
+    // HomeTempsPost200ResponseDataStatesInnerState state
+    test('to test the property `state`', () async {
       // TODO
     });
 

@@ -26,11 +26,6 @@ void main() {
       // TODO
     });
 
-    // List<HomeInfoPost200ResponseDataTempSensorsInner> tempSensors (default value: const [])
-    test('to test the property `tempSensors`', () async {
-      // TODO
-    });
-
     // HomeInfoPost200ResponseDataHouseDiagramDimensions houseDiagramDimensions
     test('to test the property `houseDiagramDimensions`', () async {
       // TODO
