@@ -70,6 +70,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**accountSessionDelete**](doc//DefaultApi.md#accountsessiondelete) | **DELETE** /account/session | 
 *DefaultApi* | [**accountSignoutPost**](doc//DefaultApi.md#accountsignoutpost) | **POST** /account/signout | 
 *DefaultApi* | [**accountVerifyDelete**](doc//DefaultApi.md#accountverifydelete) | **DELETE** /account/verify | 
+*DefaultApi* | [**adminAnalyticsQueryPost**](doc//DefaultApi.md#adminanalyticsquerypost) | **POST** /admin/analytics/query | 
+*DefaultApi* | [**adminAnalyticsStreamGet**](doc//DefaultApi.md#adminanalyticsstreamget) | **GET** /admin/analytics/stream | 
 *DefaultApi* | [**authAllowedRedirectUrlsGet**](doc//DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 *DefaultApi* | [**authCreateAgainPost**](doc//DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 *DefaultApi* | [**authCreatePost**](doc//DefaultApi.md#authcreatepost) | **POST** /auth/create | 
@@ -83,6 +85,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ghFirstGet**](doc//DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
 *DefaultApi* | [**ghFirstSecondGet**](doc//DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 *DefaultApi* | [**ghFirstSecondRestGet**](doc//DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
+*DefaultApi* | [**homeInfoPost**](doc//DefaultApi.md#homeinfopost) | **POST** /home/info | 
 *DefaultApi* | [**homeTvsAppsLaunchPost**](doc//DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
 *DefaultApi* | [**homeTvsKeyPost**](doc//DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
 *DefaultApi* | [**homeTvsPost**](doc//DefaultApi.md#hometvspost) | **POST** /home/tvs | 
@@ -112,6 +115,11 @@ Class | Method | HTTP request | Description
  - [AccountPasswordPutRequest](doc//AccountPasswordPutRequest.md)
  - [AccountSessionDeleteRequest](doc//AccountSessionDeleteRequest.md)
  - [AccountVerifyDeleteRequest](doc//AccountVerifyDeleteRequest.md)
+ - [AdminAnalyticsQueryPost200Response](doc//AdminAnalyticsQueryPost200Response.md)
+ - [AdminAnalyticsQueryPost200ResponseData](doc//AdminAnalyticsQueryPost200ResponseData.md)
+ - [AdminAnalyticsQueryPost200ResponseDataDataInner](doc//AdminAnalyticsQueryPost200ResponseDataDataInner.md)
+ - [AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType](doc//AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType.md)
+ - [AdminAnalyticsQueryPostRequest](doc//AdminAnalyticsQueryPostRequest.md)
  - [AuthAllowedRedirectUrlsGet200Response](doc//AuthAllowedRedirectUrlsGet200Response.md)
  - [AuthAllowedRedirectUrlsGet200ResponseDataInner](doc//AuthAllowedRedirectUrlsGet200ResponseDataInner.md)
  - [AuthCreateAgainPost200Response](doc//AuthCreateAgainPost200Response.md)
@@ -129,6 +137,8 @@ Class | Method | HTTP request | Description
  - [DebugTestPostRequest](doc//DebugTestPostRequest.md)
  - [GetStatus200Response](doc//GetStatus200Response.md)
  - [GetStatus200ResponseData](doc//GetStatus200ResponseData.md)
+ - [HomeInfoPost200Response](doc//HomeInfoPost200Response.md)
+ - [HomeInfoPost200ResponseData](doc//HomeInfoPost200ResponseData.md)
  - [HomeTvsAppsLaunchPostRequest](doc//HomeTvsAppsLaunchPostRequest.md)
  - [HomeTvsKeyPostRequest](doc//HomeTvsKeyPostRequest.md)
  - [HomeTvsKeyPostRequestKeysInner](doc//HomeTvsKeyPostRequestKeysInner.md)

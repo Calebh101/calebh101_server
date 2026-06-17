@@ -72,6 +72,16 @@ void main() {
       // TODO
     });
 
+    //Future<AdminAnalyticsQueryPost200Response> adminAnalyticsQueryPost({ AdminAnalyticsQueryPostRequest adminAnalyticsQueryPostRequest }) async
+    test('test adminAnalyticsQueryPost', () async {
+      // TODO
+    });
+
+    //Future<AuthCreateAgainPost200Response> adminAnalyticsStreamGet() async
+    test('test adminAnalyticsStreamGet', () async {
+      // TODO
+    });
+
     //Future<AuthAllowedRedirectUrlsGet200Response> authAllowedRedirectUrlsGet() async
     test('test authAllowedRedirectUrlsGet', () async {
       // TODO
@@ -134,6 +144,11 @@ void main() {
 
     //Future<String> ghFirstSecondRestGet() async
     test('test ghFirstSecondRestGet', () async {
+      // TODO
+    });
+
+    //Future<HomeInfoPost200Response> homeInfoPost() async
+    test('test homeInfoPost', () async {
       // TODO
     });
 

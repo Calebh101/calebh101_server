@@ -20,6 +20,8 @@ Method | HTTP request | Description
 [**accountSessionDelete**](DefaultApi.md#accountsessiondelete) | **DELETE** /account/session | 
 [**accountSignoutPost**](DefaultApi.md#accountsignoutpost) | **POST** /account/signout | 
 [**accountVerifyDelete**](DefaultApi.md#accountverifydelete) | **DELETE** /account/verify | 
+[**adminAnalyticsQueryPost**](DefaultApi.md#adminanalyticsquerypost) | **POST** /admin/analytics/query | 
+[**adminAnalyticsStreamGet**](DefaultApi.md#adminanalyticsstreamget) | **GET** /admin/analytics/stream | 
 [**authAllowedRedirectUrlsGet**](DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 [**authCreateAgainPost**](DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 [**authCreatePost**](DefaultApi.md#authcreatepost) | **POST** /auth/create | 
@@ -33,6 +35,7 @@ Method | HTTP request | Description
 [**ghFirstGet**](DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
 [**ghFirstSecondGet**](DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
 [**ghFirstSecondRestGet**](DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
+[**homeInfoPost**](DefaultApi.md#homeinfopost) | **POST** /home/info | 
 [**homeTvsAppsLaunchPost**](DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
 [**homeTvsKeyPost**](DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
 [**homeTvsPost**](DefaultApi.md#hometvspost) | **POST** /home/tvs | 
@@ -496,6 +499,84 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **adminAnalyticsQueryPost**
+> AdminAnalyticsQueryPost200Response adminAnalyticsQueryPost(adminAnalyticsQueryPostRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final adminAnalyticsQueryPostRequest = AdminAnalyticsQueryPostRequest(); // AdminAnalyticsQueryPostRequest | Request body
+
+try {
+    final result = api_instance.adminAnalyticsQueryPost(adminAnalyticsQueryPostRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->adminAnalyticsQueryPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **adminAnalyticsQueryPostRequest** | [**AdminAnalyticsQueryPostRequest**](AdminAnalyticsQueryPostRequest.md)| Request body | [optional] 
+
+### Return type
+
+[**AdminAnalyticsQueryPost200Response**](AdminAnalyticsQueryPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **adminAnalyticsStreamGet**
+> AuthCreateAgainPost200Response adminAnalyticsStreamGet()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+try {
+    final result = api_instance.adminAnalyticsStreamGet();
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->adminAnalyticsStreamGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1002,6 +1083,43 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **homeInfoPost**
+> HomeInfoPost200Response homeInfoPost()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+try {
+    final result = api_instance.homeInfoPost();
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->homeInfoPost: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**HomeInfoPost200Response**](HomeInfoPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

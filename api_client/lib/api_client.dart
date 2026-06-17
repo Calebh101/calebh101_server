@@ -204,6 +204,16 @@ class ApiClient {
           return AccountSessionDeleteRequest.fromJson(value);
         case 'AccountVerifyDeleteRequest':
           return AccountVerifyDeleteRequest.fromJson(value);
+        case 'AdminAnalyticsQueryPost200Response':
+          return AdminAnalyticsQueryPost200Response.fromJson(value);
+        case 'AdminAnalyticsQueryPost200ResponseData':
+          return AdminAnalyticsQueryPost200ResponseData.fromJson(value);
+        case 'AdminAnalyticsQueryPost200ResponseDataDataInner':
+          return AdminAnalyticsQueryPost200ResponseDataDataInner.fromJson(value);
+        case 'AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType':
+          return AdminAnalyticsQueryPost200ResponseDataDataInnerSourceType.fromJson(value);
+        case 'AdminAnalyticsQueryPostRequest':
+          return AdminAnalyticsQueryPostRequest.fromJson(value);
         case 'AuthAllowedRedirectUrlsGet200Response':
           return AuthAllowedRedirectUrlsGet200Response.fromJson(value);
         case 'AuthAllowedRedirectUrlsGet200ResponseDataInner':
@@ -238,6 +248,10 @@ class ApiClient {
           return GetStatus200Response.fromJson(value);
         case 'GetStatus200ResponseData':
           return GetStatus200ResponseData.fromJson(value);
+        case 'HomeInfoPost200Response':
+          return HomeInfoPost200Response.fromJson(value);
+        case 'HomeInfoPost200ResponseData':
+          return HomeInfoPost200ResponseData.fromJson(value);
         case 'HomeTvsAppsLaunchPostRequest':
           return HomeTvsAppsLaunchPostRequest.fromJson(value);
         case 'HomeTvsKeyPostRequest':
