@@ -645,6 +645,47 @@ class DefaultApi {
     return null;
   }
 
+  /// Performs an HTTP 'POST /api/github/webhook/:username/:repo' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [Object] body:
+  ///   Request body
+  Future<Response> apiGithubWebhookUsernameRepoPostWithHttpInfo({ Object? body, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/api/github/webhook/:username/:repo';
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Parameters:
+  ///
+  /// * [Object] body:
+  ///   Request body
+  Future<void> apiGithubWebhookUsernameRepoPost({ Object? body, }) async {
+    final response = await apiGithubWebhookUsernameRepoPostWithHttpInfo( body: body, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// Performs an HTTP 'GET /auth/allowedRedirectUrls' operation and returns the [Response].
   Future<Response> authAllowedRedirectUrlsGetWithHttpInfo() async {
     // ignore: prefer_const_declarations

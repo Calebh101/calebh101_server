@@ -22,6 +22,7 @@ Method | HTTP request | Description
 [**accountVerifyDelete**](DefaultApi.md#accountverifydelete) | **DELETE** /account/verify | 
 [**adminAnalyticsQueryPost**](DefaultApi.md#adminanalyticsquerypost) | **POST** /admin/analytics/query | 
 [**adminAnalyticsStreamGet**](DefaultApi.md#adminanalyticsstreamget) | **GET** /admin/analytics/stream | 
+[**apiGithubWebhookUsernameRepoPost**](DefaultApi.md#apigithubwebhookusernamerepopost) | **POST** /api/github/webhook/:username/:repo | 
 [**authAllowedRedirectUrlsGet**](DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 [**authCreateAgainPost**](DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 [**authCreatePost**](DefaultApi.md#authcreatepost) | **POST** /auth/create | 
@@ -580,6 +581,46 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiGithubWebhookUsernameRepoPost**
+> apiGithubWebhookUsernameRepoPost(body)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+final body = Object(); // Object | Request body
+
+try {
+    api_instance.apiGithubWebhookUsernameRepoPost(body);
+} catch (e) {
+    print('Exception when calling DefaultApi->apiGithubWebhookUsernameRepoPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **Object**| Request body | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

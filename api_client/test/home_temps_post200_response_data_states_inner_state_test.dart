@@ -16,6 +16,11 @@ void main() {
   // final instance = HomeTempsPost200ResponseDataStatesInnerState();
 
   group('test HomeTempsPost200ResponseDataStatesInnerState', () {
+    // DateTime timestamp
+    test('to test the property `timestamp`', () async {
+      // TODO
+    });
+
     // num temp
     test('to test the property `temp`', () async {
       // TODO

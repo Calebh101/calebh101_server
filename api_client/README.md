@@ -72,6 +72,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**accountVerifyDelete**](doc//DefaultApi.md#accountverifydelete) | **DELETE** /account/verify | 
 *DefaultApi* | [**adminAnalyticsQueryPost**](doc//DefaultApi.md#adminanalyticsquerypost) | **POST** /admin/analytics/query | 
 *DefaultApi* | [**adminAnalyticsStreamGet**](doc//DefaultApi.md#adminanalyticsstreamget) | **GET** /admin/analytics/stream | 
+*DefaultApi* | [**apiGithubWebhookUsernameRepoPost**](doc//DefaultApi.md#apigithubwebhookusernamerepopost) | **POST** /api/github/webhook/:username/:repo | 
 *DefaultApi* | [**authAllowedRedirectUrlsGet**](doc//DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 *DefaultApi* | [**authCreateAgainPost**](doc//DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
 *DefaultApi* | [**authCreatePost**](doc//DefaultApi.md#authcreatepost) | **POST** /auth/create | 

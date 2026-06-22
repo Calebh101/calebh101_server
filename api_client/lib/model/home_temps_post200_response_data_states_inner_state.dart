@@ -13,9 +13,12 @@ part of openapi.api;
 class HomeTempsPost200ResponseDataStatesInnerState {
   /// Returns a new [HomeTempsPost200ResponseDataStatesInnerState] instance.
   HomeTempsPost200ResponseDataStatesInnerState({
+    required this.timestamp,
     required this.temp,
     required this.humidity,
   });
+
+  DateTime timestamp;
 
   num temp;
 
@@ -23,20 +26,23 @@ class HomeTempsPost200ResponseDataStatesInnerState {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is HomeTempsPost200ResponseDataStatesInnerState &&
+    other.timestamp == timestamp &&
     other.temp == temp &&
     other.humidity == humidity;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (timestamp.hashCode) +
     (temp.hashCode) +
     (humidity.hashCode);
 
   @override
-  String toString() => 'HomeTempsPost200ResponseDataStatesInnerState[temp=$temp, humidity=$humidity]';
+  String toString() => 'HomeTempsPost200ResponseDataStatesInnerState[timestamp=$timestamp, temp=$temp, humidity=$humidity]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+      json[r'timestamp'] = this.timestamp.toUtc().toIso8601String();
       json[r'temp'] = this.temp;
       json[r'humidity'] = this.humidity;
     return json;
@@ -61,6 +67,7 @@ class HomeTempsPost200ResponseDataStatesInnerState {
       }());
 
       return HomeTempsPost200ResponseDataStatesInnerState(
+        timestamp: mapDateTime(json, r'timestamp', r'')!,
         temp: num.parse('${json[r'temp']}'),
         humidity: num.parse('${json[r'humidity']}'),
       );
@@ -110,6 +117,7 @@ class HomeTempsPost200ResponseDataStatesInnerState {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'timestamp',
     'temp',
     'humidity',
   };

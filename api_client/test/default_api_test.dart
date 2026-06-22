@@ -82,6 +82,11 @@ void main() {
       // TODO
     });
 
+    //Future apiGithubWebhookUsernameRepoPost({ Object body }) async
+    test('test apiGithubWebhookUsernameRepoPost', () async {
+      // TODO
+    });
+
     //Future<AuthAllowedRedirectUrlsGet200Response> authAllowedRedirectUrlsGet() async
     test('test authAllowedRedirectUrlsGet', () async {
       // TODO
