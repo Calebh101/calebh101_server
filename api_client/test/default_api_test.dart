@@ -77,8 +77,8 @@ void main() {
       // TODO
     });
 
-    //Future<AuthCreateAgainPost200Response> adminAnalyticsStreamGet() async
-    test('test adminAnalyticsStreamGet', () async {
+    //Future<AuthCreateAgainPost200Response> adminAnalyticsStreamPost({ AdminAnalyticsStreamPostRequest adminAnalyticsStreamPostRequest }) async
+    test('test adminAnalyticsStreamPost', () async {
       // TODO
     });
 
@@ -117,7 +117,7 @@ void main() {
       // TODO
     });
 
-    //Future<IdPost307Response> debugEchoTextPost() async
+    //Future<OcplistGet200Response> debugEchoTextPost() async
     test('test debugEchoTextPost', () async {
       // TODO
     });
@@ -234,6 +234,16 @@ void main() {
 
     //Future<LinksGet200Response> linksGet() async
     test('test linksGet', () async {
+      // TODO
+    });
+
+    //Future<OcplistGet200Response> ocplistGet() async
+    test('test ocplistGet', () async {
+      // TODO
+    });
+
+    //Future<RestGet200Response> restGet() async
+    test('test restGet', () async {
       // TODO
     });
 

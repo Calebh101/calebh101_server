@@ -604,24 +604,28 @@ class DefaultApi {
     return null;
   }
 
-  /// Performs an HTTP 'GET /admin/analytics/stream' operation and returns the [Response].
-  Future<Response> adminAnalyticsStreamGetWithHttpInfo() async {
+  /// Performs an HTTP 'POST /admin/analytics/stream' operation and returns the [Response].
+  /// Parameters:
+  ///
+  /// * [AdminAnalyticsStreamPostRequest] adminAnalyticsStreamPostRequest:
+  ///   Request body
+  Future<Response> adminAnalyticsStreamPostWithHttpInfo({ AdminAnalyticsStreamPostRequest? adminAnalyticsStreamPostRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/admin/analytics/stream';
 
     // ignore: prefer_final_locals
-    Object? postBody;
+    Object? postBody = adminAnalyticsStreamPostRequest;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const contentTypes = <String>[];
+    const contentTypes = <String>['application/json'];
 
 
     return apiClient.invokeAPI(
       path,
-      'GET',
+      'POST',
       queryParams,
       postBody,
       headerParams,
@@ -630,8 +634,12 @@ class DefaultApi {
     );
   }
 
-  Future<AuthCreateAgainPost200Response?> adminAnalyticsStreamGet() async {
-    final response = await adminAnalyticsStreamGetWithHttpInfo();
+  /// Parameters:
+  ///
+  /// * [AdminAnalyticsStreamPostRequest] adminAnalyticsStreamPostRequest:
+  ///   Request body
+  Future<AuthCreateAgainPost200Response?> adminAnalyticsStreamPost({ AdminAnalyticsStreamPostRequest? adminAnalyticsStreamPostRequest, }) async {
+    final response = await adminAnalyticsStreamPostWithHttpInfo( adminAnalyticsStreamPostRequest: adminAnalyticsStreamPostRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -998,7 +1006,7 @@ class DefaultApi {
     );
   }
 
-  Future<IdPost307Response?> debugEchoTextPost() async {
+  Future<OcplistGet200Response?> debugEchoTextPost() async {
     final response = await debugEchoTextPostWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -1007,7 +1015,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'IdPost307Response',) as IdPost307Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'OcplistGet200Response',) as OcplistGet200Response;
     
     }
     return null;
@@ -1062,10 +1070,10 @@ class DefaultApi {
     return null;
   }
 
-  /// Performs an HTTP 'GET /openapi/json' operation and returns the [Response].
+  /// Performs an HTTP 'GET /api/openapi/json' operation and returns the [Response].
   Future<Response> getOpenAPIWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/openapi/json';
+    final path = r'/api/openapi/json';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2031,6 +2039,88 @@ class DefaultApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'LinksGet200Response',) as LinksGet200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'GET /ocplist' operation and returns the [Response].
+  Future<Response> ocplistGetWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/ocplist';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  Future<OcplistGet200Response?> ocplistGet() async {
+    final response = await ocplistGetWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'OcplistGet200Response',) as OcplistGet200Response;
+    
+    }
+    return null;
+  }
+
+  /// Performs an HTTP 'GET /*rest' operation and returns the [Response].
+  Future<Response> restGetWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/*rest';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  Future<RestGet200Response?> restGet() async {
+    final response = await restGetWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'RestGet200Response',) as RestGet200Response;
     
     }
     return null;

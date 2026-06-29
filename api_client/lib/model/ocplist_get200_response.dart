@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class IdPost307Response {
-  /// Returns a new [IdPost307Response] instance.
-  IdPost307Response({
+class OcplistGet200Response {
+  /// Returns a new [OcplistGet200Response] instance.
+  OcplistGet200Response({
     required this.success,
     required this.code,
     this.data,
@@ -39,7 +39,7 @@ class IdPost307Response {
   String message;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is IdPost307Response &&
+  bool operator ==(Object other) => identical(this, other) || other is OcplistGet200Response &&
     other.success == success &&
     other.code == code &&
     other.data == data &&
@@ -56,7 +56,7 @@ class IdPost307Response {
     (message.hashCode);
 
   @override
-  String toString() => 'IdPost307Response[success=$success, code=$code, data=$data, errors=$errors, message=$message]';
+  String toString() => 'OcplistGet200Response[success=$success, code=$code, data=$data, errors=$errors, message=$message]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -72,10 +72,10 @@ class IdPost307Response {
     return json;
   }
 
-  /// Returns a new [IdPost307Response] instance and imports its values from
+  /// Returns a new [OcplistGet200Response] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static IdPost307Response? fromJson(dynamic value) {
+  static OcplistGet200Response? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -84,13 +84,13 @@ class IdPost307Response {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "IdPost307Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "IdPost307Response[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "OcplistGet200Response[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "OcplistGet200Response[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return IdPost307Response(
+      return OcplistGet200Response(
         success: mapValueOfType<bool>(json, r'success')!,
         code: mapValueOfType<int>(json, r'code')!,
         data: mapValueOfType<String>(json, r'data'),
@@ -101,11 +101,11 @@ class IdPost307Response {
     return null;
   }
 
-  static List<IdPost307Response> listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <IdPost307Response>[];
+  static List<OcplistGet200Response> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <OcplistGet200Response>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = IdPost307Response.fromJson(row);
+        final value = OcplistGet200Response.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -114,12 +114,12 @@ class IdPost307Response {
     return result.toList(growable: growable);
   }
 
-  static Map<String, IdPost307Response> mapFromJson(dynamic json) {
-    final map = <String, IdPost307Response>{};
+  static Map<String, OcplistGet200Response> mapFromJson(dynamic json) {
+    final map = <String, OcplistGet200Response>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = IdPost307Response.fromJson(entry.value);
+        final value = OcplistGet200Response.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -128,14 +128,14 @@ class IdPost307Response {
     return map;
   }
 
-  // maps a json object with a list of IdPost307Response-objects as value to a dart map
-  static Map<String, List<IdPost307Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<IdPost307Response>>{};
+  // maps a json object with a list of OcplistGet200Response-objects as value to a dart map
+  static Map<String, List<OcplistGet200Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<OcplistGet200Response>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = IdPost307Response.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = OcplistGet200Response.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

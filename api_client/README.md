@@ -71,7 +71,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**accountSignoutPost**](doc//DefaultApi.md#accountsignoutpost) | **POST** /account/signout | 
 *DefaultApi* | [**accountVerifyDelete**](doc//DefaultApi.md#accountverifydelete) | **DELETE** /account/verify | 
 *DefaultApi* | [**adminAnalyticsQueryPost**](doc//DefaultApi.md#adminanalyticsquerypost) | **POST** /admin/analytics/query | 
-*DefaultApi* | [**adminAnalyticsStreamGet**](doc//DefaultApi.md#adminanalyticsstreamget) | **GET** /admin/analytics/stream | 
+*DefaultApi* | [**adminAnalyticsStreamPost**](doc//DefaultApi.md#adminanalyticsstreampost) | **POST** /admin/analytics/stream | 
 *DefaultApi* | [**apiGithubWebhookUsernameRepoPost**](doc//DefaultApi.md#apigithubwebhookusernamerepopost) | **POST** /api/github/webhook/:username/:repo | 
 *DefaultApi* | [**authAllowedRedirectUrlsGet**](doc//DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 *DefaultApi* | [**authCreateAgainPost**](doc//DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
@@ -81,7 +81,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**authVerifyUserPost**](doc//DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
 *DefaultApi* | [**debugEchoTextPost**](doc//DefaultApi.md#debugechotextpost) | **POST** /debug/echo/:text | 
 *DefaultApi* | [**debugTestPost**](doc//DefaultApi.md#debugtestpost) | **POST** /debug/test | 
-*DefaultApi* | [**getOpenAPI**](doc//DefaultApi.md#getopenapi) | **GET** /openapi/json | 
+*DefaultApi* | [**getOpenAPI**](doc//DefaultApi.md#getopenapi) | **GET** /api/openapi/json | 
 *DefaultApi* | [**getStatus**](doc//DefaultApi.md#getstatus) | **GET** /status | 
 *DefaultApi* | [**ghFirstGet**](doc//DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
 *DefaultApi* | [**ghFirstSecondGet**](doc//DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
@@ -103,6 +103,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**linkOptionsGet**](doc//DefaultApi.md#linkoptionsget) | **GET** /link/options | 
 *DefaultApi* | [**linkPut**](doc//DefaultApi.md#linkput) | **PUT** /link | 
 *DefaultApi* | [**linksGet**](doc//DefaultApi.md#linksget) | **GET** /links | 
+*DefaultApi* | [**ocplistGet**](doc//DefaultApi.md#ocplistget) | **GET** /ocplist | 
+*DefaultApi* | [**restGet**](doc//DefaultApi.md#restget) | **GET** /*rest | 
 
 
 ## Documentation For Models
@@ -122,6 +124,7 @@ Class | Method | HTTP request | Description
  - [AdminAnalyticsQueryPost200ResponseData](doc//AdminAnalyticsQueryPost200ResponseData.md)
  - [AdminAnalyticsQueryPost200ResponseDataDataInner](doc//AdminAnalyticsQueryPost200ResponseDataDataInner.md)
  - [AdminAnalyticsQueryPostRequest](doc//AdminAnalyticsQueryPostRequest.md)
+ - [AdminAnalyticsStreamPostRequest](doc//AdminAnalyticsStreamPostRequest.md)
  - [AuthAllowedRedirectUrlsGet200Response](doc//AuthAllowedRedirectUrlsGet200Response.md)
  - [AuthAllowedRedirectUrlsGet200ResponseDataInner](doc//AuthAllowedRedirectUrlsGet200ResponseDataInner.md)
  - [AuthCreateAgainPost200Response](doc//AuthCreateAgainPost200Response.md)
@@ -171,7 +174,6 @@ Class | Method | HTTP request | Description
  - [HomeWeatherPost200ResponseDataForecastForecastdayInnerDay](doc//HomeWeatherPost200ResponseDataForecastForecastdayInnerDay.md)
  - [HomeWeatherPost200ResponseDataLocation](doc//HomeWeatherPost200ResponseDataLocation.md)
  - [HomeWeatherPostRequest](doc//HomeWeatherPostRequest.md)
- - [IdPost307Response](doc//IdPost307Response.md)
  - [LinkGet200Response](doc//LinkGet200Response.md)
  - [LinkGet200ResponseData](doc//LinkGet200ResponseData.md)
  - [LinkGet200ResponseDataLogic](doc//LinkGet200ResponseDataLogic.md)
@@ -184,6 +186,8 @@ Class | Method | HTTP request | Description
  - [LinksGet200Response](doc//LinksGet200Response.md)
  - [LinksGet200ResponseData](doc//LinksGet200ResponseData.md)
  - [LinksGet200ResponseDataLinksInner](doc//LinksGet200ResponseDataLinksInner.md)
+ - [OcplistGet200Response](doc//OcplistGet200Response.md)
+ - [RestGet200Response](doc//RestGet200Response.md)
 
 
 ## Documentation For Authorization

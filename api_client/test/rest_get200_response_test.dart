@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for IdPost307Response
+// tests for RestGet200Response
 void main() {
-  // final instance = IdPost307Response();
+  // final instance = RestGet200Response();
 
-  group('test IdPost307Response', () {
+  group('test RestGet200Response', () {
     // bool success
     test('to test the property `success`', () async {
       // TODO
@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // String data
+    // Object data
     test('to test the property `data`', () async {
       // TODO
     });

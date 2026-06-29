@@ -21,7 +21,7 @@ Method | HTTP request | Description
 [**accountSignoutPost**](DefaultApi.md#accountsignoutpost) | **POST** /account/signout | 
 [**accountVerifyDelete**](DefaultApi.md#accountverifydelete) | **DELETE** /account/verify | 
 [**adminAnalyticsQueryPost**](DefaultApi.md#adminanalyticsquerypost) | **POST** /admin/analytics/query | 
-[**adminAnalyticsStreamGet**](DefaultApi.md#adminanalyticsstreamget) | **GET** /admin/analytics/stream | 
+[**adminAnalyticsStreamPost**](DefaultApi.md#adminanalyticsstreampost) | **POST** /admin/analytics/stream | 
 [**apiGithubWebhookUsernameRepoPost**](DefaultApi.md#apigithubwebhookusernamerepopost) | **POST** /api/github/webhook/:username/:repo | 
 [**authAllowedRedirectUrlsGet**](DefaultApi.md#authallowedredirecturlsget) | **GET** /auth/allowedRedirectUrls | 
 [**authCreateAgainPost**](DefaultApi.md#authcreateagainpost) | **POST** /auth/create/again | 
@@ -31,7 +31,7 @@ Method | HTTP request | Description
 [**authVerifyUserPost**](DefaultApi.md#authverifyuserpost) | **POST** /auth/verify/user | 
 [**debugEchoTextPost**](DefaultApi.md#debugechotextpost) | **POST** /debug/echo/:text | 
 [**debugTestPost**](DefaultApi.md#debugtestpost) | **POST** /debug/test | 
-[**getOpenAPI**](DefaultApi.md#getopenapi) | **GET** /openapi/json | 
+[**getOpenAPI**](DefaultApi.md#getopenapi) | **GET** /api/openapi/json | 
 [**getStatus**](DefaultApi.md#getstatus) | **GET** /status | 
 [**ghFirstGet**](DefaultApi.md#ghfirstget) | **GET** /gh/:first | 
 [**ghFirstSecondGet**](DefaultApi.md#ghfirstsecondget) | **GET** /gh/:first/:second | 
@@ -53,6 +53,8 @@ Method | HTTP request | Description
 [**linkOptionsGet**](DefaultApi.md#linkoptionsget) | **GET** /link/options | 
 [**linkPut**](DefaultApi.md#linkput) | **PUT** /link | 
 [**linksGet**](DefaultApi.md#linksget) | **GET** /links | 
+[**ocplistGet**](DefaultApi.md#ocplistget) | **GET** /ocplist | 
+[**restGet**](DefaultApi.md#restget) | **GET** /*rest | 
 
 
 # **accountDelete**
@@ -547,8 +549,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **adminAnalyticsStreamGet**
-> AuthCreateAgainPost200Response adminAnalyticsStreamGet()
+# **adminAnalyticsStreamPost**
+> AuthCreateAgainPost200Response adminAnalyticsStreamPost(adminAnalyticsStreamPostRequest)
 
 
 
@@ -557,17 +559,21 @@ No authorization required
 import 'package:openapi/api.dart';
 
 final api_instance = DefaultApi();
+final adminAnalyticsStreamPostRequest = AdminAnalyticsStreamPostRequest(); // AdminAnalyticsStreamPostRequest | Request body
 
 try {
-    final result = api_instance.adminAnalyticsStreamGet();
+    final result = api_instance.adminAnalyticsStreamPost(adminAnalyticsStreamPostRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->adminAnalyticsStreamGet: $e\n');
+    print('Exception when calling DefaultApi->adminAnalyticsStreamPost: $e\n');
 }
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **adminAnalyticsStreamPostRequest** | [**AdminAnalyticsStreamPostRequest**](AdminAnalyticsStreamPostRequest.md)| Request body | [optional] 
 
 ### Return type
 
@@ -579,7 +585,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -867,7 +873,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **debugEchoTextPost**
-> IdPost307Response debugEchoTextPost()
+> OcplistGet200Response debugEchoTextPost()
 
 
 
@@ -890,7 +896,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**IdPost307Response**](IdPost307Response.md)
+[**OcplistGet200Response**](OcplistGet200Response.md)
 
 ### Authorization
 
@@ -1788,6 +1794,80 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**LinksGet200Response**](LinksGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ocplistGet**
+> OcplistGet200Response ocplistGet()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+try {
+    final result = api_instance.ocplistGet();
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->ocplistGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**OcplistGet200Response**](OcplistGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **restGet**
+> RestGet200Response restGet()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+try {
+    final result = api_instance.restGet();
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->restGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RestGet200Response**](RestGet200Response.md)
 
 ### Authorization
 

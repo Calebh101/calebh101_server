@@ -212,6 +212,8 @@ class ApiClient {
           return AdminAnalyticsQueryPost200ResponseDataDataInner.fromJson(value);
         case 'AdminAnalyticsQueryPostRequest':
           return AdminAnalyticsQueryPostRequest.fromJson(value);
+        case 'AdminAnalyticsStreamPostRequest':
+          return AdminAnalyticsStreamPostRequest.fromJson(value);
         case 'AuthAllowedRedirectUrlsGet200Response':
           return AuthAllowedRedirectUrlsGet200Response.fromJson(value);
         case 'AuthAllowedRedirectUrlsGet200ResponseDataInner':
@@ -310,8 +312,6 @@ class ApiClient {
           return HomeWeatherPost200ResponseDataLocation.fromJson(value);
         case 'HomeWeatherPostRequest':
           return HomeWeatherPostRequest.fromJson(value);
-        case 'IdPost307Response':
-          return IdPost307Response.fromJson(value);
         case 'LinkGet200Response':
           return LinkGet200Response.fromJson(value);
         case 'LinkGet200ResponseData':
@@ -336,6 +336,10 @@ class ApiClient {
           return LinksGet200ResponseData.fromJson(value);
         case 'LinksGet200ResponseDataLinksInner':
           return LinksGet200ResponseDataLinksInner.fromJson(value);
+        case 'OcplistGet200Response':
+          return OcplistGet200Response.fromJson(value);
+        case 'RestGet200Response':
+          return RestGet200Response.fromJson(value);
         default:
           dynamic match;
           if (value is List && (match = _regList.firstMatch(targetType)?.group(1)) != null) {

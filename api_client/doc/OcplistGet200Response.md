@@ -1,4 +1,4 @@
-# openapi.model.IdPost307Response
+# openapi.model.OcplistGet200Response
 
 ## Load the model package
 ```dart

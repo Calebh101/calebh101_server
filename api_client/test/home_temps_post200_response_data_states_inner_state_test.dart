@@ -16,6 +16,11 @@ void main() {
   // final instance = HomeTempsPost200ResponseDataStatesInnerState();
 
   group('test HomeTempsPost200ResponseDataStatesInnerState', () {
+    // String sensorId
+    test('to test the property `sensorId`', () async {
+      // TODO
+    });
+
     // DateTime timestamp
     test('to test the property `timestamp`', () async {
       // TODO

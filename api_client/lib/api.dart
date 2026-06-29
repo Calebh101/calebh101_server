@@ -45,6 +45,7 @@ part 'model/admin_analytics_query_post200_response.dart';
 part 'model/admin_analytics_query_post200_response_data.dart';
 part 'model/admin_analytics_query_post200_response_data_data_inner.dart';
 part 'model/admin_analytics_query_post_request.dart';
+part 'model/admin_analytics_stream_post_request.dart';
 part 'model/auth_allowed_redirect_urls_get200_response.dart';
 part 'model/auth_allowed_redirect_urls_get200_response_data_inner.dart';
 part 'model/auth_create_again_post200_response.dart';
@@ -94,7 +95,6 @@ part 'model/home_weather_post200_response_data_forecast_forecastday_inner_astro.
 part 'model/home_weather_post200_response_data_forecast_forecastday_inner_day.dart';
 part 'model/home_weather_post200_response_data_location.dart';
 part 'model/home_weather_post_request.dart';
-part 'model/id_post307_response.dart';
 part 'model/link_get200_response.dart';
 part 'model/link_get200_response_data.dart';
 part 'model/link_get200_response_data_logic.dart';
@@ -107,6 +107,8 @@ part 'model/link_put_request.dart';
 part 'model/links_get200_response.dart';
 part 'model/links_get200_response_data.dart';
 part 'model/links_get200_response_data_links_inner.dart';
+part 'model/ocplist_get200_response.dart';
+part 'model/rest_get200_response.dart';
 
 
 /// An [ApiClient] instance that uses the default values obtained from
