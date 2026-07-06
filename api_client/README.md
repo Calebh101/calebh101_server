@@ -88,6 +88,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ghFirstSecondRestGet**](doc//DefaultApi.md#ghfirstsecondrestget) | **GET** /gh/:first/:second/*rest | 
 *DefaultApi* | [**homeInfoPost**](doc//DefaultApi.md#homeinfopost) | **POST** /home/info | 
 *DefaultApi* | [**homeMapPngGet**](doc//DefaultApi.md#homemappngget) | **GET** /home/map.png | 
+*DefaultApi* | [**homeTempsHistoryPost**](doc//DefaultApi.md#hometempshistorypost) | **POST** /home/temps/history | 
 *DefaultApi* | [**homeTempsPost**](doc//DefaultApi.md#hometempspost) | **POST** /home/temps | 
 *DefaultApi* | [**homeTvsAppsLaunchPost**](doc//DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
 *DefaultApi* | [**homeTvsKeyPost**](doc//DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
@@ -146,6 +147,11 @@ Class | Method | HTTP request | Description
  - [HomeInfoPost200ResponseData](doc//HomeInfoPost200ResponseData.md)
  - [HomeInfoPost200ResponseDataHouseDiagramDimensions](doc//HomeInfoPost200ResponseDataHouseDiagramDimensions.md)
  - [HomeInfoPost200ResponseDataRoomsInner](doc//HomeInfoPost200ResponseDataRoomsInner.md)
+ - [HomeTempsHistoryPost200Response](doc//HomeTempsHistoryPost200Response.md)
+ - [HomeTempsHistoryPost200ResponseData](doc//HomeTempsHistoryPost200ResponseData.md)
+ - [HomeTempsHistoryPost200ResponseDataHistoryInner](doc//HomeTempsHistoryPost200ResponseDataHistoryInner.md)
+ - [HomeTempsHistoryPost200ResponseDataHistoryInnerHistoryInner](doc//HomeTempsHistoryPost200ResponseDataHistoryInnerHistoryInner.md)
+ - [HomeTempsHistoryPost200ResponseDataHistoryInnerHistoryInnerState](doc//HomeTempsHistoryPost200ResponseDataHistoryInnerHistoryInnerState.md)
  - [HomeTempsPost200Response](doc//HomeTempsPost200Response.md)
  - [HomeTempsPost200ResponseData](doc//HomeTempsPost200ResponseData.md)
  - [HomeTempsPost200ResponseDataStatesInner](doc//HomeTempsPost200ResponseDataStatesInner.md)

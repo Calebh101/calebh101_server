@@ -162,6 +162,11 @@ void main() {
       // TODO
     });
 
+    //Future<HomeTempsHistoryPost200Response> homeTempsHistoryPost() async
+    test('test homeTempsHistoryPost', () async {
+      // TODO
+    });
+
     //Future<HomeTempsPost200Response> homeTempsPost() async
     test('test homeTempsPost', () async {
       // TODO
