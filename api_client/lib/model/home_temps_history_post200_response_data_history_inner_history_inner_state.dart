@@ -17,6 +17,7 @@ class HomeTempsHistoryPost200ResponseDataHistoryInnerHistoryInnerState {
     required this.timestamp,
     required this.temp,
     required this.humidity,
+    this.rssi,
   });
 
   String sensorId;
@@ -27,12 +28,21 @@ class HomeTempsHistoryPost200ResponseDataHistoryInnerHistoryInnerState {
 
   num humidity;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  num? rssi;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is HomeTempsHistoryPost200ResponseDataHistoryInnerHistoryInnerState &&
     other.sensorId == sensorId &&
     other.timestamp == timestamp &&
     other.temp == temp &&
-    other.humidity == humidity;
+    other.humidity == humidity &&
+    other.rssi == rssi;
 
   @override
   int get hashCode =>
@@ -40,10 +50,11 @@ class HomeTempsHistoryPost200ResponseDataHistoryInnerHistoryInnerState {
     (sensorId.hashCode) +
     (timestamp.hashCode) +
     (temp.hashCode) +
-    (humidity.hashCode);
+    (humidity.hashCode) +
+    (rssi == null ? 0 : rssi!.hashCode);
 
   @override
-  String toString() => 'HomeTempsHistoryPost200ResponseDataHistoryInnerHistoryInnerState[sensorId=$sensorId, timestamp=$timestamp, temp=$temp, humidity=$humidity]';
+  String toString() => 'HomeTempsHistoryPost200ResponseDataHistoryInnerHistoryInnerState[sensorId=$sensorId, timestamp=$timestamp, temp=$temp, humidity=$humidity, rssi=$rssi]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -51,6 +62,11 @@ class HomeTempsHistoryPost200ResponseDataHistoryInnerHistoryInnerState {
       json[r'timestamp'] = this.timestamp.toUtc().toIso8601String();
       json[r'temp'] = this.temp;
       json[r'humidity'] = this.humidity;
+    if (this.rssi != null) {
+      json[r'rssi'] = this.rssi;
+    } else {
+      json[r'rssi'] = null;
+    }
     return json;
   }
 
@@ -77,6 +93,7 @@ class HomeTempsHistoryPost200ResponseDataHistoryInnerHistoryInnerState {
         timestamp: mapDateTime(json, r'timestamp', r'')!,
         temp: num.parse('${json[r'temp']}'),
         humidity: num.parse('${json[r'humidity']}'),
+        rssi: num.parse('${json[r'rssi']}'),
       );
     }
     return null;

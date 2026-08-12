@@ -93,8 +93,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**homeTvsAppsLaunchPost**](doc//DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
 *DefaultApi* | [**homeTvsKeyPost**](doc//DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
 *DefaultApi* | [**homeTvsPost**](doc//DefaultApi.md#hometvspost) | **POST** /home/tvs | 
-*DefaultApi* | [**homeTvsPowerOffPost**](doc//DefaultApi.md#hometvspoweroffpost) | **POST** /home/tvs/power/off | 
-*DefaultApi* | [**homeTvsPowerOnPost**](doc//DefaultApi.md#hometvspoweronpost) | **POST** /home/tvs/power/on | 
+*DefaultApi* | [**homeTvsPowerTogglePost**](doc//DefaultApi.md#hometvspowertogglepost) | **POST** /home/tvs/power/toggle | 
 *DefaultApi* | [**homeTvsSettingsSetPost**](doc//DefaultApi.md#hometvssettingssetpost) | **POST** /home/tvs/settings/set | 
 *DefaultApi* | [**homeTvsSourcePost**](doc//DefaultApi.md#hometvssourcepost) | **POST** /home/tvs/source | 
 *DefaultApi* | [**homeWeatherPost**](doc//DefaultApi.md#homeweatherpost) | **POST** /home/weather | 

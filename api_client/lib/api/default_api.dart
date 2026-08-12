@@ -1578,14 +1578,14 @@ class DefaultApi {
     return null;
   }
 
-  /// Performs an HTTP 'POST /home/tvs/power/off' operation and returns the [Response].
+  /// Performs an HTTP 'POST /home/tvs/power/toggle' operation and returns the [Response].
   /// Parameters:
   ///
   /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
   ///   Request body
-  Future<Response> homeTvsPowerOffPostWithHttpInfo({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+  Future<Response> homeTvsPowerTogglePostWithHttpInfo({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/home/tvs/power/off';
+    final path = r'/home/tvs/power/toggle';
 
     // ignore: prefer_final_locals
     Object? postBody = accountSessionDeleteRequest;
@@ -1612,57 +1612,8 @@ class DefaultApi {
   ///
   /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
   ///   Request body
-  Future<AuthCreateAgainPost200Response?> homeTvsPowerOffPost({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
-    final response = await homeTvsPowerOffPostWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthCreateAgainPost200Response',) as AuthCreateAgainPost200Response;
-    
-    }
-    return null;
-  }
-
-  /// Performs an HTTP 'POST /home/tvs/power/on' operation and returns the [Response].
-  /// Parameters:
-  ///
-  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
-  ///   Request body
-  Future<Response> homeTvsPowerOnPostWithHttpInfo({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/home/tvs/power/on';
-
-    // ignore: prefer_final_locals
-    Object? postBody = accountSessionDeleteRequest;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Parameters:
-  ///
-  /// * [AccountSessionDeleteRequest] accountSessionDeleteRequest:
-  ///   Request body
-  Future<AuthCreateAgainPost200Response?> homeTvsPowerOnPost({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
-    final response = await homeTvsPowerOnPostWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
+  Future<AuthCreateAgainPost200Response?> homeTvsPowerTogglePost({ AccountSessionDeleteRequest? accountSessionDeleteRequest, }) async {
+    final response = await homeTvsPowerTogglePostWithHttpInfo( accountSessionDeleteRequest: accountSessionDeleteRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -43,8 +43,7 @@ Method | HTTP request | Description
 [**homeTvsAppsLaunchPost**](DefaultApi.md#hometvsappslaunchpost) | **POST** /home/tvs/apps/launch | 
 [**homeTvsKeyPost**](DefaultApi.md#hometvskeypost) | **POST** /home/tvs/key | 
 [**homeTvsPost**](DefaultApi.md#hometvspost) | **POST** /home/tvs | 
-[**homeTvsPowerOffPost**](DefaultApi.md#hometvspoweroffpost) | **POST** /home/tvs/power/off | 
-[**homeTvsPowerOnPost**](DefaultApi.md#hometvspoweronpost) | **POST** /home/tvs/power/on | 
+[**homeTvsPowerTogglePost**](DefaultApi.md#hometvspowertogglepost) | **POST** /home/tvs/power/toggle | 
 [**homeTvsSettingsSetPost**](DefaultApi.md#hometvssettingssetpost) | **POST** /home/tvs/settings/set | 
 [**homeTvsSourcePost**](DefaultApi.md#hometvssourcepost) | **POST** /home/tvs/source | 
 [**homeWeatherPost**](DefaultApi.md#homeweatherpost) | **POST** /home/weather | 
@@ -1406,8 +1405,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **homeTvsPowerOffPost**
-> AuthCreateAgainPost200Response homeTvsPowerOffPost(accountSessionDeleteRequest)
+# **homeTvsPowerTogglePost**
+> AuthCreateAgainPost200Response homeTvsPowerTogglePost(accountSessionDeleteRequest)
 
 
 
@@ -1419,51 +1418,10 @@ final api_instance = DefaultApi();
 final accountSessionDeleteRequest = AccountSessionDeleteRequest(); // AccountSessionDeleteRequest | Request body
 
 try {
-    final result = api_instance.homeTvsPowerOffPost(accountSessionDeleteRequest);
+    final result = api_instance.homeTvsPowerTogglePost(accountSessionDeleteRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->homeTvsPowerOffPost: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountSessionDeleteRequest** | [**AccountSessionDeleteRequest**](AccountSessionDeleteRequest.md)| Request body | [optional] 
-
-### Return type
-
-[**AuthCreateAgainPost200Response**](AuthCreateAgainPost200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **homeTvsPowerOnPost**
-> AuthCreateAgainPost200Response homeTvsPowerOnPost(accountSessionDeleteRequest)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = DefaultApi();
-final accountSessionDeleteRequest = AccountSessionDeleteRequest(); // AccountSessionDeleteRequest | Request body
-
-try {
-    final result = api_instance.homeTvsPowerOnPost(accountSessionDeleteRequest);
-    print(result);
-} catch (e) {
-    print('Exception when calling DefaultApi->homeTvsPowerOnPost: $e\n');
+    print('Exception when calling DefaultApi->homeTvsPowerTogglePost: $e\n');
 }
 ```
 

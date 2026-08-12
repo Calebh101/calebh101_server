@@ -36,6 +36,11 @@ void main() {
       // TODO
     });
 
+    // num rssi
+    test('to test the property `rssi`', () async {
+      // TODO
+    });
+
 
   });
 

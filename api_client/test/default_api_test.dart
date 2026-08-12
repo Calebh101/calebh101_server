@@ -187,13 +187,8 @@ void main() {
       // TODO
     });
 
-    //Future<AuthCreateAgainPost200Response> homeTvsPowerOffPost({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
-    test('test homeTvsPowerOffPost', () async {
-      // TODO
-    });
-
-    //Future<AuthCreateAgainPost200Response> homeTvsPowerOnPost({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
-    test('test homeTvsPowerOnPost', () async {
+    //Future<AuthCreateAgainPost200Response> homeTvsPowerTogglePost({ AccountSessionDeleteRequest accountSessionDeleteRequest }) async
+    test('test homeTvsPowerTogglePost', () async {
       // TODO
     });
 
